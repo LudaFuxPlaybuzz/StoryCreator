@@ -14,11 +14,21 @@ class NewParticlesCollectionTableViewCell: UITableViewCell, UICollectionViewData
     @IBOutlet weak var NewParticlesCollectionView: UICollectionView!
     
     let cardBackgroundBorder = CAShapeLayer()
+    var particleItems = [NewParticleObject]()
     
     override func awakeFromNib()
     {
         super.awakeFromNib()
 
+        particleItems = [NewParticleObject(particleImage:"1"),
+                        NewParticleObject(particleImage:"2"),
+                        NewParticleObject(particleImage:"3"),
+                        NewParticleObject(particleImage:"4"),
+                        NewParticleObject(particleImage:"5"),
+                        NewParticleObject(particleImage:"6"),
+                        NewParticleObject(particleImage:"7"),
+                        NewParticleObject(particleImage:"8")]
+        
         cardBackgroundBorder.strokeColor = UIColor.init(colorLiteralRed: 0.5, green: 0.5, blue: 0.5, alpha: 0.25).cgColor
         cardBackgroundBorder.borderWidth = 3
         cardBackgroundBorder.fillColor = nil
@@ -35,14 +45,19 @@ class NewParticlesCollectionTableViewCell: UITableViewCell, UICollectionViewData
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return 8
+        return particleItems.count
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(NewParticleCollectionViewCell.self), for: indexPath)
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(NewParticleCollectionViewCell.self), for: indexPath) as? NewParticleCollectionViewCell
+        {
+            let particle:NewParticleObject = self.particleItems[indexPath.row]
+            cell.setDetails(particle)
+            return cell
+        }
         
-        return cell
+        return UICollectionViewCell()
 
     }
     

@@ -95,8 +95,22 @@
                                                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                                                         <autoresizingMask key="autoresizingMask"/>
+                                                                                        <subviews>
+                                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eTu-6X-4uZ">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                                            </imageView>
+                                                                                        </subviews>
                                                                                     </view>
-                                                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstItem="eTu-6X-4uZ" firstAttribute="top" secondItem="WYa-Li-BJX" secondAttribute="top" id="PIf-Yn-HiI"/>
+                                                                                        <constraint firstItem="eTu-6X-4uZ" firstAttribute="leading" secondItem="WYa-Li-BJX" secondAttribute="leading" id="nhd-yw-56e"/>
+                                                                                        <constraint firstAttribute="trailing" secondItem="eTu-6X-4uZ" secondAttribute="trailing" id="uTz-77-Iyq"/>
+                                                                                        <constraint firstAttribute="bottom" secondItem="eTu-6X-4uZ" secondAttribute="bottom" id="zsa-Ge-1tS"/>
+                                                                                    </constraints>
+                                                                                    <connections>
+                                                                                        <outlet property="particleImage" destination="eTu-6X-4uZ" id="HkS-nJ-29P"/>
+                                                                                    </connections>
                                                                                 </collectionViewCell>
                                                                             </cells>
                                                                             <connections>

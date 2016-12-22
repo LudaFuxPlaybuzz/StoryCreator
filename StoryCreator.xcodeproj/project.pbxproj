@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		852C02631E0C18A7006B5795 /* NewParticleObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852C02621E0C18A7006B5795 /* NewParticleObject.swift */; };
 		8531DCC91E0BE1C600BDEECB /* NewParticlesCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531DCC81E0BE1C600BDEECB /* NewParticlesCollectionTableViewCell.swift */; };
 		8531DCCB1E0BF08E00BDEECB /* NewParticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531DCCA1E0BF08E00BDEECB /* NewParticleCollectionViewCell.swift */; };
 		859B559C1E0AC8FA00231A2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B559B1E0AC8FA00231A2B /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		852C02621E0C18A7006B5795 /* NewParticleObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewParticleObject.swift; path = Model/NewParticleObject.swift; sourceTree = "<group>"; };
 		8531DCC81E0BE1C600BDEECB /* NewParticlesCollectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewParticlesCollectionTableViewCell.swift; path = Controller/NewParticlesCollection/NewParticlesCollectionTableViewCell.swift; sourceTree = "<group>"; };
 		8531DCCA1E0BF08E00BDEECB /* NewParticleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewParticleCollectionViewCell.swift; path = Controller/NewParticlesCollection/NewParticleCollectionViewCell.swift; sourceTree = "<group>"; };
 		859B55981E0AC8FA00231A2B /* StoryCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		852C02611E0C186F006B5795 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				852C02621E0C18A7006B5795 /* NewParticleObject.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		8531DCC51E0BD95000BDEECB /* Particles */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +96,7 @@
 		859B559A1E0AC8FA00231A2B /* StoryCreator */ = {
 			isa = PBXGroup;
 			children = (
+				852C02611E0C186F006B5795 /* Model */,
 				859B55AE1E0ACC8500231A2B /* View */,
 				859B55AD1E0ACC7F00231A2B /* Controller */,
 				859B55AF1E0ACC9E00231A2B /* Supporting Files */,
@@ -205,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */,
+				852C02631E0C18A7006B5795 /* NewParticleObject.swift in Sources */,
 				859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */,
 				8531DCC91E0BE1C600BDEECB /* NewParticlesCollectionTableViewCell.swift in Sources */,
 				8531DCCB1E0BF08E00BDEECB /* NewParticleCollectionViewCell.swift in Sources */,
