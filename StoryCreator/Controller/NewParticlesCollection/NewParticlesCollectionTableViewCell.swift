@@ -10,6 +10,27 @@ import UIKit
 
 class NewParticlesCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource {
 
+    @IBOutlet weak var cardBackground: UIView!
+    @IBOutlet weak var NewParticlesCollectionView: UICollectionView!
+    
+    let cardBackgroundBorder = CAShapeLayer()
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        cardBackgroundBorder.strokeColor = UIColor.lightGray.cgColor
+        cardBackgroundBorder.borderWidth = 3
+        cardBackgroundBorder.fillColor = nil
+        cardBackgroundBorder.lineDashPattern = [12, 8]
+    }
+
+    override func layoutSubviews()
+    {
+        super.layoutSubviews()
+        
+        cardBackgroundBorder.path = UIBezierPath(rect: cardBackground.bounds).cgPath
+        cardBackground.layer.addSublayer(cardBackgroundBorder)
+    }
+    
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
         return 7
@@ -17,18 +38,12 @@ class NewParticlesCollectionTableViewCell: UITableViewCell, UICollectionViewData
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(NewParticleCollectionViewCell.self), for: indexPath) 
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(NewParticleCollectionViewCell.self), for: indexPath)
+        
         return cell
 
     }
     
-    @IBOutlet weak var NewParticlesCollectionView: UICollectionView!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

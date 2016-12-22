@@ -124,6 +124,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <connections>
                                                             <outlet property="NewParticlesCollectionView" destination="LG9-D2-ydE" id="QVS-sc-d4x"/>
+                                                            <outlet property="cardBackground" destination="PmK-NQ-jg4" id="f7z-aI-tvy"/>
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>

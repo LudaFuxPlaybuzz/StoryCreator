@@ -27,12 +27,17 @@ class ViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(NewParticlesCollectionTableViewCell.self), for: indexPath) 
+        if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(NewParticlesCollectionTableViewCell.self), for: indexPath) as? NewParticlesCollectionTableViewCell
+        {
+            return cell
+        }
+        
+        return UITableViewCell()
             //        let entry = data.places[indexPath.row]
 //        let image = UIImage(named: entry.filename)
 //        cell.bkImageView.image = image
 //        cell.headingLabel.text = entry.heading
-        return cell
+        
     }
 }
 
