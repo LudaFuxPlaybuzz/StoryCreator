@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var createButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        createButton.layer.masksToBounds = true
+        createButton.layer.cornerRadius = 6
     }
 
     override func didReceiveMemoryWarning() {

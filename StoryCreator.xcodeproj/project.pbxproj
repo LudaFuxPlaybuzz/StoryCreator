@@ -12,6 +12,8 @@
 		859B55A11E0AC8FA00231A2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859B559F1E0AC8FA00231A2B /* Main.storyboard */; };
 		859B55A31E0AC8FA00231A2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 859B55A21E0AC8FA00231A2B /* Assets.xcassets */; };
 		859B55A61E0AC8FA00231A2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859B55A41E0AC8FA00231A2B /* LaunchScreen.storyboard */; };
+		859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B55B11E0AD2E700231A2B /* FloatLabelTextField.swift */; };
+		859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B55B21E0AD2E700231A2B /* FloatLabelTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		859B55A21E0AC8FA00231A2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		859B55A51E0AC8FA00231A2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		859B55A71E0AC8FA00231A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		859B55B11E0AD2E700231A2B /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
+		859B55B21E0AD2E700231A2B /* FloatLabelTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8531DCC51E0BD95000BDEECB /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Particles;
+			sourceTree = "<group>";
+		};
+		853534AE1E0BD6B300971F25 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				859B559B1E0AC8FA00231A2B /* AppDelegate.swift */,
+			);
+			name = General;
+			sourceTree = "<group>";
+		};
+		853534AF1E0BD6C000971F25 /* NewParticlesColletions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = NewParticlesColletions;
+			sourceTree = "<group>";
+		};
 		859B558F1E0AC8FA00231A2B = {
 			isa = PBXGroup;
 			children = (
@@ -54,14 +80,50 @@
 		859B559A1E0AC8FA00231A2B /* StoryCreator */ = {
 			isa = PBXGroup;
 			children = (
-				859B559B1E0AC8FA00231A2B /* AppDelegate.swift */,
+				859B55AD1E0ACC7F00231A2B /* Controller */,
+				859B55AE1E0ACC8500231A2B /* View */,
+				859B55AF1E0ACC9E00231A2B /* Supporting Files */,
+			);
+			path = StoryCreator;
+			sourceTree = "<group>";
+		};
+		859B55AD1E0ACC7F00231A2B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8531DCC51E0BD95000BDEECB /* Particles */,
+				853534AF1E0BD6C000971F25 /* NewParticlesColletions */,
+				853534AE1E0BD6B300971F25 /* General */,
 				859B559D1E0AC8FA00231A2B /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		859B55AE1E0ACC8500231A2B /* View */ = {
+			isa = PBXGroup;
+			children = (
 				859B559F1E0AC8FA00231A2B /* Main.storyboard */,
 				859B55A21E0AC8FA00231A2B /* Assets.xcassets */,
 				859B55A41E0AC8FA00231A2B /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		859B55AF1E0ACC9E00231A2B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				859B55B01E0AD2D200231A2B /* FloatLabel */,
 				859B55A71E0AC8FA00231A2B /* Info.plist */,
 			);
-			path = StoryCreator;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		859B55B01E0AD2D200231A2B /* FloatLabel */ = {
+			isa = PBXGroup;
+			children = (
+				859B55B11E0AD2E700231A2B /* FloatLabelTextField.swift */,
+				859B55B21E0AD2E700231A2B /* FloatLabelTextView.swift */,
+			);
+			name = FloatLabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +198,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */,
+				859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */,
 				859B559E1E0AC8FA00231A2B /* ViewController.swift in Sources */,
 				859B559C1E0AC8FA00231A2B /* AppDelegate.swift in Sources */,
 			);
@@ -299,6 +363,7 @@
 				859B55AC1E0AC8FA00231A2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
