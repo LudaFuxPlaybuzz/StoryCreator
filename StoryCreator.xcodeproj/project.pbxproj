@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8531DCC91E0BE1C600BDEECB /* NewParticlesCollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531DCC81E0BE1C600BDEECB /* NewParticlesCollectionTableViewCell.swift */; };
+		8531DCCB1E0BF08E00BDEECB /* NewParticleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531DCCA1E0BF08E00BDEECB /* NewParticleCollectionViewCell.swift */; };
 		859B559C1E0AC8FA00231A2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B559B1E0AC8FA00231A2B /* AppDelegate.swift */; };
 		859B559E1E0AC8FA00231A2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B559D1E0AC8FA00231A2B /* ViewController.swift */; };
 		859B55A11E0AC8FA00231A2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859B559F1E0AC8FA00231A2B /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8531DCC81E0BE1C600BDEECB /* NewParticlesCollectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewParticlesCollectionTableViewCell.swift; path = Controller/NewParticlesCollection/NewParticlesCollectionTableViewCell.swift; sourceTree = "<group>"; };
+		8531DCCA1E0BF08E00BDEECB /* NewParticleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewParticleCollectionViewCell.swift; path = Controller/NewParticlesCollection/NewParticleCollectionViewCell.swift; sourceTree = "<group>"; };
 		859B55981E0AC8FA00231A2B /* StoryCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859B559B1E0AC8FA00231A2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859B559D1E0AC8FA00231A2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 		853534AF1E0BD6C000971F25 /* NewParticlesColletions */ = {
 			isa = PBXGroup;
 			children = (
+				8531DCC81E0BE1C600BDEECB /* NewParticlesCollectionTableViewCell.swift */,
+				8531DCCA1E0BF08E00BDEECB /* NewParticleCollectionViewCell.swift */,
 			);
 			name = NewParticlesColletions;
 			sourceTree = "<group>";
@@ -200,6 +206,8 @@
 			files = (
 				859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */,
 				859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */,
+				8531DCC91E0BE1C600BDEECB /* NewParticlesCollectionTableViewCell.swift in Sources */,
+				8531DCCB1E0BF08E00BDEECB /* NewParticleCollectionViewCell.swift in Sources */,
 				859B559E1E0AC8FA00231A2B /* ViewController.swift in Sources */,
 				859B559C1E0AC8FA00231A2B /* AppDelegate.swift in Sources */,
 			);
