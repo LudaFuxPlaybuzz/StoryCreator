@@ -25,7 +25,10 @@ class ViewController: UIViewController, UITableViewDataSource
      
         descriptionBackgroundBorder.path = UIBezierPath(rect: descriptionBackground.bounds).cgPath
         descriptionBackground.layer.addSublayer(descriptionBackgroundBorder)
-        
+    }
+    
+    override func viewDidLayoutSubviews()
+    {
         descriptionBackgroundBorder.strokeColor = UIColor.init(colorLiteralRed: 0.5, green: 0.5, blue: 0.5, alpha: 0.25).cgColor
         descriptionBackgroundBorder.fillColor = nil
         descriptionBackgroundBorder.lineDashPattern = [12, 8]
