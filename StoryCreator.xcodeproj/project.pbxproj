@@ -178,6 +178,7 @@
 				TargetAttributes = {
 					859B55971E0AC8FA00231A2B = {
 						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = RP7F8YYSX4;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -348,6 +349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RP7F8YYSX4;
 				INFOPLIST_FILE = StoryCreator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Playbuzz.StoryCreator;
@@ -360,6 +362,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = RP7F8YYSX4;
 				INFOPLIST_FILE = StoryCreator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Playbuzz.StoryCreator;
