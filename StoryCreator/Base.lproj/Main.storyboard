@@ -18,14 +18,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYe-M2-VZo">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmJ-gI-AGX">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient" translatesAutoresizingMaskIntoConstraints="NO" id="ZHG-iq-nJX">
                                                 <rect key="frame" x="0.0" y="124" width="320" height="13"/>
@@ -55,7 +55,7 @@
                                                 </constraints>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2f5-0d-6Hu">
-                                                <rect key="frame" x="10" y="518" width="300" height="35"/>
+                                                <rect key="frame" x="10" y="650" width="300" height="35"/>
                                                 <color key="backgroundColor" red="0.73333333333333328" green="0.32156862745098036" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="15v-KE-9bv"/>
@@ -65,8 +65,8 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                             </button>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="169" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ue4-yG-3vE">
-                                                <rect key="frame" x="0.0" y="227" width="320" height="276"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="169" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ue4-yG-3vE">
+                                                <rect key="frame" x="0.0" y="227" width="320" height="408"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.NewParticlesCollectionTableViewCell" rowHeight="169" id="Omb-Hm-LEL" customClass="NewParticlesCollectionTableViewCell" customModule="StoryCreator" customModuleProvider="target">
@@ -97,7 +97,7 @@
                                                                                         <autoresizingMask key="autoresizingMask"/>
                                                                                         <subviews>
                                                                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eTu-6X-4uZ">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="50"/>
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
                                                                                             </imageView>
                                                                                         </subviews>
                                                                                     </view>
@@ -139,6 +139,44 @@
                                                         <connections>
                                                             <outlet property="NewParticlesCollectionView" destination="LG9-D2-ydE" id="QVS-sc-d4x"/>
                                                             <outlet property="cardBackground" destination="PmK-NQ-jg4" id="f7z-aI-tvy"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.ParticleTableViewCell" id="3mt-fB-B9z" customClass="ParticleTableViewCell" customModule="StoryCreator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="197" width="320" height="169"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3mt-fB-B9z" id="4Ll-wN-42g">
+                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="169"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6C-Op-dWa">
+                                                                    <rect key="frame" x="15" y="1" width="290" height="153"/>
+                                                                    <subviews>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="o9o-n7-pw9">
+                                                                            <rect key="frame" x="15" y="15" width="45" height="45"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="45" id="15l-ew-nL2"/>
+                                                                                <constraint firstAttribute="width" constant="45" id="bEV-fM-y34"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="o9o-n7-pw9" firstAttribute="top" secondItem="J6C-Op-dWa" secondAttribute="top" constant="15" id="1Oc-yK-RD3"/>
+                                                                        <constraint firstItem="o9o-n7-pw9" firstAttribute="leading" secondItem="J6C-Op-dWa" secondAttribute="leading" constant="15" id="6jZ-3E-haS"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="J6C-Op-dWa" secondAttribute="bottom" constant="15" id="HAx-vO-2ZA"/>
+                                                                <constraint firstAttribute="trailing" secondItem="J6C-Op-dWa" secondAttribute="trailing" constant="15" id="LHQ-AE-W84"/>
+                                                                <constraint firstItem="J6C-Op-dWa" firstAttribute="leading" secondItem="4Ll-wN-42g" secondAttribute="leading" constant="15" id="szl-kE-Xcm"/>
+                                                                <constraint firstItem="J6C-Op-dWa" firstAttribute="top" secondItem="4Ll-wN-42g" secondAttribute="top" constant="1" id="yfw-mo-ll6"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <outlet property="cardBackground" destination="J6C-Op-dWa" id="ojY-0m-ve2"/>
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>
@@ -217,6 +255,8 @@
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="700"/>
                     <connections>
                         <outlet property="createButton" destination="2f5-0d-6Hu" id="IMx-vS-tii"/>
                         <outlet property="descriptionBackground" destination="t3C-c3-BFW" id="hxE-Ii-rdd"/>
@@ -225,10 +265,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="138.38028169014083"/>
+            <point key="canvasLocation" x="120" y="-19.014084507042252"/>
         </scene>
     </scenes>
     <resources>
+        <image name="1" width="65" height="65"/>
         <image name="camera" width="400" height="400"/>
         <image name="cameraShadow" width="227" height="212"/>
         <image name="gradient" width="360" height="360"/>

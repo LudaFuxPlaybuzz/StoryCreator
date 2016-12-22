@@ -36,22 +36,27 @@ class ViewController: UIViewController, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(NewParticlesCollectionTableViewCell.self), for: indexPath) as? NewParticlesCollectionTableViewCell
+        if indexPath.row == 0
         {
-            return cell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ParticleTableViewCell.self), for: indexPath) as? ParticleTableViewCell
+            {
+                return cell
+            }
+        }
+        else
+        {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(NewParticlesCollectionTableViewCell.self), for: indexPath) as? NewParticlesCollectionTableViewCell
+            {
+                return cell
+            }
         }
         
         return UITableViewCell()
-            //        let entry = data.places[indexPath.row]
-//        let image = UIImage(named: entry.filename)
-//        cell.bkImageView.image = image
-//        cell.headingLabel.text = entry.heading
-        
     }
 }
 
