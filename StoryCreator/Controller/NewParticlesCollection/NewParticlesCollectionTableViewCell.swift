@@ -8,16 +8,18 @@
 
 import UIKit
 
-class NewParticlesCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource {
-
+class NewParticlesCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource
+{
     @IBOutlet weak var cardBackground: UIView!
     @IBOutlet weak var NewParticlesCollectionView: UICollectionView!
     
     let cardBackgroundBorder = CAShapeLayer()
     
-    override func awakeFromNib() {
+    override func awakeFromNib()
+    {
         super.awakeFromNib()
-        cardBackgroundBorder.strokeColor = UIColor.lightGray.cgColor
+
+        cardBackgroundBorder.strokeColor = UIColor.init(colorLiteralRed: 0.5, green: 0.5, blue: 0.5, alpha: 0.25).cgColor
         cardBackgroundBorder.borderWidth = 3
         cardBackgroundBorder.fillColor = nil
         cardBackgroundBorder.lineDashPattern = [12, 8]
@@ -33,7 +35,7 @@ class NewParticlesCollectionTableViewCell: UITableViewCell, UICollectionViewData
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return 7
+        return 8
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
