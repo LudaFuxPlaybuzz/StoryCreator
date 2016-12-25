@@ -10,7 +10,7 @@ import UIKit
 
 class NewParticleCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var particleImage: UIImageView!
+    @IBOutlet weak var particleIconButton: UIButton!
     
     var particle:NewParticleObject!
     
@@ -20,7 +20,7 @@ class NewParticleCollectionViewCell: UICollectionViewCell {
         
         if let particleImage = UIImage(named: particle.particleImage)
         {
-            self.particleImage.image = particleImage
+            self.particleIconButton.setBackgroundImage(particleImage, for: UIControlState.normal)
         }
     }
 }

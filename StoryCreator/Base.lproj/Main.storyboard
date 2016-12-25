@@ -85,80 +85,8 @@
                                                     <constraint firstAttribute="height" constant="350" id="puV-L6-Ltf"/>
                                                 </constraints>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.NewParticlesCollectionTableViewCell" rowHeight="169" id="Omb-Hm-LEL" customClass="NewParticlesCollectionTableViewCell" customModule="StoryCreator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="28" width="320" height="169"/>
-                                                        <autoresizingMask key="autoresizingMask"/>
-                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Omb-Hm-LEL" id="r7C-I6-9eI">
-                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="169"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <subviews>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PmK-NQ-jg4">
-                                                                    <rect key="frame" x="15" y="1" width="290" height="153"/>
-                                                                    <subviews>
-                                                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LG9-D2-ydE">
-                                                                            <rect key="frame" x="10" y="10" width="270" height="133"/>
-                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="h38-RM-yvf">
-                                                                                <size key="itemSize" width="45" height="45"/>
-                                                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                                                <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
-                                                                            </collectionViewFlowLayout>
-                                                                            <cells>
-                                                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.NewParticleCollectionViewCell" id="WYa-Li-BJX" customClass="NewParticleCollectionViewCell" customModule="StoryCreator" customModuleProvider="target">
-                                                                                    <rect key="frame" x="10" y="10" width="45" height="45"/>
-                                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                                                        <autoresizingMask key="autoresizingMask"/>
-                                                                                        <subviews>
-                                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eTu-6X-4uZ">
-                                                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                                                            </imageView>
-                                                                                        </subviews>
-                                                                                    </view>
-                                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                                                    <constraints>
-                                                                                        <constraint firstItem="eTu-6X-4uZ" firstAttribute="top" secondItem="WYa-Li-BJX" secondAttribute="top" id="PIf-Yn-HiI"/>
-                                                                                        <constraint firstItem="eTu-6X-4uZ" firstAttribute="leading" secondItem="WYa-Li-BJX" secondAttribute="leading" id="nhd-yw-56e"/>
-                                                                                        <constraint firstAttribute="trailing" secondItem="eTu-6X-4uZ" secondAttribute="trailing" id="uTz-77-Iyq"/>
-                                                                                        <constraint firstAttribute="bottom" secondItem="eTu-6X-4uZ" secondAttribute="bottom" id="zsa-Ge-1tS"/>
-                                                                                    </constraints>
-                                                                                    <connections>
-                                                                                        <outlet property="particleImage" destination="eTu-6X-4uZ" id="HkS-nJ-29P"/>
-                                                                                    </connections>
-                                                                                </collectionViewCell>
-                                                                            </cells>
-                                                                            <connections>
-                                                                                <outlet property="dataSource" destination="Omb-Hm-LEL" id="muJ-Vo-zde"/>
-                                                                            </connections>
-                                                                        </collectionView>
-                                                                    </subviews>
-                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <constraints>
-                                                                        <constraint firstItem="LG9-D2-ydE" firstAttribute="leading" secondItem="PmK-NQ-jg4" secondAttribute="leading" constant="10" id="7WO-yv-07Y"/>
-                                                                        <constraint firstAttribute="bottom" secondItem="LG9-D2-ydE" secondAttribute="bottom" constant="10" id="Tix-kh-to4"/>
-                                                                        <constraint firstItem="LG9-D2-ydE" firstAttribute="top" secondItem="PmK-NQ-jg4" secondAttribute="top" constant="10" id="bfu-hO-2MN"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="LG9-D2-ydE" secondAttribute="trailing" constant="10" id="xGv-MR-fXR"/>
-                                                                    </constraints>
-                                                                </view>
-                                                            </subviews>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                            <constraints>
-                                                                <constraint firstItem="PmK-NQ-jg4" firstAttribute="top" secondItem="r7C-I6-9eI" secondAttribute="top" constant="1" id="RJJ-9C-b1n"/>
-                                                                <constraint firstAttribute="trailing" secondItem="PmK-NQ-jg4" secondAttribute="trailing" constant="15" id="dOL-6P-K5u"/>
-                                                                <constraint firstItem="PmK-NQ-jg4" firstAttribute="leading" secondItem="r7C-I6-9eI" secondAttribute="leading" constant="15" id="dTh-A1-c12"/>
-                                                                <constraint firstAttribute="bottom" secondItem="PmK-NQ-jg4" secondAttribute="bottom" constant="15" id="xI4-2E-crq"/>
-                                                            </constraints>
-                                                        </tableViewCellContentView>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                        <connections>
-                                                            <outlet property="NewParticlesCollectionView" destination="LG9-D2-ydE" id="QVS-sc-d4x"/>
-                                                            <outlet property="cardBackground" destination="PmK-NQ-jg4" id="f7z-aI-tvy"/>
-                                                        </connections>
-                                                    </tableViewCell>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.ParticleTableViewCell" id="3mt-fB-B9z" customClass="ParticleTableViewCell" customModule="StoryCreator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="197" width="320" height="169"/>
+                                                        <rect key="frame" x="0.0" y="28" width="320" height="169"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3mt-fB-B9z" id="4Ll-wN-42g">
                                                             <rect key="frame" x="0.0" y="0.0" width="320" height="169"/>
@@ -203,6 +131,79 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <connections>
                                                             <outlet property="cardBackground" destination="J6C-Op-dWa" id="ojY-0m-ve2"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.NewParticlesCollectionTableViewCell" rowHeight="169" id="Omb-Hm-LEL" customClass="NewParticlesCollectionTableViewCell" customModule="StoryCreator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="197" width="320" height="169"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Omb-Hm-LEL" id="r7C-I6-9eI">
+                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="169"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PmK-NQ-jg4">
+                                                                    <rect key="frame" x="15" y="1" width="290" height="153"/>
+                                                                    <subviews>
+                                                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LG9-D2-ydE">
+                                                                            <rect key="frame" x="10" y="10" width="270" height="133"/>
+                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="h38-RM-yvf">
+                                                                                <size key="itemSize" width="45" height="45"/>
+                                                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                                                <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                                            </collectionViewFlowLayout>
+                                                                            <cells>
+                                                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.NewParticleCollectionViewCell" id="WYa-Li-BJX" customClass="NewParticleCollectionViewCell" customModule="StoryCreator" customModuleProvider="target">
+                                                                                    <rect key="frame" x="10" y="10" width="45" height="45"/>
+                                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                                        <subviews>
+                                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJF-ER-Exo">
+                                                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                                                            </button>
+                                                                                        </subviews>
+                                                                                    </view>
+                                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstItem="cJF-ER-Exo" firstAttribute="leading" secondItem="WYa-Li-BJX" secondAttribute="leading" id="SBb-IA-KaI"/>
+                                                                                        <constraint firstAttribute="trailing" secondItem="cJF-ER-Exo" secondAttribute="trailing" id="cAV-k6-a1k"/>
+                                                                                        <constraint firstItem="cJF-ER-Exo" firstAttribute="top" secondItem="WYa-Li-BJX" secondAttribute="top" id="eFd-ET-hPF"/>
+                                                                                        <constraint firstAttribute="bottom" secondItem="cJF-ER-Exo" secondAttribute="bottom" id="nou-vO-mmk"/>
+                                                                                    </constraints>
+                                                                                    <connections>
+                                                                                        <outlet property="particleIconButton" destination="cJF-ER-Exo" id="8Ee-fi-wXe"/>
+                                                                                    </connections>
+                                                                                </collectionViewCell>
+                                                                            </cells>
+                                                                            <connections>
+                                                                                <outlet property="dataSource" destination="Omb-Hm-LEL" id="muJ-Vo-zde"/>
+                                                                            </connections>
+                                                                        </collectionView>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="LG9-D2-ydE" firstAttribute="leading" secondItem="PmK-NQ-jg4" secondAttribute="leading" constant="10" id="7WO-yv-07Y"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="LG9-D2-ydE" secondAttribute="bottom" constant="10" id="Tix-kh-to4"/>
+                                                                        <constraint firstItem="LG9-D2-ydE" firstAttribute="top" secondItem="PmK-NQ-jg4" secondAttribute="top" constant="10" id="bfu-hO-2MN"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="LG9-D2-ydE" secondAttribute="trailing" constant="10" id="xGv-MR-fXR"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstItem="PmK-NQ-jg4" firstAttribute="top" secondItem="r7C-I6-9eI" secondAttribute="top" constant="1" id="RJJ-9C-b1n"/>
+                                                                <constraint firstAttribute="trailing" secondItem="PmK-NQ-jg4" secondAttribute="trailing" constant="15" id="dOL-6P-K5u"/>
+                                                                <constraint firstItem="PmK-NQ-jg4" firstAttribute="leading" secondItem="r7C-I6-9eI" secondAttribute="leading" constant="15" id="dTh-A1-c12"/>
+                                                                <constraint firstAttribute="bottom" secondItem="PmK-NQ-jg4" secondAttribute="bottom" constant="15" id="xI4-2E-crq"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <connections>
+                                                            <outlet property="NewParticlesCollectionView" destination="LG9-D2-ydE" id="QVS-sc-d4x"/>
+                                                            <outlet property="cardBackground" destination="PmK-NQ-jg4" id="f7z-aI-tvy"/>
                                                         </connections>
                                                     </tableViewCell>
                                                 </prototypes>
