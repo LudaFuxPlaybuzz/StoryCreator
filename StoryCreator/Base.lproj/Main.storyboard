@@ -146,7 +146,6 @@
                                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LG9-D2-ydE">
                                                                             <rect key="frame" x="10" y="10" width="270" height="133"/>
                                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="h38-RM-yvf">
                                                                                 <size key="itemSize" width="45" height="45"/>
                                                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -163,6 +162,9 @@
                                                                                         <subviews>
                                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJF-ER-Exo">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                                                                <connections>
+                                                                                                    <action selector="didSelectNewParticle:" destination="WYa-Li-BJX" eventType="touchUpInside" id="Iic-EY-GGT"/>
+                                                                                                </connections>
                                                                                             </button>
                                                                                         </subviews>
                                                                                     </view>
@@ -174,7 +176,7 @@
                                                                                         <constraint firstAttribute="bottom" secondItem="cJF-ER-Exo" secondAttribute="bottom" id="nou-vO-mmk"/>
                                                                                     </constraints>
                                                                                     <connections>
-                                                                                        <outlet property="particleIconButton" destination="cJF-ER-Exo" id="8Ee-fi-wXe"/>
+                                                                                        <outlet property="particleIconButton" destination="cJF-ER-Exo" id="wmY-tR-PKX"/>
                                                                                     </connections>
                                                                                 </collectionViewCell>
                                                                             </cells>

@@ -12,6 +12,7 @@ class NewParticleCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var particleIconButton: UIButton!
     
+    weak var delegate: NewParticleCollectionViewCellProtocol?
     var particle:NewParticleObject!
     
     func setDetails(_ particle:NewParticleObject)
@@ -23,4 +24,14 @@ class NewParticleCollectionViewCell: UICollectionViewCell {
             self.particleIconButton.setBackgroundImage(particleImage, for: UIControlState.normal)
         }
     }
+    
+    @IBAction func didSelectNewParticle(_ sender: Any)
+    {
+        self.delegate?.didSelectNewParticle(particle: self.particle)
+    }
+}
+
+@objc protocol NewParticleCollectionViewCellProtocol: class
+{
+    func didSelectNewParticle(particle:NewParticleObject)
 }

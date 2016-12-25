@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource
+class ViewController: UIViewController, UITableViewDataSource, NewParticlesCollectionTableViewCellProtocol
 {
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var particlesTable: UITableView!
@@ -54,6 +54,7 @@ class ViewController: UIViewController, UITableViewDataSource
         {
             if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(NewParticlesCollectionTableViewCell.self), for: indexPath) as? NewParticlesCollectionTableViewCell
             {
+                cell.delegate = self
                 return cell
             }
         }
@@ -80,5 +81,11 @@ class ViewController: UIViewController, UITableViewDataSource
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.top)
         }
     }
+    
+    func didSelectNewParticle(particle:NewParticleObject)
+    {
+        numOfParticles += 1
+        particlesTable.reloadData()
+     }
 }
 

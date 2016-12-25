@@ -8,13 +8,14 @@
 
 import UIKit
 
-class NewParticlesCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource
+class NewParticlesCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource, NewParticleCollectionViewCellProtocol
 {
     @IBOutlet weak var cardBackground: UIView!
     @IBOutlet weak var NewParticlesCollectionView: UICollectionView!
     
     let cardBackgroundBorder = CAShapeLayer()
     var particleItems = [NewParticleObject]()
+    weak var delegate: NewParticlesCollectionTableViewCellProtocol?
     
     override func awakeFromNib()
     {
@@ -54,10 +55,20 @@ class NewParticlesCollectionTableViewCell: UITableViewCell, UICollectionViewData
         {
             let particle:NewParticleObject = self.particleItems[indexPath.row]
             cell.setDetails(particle)
+            cell.delegate = self
             return cell
         }
         
         return UICollectionViewCell()
-
     }
+    
+    func didSelectNewParticle(particle:NewParticleObject)
+    {
+        self.delegate?.didSelectNewParticle(particle: particle)
+    }
+}
+
+@objc protocol NewParticlesCollectionTableViewCellProtocol: class
+{
+    func didSelectNewParticle(particle:NewParticleObject)
 }
