@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDataSource
     @IBOutlet weak var descriptionBackground: UIView!
     
     let descriptionBackgroundBorder = CAShapeLayer()
+    var numOfParticles = 1
     
     override func viewDidLoad()
     {
@@ -25,6 +26,7 @@ class ViewController: UIViewController, UITableViewDataSource
      
         descriptionBackgroundBorder.path = UIBezierPath(rect: descriptionBackground.bounds).cgPath
         descriptionBackground.layer.addSublayer(descriptionBackgroundBorder)
+        particlesTable.setEditing(true, animated: true)
     }
     
     override func viewDidLayoutSubviews()
@@ -36,7 +38,7 @@ class ViewController: UIViewController, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 2
+        return numOfParticles + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -57,6 +59,26 @@ class ViewController: UIViewController, UITableViewDataSource
         }
         
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        if indexPath.row == numOfParticles
+        {
+            return false
+        }
+        else
+        {
+            return true
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            numOfParticles -= 1
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.top)
+        }
     }
 }
 
