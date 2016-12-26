@@ -274,9 +274,11 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="700"/>
                     <connections>
+                        <outlet property="containerHeightConstraint" destination="x5c-Wo-tTk" id="u6z-Qv-apj"/>
                         <outlet property="createButton" destination="2f5-0d-6Hu" id="IMx-vS-tii"/>
                         <outlet property="descriptionBackground" destination="t3C-c3-BFW" id="hxE-Ii-rdd"/>
                         <outlet property="particlesTable" destination="ue4-yG-3vE" id="EoB-rc-Ni6"/>
+                        <outlet property="particlesTableHeight" destination="puV-L6-Ltf" id="o4C-11-6fa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -13,6 +13,8 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var particlesTable: UITableView!
     @IBOutlet weak var descriptionBackground: UIView!
+    @IBOutlet weak var particlesTableHeight: NSLayoutConstraint!
+    @IBOutlet weak var containerHeightConstraint: NSLayoutConstraint!
     
     let descriptionBackgroundBorder = CAShapeLayer()
     var newParticles = [NewParticleObject]()
@@ -34,6 +36,11 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
         descriptionBackgroundBorder.strokeColor = UIColor.init(colorLiteralRed: 0.5, green: 0.5, blue: 0.5, alpha: 0.25).cgColor
         descriptionBackgroundBorder.fillColor = nil
         descriptionBackgroundBorder.lineDashPattern = [12, 8]
+        
+        particlesTableHeight.constant = particlesTable.contentSize.height
+        
+        containerHeightConstraint.constant = particlesTable.contentSize.height + 300
+        print("luda \(containerHeightConstraint.constant)")
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -80,14 +87,25 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
     {
         if (editingStyle == UITableViewCellEditingStyle.delete) {
             newParticles.remove(at: indexPath.row)
+            
+            CATransaction.begin()
+            tableView.beginUpdates()
+            CATransaction.setCompletionBlock({
+                self.particlesTable.reloadData()
+                self.viewDidLayoutSubviews()
+            })
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.top)
+            tableView.endUpdates()
+            CATransaction.commit()
         }
+        
     }
     
     func didSelectNewParticle(particle:NewParticleObject)
     {
         newParticles.append(particle)
         particlesTable.reloadData()
+        self.viewDidLayoutSubviews()
      }
 }
 
