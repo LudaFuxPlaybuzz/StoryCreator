@@ -131,6 +131,7 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <connections>
                                                             <outlet property="cardBackground" destination="J6C-Op-dWa" id="ojY-0m-ve2"/>
+                                                            <outlet property="iconImageView" destination="o9o-n7-pw9" id="bAD-O2-lid"/>
                                                         </connections>
                                                     </tableViewCell>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.NewParticlesCollectionTableViewCell" rowHeight="169" id="Omb-Hm-LEL" customClass="NewParticlesCollectionTableViewCell" customModule="StoryCreator" customModuleProvider="target">

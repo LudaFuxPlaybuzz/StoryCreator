@@ -55,6 +55,8 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
         {
             if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ParticleTableViewCell.self), for: indexPath) as? ParticleTableViewCell
             {
+                let particle = newParticles[indexPath.row]
+                cell.setDetails(particle: particle)
                 return cell
             }
         }

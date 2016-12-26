@@ -12,8 +12,10 @@ class ParticleTableViewCell: UITableViewCell
 {
 
     @IBOutlet weak var cardBackground: UIView!
+    @IBOutlet weak var iconImageView: UIImageView!
     
     let cardBackgroundBorder = CAShapeLayer()
+    var particle:NewParticleObject!
     
     override func awakeFromNib()
     {
@@ -28,16 +30,13 @@ class ParticleTableViewCell: UITableViewCell
         cardBackgroundBorder.lineDashPattern = [12, 8]
     }
 
-    override func layoutSubviews()
+    func setDetails(particle:NewParticleObject)
     {
-        super.layoutSubviews()
+        self.particle = particle
         
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool)
-    {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        if let particleImage = UIImage(named: particle.particleImage)
+        {
+            self.iconImageView.image = particleImage
+        }
     }
 }
