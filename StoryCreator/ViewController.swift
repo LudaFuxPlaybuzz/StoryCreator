@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
     @IBOutlet weak var descriptionBackground: UIView!
     
     let descriptionBackgroundBorder = CAShapeLayer()
-    var numOfParticles = 1
+    var newParticles = [NewParticleObject]()
     
     override func viewDidLoad()
     {
@@ -38,23 +38,23 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return numOfParticles + 1
+        return newParticles.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        if indexPath.row == 0
+        if indexPath.row == newParticles.count
         {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ParticleTableViewCell.self), for: indexPath) as? ParticleTableViewCell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(NewParticlesCollectionTableViewCell.self), for: indexPath) as? NewParticlesCollectionTableViewCell
             {
+                cell.delegate = self
                 return cell
             }
         }
         else
         {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(NewParticlesCollectionTableViewCell.self), for: indexPath) as? NewParticlesCollectionTableViewCell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ParticleTableViewCell.self), for: indexPath) as? ParticleTableViewCell
             {
-                cell.delegate = self
                 return cell
             }
         }
@@ -64,7 +64,7 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
     {
-        if indexPath.row == numOfParticles
+        if indexPath.row == newParticles.count
         {
             return false
         }
@@ -76,15 +76,15 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
-        if (editingStyle == UITableViewCellEditingStyle.delete) {
-            numOfParticles -= 1
-            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.top)
-        }
+//        if (editingStyle == UITableViewCellEditingStyle.delete) {
+//            numOfParticles -= 1
+//            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.top)
+//        }
     }
     
     func didSelectNewParticle(particle:NewParticleObject)
     {
-        numOfParticles += 1
+        newParticles.append(particle)
         particlesTable.reloadData()
      }
 }
