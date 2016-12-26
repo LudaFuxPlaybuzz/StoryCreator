@@ -78,10 +78,10 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
-//        if (editingStyle == UITableViewCellEditingStyle.delete) {
-//            numOfParticles -= 1
-//            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.top)
-//        }
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            newParticles.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.top)
+        }
     }
     
     func didSelectNewParticle(particle:NewParticleObject)
