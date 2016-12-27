@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AnimatedTextInput-AnimatedTextInput.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>AnimatedTextInput.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>DKImagePickerController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,7 +27,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1700EBB47337F8387D6612CD77655904</key>
+		<key>29D8DB41194AB47BA5E0F5FE96529B16</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8C2E09E036949D84633EB63D09D7250C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9956C64114542B31CAECED0EB0C6B04E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

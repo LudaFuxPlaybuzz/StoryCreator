@@ -1,4 +1,5 @@
 PODS:
+  - AnimatedTextInput (0.4.0)
   - DKImagePickerController (3.4.2):
     - DKImagePickerController/Camera (= 3.4.2)
     - DKImagePickerController/ImageManager (= 3.4.2)
@@ -6,11 +7,13 @@ PODS:
   - DKImagePickerController/ImageManager (3.4.2)
 
 DEPENDENCIES:
+  - AnimatedTextInput
   - DKImagePickerController
 
 SPEC CHECKSUMS:
+  AnimatedTextInput: 283f38c106399b809b126f80af79fca9f4aabfd6
   DKImagePickerController: 8fc8a42120cb0c9b7982af04d47e0e5b25b5186f
 
-PODFILE CHECKSUM: 8bd1129e3f695ac9baa2ec31b7e5128cabe92f02
+PODFILE CHECKSUM: 366c051d5da73210700d0d3a89d0a6df6a4e7b24
 
 COCOAPODS: 1.1.1
