@@ -18,9 +18,12 @@
 		859B55A61E0AC8FA00231A2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859B55A41E0AC8FA00231A2B /* LaunchScreen.storyboard */; };
 		859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B55B11E0AD2E700231A2B /* FloatLabelTextField.swift */; };
 		859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B55B21E0AD2E700231A2B /* FloatLabelTextView.swift */; };
+		989A2345E41CEB9D85ACB3B1 /* Pods_StoryCreator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849CDF9A9E24697EC0AE0A98 /* Pods_StoryCreator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46D0F28B86A88446D3578897 /* Pods-StoryCreator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryCreator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoryCreator/Pods-StoryCreator.debug.xcconfig"; sourceTree = "<group>"; };
+		849CDF9A9E24697EC0AE0A98 /* Pods_StoryCreator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoryCreator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		852C02621E0C18A7006B5795 /* NewParticleObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewParticleObject.swift; path = Model/NewParticleObject.swift; sourceTree = "<group>"; };
 		852C02641E0C2ABD006B5795 /* ParticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticleTableViewCell.swift; path = Controller/Particle/ParticleTableViewCell.swift; sourceTree = "<group>"; };
 		8531DCC81E0BE1C600BDEECB /* NewParticlesCollectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewParticlesCollectionTableViewCell.swift; path = Controller/NewParticlesCollection/NewParticlesCollectionTableViewCell.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		859B55A71E0AC8FA00231A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		859B55B11E0AD2E700231A2B /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
 		859B55B21E0AD2E700231A2B /* FloatLabelTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextView.swift; sourceTree = "<group>"; };
+		DF9CF8EDB0849B8B7E03C113 /* Pods-StoryCreator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryCreator.release.xcconfig"; path = "Pods/Target Support Files/Pods-StoryCreator/Pods-StoryCreator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				989A2345E41CEB9D85ACB3B1 /* Pods_StoryCreator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,8 @@
 			children = (
 				859B559A1E0AC8FA00231A2B /* StoryCreator */,
 				859B55991E0AC8FA00231A2B /* Products */,
+				C43BDA37BE37657B705C32DE /* Pods */,
+				E27C4DFD15D1399186E0F2D0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -146,6 +153,23 @@
 			name = FloatLabel;
 			sourceTree = "<group>";
 		};
+		C43BDA37BE37657B705C32DE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				46D0F28B86A88446D3578897 /* Pods-StoryCreator.debug.xcconfig */,
+				DF9CF8EDB0849B8B7E03C113 /* Pods-StoryCreator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E27C4DFD15D1399186E0F2D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				849CDF9A9E24697EC0AE0A98 /* Pods_StoryCreator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -153,9 +177,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 859B55AA1E0AC8FA00231A2B /* Build configuration list for PBXNativeTarget "StoryCreator" */;
 			buildPhases = (
+				756064263DB1378766D5A83B /* [CP] Check Pods Manifest.lock */,
 				859B55941E0AC8FA00231A2B /* Sources */,
 				859B55951E0AC8FA00231A2B /* Frameworks */,
 				859B55961E0AC8FA00231A2B /* Resources */,
+				B7A9E6F78020BAEE44B18E11 /* [CP] Embed Pods Frameworks */,
+				063EA2C99B5AAA60C9D8957B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +240,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		063EA2C99B5AAA60C9D8957B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StoryCreator/Pods-StoryCreator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		756064263DB1378766D5A83B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B7A9E6F78020BAEE44B18E11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StoryCreator/Pods-StoryCreator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		859B55941E0AC8FA00231A2B /* Sources */ = {
@@ -347,6 +422,7 @@
 		};
 		859B55AB1E0AC8FA00231A2B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46D0F28B86A88446D3578897 /* Pods-StoryCreator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RP7F8YYSX4;
@@ -360,6 +436,7 @@
 		};
 		859B55AC1E0AC8FA00231A2B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF9CF8EDB0849B8B7E03C113 /* Pods-StoryCreator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RP7F8YYSX4;

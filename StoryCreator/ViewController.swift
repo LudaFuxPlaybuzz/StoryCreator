@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DKImagePickerController
 
 class ViewController: UIViewController, UITableViewDataSource, NewParticlesCollectionTableViewCellProtocol
 {
@@ -15,6 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
     @IBOutlet weak var descriptionBackground: UIView!
     @IBOutlet weak var particlesTableHeight: NSLayoutConstraint!
     @IBOutlet weak var containerHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var coverImage: UIImageView!
     
     let descriptionBackgroundBorder = CAShapeLayer()
     var newParticles = [NewParticleObject]()
@@ -41,6 +43,18 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
         
         containerHeightConstraint.constant = particlesTable.contentSize.height + 300
         print("luda \(containerHeightConstraint.constant)")
+    }
+    
+    @IBAction func didPressCameraButton(_ sender: Any)
+    {
+        let pickerController = DKImagePickerController()
+        
+        pickerController.didSelectAssets = { (assets: [DKAsset]) in
+            print("didSelectAssets")
+            print(assets)
+        }
+        
+        self.present(pickerController, animated: true) {}
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
