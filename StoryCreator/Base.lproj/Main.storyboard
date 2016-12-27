@@ -33,7 +33,7 @@
                                                     <constraint firstAttribute="height" constant="13" id="Rvn-xo-afe"/>
                                                 </constraints>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nfz-rI-oc2">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nfz-rI-oc2">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
                                                 <color key="backgroundColor" red="0.0" green="0.61176470589999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </imageView>

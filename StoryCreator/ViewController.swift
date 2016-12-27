@@ -42,16 +42,20 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
         particlesTableHeight.constant = particlesTable.contentSize.height
         
         containerHeightConstraint.constant = particlesTable.contentSize.height + 300
-        print("luda \(containerHeightConstraint.constant)")
     }
     
     @IBAction func didPressCameraButton(_ sender: Any)
     {
         let pickerController = DKImagePickerController()
+        pickerController.singleSelect = true
         
         pickerController.didSelectAssets = { (assets: [DKAsset]) in
-            print("didSelectAssets")
-            print(assets)
+            let asset: DKAsset = assets[0]
+            
+            asset.fetchImageWithSize(self.coverImage.frame.size, completeBlock: { image, info in
+                    self.coverImage.image = image
+            })
+           
         }
         
         self.present(pickerController, animated: true) {}
