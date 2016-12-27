@@ -160,7 +160,7 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
         
         let activeColor = UIColor.gray.withAlphaComponent(0.3)
         let inactiveColor = UIColor.gray.withAlphaComponent(0.3)
-        let lineInactiveColor = UIColor.gray.withAlphaComponent(0.3)
+        let lineInactiveColor = UIColor.clear//gray.withAlphaComponent(0.3)
         let errorColor = UIColor.red
         let textInputFont = UIFont.systemFont(ofSize: 20)
         let textInputFontColor = UIColor.black
