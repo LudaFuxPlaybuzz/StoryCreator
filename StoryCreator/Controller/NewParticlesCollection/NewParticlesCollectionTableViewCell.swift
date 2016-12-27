@@ -29,19 +29,6 @@ class NewParticlesCollectionTableViewCell: UITableViewCell, UICollectionViewData
                         NewParticleObject(particleImage:"6"),
                         NewParticleObject(particleImage:"7"),
                         NewParticleObject(particleImage:"8")]
-        
-//        cardBackgroundBorder.strokeColor = UIColor.init(colorLiteralRed: 0.5, green: 0.5, blue: 0.5, alpha: 0.25).cgColor
-//        cardBackgroundBorder.borderWidth = 3
-//        cardBackgroundBorder.fillColor = nil
-//        cardBackgroundBorder.lineDashPattern = [12, 8]
-    }
-
-    override func layoutSubviews()
-    {
-        super.layoutSubviews()
-        
-//        cardBackgroundBorder.path = UIBezierPath(rect: cardBackground.bounds).cgPath
-//        cardBackground.layer.addSublayer(cardBackgroundBorder)
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int

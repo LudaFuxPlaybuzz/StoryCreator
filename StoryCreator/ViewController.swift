@@ -30,8 +30,6 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
         createButton.layer.masksToBounds = true
         createButton.layer.cornerRadius = 6
      
-//        descriptionBackgroundBorder.path = UIBezierPath(rect: descriptionTextField.bounds).cgPath
-//        descriptionTextField.layer.addSublayer(descriptionBackgroundBorder)
         particlesTable.setEditing(true, animated: true)
         
         titleTextField.style = TitleInputStyle() as AnimatedTextInputStyle
@@ -45,10 +43,6 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
     
     override func viewDidLayoutSubviews()
     {
-//        descriptionBackgroundBorder.strokeColor = UIColor.init(colorLiteralRed: 0.5, green: 0.5, blue: 0.5, alpha: 0.25).cgColor
-//        descriptionBackgroundBorder.fillColor = nil
-//        descriptionBackgroundBorder.lineDashPattern = [12, 8]
-        
         particlesTableHeight.constant = particlesTable.contentSize.height
         
         containerHeightConstraint.constant = particlesTable.contentSize.height + 300
@@ -140,7 +134,7 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
     struct TitleInputStyle: AnimatedTextInputStyle {
         
         let activeColor = UIColor.white
-        let inactiveColor = UIColor.white//.withAlphaComponent(0.3)
+        let inactiveColor = UIColor.white
         let lineInactiveColor = UIColor.white.withAlphaComponent(0.3)
         let errorColor = UIColor.red
         let textInputFont = UIFont.systemFont(ofSize: 25)
@@ -160,7 +154,7 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
         
         let activeColor = UIColor.gray.withAlphaComponent(0.3)
         let inactiveColor = UIColor.gray.withAlphaComponent(0.3)
-        let lineInactiveColor = UIColor.clear//gray.withAlphaComponent(0.3)
+        let lineInactiveColor = UIColor.clear
         let errorColor = UIColor.red
         let textInputFont = UIFont.systemFont(ofSize: 20)
         let textInputFontColor = UIColor.black
