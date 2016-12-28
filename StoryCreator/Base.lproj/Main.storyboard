@@ -84,7 +84,17 @@
                                                                         <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6gw-2i-qHp">
                                                                             <rect key="frame" x="0.0" y="0.0" width="290" height="153"/>
                                                                             <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="153" id="A3f-31-F7H"/>
+                                                                            </constraints>
                                                                         </webView>
+                                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0nJ-xa-eJe">
+                                                                            <rect key="frame" x="8" y="8" width="40" height="40"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="40" id="4dB-rk-wjt"/>
+                                                                                <constraint firstAttribute="width" constant="40" id="AIH-oJ-IGU"/>
+                                                                            </constraints>
+                                                                        </imageView>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
@@ -92,6 +102,8 @@
                                                                         <constraint firstItem="6gw-2i-qHp" firstAttribute="leading" secondItem="J6C-Op-dWa" secondAttribute="leading" id="HYC-s0-qku"/>
                                                                         <constraint firstAttribute="bottom" secondItem="6gw-2i-qHp" secondAttribute="bottom" id="UCs-wy-uPf"/>
                                                                         <constraint firstAttribute="trailing" secondItem="6gw-2i-qHp" secondAttribute="trailing" id="aWX-yo-764"/>
+                                                                        <constraint firstItem="0nJ-xa-eJe" firstAttribute="top" secondItem="J6C-Op-dWa" secondAttribute="top" constant="8" id="bTS-fP-i8j"/>
+                                                                        <constraint firstItem="0nJ-xa-eJe" firstAttribute="leading" secondItem="J6C-Op-dWa" secondAttribute="leading" constant="8" id="fsI-39-GEh"/>
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
@@ -106,7 +118,9 @@
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <connections>
                                                             <outlet property="cardBackground" destination="J6C-Op-dWa" id="ojY-0m-ve2"/>
+                                                            <outlet property="iconImageView" destination="0nJ-xa-eJe" id="Ofd-Y3-o75"/>
                                                             <outlet property="webView" destination="6gw-2i-qHp" id="dEX-aO-gn8"/>
+                                                            <outlet property="webViewContainerHeightConstraint" destination="A3f-31-F7H" id="6i4-Ld-lGu"/>
                                                         </connections>
                                                     </tableViewCell>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.NewParticlesCollectionTableViewCell" rowHeight="169" id="Omb-Hm-LEL" customClass="NewParticlesCollectionTableViewCell" customModule="StoryCreator" customModuleProvider="target">
