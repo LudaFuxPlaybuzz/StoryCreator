@@ -10,7 +10,7 @@ import UIKit
 import DKImagePickerController
 import AnimatedTextInput
 
-class ViewController: UIViewController, UITableViewDataSource, NewParticlesCollectionTableViewCellProtocol
+class ViewController: UIViewController, UITableViewDataSource, NewParticlesCollectionTableViewCellProtocol, ParticleTableViewCellProtocol, UITableViewDelegate
 {
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var particlesTable: UITableView!
@@ -30,7 +30,7 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
         createButton.layer.masksToBounds = true
         createButton.layer.cornerRadius = 6
      
-        particlesTable.setEditing(true, animated: true)
+//        particlesTable.setEditing(true, animated: true)
         
         titleTextField.style = TitleInputStyle() as AnimatedTextInputStyle
         titleTextField.backgroundColor = UIColor.clear
@@ -66,6 +66,11 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
         self.present(pickerController, animated: true) {}
     }
     
+    @IBAction func didPressDeleteCell(_ sender: Any)
+    {
+//        particlesTable.setEditing(true, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return newParticles.count + 1
@@ -87,12 +92,14 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
             {
                 let particle = newParticles[indexPath.row]
                 cell.setDetails(particle: particle)
+                cell.delegate = self
                 return cell
             }
         }
         
         return UITableViewCell()
     }
+    
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
     {
@@ -122,6 +129,18 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
             CATransaction.commit()
         }
         
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        if indexPath.row == newParticles.count
+        {
+            return 165
+        }
+        else
+        {
+            return 400
+        }
     }
     
     func didSelectNewParticle(particle:NewParticleObject)

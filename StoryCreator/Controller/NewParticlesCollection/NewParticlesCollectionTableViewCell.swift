@@ -21,14 +21,14 @@ class NewParticlesCollectionTableViewCell: UITableViewCell, UICollectionViewData
     {
         super.awakeFromNib()
 
-        particleItems = [NewParticleObject(particleImage:"1"),
-                        NewParticleObject(particleImage:"2"),
-                        NewParticleObject(particleImage:"3"),
-                        NewParticleObject(particleImage:"4"),
-                        NewParticleObject(particleImage:"5"),
-                        NewParticleObject(particleImage:"6"),
-                        NewParticleObject(particleImage:"7"),
-                        NewParticleObject(particleImage:"8")]
+        particleItems = [NewParticleObject(particleImage:"1", particleURL:""),
+                        NewParticleObject(particleImage:"2", particleURL:""),
+                        NewParticleObject(particleImage:"3", particleURL:"https://steelb.com/story.html?particle=quote"),
+                        NewParticleObject(particleImage:"4", particleURL:"https://steelb.com/story.html?particle=convo"),
+                        NewParticleObject(particleImage:"5", particleURL:"https://steelb.com/story.html?particle=paragraph"),
+                        NewParticleObject(particleImage:"6", particleURL:""),
+                        NewParticleObject(particleImage:"7", particleURL:""),
+                        NewParticleObject(particleImage:"8", particleURL:"")]
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int

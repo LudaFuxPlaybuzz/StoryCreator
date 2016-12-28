@@ -12,17 +12,18 @@ class ParticleTableViewCell: UITableViewCell
 {
 
     @IBOutlet weak var cardBackground: UIView!
-    @IBOutlet weak var iconImageView: UIImageView!
+//    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var webView: UIWebView!
     
+    weak var delegate: ParticleTableViewCellProtocol?
     let cardBackgroundBorder = CAShapeLayer()
     var particle:NewParticleObject!
     
     override func awakeFromNib()
     {
         super.awakeFromNib()
-
-        cardBackgroundBorder.path = UIBezierPath(rect: cardBackground.bounds).cgPath
-        cardBackground.layer.addSublayer(cardBackgroundBorder)
+        
+        webView.scrollView.isScrollEnabled = false
     }
 
     func setDetails(particle:NewParticleObject)
@@ -31,7 +32,21 @@ class ParticleTableViewCell: UITableViewCell
         
         if let particleImage = UIImage(named: particle.particleImage)
         {
-            self.iconImageView.image = particleImage
+//            self.iconImageView.image = particleImage
         }
+        
+        let url = URL(string: particle.particleURL)
+        let request = URLRequest(url: url!)
+        webView.loadRequest(request)
     }
+    
+    @IBAction func didPressDeleteCell(_ sender: Any)
+    {
+        self.delegate?.didPressDeleteCell(sender)
+    }
+}
+
+@objc protocol ParticleTableViewCellProtocol {
+    
+    func didPressDeleteCell(_ sender: Any)
 }
