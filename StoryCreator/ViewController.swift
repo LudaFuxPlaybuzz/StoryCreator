@@ -139,7 +139,7 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
         }
         else
         {
-            return 400
+            return 200
         }
     }
     
