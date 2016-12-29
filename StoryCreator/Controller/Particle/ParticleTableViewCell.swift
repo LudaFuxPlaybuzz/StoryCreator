@@ -44,6 +44,11 @@ class ParticleTableViewCell: UITableViewCell
 //        self.setNeedsUpdateConstraints()
     }
     
+    func getParticleData() -> String
+    {
+        return webView.stringByEvaluatingJavaScript(from: "getPbItem()")!
+    }
+    
     deinit
     {
         webView.scrollView.removeObserver(self, forKeyPath: "contentSize")

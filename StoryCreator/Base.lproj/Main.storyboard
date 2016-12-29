@@ -64,8 +64,8 @@
                                                     <action selector="didPressCameraButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Onb-mw-qdd"/>
                                                 </connections>
                                             </button>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="169" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ue4-yG-3vE">
-                                                <rect key="frame" x="0.0" y="226" width="320" height="449"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="169" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ue4-yG-3vE">
+                                                <rect key="frame" x="0.0" y="245" width="320" height="350"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="350" id="puV-L6-Ltf"/>
@@ -204,8 +204,8 @@
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="k8C-cM-huA"/>
                                                 </connections>
                                             </tableView>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2f5-0d-6Hu">
-                                                <rect key="frame" x="10" y="577" width="300" height="35"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2f5-0d-6Hu">
+                                                <rect key="frame" x="10" y="595" width="300" height="35"/>
                                                 <color key="backgroundColor" red="0.73333333333333328" green="0.32156862745098036" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="35" id="15v-KE-9bv"/>
@@ -214,6 +214,9 @@
                                                 <state key="normal" title="CREATE">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="didPressCreateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xmL-Wd-mDC"/>
+                                                </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vbx-8d-IhW" customClass="AnimatedTextInput" customModule="AnimatedTextInput">
                                                 <rect key="frame" x="15" y="54" width="245" height="60"/>
@@ -222,8 +225,8 @@
                                                     <constraint firstAttribute="height" constant="60" id="zU9-Ul-dOC"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gp7-cN-pHp" customClass="AnimatedTextInput" customModule="AnimatedTextInput">
-                                                <rect key="frame" x="15" y="145" width="290" height="65"/>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gp7-cN-pHp" customClass="AnimatedTextInput" customModule="AnimatedTextInput">
+                                                <rect key="frame" x="15" y="145" width="290" height="85"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
@@ -248,6 +251,7 @@
                                             <constraint firstItem="2f5-0d-6Hu" firstAttribute="top" secondItem="ue4-yG-3vE" secondAttribute="bottom" id="YZq-aD-BXO"/>
                                             <constraint firstItem="Uzp-uU-X4f" firstAttribute="centerX" secondItem="COs-1L-RaQ" secondAttribute="centerX" id="e7U-ql-a58"/>
                                             <constraint firstItem="Nfz-rI-oc2" firstAttribute="leading" secondItem="NeA-yr-Mkr" secondAttribute="leading" id="gOT-QC-6zW"/>
+                                            <constraint firstAttribute="bottom" secondItem="2f5-0d-6Hu" secondAttribute="bottom" constant="10" id="geS-Tx-Sex"/>
                                             <constraint firstItem="NeA-yr-Mkr" firstAttribute="leading" secondItem="rmJ-gI-AGX" secondAttribute="leading" id="l4Y-ti-2BP"/>
                                             <constraint firstItem="Vbx-8d-IhW" firstAttribute="leading" secondItem="rmJ-gI-AGX" secondAttribute="leading" constant="15" id="psm-Qx-pjt"/>
                                             <constraint firstItem="Nfz-rI-oc2" firstAttribute="trailing" secondItem="NeA-yr-Mkr" secondAttribute="trailing" id="rlM-PH-AEn"/>
