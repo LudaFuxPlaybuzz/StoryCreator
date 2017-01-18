@@ -3,5 +3,6 @@ target 'StoryCreator' do
 
     pod 'DKImagePickerController'
     pod 'AnimatedTextInput'
-    
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
 end

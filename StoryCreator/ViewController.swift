@@ -9,6 +9,7 @@
 import UIKit
 import DKImagePickerController
 import AnimatedTextInput
+import Firebase
 
 class ViewController: UIViewController, UITableViewDataSource, NewParticlesCollectionTableViewCellProtocol, ParticleTableViewCellProtocol, UITableViewDelegate
 {
@@ -30,7 +31,7 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
         createButton.layer.masksToBounds = true
         createButton.layer.cornerRadius = 6
      
-//        particlesTable.setEditing(true, animated: true)
+        self.useFirebaseDatabase()
         
         titleTextField.style = TitleInputStyle() as AnimatedTextInputStyle
         titleTextField.backgroundColor = UIColor.clear
@@ -39,6 +40,12 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
         descriptionTextField.style = DescriptionInputStyle() as AnimatedTextInputStyle
         descriptionTextField.placeHolderText = "Description"
         descriptionTextField.type = .multiline
+    }
+    
+    func useFirebaseDatabase()
+    {
+        let ref = FIRDatabase.database().reference()
+        ref.child("articles").child("article2").setValue(["title": "Igal is awesome!"])
     }
     
     override func viewDidLayoutSubviews()
@@ -139,7 +146,7 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
         }
         else
         {
-            return 200
+            return 300
         }
     }
     
