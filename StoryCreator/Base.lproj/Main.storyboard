@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StoryCreator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="StoryCreator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -71,7 +71,7 @@
                                                     <constraint firstAttribute="height" constant="350" id="puV-L6-Ltf"/>
                                                 </constraints>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.ParticleTableViewCell" id="3mt-fB-B9z" customClass="ParticleTableViewCell" customModule="StoryCreator" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.WebViewFallbackCell" id="3mt-fB-B9z" customClass="WebViewFallbackCell" customModule="StoryCreator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="320" height="169"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3mt-fB-B9z" id="4Ll-wN-42g">
@@ -129,7 +129,7 @@
                                                             <outlet property="webViewContainerHeightConstraint" destination="A3f-31-F7H" id="6i4-Ld-lGu"/>
                                                         </connections>
                                                     </tableViewCell>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.NewParticlesCollectionTableViewCell" rowHeight="169" id="Omb-Hm-LEL" customClass="NewParticlesCollectionTableViewCell" customModule="StoryCreator" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.IconsCollectionCell" rowHeight="169" id="Omb-Hm-LEL" customClass="IconsCollectionCell" customModule="StoryCreator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="197" width="320" height="169"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Omb-Hm-LEL" id="r7C-I6-9eI">
@@ -149,7 +149,7 @@
                                                                                 <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                                                             </collectionViewFlowLayout>
                                                                             <cells>
-                                                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.NewParticleCollectionViewCell" id="WYa-Li-BJX" customClass="NewParticleCollectionViewCell" customModule="StoryCreator" customModuleProvider="target">
+                                                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.IconCell" id="WYa-Li-BJX" customClass="IconCell" customModule="StoryCreator" customModuleProvider="target">
                                                                                     <rect key="frame" x="10" y="10" width="45" height="45"/>
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -172,7 +172,7 @@
                                                                                         <constraint firstAttribute="bottom" secondItem="cJF-ER-Exo" secondAttribute="bottom" id="nou-vO-mmk"/>
                                                                                     </constraints>
                                                                                     <connections>
-                                                                                        <outlet property="particleIconButton" destination="cJF-ER-Exo" id="wmY-tR-PKX"/>
+                                                                                        <outlet property="particleIconButton" destination="cJF-ER-Exo" id="H9f-hh-AJV"/>
                                                                                     </connections>
                                                                                 </collectionViewCell>
                                                                             </cells>
@@ -240,6 +240,7 @@
                                         <constraints>
                                             <constraint firstItem="ZHG-iq-nJX" firstAttribute="top" secondItem="rmJ-gI-AGX" secondAttribute="top" constant="124" id="23h-Q6-Fj5"/>
                                             <constraint firstItem="Uzp-uU-X4f" firstAttribute="centerY" secondItem="COs-1L-RaQ" secondAttribute="centerY" id="26w-dr-6Kd"/>
+                                            <constraint firstAttribute="height" constant="640" id="5Ki-0C-EiV"/>
                                             <constraint firstItem="ZHG-iq-nJX" firstAttribute="top" secondItem="Vbx-8d-IhW" secondAttribute="bottom" constant="10" id="6OR-sC-Eft"/>
                                             <constraint firstAttribute="trailing" secondItem="NeA-yr-Mkr" secondAttribute="trailing" id="7Te-Py-pOo"/>
                                             <constraint firstItem="ZHG-iq-nJX" firstAttribute="top" secondItem="COs-1L-RaQ" secondAttribute="bottom" constant="1" id="8ex-Is-UWd"/>
@@ -263,7 +264,6 @@
                                             <constraint firstItem="Nfz-rI-oc2" firstAttribute="trailing" secondItem="NeA-yr-Mkr" secondAttribute="trailing" id="rlM-PH-AEn"/>
                                             <constraint firstItem="COs-1L-RaQ" firstAttribute="leading" secondItem="Vbx-8d-IhW" secondAttribute="trailing" constant="15" id="sLL-eJ-h43"/>
                                             <constraint firstItem="ue4-yG-3vE" firstAttribute="top" secondItem="gp7-cN-pHp" secondAttribute="bottom" constant="15" id="vnD-EW-WY3"/>
-                                            <constraint firstAttribute="height" constant="640" id="x5c-Wo-tTk"/>
                                             <constraint firstItem="NeA-yr-Mkr" firstAttribute="top" secondItem="rmJ-gI-AGX" secondAttribute="top" id="xHE-qY-rNm"/>
                                             <constraint firstItem="gp7-cN-pHp" firstAttribute="top" secondItem="Uzp-uU-X4f" secondAttribute="bottom" constant="8" id="xcK-SJ-Nb2"/>
                                         </constraints>
@@ -290,7 +290,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="700"/>
                     <connections>
-                        <outlet property="containerHeightConstraint" destination="x5c-Wo-tTk" id="u6z-Qv-apj"/>
+                        <outlet property="containerHeightConstraint" destination="5Ki-0C-EiV" id="eh6-Hi-Ffk"/>
                         <outlet property="coverImage" destination="Nfz-rI-oc2" id="r2Z-e0-ZiJ"/>
                         <outlet property="createButton" destination="2f5-0d-6Hu" id="IMx-vS-tii"/>
                         <outlet property="descriptionTextField" destination="gp7-cN-pHp" id="KLn-2c-8LH"/>

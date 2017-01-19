@@ -11,7 +11,7 @@ import DKImagePickerController
 import AnimatedTextInput
 import Firebase
 
-class ViewController: UIViewController, UITableViewDataSource, NewParticlesCollectionTableViewCellProtocol, ParticleTableViewCellProtocol, UITableViewDelegate
+class MainViewController: UIViewController, UITableViewDataSource, NewParticlesCollectionTableViewCellProtocol, UITableViewDelegate
 {
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var particlesTable: UITableView!
@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
         createButton.layer.masksToBounds = true
         createButton.layer.cornerRadius = 6
      
-        self.useFirebaseDatabase()
+//        self.useFirebaseDatabase()
         
         titleTextField.style = TitleInputStyle() as AnimatedTextInputStyle
         titleTextField.backgroundColor = UIColor.clear
@@ -42,12 +42,12 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
         descriptionTextField.type = .multiline
     }
     
-    func useFirebaseDatabase()
-    {
-        let ref = FIRDatabase.database().reference()
-        ref.child("articles").child("article2").setValue(["title": "Igal is awesome!"])
-    }
-    
+//    func useFirebaseDatabase()
+//    {
+//        let ref = FIRDatabase.database().reference()
+//        ref.child("articles").child("article2").setValue(["title": "Igal is awesome!"])
+//    }
+//    
     override func viewDidLayoutSubviews()
     {
         particlesTableHeight.constant = particlesTable.contentSize.height
@@ -72,12 +72,7 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
         
         self.present(pickerController, animated: true) {}
     }
-    
-    @IBAction func didPressDeleteCell(_ sender: Any)
-    {
-//        particlesTable.setEditing(true, animated: true)
-    }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return newParticles.count + 1
@@ -87,7 +82,7 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
     {
         if indexPath.row == newParticles.count
         {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(NewParticlesCollectionTableViewCell.self), for: indexPath) as? NewParticlesCollectionTableViewCell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(IconsCollectionCell.self), for: indexPath) as? IconsCollectionCell
             {
                 cell.delegate = self
                 return cell
@@ -95,11 +90,10 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
         }
         else
         {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ParticleTableViewCell.self), for: indexPath) as? ParticleTableViewCell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(WebViewFallbackCell.self), for: indexPath) as? WebViewFallbackCell
             {
                 let particle = newParticles[indexPath.row]
                 cell.setDetails(particle: particle)
-                cell.delegate = self
                 return cell
             }
         }
@@ -107,48 +101,6 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
         return UITableViewCell()
     }
     
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
-    {
-        if indexPath.row == newParticles.count
-        {
-            return false
-        }
-        else
-        {
-            return true
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
-    {
-        if (editingStyle == UITableViewCellEditingStyle.delete) {
-            newParticles.remove(at: indexPath.row)
-            
-            CATransaction.begin()
-            tableView.beginUpdates()
-            CATransaction.setCompletionBlock({
-                self.particlesTable.reloadData()
-                self.viewDidLayoutSubviews()
-            })
-            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.top)
-            tableView.endUpdates()
-            CATransaction.commit()
-        }
-        
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
-    {
-        if indexPath.row == newParticles.count
-        {
-            return 165
-        }
-        else
-        {
-            return 300
-        }
-    }
     
     func didSelectNewParticle(particle:NewParticleObject)
     {
@@ -163,7 +115,7 @@ class ViewController: UIViewController, UITableViewDataSource, NewParticlesColle
         
         for index in 0...newParticles.count
         {
-            if let particleCell = particlesTable.cellForRow(at: IndexPath(row: index, section:0)) as? ParticleTableViewCell
+            if let particleCell = particlesTable.cellForRow(at: IndexPath(row: index, section:0)) as? WebViewFallbackCell
             {
                 storyContent += particleCell.getParticleData()
             }

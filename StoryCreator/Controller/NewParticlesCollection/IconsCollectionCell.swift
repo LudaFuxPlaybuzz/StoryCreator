@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewParticlesCollectionTableViewCell: UITableViewCell, UICollectionViewDataSource, NewParticleCollectionViewCellProtocol
+class IconsCollectionCell: UITableViewCell, UICollectionViewDataSource, NewParticleCollectionViewCellProtocol
 {
     @IBOutlet weak var cardBackground: UIView!
     @IBOutlet weak var NewParticlesCollectionView: UICollectionView!
@@ -38,7 +38,7 @@ class NewParticlesCollectionTableViewCell: UITableViewCell, UICollectionViewData
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(NewParticleCollectionViewCell.self), for: indexPath) as? NewParticleCollectionViewCell
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(IconCell.self), for: indexPath) as? IconCell
         {
             let particle:NewParticleObject = self.particleItems[indexPath.row]
             cell.setDetails(particle)

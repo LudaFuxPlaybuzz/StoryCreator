@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ParticleTableViewCell: UITableViewCell, UIWebViewDelegate
+class WebViewFallbackCell: UITableViewCell, UIWebViewDelegate
 {
 
     @IBOutlet weak var cardBackground: UIView!
@@ -16,8 +16,7 @@ class ParticleTableViewCell: UITableViewCell, UIWebViewDelegate
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var webViewContainerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
-    weak var delegate: ParticleTableViewCellProtocol?
+
     let cardBackgroundBorder = CAShapeLayer()
     var particle:NewParticleObject!
     
@@ -76,14 +75,5 @@ class ParticleTableViewCell: UITableViewCell, UIWebViewDelegate
             self.iconImageView.image = particleImage
         }
     }
-    
-    @IBAction func didPressDeleteCell(_ sender: Any)
-    {
-        self.delegate?.didPressDeleteCell(sender)
-    }
 }
 
-@objc protocol ParticleTableViewCellProtocol {
-    
-    func didPressDeleteCell(_ sender: Any)
-}
