@@ -8,13 +8,14 @@
 
 import UIKit
 
-class ParticleTableViewCell: UITableViewCell
+class ParticleTableViewCell: UITableViewCell, UIWebViewDelegate
 {
 
     @IBOutlet weak var cardBackground: UIView!
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var webView: UIWebView!
     @IBOutlet weak var webViewContainerHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     weak var delegate: ParticleTableViewCellProtocol?
     let cardBackgroundBorder = CAShapeLayer()
@@ -26,6 +27,7 @@ class ParticleTableViewCell: UITableViewCell
         
         webView.scrollView.isScrollEnabled = false
         webView.scrollView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
+        webView.delegate = self
     }
 
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -35,6 +37,11 @@ class ParticleTableViewCell: UITableViewCell
         }
     }
 
+    func webViewDidFinishLoad(_ webView: UIWebView)
+    {
+        activityIndicator.isHidden = true
+    }
+    
     func updatePageViewsFrames()
     {
 //        webView.sizeToFit()

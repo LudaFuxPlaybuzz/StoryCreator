@@ -21,14 +21,14 @@ class NewParticlesCollectionTableViewCell: UITableViewCell, UICollectionViewData
     {
         super.awakeFromNib()
 
-        particleItems = [NewParticleObject(particleImage:"1", particleURL:""),
-                        NewParticleObject(particleImage:"2", particleURL:""),
+        particleItems = [NewParticleObject(particleImage:"1", particleURL:"https://steelb.com/story.html?particle=paragraph"),
+                        NewParticleObject(particleImage:"2", particleURL:"https://steelb.com/story.html?particle=imageSection"),
                         NewParticleObject(particleImage:"3", particleURL:"https://steelb.com/story.html?particle=quote"),
                         NewParticleObject(particleImage:"4", particleURL:"https://steelb.com/story.html?particle=convo"),
-                        NewParticleObject(particleImage:"5", particleURL:"https://steelb.com/story.html?particle=paragraph"),
-                        NewParticleObject(particleImage:"6", particleURL:""),
-                        NewParticleObject(particleImage:"7", particleURL:""),
-                        NewParticleObject(particleImage:"8", particleURL:"")]
+                        NewParticleObject(particleImage:"5", particleURL:"https://steelb.com/story.html?particle=summaryCard"),
+                        NewParticleObject(particleImage:"6", particleURL:"https://steelb.com/story.html?particle=embedSection"),
+                        NewParticleObject(particleImage:"7", particleURL:"https://steelb.com/story.html?particle=flipCard"),
+                        NewParticleObject(particleImage:"8", particleURL:"https://steelb.com/story.html?particle=pollSection")]
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
