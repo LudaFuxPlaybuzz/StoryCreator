@@ -142,6 +142,9 @@
                                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LG9-D2-ydE">
                                                                             <rect key="frame" x="10" y="10" width="270" height="133"/>
                                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="133" id="FR7-aN-9uX"/>
+                                                                            </constraints>
                                                                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="h38-RM-yvf">
                                                                                 <size key="itemSize" width="45" height="45"/>
                                                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>

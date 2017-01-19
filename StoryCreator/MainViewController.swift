@@ -40,6 +40,9 @@ class MainViewController: UIViewController, UITableViewDataSource, NewParticlesC
         descriptionTextField.style = DescriptionInputStyle() as AnimatedTextInputStyle
         descriptionTextField.placeHolderText = "Description"
         descriptionTextField.type = .multiline
+        
+        particlesTable.rowHeight = UITableViewAutomaticDimension
+        particlesTable.estimatedRowHeight = 140
     }
     
 //    func useFirebaseDatabase()
