@@ -49,21 +49,25 @@ class WebViewFallbackCell: UITableViewCell, UIWebViewDelegate
     
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
        
-        print(request.url?.query ?? <#default value#>)
+        print(request.url?.query ?? "")
 //        if request.URL?.query?.containsString("show_activity_indicator=true") {
 //            
 //        }
+        return true
     }
     
     func setDetails(particle:NewParticleObject)
     {
-        self.particle = particle
-        
-        
-        if let url = URL(string: particle.particleURL)
+        if self.particle != particle
         {
-            let request = URLRequest(url: url)
-            webView.loadRequest(request)
+            self.particle = particle
+            
+            
+            if let url = URL(string: particle.particleURL)
+            {
+                let request = URLRequest(url: url)
+                webView.loadRequest(request)
+            }
         }
     }
     
