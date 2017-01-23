@@ -18,4 +18,8 @@ class NewParticleObject: NSObject
         self.particleImage = particleImage
         self.particleURL = particleURL
     }
+    
+    override var description: String {
+        return "\(type(of: self)) particleImage - \(self.particleImage)"
+    }
 }

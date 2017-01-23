@@ -29,6 +29,7 @@ class WebViewFallbackCell: UITableViewCell, UIWebViewDelegate
     deinit
     {
         webView.scrollView.removeObserver(self, forKeyPath: "contentSize")
+        self.particle = nil
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
@@ -58,16 +59,13 @@ class WebViewFallbackCell: UITableViewCell, UIWebViewDelegate
     
     func setDetails(particle:NewParticleObject)
     {
-        if self.particle != particle
+        self.particle = particle
+        
+        
+        if let url = URL(string: particle.particleURL)
         {
-            self.particle = particle
-            
-            
-            if let url = URL(string: particle.particleURL)
-            {
-                let request = URLRequest(url: url)
-                webView.loadRequest(request)
-            }
+            let request = URLRequest(url: url)
+            webView.loadRequest(request)
         }
     }
     
