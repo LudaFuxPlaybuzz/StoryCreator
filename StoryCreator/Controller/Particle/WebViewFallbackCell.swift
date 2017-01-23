@@ -47,6 +47,14 @@ class WebViewFallbackCell: UITableViewCell, UIWebViewDelegate
         self.delegate?.reloadTable()
     }
     
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+       
+        print(request.url?.query ?? <#default value#>)
+//        if request.URL?.query?.containsString("show_activity_indicator=true") {
+//            
+//        }
+    }
+    
     func setDetails(particle:NewParticleObject)
     {
         self.particle = particle

@@ -113,6 +113,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return UITableViewCell()
     }
     
+    //MARK: Deletion
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
         if editingStyle == UITableViewCellEditingStyle.delete
