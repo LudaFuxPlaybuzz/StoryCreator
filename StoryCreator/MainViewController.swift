@@ -59,6 +59,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         particlesTable.reloadData()
     }
     
+    func triggerOpenCamera()
+    {
+        self.didPressCameraButton(self)
+    }
+    
     override func viewDidLayoutSubviews()
     {
 //        particlesTableHeight.constant = particlesTable.contentSize.height

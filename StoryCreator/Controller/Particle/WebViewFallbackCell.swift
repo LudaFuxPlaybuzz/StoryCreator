@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DKImagePickerController
 
 class WebViewFallbackCell: UITableViewCell, UIWebViewDelegate
 {
@@ -50,6 +51,9 @@ class WebViewFallbackCell: UITableViewCell, UIWebViewDelegate
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
        
         print(request.url?.query ?? "")
+        if (((request.url?.query) != nil) && request.url?.query == "GetImage") {
+            self.delegate?.triggerOpenCamera()
+        }
 //        if request.URL?.query?.containsString("show_activity_indicator=true") {
 //            
 //        }
@@ -80,6 +84,7 @@ class WebViewFallbackCell: UITableViewCell, UIWebViewDelegate
 @objc protocol WebViewFallbackCellProtocol: class
 {
     func reloadTable()
+    func triggerOpenCamera()
 }
 
 
