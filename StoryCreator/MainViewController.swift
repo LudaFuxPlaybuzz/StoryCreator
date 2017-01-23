@@ -11,7 +11,7 @@ import DKImagePickerController
 import AnimatedTextInput
 import Firebase
 
-class MainViewController: UIViewController, UITableViewDataSource, NewParticlesCollectionTableViewCellProtocol, UITableViewDelegate
+class MainViewController: UIViewController, UITableViewDataSource, NewParticlesCollectionTableViewCellProtocol, UITableViewDelegate, WebViewFallbackCellProtocol
 {
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var particlesTable: UITableView!
@@ -43,6 +43,9 @@ class MainViewController: UIViewController, UITableViewDataSource, NewParticlesC
         
         particlesTable.rowHeight = UITableViewAutomaticDimension
         particlesTable.estimatedRowHeight = 140
+        
+        containerHeightConstraint.constant = self.view.frame.height
+        self.view.needsUpdateConstraints()
     }
     
 //    func useFirebaseDatabase()
@@ -51,11 +54,16 @@ class MainViewController: UIViewController, UITableViewDataSource, NewParticlesC
 //        ref.child("articles").child("article2").setValue(["title": "Igal is awesome!"])
 //    }
 //    
+    func reloadTable()
+    {
+        particlesTable.reloadData()
+    }
+    
     override func viewDidLayoutSubviews()
     {
-        particlesTableHeight.constant = particlesTable.contentSize.height
+//        particlesTableHeight.constant = particlesTable.contentSize.height
         
-        containerHeightConstraint.constant = particlesTable.contentSize.height + 300
+//        containerHeightConstraint.constant = particlesTable.contentSize.height + 300
     }
     
     @IBAction func didPressCameraButton(_ sender: Any)
@@ -97,6 +105,7 @@ class MainViewController: UIViewController, UITableViewDataSource, NewParticlesC
             {
                 let particle = newParticles[indexPath.row]
                 cell.setDetails(particle: particle)
+                cell.delegate = self
                 return cell
             }
         }

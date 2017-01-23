@@ -10,25 +10,27 @@ import UIKit
 
 class WebViewFallbackCell: UITableViewCell, UIWebViewDelegate
 {
-
-    @IBOutlet weak var cardBackground: UIView!
-    @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var webView: UIWebView!
-    @IBOutlet weak var webViewContainerHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var webViewHeight: NSLayoutConstraint!
 
     let cardBackgroundBorder = CAShapeLayer()
     var particle:NewParticleObject!
     
+    weak var delegate: WebViewFallbackCellProtocol?
+    
     override func awakeFromNib()
     {
         super.awakeFromNib()
-        
         webView.scrollView.isScrollEnabled = false
         webView.scrollView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
         webView.delegate = self
     }
 
+    deinit
+    {
+        webView.scrollView.removeObserver(self, forKeyPath: "contentSize")
+    }
+    
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == "contentSize"
         {
@@ -36,28 +38,13 @@ class WebViewFallbackCell: UITableViewCell, UIWebViewDelegate
         }
     }
 
-    func webViewDidFinishLoad(_ webView: UIWebView)
-    {
-        activityIndicator.isHidden = true
-    }
-    
     func updatePageViewsFrames()
     {
-//        webView.sizeToFit()
-//        let webViewContentHeight:CGFloat = webView.scrollView.contentSize.height
-//        webView.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: webViewContentHeight)
-//        webViewContainerHeightConstraint.constant = webViewContentHeight
-//        self.setNeedsUpdateConstraints()
-    }
-    
-    func getParticleData() -> String
-    {
-        return webView.stringByEvaluatingJavaScript(from: "getPbItem()")!
-    }
-    
-    deinit
-    {
-        webView.scrollView.removeObserver(self, forKeyPath: "contentSize")
+        webView.sizeToFit()
+        let newWebViewHeight:CGFloat = webView.scrollView.contentSize.height
+        webViewHeight.constant = newWebViewHeight
+        self.setNeedsUpdateConstraints()
+        self.delegate?.reloadTable()
     }
     
     func setDetails(particle:NewParticleObject)
@@ -70,10 +57,17 @@ class WebViewFallbackCell: UITableViewCell, UIWebViewDelegate
             let request = URLRequest(url: url)
             webView.loadRequest(request)
         }
-        else if let particleImage = UIImage(named: particle.particleImage)
-        {
-            self.iconImageView.image = particleImage
-        }
+    }
+    
+    func getParticleData() -> String
+    {
+        return webView.stringByEvaluatingJavaScript(from: "getPbItem()")!
     }
 }
+
+@objc protocol WebViewFallbackCellProtocol: class
+{
+    func reloadTable()
+}
+
 
