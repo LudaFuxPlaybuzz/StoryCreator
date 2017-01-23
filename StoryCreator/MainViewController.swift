@@ -11,7 +11,7 @@ import DKImagePickerController
 import AnimatedTextInput
 import Firebase
 
-class MainViewController: UIViewController, UITableViewDataSource, NewParticlesCollectionTableViewCellProtocol, UITableViewDelegate, WebViewFallbackCellProtocol
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,NewParticlesCollectionTableViewCellProtocol, WebViewFallbackCellProtocol
 {
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var particlesTable: UITableView!
@@ -113,6 +113,14 @@ class MainViewController: UIViewController, UITableViewDataSource, NewParticlesC
         return UITableViewCell()
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == UITableViewCellEditingStyle.delete
+        {
+            newParticles .remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
+        }
+    }
     
     func didSelectNewParticle(particle:NewParticleObject)
     {
