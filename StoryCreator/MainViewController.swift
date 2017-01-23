@@ -122,6 +122,20 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+    //MARK: Reordering
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool
+    {
+        return (indexPath.row != newParticles.count)
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+        let source = newParticles[sourceIndexPath.row]
+        let destination = newParticles[destinationIndexPath.row]
+        newParticles[sourceIndexPath.row] = destination
+        newParticles[destinationIndexPath.row] = source
+    }
+    
     func didSelectNewParticle(particle:NewParticleObject)
     {
         newParticles.append(particle)

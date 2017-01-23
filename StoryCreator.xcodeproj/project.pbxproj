@@ -20,6 +20,7 @@
 		859B55A61E0AC8FA00231A2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859B55A41E0AC8FA00231A2B /* LaunchScreen.storyboard */; };
 		859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B55B11E0AD2E700231A2B /* FloatLabelTextField.swift */; };
 		859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B55B21E0AD2E700231A2B /* FloatLabelTextView.swift */; };
+		85D675931E3637B2003B9798 /* LPRTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D675921E3637B2003B9798 /* LPRTableView.swift */; };
 		85DDC5921E2FCA100077E942 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85DDC5911E2FCA100077E942 /* GoogleService-Info.plist */; };
 		989A2345E41CEB9D85ACB3B1 /* Pods_StoryCreator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849CDF9A9E24697EC0AE0A98 /* Pods_StoryCreator.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		859B55A71E0AC8FA00231A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		859B55B11E0AD2E700231A2B /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
 		859B55B21E0AD2E700231A2B /* FloatLabelTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextView.swift; sourceTree = "<group>"; };
+		85D675921E3637B2003B9798 /* LPRTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPRTableView.swift; sourceTree = "<group>"; };
 		85DDC5911E2FCA100077E942 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DF9CF8EDB0849B8B7E03C113 /* Pods-StoryCreator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryCreator.release.xcconfig"; path = "Pods/Target Support Files/Pods-StoryCreator/Pods-StoryCreator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +147,7 @@
 		859B55AF1E0ACC9E00231A2B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				85D675921E3637B2003B9798 /* LPRTableView.swift */,
 				859B559B1E0AC8FA00231A2B /* AppDelegate.swift */,
 				85DDC5911E2FCA100077E942 /* GoogleService-Info.plist */,
 				859B55B01E0AD2D200231A2B /* FloatLabel */,
@@ -312,6 +315,7 @@
 				85267B051E30E3230001845C /* Artist.swift in Sources */,
 				8531DCC91E0BE1C600BDEECB /* IconsCollectionCell.swift in Sources */,
 				8531DCCB1E0BF08E00BDEECB /* IconCell.swift in Sources */,
+				85D675931E3637B2003B9798 /* LPRTableView.swift in Sources */,
 				852C02651E0C2ABD006B5795 /* WebViewFallbackCell.swift in Sources */,
 				859B559E1E0AC8FA00231A2B /* MainViewController.swift in Sources */,
 				859B559C1E0AC8FA00231A2B /* AppDelegate.swift in Sources */,
