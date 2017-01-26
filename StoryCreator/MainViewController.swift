@@ -108,6 +108,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         {
             if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ParticleOverviewTableViewCell.self), for: indexPath) as? ParticleOverviewTableViewCell
             {
+                let bgColorView = UIView()
+                bgColorView.backgroundColor = UIColor.clear
+                cell.selectedBackgroundView = bgColorView
+                
                 let particle = newParticles[indexPath.row]
                 cell.setDetails(particle: particle)
 //                cell.delegate = self
@@ -151,13 +155,13 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any!)
     {
-//        if let id = segue.identifier
-//        {
-//            CLSLogv("FeedViewController prepareForSegue: segue.identifier - %@", getVaList([id]))
-//        }
-        
-        let viewController = segue.destination
-        viewController.title = "sdfs"
+        if let indexPath = particlesTable.indexPathForSelectedRow
+        {
+            let selectedRow = indexPath.row
+            let detailViewController = segue.destination
+            let particle = newParticles[selectedRow]
+            detailViewController.title = particle.name
+        }
     }
 
     @IBAction func didPressCreateButton(_ sender: Any)
