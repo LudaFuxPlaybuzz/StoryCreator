@@ -14,21 +14,21 @@ class IconsCollectionCell: UITableViewCell, UICollectionViewDataSource, NewParti
     @IBOutlet weak var NewParticlesCollectionView: UICollectionView!
     
     let cardBackgroundBorder = CAShapeLayer()
-    var particleItems = [NewParticleObject]()
+    var particleItems = [Particle]()
     weak var delegate: NewParticlesCollectionTableViewCellProtocol?
     
     override func awakeFromNib()
     {
         super.awakeFromNib()
 
-        particleItems = [NewParticleObject(particleImage:"1", particleURL:"https://steelb.com/story.html?particle=paragraph"),
-                        NewParticleObject(particleImage:"2", particleURL:"https://steelb.com/story.html?particle=imageSection"),
-                        NewParticleObject(particleImage:"3", particleURL:"https://steelb.com/story.html?particle=quote"),
-                        NewParticleObject(particleImage:"4", particleURL:"https://steelb.com/story.html?particle=convo"),
-                        NewParticleObject(particleImage:"5", particleURL:"https://steelb.com/story.html?particle=summaryCard"),
-                        NewParticleObject(particleImage:"6", particleURL:"https://steelb.com/story.html?particle=embedSection"),
-                        NewParticleObject(particleImage:"7", particleURL:"https://steelb.com/story.html?particle=flipCard"),
-                        NewParticleObject(particleImage:"8", particleURL:"https://steelb.com/story.html?particle=pollSection")]
+        particleItems = [Particle(particleImage:"1", particleURL:"https://steelb.com/story.html?particle=paragraph"),
+                        Particle(particleImage:"2", particleURL:"https://steelb.com/story.html?particle=imageSection"),
+                        Particle(particleImage:"3", particleURL:"https://steelb.com/story.html?particle=quote"),
+                        Particle(particleImage:"4", particleURL:"https://steelb.com/story.html?particle=convo"),
+                        Particle(particleImage:"5", particleURL:"https://steelb.com/story.html?particle=summaryCard"),
+                        Particle(particleImage:"6", particleURL:"https://steelb.com/story.html?particle=embedSection"),
+                        Particle(particleImage:"7", particleURL:"https://steelb.com/story.html?particle=flipCard"),
+                        Particle(particleImage:"8", particleURL:"https://steelb.com/story.html?particle=pollSection")]
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -40,7 +40,7 @@ class IconsCollectionCell: UITableViewCell, UICollectionViewDataSource, NewParti
     {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(IconCell.self), for: indexPath) as? IconCell
         {
-            let particle:NewParticleObject = self.particleItems[indexPath.row]
+            let particle:Particle = self.particleItems[indexPath.row]
             cell.setDetails(particle)
             cell.delegate = self
             return cell
@@ -49,7 +49,7 @@ class IconsCollectionCell: UITableViewCell, UICollectionViewDataSource, NewParti
         return UICollectionViewCell()
     }
     
-    func didSelectNewParticle(particle:NewParticleObject)
+    func didSelectNewParticle(particle:Particle)
     {
         self.delegate?.didSelectNewParticle(particle: particle)
     }
@@ -57,5 +57,5 @@ class IconsCollectionCell: UITableViewCell, UICollectionViewDataSource, NewParti
 
 @objc protocol NewParticlesCollectionTableViewCellProtocol: class
 {
-    func didSelectNewParticle(particle:NewParticleObject)
+    func didSelectNewParticle(particle:Particle)
 }

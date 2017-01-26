@@ -12,14 +12,14 @@ class ParticleOverviewTableViewCell: UITableViewCell {
 
     @IBOutlet weak var particleIcon: UIImageView!
     
-    var particle:NewParticleObject!
+    var particle:Particle!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    func setDetails(particle:NewParticleObject)
+    func setDetails(particle:Particle)
     {
         self.particle = particle
         

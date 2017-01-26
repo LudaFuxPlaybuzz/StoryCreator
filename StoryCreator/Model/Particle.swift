@@ -1,5 +1,5 @@
 //
-//  NewParticleObject.swift
+//  Particle.swift
 //  StoryCreator
 //
 //  Created by Luda Fux on 12/22/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewParticleObject: NSObject
+class Particle: NSObject
 {
     let particleImage: String
     let particleURL: String

@@ -22,7 +22,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var descriptionTextField: AnimatedTextInput!
     
     let descriptionBackgroundBorder = CAShapeLayer()
-    var newParticles = [NewParticleObject]()
+    var newParticles = [Particle]()
     
     override func viewDidLoad()
     {
@@ -142,7 +142,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         newParticles[destinationIndexPath.row] = source
     }
     
-    func didSelectNewParticle(particle:NewParticleObject)
+    func didSelectNewParticle(particle:Particle)
     {
         newParticles.append(particle)
         particlesTable.reloadData()

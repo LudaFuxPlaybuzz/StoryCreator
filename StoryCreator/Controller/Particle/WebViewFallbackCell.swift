@@ -15,7 +15,7 @@ class WebViewFallbackCell: UITableViewCell, UIWebViewDelegate
     @IBOutlet weak var webViewHeight: NSLayoutConstraint!
 
     let cardBackgroundBorder = CAShapeLayer()
-    var particle:NewParticleObject!
+    var particle:Particle!
     
     weak var delegate: WebViewFallbackCellProtocol?
     
@@ -61,7 +61,7 @@ class WebViewFallbackCell: UITableViewCell, UIWebViewDelegate
         return true
     }
     
-    func setDetails(particle:NewParticleObject)
+    func setDetails(particle:Particle)
     {
         self.particle = particle
         
