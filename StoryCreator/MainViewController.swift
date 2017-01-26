@@ -11,7 +11,7 @@ import DKImagePickerController
 import AnimatedTextInput
 import Firebase
 
-class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,NewParticlesCollectionTableViewCellProtocol, WebViewFallbackCellProtocol
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,NewParticlesCollectionTableViewCellProtocol
 {
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var particlesTable: UITableView!
@@ -54,15 +54,15 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //        ref.child("articles").child("article2").setValue(["title": "Igal is awesome!"])
 //    }
 //    
-    func reloadTable()
-    {
-        particlesTable.reloadData()
-    }
-    
-    func triggerOpenCamera()
-    {
-        self.didPressCameraButton(self)
-    }
+//    func reloadTable()
+//    {
+//        particlesTable.reloadData()
+//    }
+//    
+//    func triggerOpenCamera()
+//    {
+//        self.didPressCameraButton(self)
+//    }
     
     override func viewDidLayoutSubviews()
     {
@@ -106,11 +106,11 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         else
         {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(WebViewFallbackCell.self), for: indexPath) as? WebViewFallbackCell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ParticleOverviewTableViewCell.self), for: indexPath) as? ParticleOverviewTableViewCell
             {
                 let particle = newParticles[indexPath.row]
                 cell.setDetails(particle: particle)
-                cell.delegate = self
+//                cell.delegate = self
                 return cell
             }
         }
@@ -151,21 +151,21 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBAction func didPressCreateButton(_ sender: Any)
     {
-        var storyContent = ""
-        
-        for index in 0...newParticles.count
-        {
-            if let particleCell = particlesTable.cellForRow(at: IndexPath(row: index, section:0)) as? WebViewFallbackCell
-            {
-                storyContent += particleCell.getParticleData()
-            }
-        }
-        
-        let alertController = UIAlertController(title: "Story Content", message:
-            storyContent, preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-        
-        self.present(alertController, animated: true, completion: nil)
+//        var storyContent = ""
+//        
+//        for index in 0...newParticles.count
+//        {
+//            if let particleCell = particlesTable.cellForRow(at: IndexPath(row: index, section:0)) as? WebViewFallbackCell
+//            {
+//                storyContent += particleCell.getParticleData()
+//            }
+//        }
+//        
+//        let alertController = UIAlertController(title: "Story Content", message:
+//            storyContent, preferredStyle: UIAlertControllerStyle.alert)
+//        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+//        
+//        self.present(alertController, animated: true, completion: nil)
     }
     
     struct TitleInputStyle: AnimatedTextInputStyle {

@@ -13,6 +13,7 @@
 		852C02651E0C2ABD006B5795 /* WebViewFallbackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852C02641E0C2ABD006B5795 /* WebViewFallbackCell.swift */; };
 		8531DCC91E0BE1C600BDEECB /* IconsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531DCC81E0BE1C600BDEECB /* IconsCollectionCell.swift */; };
 		8531DCCB1E0BF08E00BDEECB /* IconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531DCCA1E0BF08E00BDEECB /* IconCell.swift */; };
+		8548C3871E3A22A9002D0887 /* ParticleOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548C3861E3A22A9002D0887 /* ParticleOverviewTableViewCell.swift */; };
 		859B559C1E0AC8FA00231A2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B559B1E0AC8FA00231A2B /* AppDelegate.swift */; };
 		859B559E1E0AC8FA00231A2B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B559D1E0AC8FA00231A2B /* MainViewController.swift */; };
 		859B55A11E0AC8FA00231A2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 859B559F1E0AC8FA00231A2B /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		852C02641E0C2ABD006B5795 /* WebViewFallbackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewFallbackCell.swift; path = Controller/Particle/WebViewFallbackCell.swift; sourceTree = "<group>"; };
 		8531DCC81E0BE1C600BDEECB /* IconsCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconsCollectionCell.swift; path = Controller/NewParticlesCollection/IconsCollectionCell.swift; sourceTree = "<group>"; };
 		8531DCCA1E0BF08E00BDEECB /* IconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconCell.swift; path = Controller/NewParticlesCollection/IconCell.swift; sourceTree = "<group>"; };
+		8548C3861E3A22A9002D0887 /* ParticleOverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticleOverviewTableViewCell.swift; path = Controller/Particle/ParticleOverviewTableViewCell.swift; sourceTree = "<group>"; };
 		859B55981E0AC8FA00231A2B /* StoryCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859B559B1E0AC8FA00231A2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859B559D1E0AC8FA00231A2B /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -87,12 +89,13 @@
 			name = Icons;
 			sourceTree = "<group>";
 		};
-		853534AF1E0BD6C000971F25 /* Fallback */ = {
+		853534AF1E0BD6C000971F25 /* Particle */ = {
 			isa = PBXGroup;
 			children = (
 				852C02641E0C2ABD006B5795 /* WebViewFallbackCell.swift */,
+				8548C3861E3A22A9002D0887 /* ParticleOverviewTableViewCell.swift */,
 			);
-			name = Fallback;
+			name = Particle;
 			sourceTree = "<group>";
 		};
 		859B558F1E0AC8FA00231A2B = {
@@ -129,7 +132,7 @@
 			children = (
 				859B559D1E0AC8FA00231A2B /* MainViewController.swift */,
 				8531DCC51E0BD95000BDEECB /* Icons */,
-				853534AF1E0BD6C000971F25 /* Fallback */,
+				853534AF1E0BD6C000971F25 /* Particle */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				852C02631E0C18A7006B5795 /* NewParticleObject.swift in Sources */,
 				859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */,
 				85267B051E30E3230001845C /* Artist.swift in Sources */,
+				8548C3871E3A22A9002D0887 /* ParticleOverviewTableViewCell.swift in Sources */,
 				8531DCC91E0BE1C600BDEECB /* IconsCollectionCell.swift in Sources */,
 				8531DCCB1E0BF08E00BDEECB /* IconCell.swift in Sources */,
 				85D675931E3637B2003B9798 /* LPRTableView.swift in Sources */,
