@@ -19,7 +19,7 @@ class IconCell  : UICollectionViewCell {
     {
         self.particle = particle
         
-        if let particleImage = UIImage(named: particle.particleImage)
+        if let particleImage = UIImage(named: particle.image)
         {
             self.particleIconButton.setBackgroundImage(particleImage, for: UIControlState.normal)
         }

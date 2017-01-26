@@ -10,16 +10,18 @@ import UIKit
 
 class Particle: NSObject
 {
-    let particleImage: String
-    let particleURL: String
+    let image: String
+    let url: String
+    let name: String
     
-    init(particleImage:String, particleURL:String)
+    init(image:String, name:String, url:String)
     {
-        self.particleImage = particleImage
-        self.particleURL = particleURL
+        self.image = image
+        self.url = url
+        self.name = name
     }
     
     override var description: String {
-        return "\(type(of: self)) particleImage - \(self.particleImage)"
+        return "\(type(of: self)) name - \(self.name)"
     }
 }

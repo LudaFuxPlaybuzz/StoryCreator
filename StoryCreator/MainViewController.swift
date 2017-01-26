@@ -149,6 +149,17 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.viewDidLayoutSubviews()
      }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!)
+    {
+//        if let id = segue.identifier
+//        {
+//            CLSLogv("FeedViewController prepareForSegue: segue.identifier - %@", getVaList([id]))
+//        }
+        
+        let viewController = segue.destination
+        viewController.title = "sdfs"
+    }
+
     @IBAction func didPressCreateButton(_ sender: Any)
     {
 //        var storyContent = ""

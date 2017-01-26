@@ -21,14 +21,14 @@ class IconsCollectionCell: UITableViewCell, UICollectionViewDataSource, NewParti
     {
         super.awakeFromNib()
 
-        particleItems = [Particle(particleImage:"1", particleURL:"https://steelb.com/story.html?particle=paragraph"),
-                        Particle(particleImage:"2", particleURL:"https://steelb.com/story.html?particle=imageSection"),
-                        Particle(particleImage:"3", particleURL:"https://steelb.com/story.html?particle=quote"),
-                        Particle(particleImage:"4", particleURL:"https://steelb.com/story.html?particle=convo"),
-                        Particle(particleImage:"5", particleURL:"https://steelb.com/story.html?particle=summaryCard"),
-                        Particle(particleImage:"6", particleURL:"https://steelb.com/story.html?particle=embedSection"),
-                        Particle(particleImage:"7", particleURL:"https://steelb.com/story.html?particle=flipCard"),
-                        Particle(particleImage:"8", particleURL:"https://steelb.com/story.html?particle=pollSection")]
+        particleItems = [Particle(image:"1", name:"Text", url:"https://steelb.com/story.html?particle=paragraph"),
+                        Particle(image:"2", name:"Image", url:"https://steelb.com/story.html?particle=imageSection"),
+                        Particle(image:"3", name:"Quote", url:"https://steelb.com/story.html?particle=quote"),
+                        Particle(image:"4", name:"Convo", url:"https://steelb.com/story.html?particle=convo"),
+                        Particle(image:"5", name:"Summery", url:"https://steelb.com/story.html?particle=summaryCard"),
+                        Particle(image:"6", name:"Embed Section", url:"https://steelb.com/story.html?particle=embedSection"),
+                        Particle(image:"7", name:"Flip Card", url:"https://steelb.com/story.html?particle=flipCard"),
+                        Particle(image:"8", name:"Poll", url:"https://steelb.com/story.html?particle=pollSection")]
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int

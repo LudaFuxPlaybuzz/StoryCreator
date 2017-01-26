@@ -23,7 +23,7 @@ class ParticleOverviewTableViewCell: UITableViewCell {
     {
         self.particle = particle
         
-        if let particleImage = UIImage(named: particle.particleImage)
+        if let particleImage = UIImage(named: particle.image)
         {
             self.particleIcon.image = particleImage
         }

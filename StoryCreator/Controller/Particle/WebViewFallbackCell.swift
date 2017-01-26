@@ -66,7 +66,7 @@ class WebViewFallbackCell: UITableViewCell, UIWebViewDelegate
         self.particle = particle
         
         
-        if let url = URL(string: particle.particleURL)
+        if let url = URL(string: particle.image)
         {
             let request = URLRequest(url: url)
             webView.loadRequest(request)
