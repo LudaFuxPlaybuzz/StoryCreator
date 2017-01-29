@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		852541501E3E1698008F6A09 /* WebFallbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525414F1E3E1698008F6A09 /* WebFallbackViewController.swift */; };
+		852541541E3E36A7008F6A09 /* PublishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541531E3E36A7008F6A09 /* PublishTableViewCell.swift */; };
+		852541561E3E3893008F6A09 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541551E3E3893008F6A09 /* DescriptionTableViewCell.swift */; };
 		85267B051E30E3230001845C /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85267B031E30E3230001845C /* Artist.swift */; };
 		85267B061E30E3230001845C /* artists.json in Resources */ = {isa = PBXBuildFile; fileRef = 85267B041E30E3230001845C /* artists.json */; };
 		852C02631E0C18A7006B5795 /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852C02621E0C18A7006B5795 /* Particle.swift */; };
-		852C02651E0C2ABD006B5795 /* WebViewFallbackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852C02641E0C2ABD006B5795 /* WebViewFallbackCell.swift */; };
 		8531DCC91E0BE1C600BDEECB /* IconsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531DCC81E0BE1C600BDEECB /* IconsCollectionCell.swift */; };
 		8531DCCB1E0BF08E00BDEECB /* IconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531DCCA1E0BF08E00BDEECB /* IconCell.swift */; };
 		8548C3871E3A22A9002D0887 /* ParticleOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8548C3861E3A22A9002D0887 /* ParticleOverviewTableViewCell.swift */; };
@@ -31,10 +32,11 @@
 		46D0F28B86A88446D3578897 /* Pods-StoryCreator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryCreator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoryCreator/Pods-StoryCreator.debug.xcconfig"; sourceTree = "<group>"; };
 		849CDF9A9E24697EC0AE0A98 /* Pods_StoryCreator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoryCreator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8525414F1E3E1698008F6A09 /* WebFallbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebFallbackViewController.swift; path = Controller/Particles/WebFallbackViewController.swift; sourceTree = "<group>"; };
+		852541531E3E36A7008F6A09 /* PublishTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublishTableViewCell.swift; path = Controller/PreviewViewController/PreviewTableComponents/PublishTableViewCell.swift; sourceTree = "<group>"; };
+		852541551E3E3893008F6A09 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DescriptionTableViewCell.swift; path = Controller/PreviewViewController/PreviewTableComponents/DescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		85267B031E30E3230001845C /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		85267B041E30E3230001845C /* artists.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = artists.json; sourceTree = "<group>"; };
 		852C02621E0C18A7006B5795 /* Particle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Particle.swift; path = Model/Particle.swift; sourceTree = "<group>"; };
-		852C02641E0C2ABD006B5795 /* WebViewFallbackCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebViewFallbackCell.swift; path = Controller/Particle/WebViewFallbackCell.swift; sourceTree = "<group>"; };
 		8531DCC81E0BE1C600BDEECB /* IconsCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconsCollectionCell.swift; path = Controller/NewParticlesCollection/IconsCollectionCell.swift; sourceTree = "<group>"; };
 		8531DCCA1E0BF08E00BDEECB /* IconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconCell.swift; path = Controller/NewParticlesCollection/IconCell.swift; sourceTree = "<group>"; };
 		8548C3861E3A22A9002D0887 /* ParticleOverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticleOverviewTableViewCell.swift; path = Controller/Particle/ParticleOverviewTableViewCell.swift; sourceTree = "<group>"; };
@@ -72,6 +74,26 @@
 			name = Particles;
 			sourceTree = "<group>";
 		};
+		852541511E3E3605008F6A09 /* PreviewViewController */ = {
+			isa = PBXGroup;
+			children = (
+				859B559D1E0AC8FA00231A2B /* MainViewController.swift */,
+				852541521E3E3632008F6A09 /* PreviewTableComponents */,
+				8531DCC51E0BD95000BDEECB /* Icons */,
+			);
+			name = PreviewViewController;
+			sourceTree = "<group>";
+		};
+		852541521E3E3632008F6A09 /* PreviewTableComponents */ = {
+			isa = PBXGroup;
+			children = (
+				8548C3861E3A22A9002D0887 /* ParticleOverviewTableViewCell.swift */,
+				852541531E3E36A7008F6A09 /* PublishTableViewCell.swift */,
+				852541551E3E3893008F6A09 /* DescriptionTableViewCell.swift */,
+			);
+			name = PreviewTableComponents;
+			sourceTree = "<group>";
+		};
 		85267B021E30E3120001845C /* test */ = {
 			isa = PBXGroup;
 			children = (
@@ -97,15 +119,6 @@
 				8531DCCA1E0BF08E00BDEECB /* IconCell.swift */,
 			);
 			name = Icons;
-			sourceTree = "<group>";
-		};
-		853534AF1E0BD6C000971F25 /* Particle */ = {
-			isa = PBXGroup;
-			children = (
-				852C02641E0C2ABD006B5795 /* WebViewFallbackCell.swift */,
-				8548C3861E3A22A9002D0887 /* ParticleOverviewTableViewCell.swift */,
-			);
-			name = Particle;
 			sourceTree = "<group>";
 		};
 		859B558F1E0AC8FA00231A2B = {
@@ -140,10 +153,8 @@
 		859B55AD1E0ACC7F00231A2B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				859B559D1E0AC8FA00231A2B /* MainViewController.swift */,
+				852541511E3E3605008F6A09 /* PreviewViewController */,
 				8525414E1E3E1661008F6A09 /* Particles */,
-				8531DCC51E0BD95000BDEECB /* Icons */,
-				853534AF1E0BD6C000971F25 /* Particle */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -326,13 +337,14 @@
 				859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */,
 				852C02631E0C18A7006B5795 /* Particle.swift in Sources */,
 				859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */,
+				852541541E3E36A7008F6A09 /* PublishTableViewCell.swift in Sources */,
 				852541501E3E1698008F6A09 /* WebFallbackViewController.swift in Sources */,
 				85267B051E30E3230001845C /* Artist.swift in Sources */,
 				8548C3871E3A22A9002D0887 /* ParticleOverviewTableViewCell.swift in Sources */,
+				852541561E3E3893008F6A09 /* DescriptionTableViewCell.swift in Sources */,
 				8531DCC91E0BE1C600BDEECB /* IconsCollectionCell.swift in Sources */,
 				8531DCCB1E0BF08E00BDEECB /* IconCell.swift in Sources */,
 				85D675931E3637B2003B9798 /* LPRTableView.swift in Sources */,
-				852C02651E0C2ABD006B5795 /* WebViewFallbackCell.swift in Sources */,
 				859B559E1E0AC8FA00231A2B /* MainViewController.swift in Sources */,
 				859B559C1E0AC8FA00231A2B /* AppDelegate.swift in Sources */,
 			);

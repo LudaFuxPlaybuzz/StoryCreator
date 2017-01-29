@@ -115,22 +115,41 @@
                                                     <constraint firstAttribute="height" constant="132" id="xnk-7i-6wk"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gp7-cN-pHp" customClass="AnimatedTextInput" customModule="AnimatedTextInput">
-                                                <rect key="frame" x="0.0" y="142" width="320" height="85"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="85" id="t4t-iN-C0C"/>
-                                                </constraints>
-                                            </view>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ue4-yG-3vE" customClass="LPRTableView" customModule="StoryCreator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="237" width="320" height="418"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ue4-yG-3vE" customClass="LPRTableView" customModule="StoryCreator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="142" width="320" height="558"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <prototypes>
-                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="StoryCreator.ParticleOverviewTableViewCell" id="3mt-fB-B9z" customClass="ParticleOverviewTableViewCell" customModule="StoryCreator" customModuleProvider="target">
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.DescriptionTableViewCell" id="tdr-VI-Kch" customClass="DescriptionTableViewCell" customModule="StoryCreator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="28" width="320" height="80"/>
                                                         <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tdr-VI-Kch" id="WEf-DM-NUk">
+                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gp7-cN-pHp" customClass="AnimatedTextInput" customModule="AnimatedTextInput">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="80" id="7z1-y6-oKr"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstAttribute="bottom" secondItem="gp7-cN-pHp" secondAttribute="bottom" id="Ct3-Ni-1Re"/>
+                                                                <constraint firstItem="gp7-cN-pHp" firstAttribute="top" secondItem="WEf-DM-NUk" secondAttribute="top" id="HO6-7Y-FFG"/>
+                                                                <constraint firstItem="gp7-cN-pHp" firstAttribute="leading" secondItem="WEf-DM-NUk" secondAttribute="leading" id="fgI-Lw-XVy"/>
+                                                                <constraint firstAttribute="trailing" secondItem="gp7-cN-pHp" secondAttribute="trailing" id="z5u-Ah-2dU"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="descriptionTextField" destination="gp7-cN-pHp" id="cHg-D1-mO5"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="StoryCreator.ParticleOverviewTableViewCell" id="3mt-fB-B9z" customClass="ParticleOverviewTableViewCell" customModule="StoryCreator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="108" width="320" height="80"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3mt-fB-B9z" id="4Ll-wN-42g">
-                                                            <rect key="frame" x="0.0" y="0.0" width="287" height="79"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="287" height="80"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M3V-yf-al6">
@@ -168,10 +187,10 @@
                                                         </connections>
                                                     </tableViewCell>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.IconsCollectionCell" rowHeight="169" id="Omb-Hm-LEL" customClass="IconsCollectionCell" customModule="StoryCreator" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="108" width="320" height="169"/>
+                                                        <rect key="frame" x="0.0" y="188" width="320" height="169"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Omb-Hm-LEL" id="r7C-I6-9eI">
-                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="169"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PmK-NQ-jg4">
@@ -245,26 +264,39 @@
                                                             <outlet property="cardBackground" destination="PmK-NQ-jg4" id="f7z-aI-tvy"/>
                                                         </connections>
                                                     </tableViewCell>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.PublishTableViewCell" rowHeight="40" id="7vw-Cu-qNI" customClass="PublishTableViewCell" customModule="StoryCreator" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="357" width="320" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7vw-Cu-qNI" id="39a-t6-VYh">
+                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2f5-0d-6Hu">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
+                                                                    <color key="backgroundColor" red="0.73333333333333328" green="0.32156862745098036" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="39.5" id="OxT-CO-0V1"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <state key="normal" title="PUBLISH">
+                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    </state>
+                                                                </button>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="2f5-0d-6Hu" firstAttribute="top" secondItem="39a-t6-VYh" secondAttribute="top" id="4Vr-Ss-zcm"/>
+                                                                <constraint firstItem="2f5-0d-6Hu" firstAttribute="leading" secondItem="39a-t6-VYh" secondAttribute="leading" id="J60-eb-DFq"/>
+                                                                <constraint firstAttribute="trailing" secondItem="2f5-0d-6Hu" secondAttribute="trailing" id="o20-wO-N3C"/>
+                                                                <constraint firstAttribute="bottom" secondItem="2f5-0d-6Hu" secondAttribute="bottom" id="xeG-h8-Fdx"/>
+                                                            </constraints>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
                                                 </prototypes>
                                                 <connections>
                                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="cyc-jn-Rbm"/>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="k8C-cM-huA"/>
                                                 </connections>
                                             </tableView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2f5-0d-6Hu">
-                                                <rect key="frame" x="0.0" y="665" width="320" height="35"/>
-                                                <color key="backgroundColor" red="0.73333333333333328" green="0.32156862745098036" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="15v-KE-9bv"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <state key="normal" title="PUBLISH">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="didPressCreateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xmL-Wd-mDC"/>
-                                                </connections>
-                                            </button>
                                         </subviews>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="700" id="vmu-6x-baj"/>
@@ -296,8 +328,6 @@
                     <connections>
                         <outlet property="containerHeightConstraint" destination="vmu-6x-baj" id="ZIF-Eg-fgZ"/>
                         <outlet property="coverImage" destination="Nfz-rI-oc2" id="r2Z-e0-ZiJ"/>
-                        <outlet property="createButton" destination="2f5-0d-6Hu" id="IMx-vS-tii"/>
-                        <outlet property="descriptionTextField" destination="gp7-cN-pHp" id="KLn-2c-8LH"/>
                         <outlet property="particlesTable" destination="ue4-yG-3vE" id="EoB-rc-Ni6"/>
                         <outlet property="titleTextField" destination="Vbx-8d-IhW" id="XYX-8X-jKG"/>
                     </connections>
