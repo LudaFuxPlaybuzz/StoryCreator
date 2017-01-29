@@ -11,6 +11,7 @@ import UIKit
 class ParticleOverviewTableViewCell: UITableViewCell {
 
     @IBOutlet weak var particleIcon: UIImageView!
+    @IBOutlet weak var explanationLabel: UILabel!
     
     var particle:Particle!
     
@@ -22,6 +23,8 @@ class ParticleOverviewTableViewCell: UITableViewCell {
     func setDetails(particle:Particle)
     {
         self.particle = particle
+        
+        self.explanationLabel.text = "Preview of \(particle.name)"
         
         if let particleImage = UIImage(named: particle.image)
         {
