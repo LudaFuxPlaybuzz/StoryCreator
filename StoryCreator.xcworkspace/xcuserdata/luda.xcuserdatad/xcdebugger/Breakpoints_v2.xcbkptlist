@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StoryCreator/MainViewController.swift"
-            timestampString = "507394430.244095"
+            timestampString = "507395549.886541"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "MainViewController"
             landmarkType = "3">
          </BreakpointContent>

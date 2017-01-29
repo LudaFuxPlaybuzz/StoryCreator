@@ -7,19 +7,12 @@
 //
 
 import UIKit
-import DKImagePickerController
-import AnimatedTextInput
 import Firebase
 
 class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,NewParticlesCollectionTableViewCellProtocol
 {
     @IBOutlet weak var particlesTable: UITableView!
-    @IBOutlet weak var containerHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var coverImage: UIImageView!
-    @IBOutlet weak var titleTextField: AnimatedTextInput!
     
-    
-    let descriptionBackgroundBorder = CAShapeLayer()
     var newParticles = [Particle]()
     
     override func viewDidLoad()
@@ -27,16 +20,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         
         //        self.useFirebaseDatabase()
-        
-        titleTextField.style = TitleInputStyle() as AnimatedTextInputStyle
-        titleTextField.backgroundColor = UIColor.clear
-        titleTextField.placeHolderText = "Title"
-        
+    
         particlesTable.rowHeight = UITableViewAutomaticDimension
         particlesTable.estimatedRowHeight = 140
-        
-        containerHeightConstraint.constant = self.view.frame.height
-        self.view.needsUpdateConstraints()
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -62,35 +48,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //    {
 //        self.didPressCameraButton(self)
 //    }
-    
-    override func viewDidLayoutSubviews()
-    {
-//        particlesTableHeight.constant = particlesTable.contentSize.height
-        
-//        containerHeightConstraint.constant = particlesTable.contentSize.height + 300
-    }
-    
-    @IBAction func didPressCameraButton(_ sender: Any)
-    {
-        let pickerController = DKImagePickerController()
-        pickerController.singleSelect = true
-        
-        pickerController.didSelectAssets = { (assets: [DKAsset]) in
-            if assets.count > 0
-            {
-                let asset: DKAsset = assets[0]
-                asset.fetchImageWithSize(self.coverImage.frame.size, completeBlock: { image, info in
-                        self.coverImage.image = image
-                })
-            }
-        }
-        
-        self.present(pickerController, animated: true) {}
-    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return newParticles.count + 3
+        return newParticles.count + 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
@@ -98,12 +59,19 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         print("row - \(indexPath.row)")
         if indexPath.row == newParticles.count
         {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(TitleAndCoverTableViewCell.self), for: indexPath) as? TitleAndCoverTableViewCell
+            {
+                return cell
+            }
+        }
+        else if indexPath.row == newParticles.count + 1
+        {
             if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(DescriptionTableViewCell.self), for: indexPath) as? DescriptionTableViewCell
             {
                 return cell
             }
         }
-        if indexPath.row == newParticles.count + 1
+        else if indexPath.row == newParticles.count + 2
         {
             if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(IconsCollectionCell.self), for: indexPath) as? IconsCollectionCell
             {
@@ -111,7 +79,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 return cell
             }
         }
-        else if indexPath.row == newParticles.count + 2
+        else if indexPath.row == newParticles.count + 3
         {
             if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(PublishTableViewCell.self), for: indexPath) as? PublishTableViewCell
             {
@@ -141,7 +109,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     {
         if editingStyle == UITableViewCellEditingStyle.delete
         {
-            newParticles .remove(at: indexPath.row)
+            newParticles.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
         }
     }
@@ -194,24 +162,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    struct TitleInputStyle: AnimatedTextInputStyle {
-        
-        let activeColor = UIColor.white
-        let inactiveColor = UIColor.white
-        let lineInactiveColor = UIColor.white.withAlphaComponent(0.3)
-        let errorColor = UIColor.red
-        let textInputFont = UIFont.systemFont(ofSize: 25)
-        let textInputFontColor = UIColor.white
-        let placeholderMinFontSize: CGFloat = 9
-        let counterLabelFont: UIFont? = UIFont.systemFont(ofSize: 9)
-        let leftMargin: CGFloat = 0
-        let topMargin: CGFloat = 20
-        let rightMargin: CGFloat = 15
-        let bottomMargin: CGFloat = 10
-        let yHintPositionOffset: CGFloat = 7
-        let yPlaceholderPositionOffset: CGFloat = 7
 
-    }
 }
 
 
