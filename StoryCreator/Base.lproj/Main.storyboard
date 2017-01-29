@@ -39,7 +39,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ue4-yG-3vE" customClass="LPRTableView" customModule="StoryCreator" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
+                                <rect key="frame" x="0.0" y="-20" width="320" height="720"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.TitleAndCoverTableViewCell" rowHeight="132" id="gy8-IT-C0g" customClass="TitleAndCoverTableViewCell" customModule="StoryCreator" customModuleProvider="target">
@@ -317,7 +317,7 @@
                             <constraint firstAttribute="trailing" secondItem="ue4-yG-3vE" secondAttribute="trailing" id="1og-Yd-Lo4"/>
                             <constraint firstItem="ue4-yG-3vE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="B4I-ya-DQq"/>
                             <constraint firstAttribute="bottom" secondItem="ue4-yG-3vE" secondAttribute="bottom" id="CCQ-gZ-h7N"/>
-                            <constraint firstItem="ue4-yG-3vE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UrO-Cu-x0S"/>
+                            <constraint firstItem="ue4-yG-3vE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-20" id="UrO-Cu-x0S"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cm6-aZ-iV6"/>
