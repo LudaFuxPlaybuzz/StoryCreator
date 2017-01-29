@@ -164,14 +164,14 @@
                                                             <outlet property="explanationLabel" destination="YfD-uy-2bg" id="5g3-WR-RzC"/>
                                                             <outlet property="particleIcon" destination="M3V-yf-al6" id="lfH-rM-hyP"/>
                                                             <segue destination="6Yf-YR-ObO" kind="show" id="sYq-1X-biV"/>
-                                                            <segue destination="6Yf-YR-ObO" kind="show" trigger="accessoryAction" id="WpM-eT-hFa"/>
+                                                            <segue destination="6Yf-YR-ObO" kind="show" identifier="details" trigger="accessoryAction" id="WpM-eT-hFa"/>
                                                         </connections>
                                                     </tableViewCell>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.IconsCollectionCell" rowHeight="169" id="Omb-Hm-LEL" customClass="IconsCollectionCell" customModule="StoryCreator" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="108" width="320" height="169"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Omb-Hm-LEL" id="r7C-I6-9eI">
-                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="169"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="320" height="168"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PmK-NQ-jg4">
@@ -258,7 +258,7 @@
                                                     <constraint firstAttribute="height" constant="35" id="15v-KE-9bv"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <state key="normal" title="CREATE">
+                                                <state key="normal" title="PUBLISH">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <connections>
@@ -282,8 +282,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hYe-M2-VZo" secondAttribute="bottom" id="OqR-ub-06K"/>
                             <constraint firstItem="qFE-YU-eOL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="TWk-td-Bie"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="hYe-M2-VZo" secondAttribute="bottom" id="jyl-q3-bGt"/>
                             <constraint firstAttribute="trailing" secondItem="hYe-M2-VZo" secondAttribute="trailing" id="mNB-yM-CV7"/>
                             <constraint firstItem="hYe-M2-VZo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nHl-df-0t2"/>
                             <constraint firstItem="hYe-M2-VZo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="wcG-xs-5xQ"/>
@@ -306,10 +306,10 @@
             </objects>
             <point key="canvasLocation" x="120" y="-19.014084507042252"/>
         </scene>
-        <!--View Controller-->
+        <!--Web Fallback View Controller-->
         <scene sceneID="bJY-rv-dcr">
             <objects>
-                <viewController id="6Yf-YR-ObO" sceneMemberID="viewController">
+                <viewController id="6Yf-YR-ObO" customClass="WebFallbackViewController" customModule="StoryCreator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="p9M-u7-ic8"/>
                         <viewControllerLayoutGuide type="bottom" id="esY-VM-Yr1"/>
@@ -317,12 +317,30 @@
                     <view key="view" contentMode="scaleToFill" id="NW2-eV-kbp">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dfl-rq-TFg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6Yf-YR-ObO" id="BGG-Yi-4mg"/>
+                                </connections>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dfl-rq-TFg" firstAttribute="top" secondItem="NW2-eV-kbp" secondAttribute="top" id="4kW-E6-d7Q"/>
+                            <constraint firstAttribute="trailing" secondItem="Dfl-rq-TFg" secondAttribute="trailing" id="HEs-Vs-vv7"/>
+                            <constraint firstItem="Dfl-rq-TFg" firstAttribute="leading" secondItem="NW2-eV-kbp" secondAttribute="leading" id="atR-0L-uyJ"/>
+                            <constraint firstAttribute="bottom" secondItem="Dfl-rq-TFg" secondAttribute="bottom" id="tyu-fM-FjT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="Dfl-rq-TFg" id="Qkl-Dk-M5n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmu-mn-QjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1050" y="-19"/>
+            <point key="canvasLocation" x="1050" y="-19.014084507042252"/>
         </scene>
     </scenes>
     <resources>
@@ -331,6 +349,6 @@
         <image name="gradient" width="360" height="360"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sYq-1X-biV"/>
+        <segue reference="WpM-eT-hFa"/>
     </inferredMetricsTieBreakers>
 </document>

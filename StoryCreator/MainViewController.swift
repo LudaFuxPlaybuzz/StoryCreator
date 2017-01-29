@@ -15,7 +15,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 {
     @IBOutlet weak var createButton: UIButton!
     @IBOutlet weak var particlesTable: UITableView!
-    @IBOutlet weak var particlesTableHeight: NSLayoutConstraint!
     @IBOutlet weak var containerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var titleTextField: AnimatedTextInput!
@@ -159,16 +158,37 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         newParticles.append(particle)
         particlesTable.reloadData()
         self.viewDidLayoutSubviews()
-     }
+        
+        let deadlineTime = DispatchTime.now() + .seconds(1)
+        DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+            self.performSegue(withIdentifier: "details", sender: particle)
+        }
+    }
+    
+    func openDetaledView()
+    {
+        
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any!)
     {
-        if let indexPath = particlesTable.indexPathForSelectedRow
+        if let particle = sender as? Particle
+        {
+            if let detailViewController = segue.destination as? WebFallbackViewController
+            {
+                detailViewController.particle = particle
+            }
+            
+        }
+        else if let indexPath = particlesTable.indexPathForSelectedRow
         {
             let selectedRow = indexPath.row
-            let detailViewController = segue.destination
-            let particle = newParticles[selectedRow]
-            detailViewController.title = particle.name
+            
+            if let detailViewController = segue.destination as? WebFallbackViewController
+            {
+                let particle = newParticles[selectedRow]
+                detailViewController.particle = particle
+            }
         }
     }
 
