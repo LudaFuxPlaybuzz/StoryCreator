@@ -49,13 +49,13 @@ class IconsCollectionCell: UITableViewCell, UICollectionViewDataSource, NewParti
         return UICollectionViewCell()
     }
     
-    func didSelectNewParticle(particle:Particle)
+    func particleAdded(_ particle:Particle)
     {
-        self.delegate?.didSelectNewParticle(particle: particle)
+        self.delegate?.particleAdded(particle)
     }
 }
 
 @objc protocol NewParticlesCollectionTableViewCellProtocol: class
 {
-    func didSelectNewParticle(particle:Particle)
+    func particleAdded(_ particle:Particle)
 }

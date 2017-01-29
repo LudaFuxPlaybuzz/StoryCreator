@@ -25,13 +25,13 @@ class IconCell  : UICollectionViewCell {
         }
     }
     
-    @IBAction func didSelectNewParticle(_ sender: Any)
+    @IBAction func didPressAddParticle(_ sender: Any)
     {
-        self.delegate?.didSelectNewParticle(particle: self.particle)
+        self.delegate?.particleAdded(self.particle)
     }
 }
 
 @objc protocol NewParticleCollectionViewCellProtocol: class
 {
-    func didSelectNewParticle(particle:Particle)
+    func particleAdded(_ particle:Particle)
 }

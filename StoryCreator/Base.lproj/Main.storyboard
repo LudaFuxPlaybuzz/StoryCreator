@@ -233,7 +233,7 @@
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJF-ER-Exo">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
                                                                                 <connections>
-                                                                                    <action selector="didSelectNewParticle:" destination="WYa-Li-BJX" eventType="touchUpInside" id="Iic-EY-GGT"/>
+                                                                                    <action selector="didPressAddParticle:" destination="WYa-Li-BJX" eventType="touchUpInside" id="B41-Pi-iaj"/>
                                                                                 </connections>
                                                                             </button>
                                                                         </subviews>
