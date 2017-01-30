@@ -58,7 +58,7 @@ class MainViewController: UIViewController, PreviewTableDataSourceProtocol
         
         let deadlineTime = DispatchTime.now() + .seconds(1)
         DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
-            self.performSegue(withIdentifier: "details", sender: particle)
+//            self.performSegue(withIdentifier: "details", sender: particle)
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any!)
