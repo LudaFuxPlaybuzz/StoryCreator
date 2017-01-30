@@ -20,10 +20,8 @@ class PreviewTableDataSource: NSObject, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        print("row - \(indexPath.row). newParticles.count - \(newParticles.count)")
         if indexPath.row == 0
         {
-            print("title")
             if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(TitleAndCoverTableViewCell.self), for: indexPath) as? TitleAndCoverTableViewCell
             {
                 return cell
@@ -31,7 +29,6 @@ class PreviewTableDataSource: NSObject, UITableViewDataSource, UITableViewDelega
         }
         else if indexPath.row == 1
         {
-            print("description")
             if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(DescriptionTableViewCell.self), for: indexPath) as? DescriptionTableViewCell
             {
                 return cell
@@ -39,7 +36,6 @@ class PreviewTableDataSource: NSObject, UITableViewDataSource, UITableViewDelega
         }
         else if indexPath.row == newParticles.count + 2
         {
-            print("icons")
             if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(IconsCollectionCell.self), for: indexPath) as? IconsCollectionCell
             {
                 cell.delegate = self
@@ -48,28 +44,24 @@ class PreviewTableDataSource: NSObject, UITableViewDataSource, UITableViewDelega
         }
         else if indexPath.row == newParticles.count + 3
         {
-            print("publish button")
             if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(PublishTableViewCell.self), for: indexPath) as? PublishTableViewCell
             {
                 return cell
             }
         } else
         {
-            print("new particle")
             if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ParticleOverviewTableViewCell.self), for: indexPath) as? ParticleOverviewTableViewCell
             {
-                print("problematic row - \(indexPath.row)")
                 let bgColorView = UIView()
                 bgColorView.backgroundColor = UIColor.clear
                 cell.selectedBackgroundView = bgColorView
                 
-                let particle = newParticles[indexPath.row]
+                let particle = newParticles[indexPath.row - 2]
                 cell.setDetails(particle: particle)
                 //                cell.delegate = self
                 return cell
             }
         }
-        print("-----")
         return UITableViewCell()
     }
     
