@@ -80,15 +80,16 @@ class PreviewTableDataSource: NSObject, UITableViewDataSource, UITableViewDelega
     //MARK: Reordering
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool
     {
-        return (indexPath.row != newParticles.count)
+        return indexPath.row >= 2 && indexPath.row < newParticles.count + 2
     }
     
-    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath)
+    {
+        let source = newParticles[sourceIndexPath.row - 2]
+        let destination = newParticles[destinationIndexPath.row - 2]
         
-        let source = newParticles[sourceIndexPath.row]
-        let destination = newParticles[destinationIndexPath.row]
-        newParticles[sourceIndexPath.row] = destination
-        newParticles[destinationIndexPath.row] = source
+        newParticles[sourceIndexPath.row - 2] = destination
+        newParticles[destinationIndexPath.row - 2] = source
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
