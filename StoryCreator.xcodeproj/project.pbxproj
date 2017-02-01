@@ -12,8 +12,7 @@
 		852541561E3E3893008F6A09 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541551E3E3893008F6A09 /* DescriptionTableViewCell.swift */; };
 		852541581E3E3C53008F6A09 /* TitleAndCoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541571E3E3C53008F6A09 /* TitleAndCoverTableViewCell.swift */; };
 		8525415A1E3E3FE9008F6A09 /* PreviewTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541591E3E3FE9008F6A09 /* PreviewTableDataSource.swift */; };
-		85267B051E30E3230001845C /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85267B031E30E3230001845C /* Artist.swift */; };
-		85267B061E30E3230001845C /* artists.json in Resources */ = {isa = PBXBuildFile; fileRef = 85267B041E30E3230001845C /* artists.json */; };
+		8525415D1E4215CF008F6A09 /* PollNativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525415C1E4215CF008F6A09 /* PollNativeViewController.swift */; };
 		852C02631E0C18A7006B5795 /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852C02621E0C18A7006B5795 /* Particle.swift */; };
 		8531DCC91E0BE1C600BDEECB /* IconsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531DCC81E0BE1C600BDEECB /* IconsCollectionCell.swift */; };
 		8531DCCB1E0BF08E00BDEECB /* IconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531DCCA1E0BF08E00BDEECB /* IconCell.swift */; };
@@ -38,8 +37,7 @@
 		852541551E3E3893008F6A09 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DescriptionTableViewCell.swift; path = Controller/PreviewViewController/PreviewTableComponents/DescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		852541571E3E3C53008F6A09 /* TitleAndCoverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitleAndCoverTableViewCell.swift; path = Controller/PreviewViewController/PreviewTableComponents/TitleAndCoverTableViewCell.swift; sourceTree = "<group>"; };
 		852541591E3E3FE9008F6A09 /* PreviewTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreviewTableDataSource.swift; path = Controller/PreviewViewController/PreviewTableDataSource.swift; sourceTree = "<group>"; };
-		85267B031E30E3230001845C /* Artist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
-		85267B041E30E3230001845C /* artists.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = artists.json; sourceTree = "<group>"; };
+		8525415C1E4215CF008F6A09 /* PollNativeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollNativeViewController.swift; path = "Controller/Native Particle/PollNativeViewController.swift"; sourceTree = "<group>"; };
 		852C02621E0C18A7006B5795 /* Particle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Particle.swift; path = Model/Particle.swift; sourceTree = "<group>"; };
 		8531DCC81E0BE1C600BDEECB /* IconsCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconsCollectionCell.swift; path = Controller/NewParticlesCollection/IconsCollectionCell.swift; sourceTree = "<group>"; };
 		8531DCCA1E0BF08E00BDEECB /* IconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconCell.swift; path = Controller/NewParticlesCollection/IconCell.swift; sourceTree = "<group>"; };
@@ -100,19 +98,25 @@
 			name = PreviewTableComponents;
 			sourceTree = "<group>";
 		};
-		85267B021E30E3120001845C /* test */ = {
+		8525415B1E421591008F6A09 /* Native Particles */ = {
 			isa = PBXGroup;
 			children = (
-				85267B031E30E3230001845C /* Artist.swift */,
-				85267B041E30E3230001845C /* artists.json */,
+				8525415E1E421606008F6A09 /* PollNative */,
 			);
-			name = test;
+			name = "Native Particles";
+			sourceTree = "<group>";
+		};
+		8525415E1E421606008F6A09 /* PollNative */ = {
+			isa = PBXGroup;
+			children = (
+				8525415C1E4215CF008F6A09 /* PollNativeViewController.swift */,
+			);
+			name = PollNative;
 			sourceTree = "<group>";
 		};
 		852C02611E0C186F006B5795 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				85267B021E30E3120001845C /* test */,
 				852C02621E0C18A7006B5795 /* Particle.swift */,
 			);
 			name = Model;
@@ -159,6 +163,7 @@
 		859B55AD1E0ACC7F00231A2B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8525415B1E421591008F6A09 /* Native Particles */,
 				852541511E3E3605008F6A09 /* PreviewViewController */,
 				8525414E1E3E1661008F6A09 /* Particles */,
 			);
@@ -281,7 +286,6 @@
 				85DDC5921E2FCA100077E942 /* GoogleService-Info.plist in Resources */,
 				859B55A31E0AC8FA00231A2B /* Assets.xcassets in Resources */,
 				859B55A11E0AC8FA00231A2B /* Main.storyboard in Resources */,
-				85267B061E30E3230001845C /* artists.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,8 +350,8 @@
 				852C02631E0C18A7006B5795 /* Particle.swift in Sources */,
 				859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */,
 				852541541E3E36A7008F6A09 /* PublishTableViewCell.swift in Sources */,
+				8525415D1E4215CF008F6A09 /* PollNativeViewController.swift in Sources */,
 				852541501E3E1698008F6A09 /* WebFallbackViewController.swift in Sources */,
-				85267B051E30E3230001845C /* Artist.swift in Sources */,
 				8548C3871E3A22A9002D0887 /* ParticleOverviewTableViewCell.swift in Sources */,
 				852541561E3E3893008F6A09 /* DescriptionTableViewCell.swift in Sources */,
 				8531DCC91E0BE1C600BDEECB /* IconsCollectionCell.swift in Sources */,
