@@ -1,5 +1,5 @@
 //
-//  DescriptionTableViewCell.swift
+//  DescriptionCell.swift
 //  StoryCreator
 //
 //  Created by Luda Fux on 1/29/17.
@@ -9,7 +9,7 @@
 import UIKit
 import AnimatedTextInput
 
-class DescriptionTableViewCell: UITableViewCell {
+class DescriptionCell: UITableViewCell {
 
     @IBOutlet weak var descriptionTextField: AnimatedTextInput!
     

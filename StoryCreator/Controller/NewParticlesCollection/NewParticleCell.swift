@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IconCell  : UICollectionViewCell {
+class NewParticleCell  : UICollectionViewCell {
     
     @IBOutlet weak var particleIconButton: UIButton!
     

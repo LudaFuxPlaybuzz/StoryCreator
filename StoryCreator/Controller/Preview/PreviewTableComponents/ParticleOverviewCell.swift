@@ -1,5 +1,5 @@
 //
-//  ParticleOverviewTableViewCell.swift
+//  ParticleOverviewCell.swift
 //  StoryCreator
 //
 //  Created by Luda Fux on 1/26/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ParticleOverviewTableViewCell: UITableViewCell {
+class ParticleOverviewCell: UITableViewCell {
 
     @IBOutlet weak var particleIcon: UIImageView!
     @IBOutlet weak var explanationLabel: UILabel!

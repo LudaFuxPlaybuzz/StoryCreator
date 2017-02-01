@@ -133,7 +133,7 @@
                                             <outlet property="titleTextField" destination="Vbx-8d-IhW" id="mdk-Jt-lYh"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.DescriptionTableViewCell" id="tdr-VI-Kch" customClass="DescriptionTableViewCell" customModule="StoryCreator" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.DescriptionCell" id="tdr-VI-Kch" customClass="DescriptionCell" customModule="StoryCreator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="160" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tdr-VI-Kch" id="WEf-DM-NUk">
@@ -171,7 +171,7 @@
                                             <outlet property="descriptionTextField" destination="gp7-cN-pHp" id="cHg-D1-mO5"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="StoryCreator.ParticleOverviewTableViewCell" id="3mt-fB-B9z" customClass="ParticleOverviewTableViewCell" customModule="StoryCreator" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="StoryCreator.ParticleOverviewCell" id="3mt-fB-B9z" customClass="ParticleOverviewCell" customModule="StoryCreator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="240" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3mt-fB-B9z" id="4Ll-wN-42g">
@@ -211,7 +211,7 @@
                                             <segue destination="6Yf-YR-ObO" kind="show" identifier="details" id="dA2-7h-sNn"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.IconsCollectionCell" rowHeight="169" id="Omb-Hm-LEL" customClass="IconsCollectionCell" customModule="StoryCreator" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.NewParticlesCollectionView" rowHeight="169" id="Omb-Hm-LEL" customClass="NewParticlesCollectionView" customModule="StoryCreator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="320" width="320" height="169"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Omb-Hm-LEL" id="r7C-I6-9eI">
@@ -232,7 +232,7 @@
                                                         <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.IconCell" id="WYa-Li-BJX" customClass="IconCell" customModule="StoryCreator" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.NewParticleCell" id="WYa-Li-BJX" customClass="NewParticleCell" customModule="StoryCreator" customModuleProvider="target">
                                                             <rect key="frame" x="10" y="10" width="45" height="45"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -278,7 +278,7 @@
                                             <outlet property="NewParticlesCollectionView" destination="LG9-D2-ydE" id="QVS-sc-d4x"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.PublishTableViewCell" rowHeight="40" id="7vw-Cu-qNI" customClass="PublishTableViewCell" customModule="StoryCreator" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.PublishCell" rowHeight="40" id="7vw-Cu-qNI" customClass="PublishCell" customModule="StoryCreator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="489" width="320" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7vw-Cu-qNI" id="39a-t6-VYh">

@@ -31,14 +31,14 @@ class PreviewTableDataSource: NSObject, UITableViewDataSource, UITableViewDelega
         }
         else if indexPath.row == 1
         {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(DescriptionTableViewCell.self), for: indexPath) as? DescriptionTableViewCell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(DescriptionCell.self), for: indexPath) as? DescriptionCell
             {
                 return cell
             }
         }
         else if indexPath.row == newParticles.count + 2
         {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(IconsCollectionCell.self), for: indexPath) as? IconsCollectionCell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(NewParticlesCollectionView.self), for: indexPath) as? NewParticlesCollectionView
             {
                 cell.delegate = self
                 return cell
@@ -46,13 +46,13 @@ class PreviewTableDataSource: NSObject, UITableViewDataSource, UITableViewDelega
         }
         else if indexPath.row == newParticles.count + 3
         {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(PublishTableViewCell.self), for: indexPath) as? PublishTableViewCell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(PublishCell.self), for: indexPath) as? PublishCell
             {
                 return cell
             }
         } else
         {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ParticleOverviewTableViewCell.self), for: indexPath) as? ParticleOverviewTableViewCell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ParticleOverviewCell.self), for: indexPath) as? ParticleOverviewCell
             {
                 let bgColorView = UIView()
                 bgColorView.backgroundColor = UIColor.clear

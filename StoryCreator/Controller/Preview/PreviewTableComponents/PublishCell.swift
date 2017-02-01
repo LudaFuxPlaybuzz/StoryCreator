@@ -1,5 +1,5 @@
 //
-//  PublishTableViewCell.swift
+//  PublishCell.swift
 //  StoryCreator
 //
 //  Created by Luda Fux on 1/29/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PublishTableViewCell: UITableViewCell {
+class PublishCell: UITableViewCell {
 
     @IBOutlet weak var publishButton: UIButton!
     

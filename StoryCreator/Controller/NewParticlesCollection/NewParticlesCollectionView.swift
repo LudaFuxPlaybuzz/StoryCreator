@@ -1,5 +1,5 @@
 //
-//  NewParticlesCollectionTableViewCell.swift
+//  NewParticlesCollectionView.swift
 //  StoryCreator
 //
 //  Created by Luda Fux on 12/22/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class IconsCollectionCell: UITableViewCell, UICollectionViewDataSource, NewParticleCollectionViewCellProtocol
+class NewParticlesCollectionView: UITableViewCell, UICollectionViewDataSource, NewParticleCollectionViewCellProtocol
 {
     @IBOutlet weak var NewParticlesCollectionView: UICollectionView!
     
@@ -37,7 +37,7 @@ class IconsCollectionCell: UITableViewCell, UICollectionViewDataSource, NewParti
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(IconCell.self), for: indexPath) as? IconCell
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(NewParticleCell.self), for: indexPath) as? NewParticleCell
         {
             let particle:Particle = self.particleItems[indexPath.row]
             cell.setDetails(particle)

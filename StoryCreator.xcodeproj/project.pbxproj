@@ -14,13 +14,13 @@
 		8525416A1E4217AC008F6A09 /* PollNativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541691E4217AC008F6A09 /* PollNativeViewController.swift */; };
 		8525416C1E4217CE008F6A09 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525416B1E4217CE008F6A09 /* PreviewViewController.swift */; };
 		8525416E1E4217D9008F6A09 /* PreviewTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525416D1E4217D9008F6A09 /* PreviewTableDataSource.swift */; };
-		852541731E421839008F6A09 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525416F1E421839008F6A09 /* DescriptionTableViewCell.swift */; };
-		852541741E421839008F6A09 /* ParticleOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541701E421839008F6A09 /* ParticleOverviewTableViewCell.swift */; };
-		852541751E421839008F6A09 /* PublishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541711E421839008F6A09 /* PublishTableViewCell.swift */; };
+		852541731E421839008F6A09 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525416F1E421839008F6A09 /* DescriptionCell.swift */; };
+		852541741E421839008F6A09 /* ParticleOverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541701E421839008F6A09 /* ParticleOverviewCell.swift */; };
+		852541751E421839008F6A09 /* PublishCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541711E421839008F6A09 /* PublishCell.swift */; };
 		852541761E421839008F6A09 /* TitleAndCoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541721E421839008F6A09 /* TitleAndCoverCell.swift */; };
 		852C02631E0C18A7006B5795 /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852C02621E0C18A7006B5795 /* Particle.swift */; };
-		8531DCC91E0BE1C600BDEECB /* IconsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531DCC81E0BE1C600BDEECB /* IconsCollectionCell.swift */; };
-		8531DCCB1E0BF08E00BDEECB /* IconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531DCCA1E0BF08E00BDEECB /* IconCell.swift */; };
+		8531DCC91E0BE1C600BDEECB /* NewParticlesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531DCC81E0BE1C600BDEECB /* NewParticlesCollectionView.swift */; };
+		8531DCCB1E0BF08E00BDEECB /* NewParticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531DCCA1E0BF08E00BDEECB /* NewParticleCell.swift */; };
 		859B559C1E0AC8FA00231A2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B559B1E0AC8FA00231A2B /* AppDelegate.swift */; };
 		859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B55B11E0AD2E700231A2B /* FloatLabelTextField.swift */; };
 		859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B55B21E0AD2E700231A2B /* FloatLabelTextView.swift */; };
@@ -39,13 +39,13 @@
 		852541691E4217AC008F6A09 /* PollNativeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollNativeViewController.swift; path = "Controller/Native Particles/Poll/PollNativeViewController.swift"; sourceTree = "<group>"; };
 		8525416B1E4217CE008F6A09 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreviewViewController.swift; path = Controller/Preview/PreviewViewController.swift; sourceTree = "<group>"; };
 		8525416D1E4217D9008F6A09 /* PreviewTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreviewTableDataSource.swift; path = Controller/Preview/PreviewTableDataSource.swift; sourceTree = "<group>"; };
-		8525416F1E421839008F6A09 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DescriptionTableViewCell.swift; path = Controller/Preview/PreviewTableComponents/DescriptionTableViewCell.swift; sourceTree = "<group>"; };
-		852541701E421839008F6A09 /* ParticleOverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticleOverviewTableViewCell.swift; path = Controller/Preview/PreviewTableComponents/ParticleOverviewTableViewCell.swift; sourceTree = "<group>"; };
-		852541711E421839008F6A09 /* PublishTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublishTableViewCell.swift; path = Controller/Preview/PreviewTableComponents/PublishTableViewCell.swift; sourceTree = "<group>"; };
+		8525416F1E421839008F6A09 /* DescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DescriptionCell.swift; path = Controller/Preview/PreviewTableComponents/DescriptionCell.swift; sourceTree = "<group>"; };
+		852541701E421839008F6A09 /* ParticleOverviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticleOverviewCell.swift; path = Controller/Preview/PreviewTableComponents/ParticleOverviewCell.swift; sourceTree = "<group>"; };
+		852541711E421839008F6A09 /* PublishCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublishCell.swift; path = Controller/Preview/PreviewTableComponents/PublishCell.swift; sourceTree = "<group>"; };
 		852541721E421839008F6A09 /* TitleAndCoverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitleAndCoverCell.swift; path = Controller/Preview/PreviewTableComponents/TitleAndCoverCell.swift; sourceTree = "<group>"; };
 		852C02621E0C18A7006B5795 /* Particle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Particle.swift; path = Model/Particle.swift; sourceTree = "<group>"; };
-		8531DCC81E0BE1C600BDEECB /* IconsCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconsCollectionCell.swift; path = Controller/NewParticlesCollection/IconsCollectionCell.swift; sourceTree = "<group>"; };
-		8531DCCA1E0BF08E00BDEECB /* IconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconCell.swift; path = Controller/NewParticlesCollection/IconCell.swift; sourceTree = "<group>"; };
+		8531DCC81E0BE1C600BDEECB /* NewParticlesCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewParticlesCollectionView.swift; path = Controller/NewParticlesCollection/NewParticlesCollectionView.swift; sourceTree = "<group>"; };
+		8531DCCA1E0BF08E00BDEECB /* NewParticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewParticleCell.swift; path = Controller/NewParticlesCollection/NewParticleCell.swift; sourceTree = "<group>"; };
 		859B55981E0AC8FA00231A2B /* StoryCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859B559B1E0AC8FA00231A2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859B55A71E0AC8FA00231A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 				8525416B1E4217CE008F6A09 /* PreviewViewController.swift */,
 				8525416D1E4217D9008F6A09 /* PreviewTableDataSource.swift */,
 				852541521E3E3632008F6A09 /* PreviewTableComponents */,
-				8531DCC51E0BD95000BDEECB /* Icons */,
+				8531DCC51E0BD95000BDEECB /* New Particles */,
 			);
 			name = Preview;
 			sourceTree = "<group>";
@@ -91,9 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				852541721E421839008F6A09 /* TitleAndCoverCell.swift */,
-				8525416F1E421839008F6A09 /* DescriptionTableViewCell.swift */,
-				852541701E421839008F6A09 /* ParticleOverviewTableViewCell.swift */,
-				852541711E421839008F6A09 /* PublishTableViewCell.swift */,
+				8525416F1E421839008F6A09 /* DescriptionCell.swift */,
+				852541701E421839008F6A09 /* ParticleOverviewCell.swift */,
+				852541711E421839008F6A09 /* PublishCell.swift */,
 			);
 			name = PreviewTableComponents;
 			sourceTree = "<group>";
@@ -122,13 +122,13 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		8531DCC51E0BD95000BDEECB /* Icons */ = {
+		8531DCC51E0BD95000BDEECB /* New Particles */ = {
 			isa = PBXGroup;
 			children = (
-				8531DCC81E0BE1C600BDEECB /* IconsCollectionCell.swift */,
-				8531DCCA1E0BF08E00BDEECB /* IconCell.swift */,
+				8531DCC81E0BE1C600BDEECB /* NewParticlesCollectionView.swift */,
+				8531DCCA1E0BF08E00BDEECB /* NewParticleCell.swift */,
 			);
-			name = Icons;
+			name = "New Particles";
 			sourceTree = "<group>";
 		};
 		859B558F1E0AC8FA00231A2B = {
@@ -349,16 +349,16 @@
 				859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */,
 				852C02631E0C18A7006B5795 /* Particle.swift in Sources */,
 				859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */,
-				852541731E421839008F6A09 /* DescriptionTableViewCell.swift in Sources */,
-				852541741E421839008F6A09 /* ParticleOverviewTableViewCell.swift in Sources */,
+				852541731E421839008F6A09 /* DescriptionCell.swift in Sources */,
+				852541741E421839008F6A09 /* ParticleOverviewCell.swift in Sources */,
 				852541501E3E1698008F6A09 /* WebFallbackViewController.swift in Sources */,
 				8525416A1E4217AC008F6A09 /* PollNativeViewController.swift in Sources */,
 				8525416C1E4217CE008F6A09 /* PreviewViewController.swift in Sources */,
-				8531DCC91E0BE1C600BDEECB /* IconsCollectionCell.swift in Sources */,
-				8531DCCB1E0BF08E00BDEECB /* IconCell.swift in Sources */,
+				8531DCC91E0BE1C600BDEECB /* NewParticlesCollectionView.swift in Sources */,
+				8531DCCB1E0BF08E00BDEECB /* NewParticleCell.swift in Sources */,
 				85D675931E3637B2003B9798 /* LPRTableView.swift in Sources */,
 				859B559C1E0AC8FA00231A2B /* AppDelegate.swift in Sources */,
-				852541751E421839008F6A09 /* PublishTableViewCell.swift in Sources */,
+				852541751E421839008F6A09 /* PublishCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
