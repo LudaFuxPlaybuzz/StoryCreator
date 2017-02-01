@@ -142,9 +142,21 @@
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gp7-cN-pHp" customClass="AnimatedTextInput" customModule="AnimatedTextInput">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3bZ-pM-u7w">
+                                                            <rect key="frame" x="0.0" y="79" width="320" height="1"/>
+                                                            <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="Jkg-Dh-a1j"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="7z1-y6-oKr"/>
+                                                        <constraint firstItem="3bZ-pM-u7w" firstAttribute="leading" secondItem="gp7-cN-pHp" secondAttribute="leading" id="Egz-0b-Wnd"/>
+                                                        <constraint firstAttribute="bottom" secondItem="3bZ-pM-u7w" secondAttribute="bottom" id="c4n-In-OdX"/>
+                                                        <constraint firstAttribute="trailing" secondItem="3bZ-pM-u7w" secondAttribute="trailing" id="gkC-Oz-3kI"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
