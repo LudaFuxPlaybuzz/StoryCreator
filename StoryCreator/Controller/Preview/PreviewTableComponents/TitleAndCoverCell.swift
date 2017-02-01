@@ -1,5 +1,5 @@
 //
-//  TitleAndCoverTableViewCell.swift
+//  TitleAndCoverCell.swift
 //  StoryCreator
 //
 //  Created by Luda Fux on 1/29/17.
@@ -10,7 +10,7 @@ import UIKit
 import AnimatedTextInput
 import DKImagePickerController
 
-class TitleAndCoverTableViewCell: UITableViewCell {
+class TitleAndCoverCell: UITableViewCell {
 
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var titleTextField: AnimatedTextInput!

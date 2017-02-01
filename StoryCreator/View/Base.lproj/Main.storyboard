@@ -42,7 +42,7 @@
                                 <rect key="frame" x="0.0" y="-20" width="320" height="705"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.TitleAndCoverTableViewCell" rowHeight="132" id="gy8-IT-C0g" customClass="TitleAndCoverTableViewCell" customModule="StoryCreator" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.TitleAndCoverCell" rowHeight="132" id="gy8-IT-C0g" customClass="TitleAndCoverCell" customModule="StoryCreator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="132"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gy8-IT-C0g" id="sJr-fl-Cue">

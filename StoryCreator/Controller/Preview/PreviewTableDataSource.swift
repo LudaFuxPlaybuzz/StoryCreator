@@ -23,7 +23,7 @@ class PreviewTableDataSource: NSObject, UITableViewDataSource, UITableViewDelega
     {
         if indexPath.row == 0
         {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(TitleAndCoverTableViewCell.self), for: indexPath) as? TitleAndCoverTableViewCell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(TitleAndCoverCell.self), for: indexPath) as? TitleAndCoverCell    
             {
                 cell.delegate = self.presentVCDelegate
                 return cell

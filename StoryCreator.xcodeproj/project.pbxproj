@@ -17,7 +17,7 @@
 		852541731E421839008F6A09 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525416F1E421839008F6A09 /* DescriptionTableViewCell.swift */; };
 		852541741E421839008F6A09 /* ParticleOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541701E421839008F6A09 /* ParticleOverviewTableViewCell.swift */; };
 		852541751E421839008F6A09 /* PublishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541711E421839008F6A09 /* PublishTableViewCell.swift */; };
-		852541761E421839008F6A09 /* TitleAndCoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541721E421839008F6A09 /* TitleAndCoverTableViewCell.swift */; };
+		852541761E421839008F6A09 /* TitleAndCoverCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541721E421839008F6A09 /* TitleAndCoverCell.swift */; };
 		852C02631E0C18A7006B5795 /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852C02621E0C18A7006B5795 /* Particle.swift */; };
 		8531DCC91E0BE1C600BDEECB /* IconsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531DCC81E0BE1C600BDEECB /* IconsCollectionCell.swift */; };
 		8531DCCB1E0BF08E00BDEECB /* IconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8531DCCA1E0BF08E00BDEECB /* IconCell.swift */; };
@@ -42,7 +42,7 @@
 		8525416F1E421839008F6A09 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DescriptionTableViewCell.swift; path = Controller/Preview/PreviewTableComponents/DescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		852541701E421839008F6A09 /* ParticleOverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticleOverviewTableViewCell.swift; path = Controller/Preview/PreviewTableComponents/ParticleOverviewTableViewCell.swift; sourceTree = "<group>"; };
 		852541711E421839008F6A09 /* PublishTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PublishTableViewCell.swift; path = Controller/Preview/PreviewTableComponents/PublishTableViewCell.swift; sourceTree = "<group>"; };
-		852541721E421839008F6A09 /* TitleAndCoverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitleAndCoverTableViewCell.swift; path = Controller/Preview/PreviewTableComponents/TitleAndCoverTableViewCell.swift; sourceTree = "<group>"; };
+		852541721E421839008F6A09 /* TitleAndCoverCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitleAndCoverCell.swift; path = Controller/Preview/PreviewTableComponents/TitleAndCoverCell.swift; sourceTree = "<group>"; };
 		852C02621E0C18A7006B5795 /* Particle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Particle.swift; path = Model/Particle.swift; sourceTree = "<group>"; };
 		8531DCC81E0BE1C600BDEECB /* IconsCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconsCollectionCell.swift; path = Controller/NewParticlesCollection/IconsCollectionCell.swift; sourceTree = "<group>"; };
 		8531DCCA1E0BF08E00BDEECB /* IconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IconCell.swift; path = Controller/NewParticlesCollection/IconCell.swift; sourceTree = "<group>"; };
@@ -90,10 +90,10 @@
 		852541521E3E3632008F6A09 /* PreviewTableComponents */ = {
 			isa = PBXGroup;
 			children = (
+				852541721E421839008F6A09 /* TitleAndCoverCell.swift */,
 				8525416F1E421839008F6A09 /* DescriptionTableViewCell.swift */,
 				852541701E421839008F6A09 /* ParticleOverviewTableViewCell.swift */,
 				852541711E421839008F6A09 /* PublishTableViewCell.swift */,
-				852541721E421839008F6A09 /* TitleAndCoverTableViewCell.swift */,
 			);
 			name = PreviewTableComponents;
 			sourceTree = "<group>";
@@ -345,7 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8525416E1E4217D9008F6A09 /* PreviewTableDataSource.swift in Sources */,
-				852541761E421839008F6A09 /* TitleAndCoverTableViewCell.swift in Sources */,
+				852541761E421839008F6A09 /* TitleAndCoverCell.swift in Sources */,
 				859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */,
 				852C02631E0C18A7006B5795 /* Particle.swift in Sources */,
 				859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */,
