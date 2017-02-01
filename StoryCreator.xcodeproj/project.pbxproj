@@ -12,7 +12,7 @@
 		852541651E421717008F6A09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852541611E421717008F6A09 /* LaunchScreen.storyboard */; };
 		852541661E421717008F6A09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852541631E421717008F6A09 /* Main.storyboard */; };
 		8525416A1E4217AC008F6A09 /* PollNativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541691E4217AC008F6A09 /* PollNativeViewController.swift */; };
-		8525416C1E4217CE008F6A09 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525416B1E4217CE008F6A09 /* MainViewController.swift */; };
+		8525416C1E4217CE008F6A09 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525416B1E4217CE008F6A09 /* PreviewViewController.swift */; };
 		8525416E1E4217D9008F6A09 /* PreviewTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525416D1E4217D9008F6A09 /* PreviewTableDataSource.swift */; };
 		852541731E421839008F6A09 /* DescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525416F1E421839008F6A09 /* DescriptionTableViewCell.swift */; };
 		852541741E421839008F6A09 /* ParticleOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541701E421839008F6A09 /* ParticleOverviewTableViewCell.swift */; };
@@ -37,7 +37,7 @@
 		852541621E421717008F6A09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = View/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		852541641E421717008F6A09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = View/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		852541691E4217AC008F6A09 /* PollNativeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollNativeViewController.swift; path = "Controller/Native Particles/Poll/PollNativeViewController.swift"; sourceTree = "<group>"; };
-		8525416B1E4217CE008F6A09 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainViewController.swift; path = Controller/Preview/MainViewController.swift; sourceTree = "<group>"; };
+		8525416B1E4217CE008F6A09 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreviewViewController.swift; path = Controller/Preview/PreviewViewController.swift; sourceTree = "<group>"; };
 		8525416D1E4217D9008F6A09 /* PreviewTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreviewTableDataSource.swift; path = Controller/Preview/PreviewTableDataSource.swift; sourceTree = "<group>"; };
 		8525416F1E421839008F6A09 /* DescriptionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DescriptionTableViewCell.swift; path = Controller/Preview/PreviewTableComponents/DescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		852541701E421839008F6A09 /* ParticleOverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticleOverviewTableViewCell.swift; path = Controller/Preview/PreviewTableComponents/ParticleOverviewTableViewCell.swift; sourceTree = "<group>"; };
@@ -76,15 +76,15 @@
 			name = Particles;
 			sourceTree = "<group>";
 		};
-		852541511E3E3605008F6A09 /* PreviewViewController */ = {
+		852541511E3E3605008F6A09 /* Preview */ = {
 			isa = PBXGroup;
 			children = (
-				8525416B1E4217CE008F6A09 /* MainViewController.swift */,
+				8525416B1E4217CE008F6A09 /* PreviewViewController.swift */,
 				8525416D1E4217D9008F6A09 /* PreviewTableDataSource.swift */,
 				852541521E3E3632008F6A09 /* PreviewTableComponents */,
 				8531DCC51E0BD95000BDEECB /* Icons */,
 			);
-			name = PreviewViewController;
+			name = Preview;
 			sourceTree = "<group>";
 		};
 		852541521E3E3632008F6A09 /* PreviewTableComponents */ = {
@@ -164,7 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				8525415B1E421591008F6A09 /* Native Particles */,
-				852541511E3E3605008F6A09 /* PreviewViewController */,
+				852541511E3E3605008F6A09 /* Preview */,
 				8525414E1E3E1661008F6A09 /* Particles */,
 			);
 			name = Controller;
@@ -353,7 +353,7 @@
 				852541741E421839008F6A09 /* ParticleOverviewTableViewCell.swift in Sources */,
 				852541501E3E1698008F6A09 /* WebFallbackViewController.swift in Sources */,
 				8525416A1E4217AC008F6A09 /* PollNativeViewController.swift in Sources */,
-				8525416C1E4217CE008F6A09 /* MainViewController.swift in Sources */,
+				8525416C1E4217CE008F6A09 /* PreviewViewController.swift in Sources */,
 				8531DCC91E0BE1C600BDEECB /* IconsCollectionCell.swift in Sources */,
 				8531DCCB1E0BF08E00BDEECB /* IconCell.swift in Sources */,
 				85D675931E3637B2003B9798 /* LPRTableView.swift in Sources */,

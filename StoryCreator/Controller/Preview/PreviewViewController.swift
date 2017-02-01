@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class MainViewController: UIViewController, PreviewTableDataSourceProtocol, PresentViewControllerProtocol
+class PreviewViewController: UIViewController, PreviewTableDataSourceProtocol, PresentViewControllerProtocol
 {
     @IBOutlet weak var particlesTable: UITableView!
     
