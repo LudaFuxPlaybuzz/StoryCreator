@@ -159,7 +159,7 @@
                                             <outlet property="descriptionTextField" destination="gp7-cN-pHp" id="cHg-D1-mO5"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="StoryCreator.ParticleOverviewTableViewCell" id="3mt-fB-B9z" customClass="ParticleOverviewTableViewCell" customModule="StoryCreator" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="StoryCreator.ParticleOverviewTableViewCell" id="3mt-fB-B9z" customClass="ParticleOverviewTableViewCell" customModule="StoryCreator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="240" width="320" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3mt-fB-B9z" id="4Ll-wN-42g">
@@ -196,8 +196,7 @@
                                         <connections>
                                             <outlet property="explanationLabel" destination="YfD-uy-2bg" id="5g3-WR-RzC"/>
                                             <outlet property="particleIcon" destination="M3V-yf-al6" id="lfH-rM-hyP"/>
-                                            <segue destination="6Yf-YR-ObO" kind="show" id="sYq-1X-biV"/>
-                                            <segue destination="6Yf-YR-ObO" kind="show" identifier="details" trigger="accessoryAction" id="WpM-eT-hFa"/>
+                                            <segue destination="6Yf-YR-ObO" kind="show" identifier="details" id="dA2-7h-sNn"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.IconsCollectionCell" rowHeight="169" id="Omb-Hm-LEL" customClass="IconsCollectionCell" customModule="StoryCreator" customModuleProvider="target">
@@ -374,7 +373,4 @@
         <image name="cameraShadow" width="227" height="212"/>
         <image name="gradient" width="360" height="360"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="WpM-eT-hFa"/>
-    </inferredMetricsTieBreakers>
 </document>

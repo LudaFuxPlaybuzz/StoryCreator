@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class MainViewController: UIViewController, PreviewTableDataSourceProtocol
+class MainViewController: UIViewController, PreviewTableDataSourceProtocol, PresentViewControllerProtocol
 {
     @IBOutlet weak var particlesTable: UITableView!
     
@@ -24,7 +24,9 @@ class MainViewController: UIViewController, PreviewTableDataSourceProtocol
         particlesTable.rowHeight = UITableViewAutomaticDimension
         particlesTable.estimatedRowHeight = 140
         particlesTable.dataSource = self.feedDataSource
+        particlesTable.delegate = self.feedDataSource
         self.feedDataSource.delegate = self
+        self.feedDataSource.presentVCDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -61,6 +63,12 @@ class MainViewController: UIViewController, PreviewTableDataSourceProtocol
 //            self.performSegue(withIdentifier: "details", sender: particle)
         }
     }
+    
+    func showParticle(_ particle:Particle)
+    {
+        self.performSegue(withIdentifier: "details", sender: particle)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any!)
     {
         if let particle = sender as? Particle
@@ -81,6 +89,12 @@ class MainViewController: UIViewController, PreviewTableDataSourceProtocol
 //                detailViewController.particle = particle
             }
         }
+    }
+    
+    //Mark: PresentViewControllerProtocol
+    func present(_ viewController:UIViewController, animated: Bool)
+    {
+        self.present(viewController, animated: true) {}
     }
 }
 

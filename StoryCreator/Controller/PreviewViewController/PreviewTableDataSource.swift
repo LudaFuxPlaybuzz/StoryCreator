@@ -12,6 +12,7 @@ class PreviewTableDataSource: NSObject, UITableViewDataSource, UITableViewDelega
     
     var newParticles = [Particle]()
     weak var delegate: PreviewTableDataSourceProtocol?
+    weak var presentVCDelegate: PresentViewControllerProtocol?
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
@@ -24,6 +25,7 @@ class PreviewTableDataSource: NSObject, UITableViewDataSource, UITableViewDelega
         {
             if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(TitleAndCoverTableViewCell.self), for: indexPath) as? TitleAndCoverTableViewCell
             {
+                cell.delegate = self.presentVCDelegate
                 return cell
             }
         }
@@ -89,6 +91,12 @@ class PreviewTableDataSource: NSObject, UITableViewDataSource, UITableViewDelega
         newParticles[destinationIndexPath.row] = source
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let particle = newParticles[indexPath.row - 2]
+        print(particle)
+        self.delegate?.showParticle(particle)
+    }
+    
     func particleAdded(_ particle:Particle)
     {
         newParticles.append(particle)
@@ -99,4 +107,5 @@ class PreviewTableDataSource: NSObject, UITableViewDataSource, UITableViewDelega
 @objc protocol PreviewTableDataSourceProtocol: class
 {
     func particleAdded(_ particle:Particle)
+    func showParticle(_ particle:Particle)
 }

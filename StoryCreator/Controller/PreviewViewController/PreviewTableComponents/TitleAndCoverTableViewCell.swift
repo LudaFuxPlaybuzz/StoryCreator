@@ -15,6 +15,7 @@ class TitleAndCoverTableViewCell: UITableViewCell {
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var titleTextField: AnimatedTextInput!
     
+    weak var delegate: PresentViewControllerProtocol?
     
     override func awakeFromNib()
     {
@@ -65,6 +66,12 @@ class TitleAndCoverTableViewCell: UITableViewCell {
             }
         }
         
-//        self.present(pickerController, animated: true) {}
+        self.delegate?.present(pickerController, animated: true)
+        
     }
+}
+
+@objc protocol PresentViewControllerProtocol: class
+{
+    func present(_ viewController:UIViewController, animated: Bool)
 }
