@@ -85,8 +85,8 @@ class MainViewController: UIViewController, PreviewTableDataSourceProtocol, Pres
             
             if let detailViewController = segue.destination as? WebFallbackViewController
             {
-//                let particle = newParticles[selectedRow]
-//                detailViewController.particle = particle
+                let particle = self.feedDataSource.newParticles[selectedRow - 2]
+                detailViewController.particle = particle
             }
         }
     }

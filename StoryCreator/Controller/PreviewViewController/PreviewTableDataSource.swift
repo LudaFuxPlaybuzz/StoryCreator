@@ -91,13 +91,7 @@ class PreviewTableDataSource: NSObject, UITableViewDataSource, UITableViewDelega
         newParticles[sourceIndexPath.row - 2] = destination
         newParticles[destinationIndexPath.row - 2] = source
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let particle = newParticles[indexPath.row - 2]
-        print(particle)
-        self.delegate?.showParticle(particle)
-    }
-    
+
     func particleAdded(_ particle:Particle)
     {
         newParticles.append(particle)
