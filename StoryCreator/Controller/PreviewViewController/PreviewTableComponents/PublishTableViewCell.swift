@@ -10,15 +10,14 @@ import UIKit
 
 class PublishTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
+    @IBOutlet weak var publishButton: UIButton!
+    
+    override func awakeFromNib()
+    {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        
+        publishButton.layer.masksToBounds = true
+        publishButton.layer.cornerRadius = 4
     }
 
     @IBAction func didPressCreateButton(_ sender: Any)

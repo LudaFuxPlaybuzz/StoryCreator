@@ -93,9 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				852541571E3E3C53008F6A09 /* TitleAndCoverTableViewCell.swift */,
+				852541551E3E3893008F6A09 /* DescriptionTableViewCell.swift */,
 				8548C3861E3A22A9002D0887 /* ParticleOverviewTableViewCell.swift */,
 				852541531E3E36A7008F6A09 /* PublishTableViewCell.swift */,
-				852541551E3E3893008F6A09 /* DescriptionTableViewCell.swift */,
 			);
 			name = PreviewTableComponents;
 			sourceTree = "<group>";
