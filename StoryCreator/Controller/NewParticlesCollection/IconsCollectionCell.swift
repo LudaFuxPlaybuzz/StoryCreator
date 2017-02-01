@@ -10,7 +10,6 @@ import UIKit
 
 class IconsCollectionCell: UITableViewCell, UICollectionViewDataSource, NewParticleCollectionViewCellProtocol
 {
-    @IBOutlet weak var cardBackground: UIView!
     @IBOutlet weak var NewParticlesCollectionView: UICollectionView!
     
     let cardBackgroundBorder = CAShapeLayer()

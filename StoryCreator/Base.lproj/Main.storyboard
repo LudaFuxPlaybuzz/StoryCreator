@@ -206,75 +206,64 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="169"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PmK-NQ-jg4">
-                                                    <rect key="frame" x="15" y="1" width="290" height="153"/>
-                                                    <subviews>
-                                                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LG9-D2-ydE">
-                                                            <rect key="frame" x="10" y="10" width="270" height="133"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="133" id="FR7-aN-9uX"/>
-                                                            </constraints>
-                                                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="h38-RM-yvf">
-                                                                <size key="itemSize" width="45" height="45"/>
-                                                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                                <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
-                                                            </collectionViewFlowLayout>
-                                                            <cells>
-                                                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.IconCell" id="WYa-Li-BJX" customClass="IconCell" customModule="StoryCreator" customModuleProvider="target">
-                                                                    <rect key="frame" x="10" y="10" width="45" height="45"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                                        <autoresizingMask key="autoresizingMask"/>
-                                                                        <subviews>
-                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJF-ER-Exo">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                                                <connections>
-                                                                                    <action selector="didPressAddParticle:" destination="WYa-Li-BJX" eventType="touchUpInside" id="B41-Pi-iaj"/>
-                                                                                </connections>
-                                                                            </button>
-                                                                        </subviews>
-                                                                    </view>
-                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                                    <constraints>
-                                                                        <constraint firstItem="cJF-ER-Exo" firstAttribute="leading" secondItem="WYa-Li-BJX" secondAttribute="leading" id="SBb-IA-KaI"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="cJF-ER-Exo" secondAttribute="trailing" id="cAV-k6-a1k"/>
-                                                                        <constraint firstItem="cJF-ER-Exo" firstAttribute="top" secondItem="WYa-Li-BJX" secondAttribute="top" id="eFd-ET-hPF"/>
-                                                                        <constraint firstAttribute="bottom" secondItem="cJF-ER-Exo" secondAttribute="bottom" id="nou-vO-mmk"/>
-                                                                    </constraints>
-                                                                    <connections>
-                                                                        <outlet property="particleIconButton" destination="cJF-ER-Exo" id="H9f-hh-AJV"/>
-                                                                    </connections>
-                                                                </collectionViewCell>
-                                                            </cells>
-                                                            <connections>
-                                                                <outlet property="dataSource" destination="Omb-Hm-LEL" id="muJ-Vo-zde"/>
-                                                            </connections>
-                                                        </collectionView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LG9-D2-ydE">
+                                                    <rect key="frame" x="23" y="18" width="274" height="133"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstItem="LG9-D2-ydE" firstAttribute="leading" secondItem="PmK-NQ-jg4" secondAttribute="leading" constant="10" id="7WO-yv-07Y"/>
-                                                        <constraint firstAttribute="bottom" secondItem="LG9-D2-ydE" secondAttribute="bottom" constant="10" id="Tix-kh-to4"/>
-                                                        <constraint firstItem="LG9-D2-ydE" firstAttribute="top" secondItem="PmK-NQ-jg4" secondAttribute="top" constant="10" id="bfu-hO-2MN"/>
-                                                        <constraint firstAttribute="trailing" secondItem="LG9-D2-ydE" secondAttribute="trailing" constant="10" id="xGv-MR-fXR"/>
+                                                        <constraint firstAttribute="height" constant="133" id="FR7-aN-9uX"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="133" id="ej7-ly-Uxc"/>
                                                     </constraints>
-                                                </view>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="h38-RM-yvf">
+                                                        <size key="itemSize" width="45" height="45"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.IconCell" id="WYa-Li-BJX" customClass="IconCell" customModule="StoryCreator" customModuleProvider="target">
+                                                            <rect key="frame" x="10" y="10" width="45" height="45"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJF-ER-Exo">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
+                                                                        <connections>
+                                                                            <action selector="didPressAddParticle:" destination="WYa-Li-BJX" eventType="touchUpInside" id="B41-Pi-iaj"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </view>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstItem="cJF-ER-Exo" firstAttribute="leading" secondItem="WYa-Li-BJX" secondAttribute="leading" id="SBb-IA-KaI"/>
+                                                                <constraint firstAttribute="trailing" secondItem="cJF-ER-Exo" secondAttribute="trailing" id="cAV-k6-a1k"/>
+                                                                <constraint firstItem="cJF-ER-Exo" firstAttribute="top" secondItem="WYa-Li-BJX" secondAttribute="top" id="eFd-ET-hPF"/>
+                                                                <constraint firstAttribute="bottom" secondItem="cJF-ER-Exo" secondAttribute="bottom" id="nou-vO-mmk"/>
+                                                            </constraints>
+                                                            <connections>
+                                                                <outlet property="particleIconButton" destination="cJF-ER-Exo" id="H9f-hh-AJV"/>
+                                                            </connections>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="Omb-Hm-LEL" id="muJ-Vo-zde"/>
+                                                    </connections>
+                                                </collectionView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="PmK-NQ-jg4" firstAttribute="top" secondItem="r7C-I6-9eI" secondAttribute="top" constant="1" id="RJJ-9C-b1n"/>
-                                                <constraint firstAttribute="trailing" secondItem="PmK-NQ-jg4" secondAttribute="trailing" constant="15" id="dOL-6P-K5u"/>
-                                                <constraint firstItem="PmK-NQ-jg4" firstAttribute="leading" secondItem="r7C-I6-9eI" secondAttribute="leading" constant="15" id="dTh-A1-c12"/>
-                                                <constraint firstAttribute="bottom" secondItem="PmK-NQ-jg4" secondAttribute="bottom" constant="15" id="xI4-2E-crq"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="LG9-D2-ydE" secondAttribute="bottom" constant="10" id="0H6-hK-LWH"/>
+                                                <constraint firstItem="LG9-D2-ydE" firstAttribute="top" secondItem="r7C-I6-9eI" secondAttribute="topMargin" constant="10" id="2Tg-Hs-db9"/>
+                                                <constraint firstItem="LG9-D2-ydE" firstAttribute="centerY" secondItem="r7C-I6-9eI" secondAttribute="centerY" id="FgC-DA-7X4"/>
+                                                <constraint firstItem="LG9-D2-ydE" firstAttribute="leading" secondItem="r7C-I6-9eI" secondAttribute="leadingMargin" constant="15" id="QHm-Wq-k52"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="LG9-D2-ydE" secondAttribute="trailing" constant="15" id="zE6-I8-zHn"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="NewParticlesCollectionView" destination="LG9-D2-ydE" id="QVS-sc-d4x"/>
-                                            <outlet property="cardBackground" destination="PmK-NQ-jg4" id="f7z-aI-tvy"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StoryCreator.PublishTableViewCell" rowHeight="40" id="7vw-Cu-qNI" customClass="PublishTableViewCell" customModule="StoryCreator" customModuleProvider="target">
@@ -285,11 +274,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2f5-0d-6Hu">
-                                                    <rect key="frame" x="85" y="3" width="150" height="34"/>
+                                                    <rect key="frame" x="85" y="0.0" width="150" height="40"/>
                                                     <color key="backgroundColor" red="0.73333333333333328" green="0.32156862745098036" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="150" id="Cmf-u3-5HT"/>
-                                                        <constraint firstAttribute="height" constant="34" id="OxT-CO-0V1"/>
+                                                        <constraint firstAttribute="height" constant="40" id="OxT-CO-0V1"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <state key="normal" title="PUBLISH">
