@@ -44,7 +44,7 @@
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xC2-Ht-TLK">
                                     <size key="itemSize" width="412" height="63"/>
                                     <size key="headerReferenceSize" width="50" height="212"/>
-                                    <size key="footerReferenceSize" width="50" height="216"/>
+                                    <size key="footerReferenceSize" width="50" height="173"/>
                                     <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
@@ -188,18 +188,19 @@
                                     </constraints>
                                     <connections>
                                         <outlet property="coverImage" destination="iB9-Qv-JSs" id="FyW-fB-YRy"/>
+                                        <outlet property="descriptionTextField" destination="7mB-ls-DBu" id="hLh-XT-XbK"/>
                                         <outlet property="titleTextField" destination="k7N-1r-yuu" id="bmb-I9-piR"/>
                                     </connections>
                                 </collectionReusableView>
                                 <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.NewParticlesAndPublishFooter" id="Ers-4x-Kh1" customClass="NewParticlesAndPublishFooter" customModule="StoryCreator" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="295" width="414" height="216"/>
+                                    <rect key="frame" x="0.0" y="295" width="414" height="173"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RfC-yL-38I">
-                                            <rect key="frame" x="8" y="8" width="398" height="200"/>
+                                            <rect key="frame" x="8" y="8" width="398" height="157"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LG9-D2-ydE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="160"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="122"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="h38-RM-yvf">
                                                         <size key="itemSize" width="45" height="45"/>
@@ -235,14 +236,21 @@
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="Ers-4x-Kh1" id="cct-r4-Xwv"/>
+                                                        <outlet property="delegate" destination="Ers-4x-Kh1" id="X9L-r1-Gge"/>
+                                                    </connections>
                                                 </collectionView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2f5-0d-6Hu">
-                                                    <rect key="frame" x="0.0" y="160" width="398" height="40"/>
+                                                    <rect key="frame" x="0.0" y="122" width="398" height="35"/>
                                                     <color key="backgroundColor" red="0.73333333333333328" green="0.32156862745098036" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <state key="normal" title="PUBLISH">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="didPressCreateButton:" destination="Ers-4x-Kh1" eventType="touchUpInside" id="maD-rl-5Ic"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </stackView>
@@ -255,6 +263,7 @@
                                     </constraints>
                                     <connections>
                                         <outlet property="NewParticlesCollectionView" destination="LG9-D2-ydE" id="A9I-TT-uPP"/>
+                                        <outlet property="publishButton" destination="2f5-0d-6Hu" id="F71-Bh-tRW"/>
                                     </connections>
                                 </collectionReusableView>
                             </collectionView>
