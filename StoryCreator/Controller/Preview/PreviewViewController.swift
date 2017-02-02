@@ -98,6 +98,10 @@ class PreviewViewController: UIViewController, PreviewCollectionDataSourceProtoc
         }
     }
     
+    @IBAction func didPan(_ sender: Any)
+    {
+        UIApplication.shared.sendAction(#selector(UIApplication.resignFirstResponder), to: nil, from: nil, for: nil);
+    }
     //Mark: PresentViewControllerProtocol
     func present(_ viewController:UIViewController, animated: Bool)
     {
