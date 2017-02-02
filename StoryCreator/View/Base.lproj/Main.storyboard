@@ -15,7 +15,8 @@
             <objects>
                 <navigationController id="opM-53-ctZ" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IId-ut-Q8C">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="IId-ut-Q8C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -374,6 +375,8 @@
                             <constraint firstAttribute="bottom" secondItem="Dfl-rq-TFg" secondAttribute="bottom" id="tyu-fM-FjT"/>
                         </constraints>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <connections>
                         <outlet property="webView" destination="Dfl-rq-TFg" id="Qkl-Dk-M5n"/>
                     </connections>

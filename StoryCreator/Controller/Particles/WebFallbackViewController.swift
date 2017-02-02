@@ -32,6 +32,8 @@ class WebFallbackViewController: UIViewController, UIWebViewDelegate {
             let request = URLRequest(url: url)
             webView.loadRequest(request)
         }
+        
+        setNeedsStatusBarAppearanceUpdate()
     }
 
     deinit
