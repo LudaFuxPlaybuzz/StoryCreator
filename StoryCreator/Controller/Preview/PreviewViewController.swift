@@ -21,8 +21,6 @@ class PreviewViewController: UIViewController, PreviewCollectionDataSourceProtoc
         
         //        self.useFirebaseDatabase()
     
-//        particlesTable.rowHeight = UITableViewAutomaticDimension
-//        particlesTable.estimatedRowHeight = 140
         previewCollection.dataSource = self.previewDataSource
         previewCollection.delegate = self.previewDataSource
         
@@ -61,7 +59,7 @@ class PreviewViewController: UIViewController, PreviewCollectionDataSourceProtoc
         
         let deadlineTime = DispatchTime.now() + .seconds(1)
         DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
-            self.performSegue(withIdentifier: "details", sender: particle)
+//            self.performSegue(withIdentifier: "details", sender: particle)
         }
     }
     
@@ -80,23 +78,24 @@ class PreviewViewController: UIViewController, PreviewCollectionDataSourceProtoc
             }
             
         }
-//        else if let indexPath = particlesTable.indexPathForSelectedRow
-//        {
-//            let selectedRow = indexPath.row
-//            
-//            if let cell = particlesTable.cellForRow(at: indexPath) as? ParticleOverviewCell
+        else if let indexPath = previewCollection.indexPathsForSelectedItems?[0]
+        {
+            let selectedRow = indexPath.row
+            
+//            if let cell = previewCollection.cellForItem(at: indexPath) as? ParticleOverviewCell
 //            {
 ////                print("stuff in prepare")
 ////                cell.selectionView.isHidden = false
 //                cell.setSelected(true, animated: false)
 //            }
-//        
-//            if let detailViewController = segue.destination as? WebFallbackViewController
-//            {
-//                let particle = self.feedDataSource.newParticles[selectedRow - 2]
-//                detailViewController.particle = particle
-//            }
-//        }
+        
+            if let detailViewController = segue.destination as? WebFallbackViewController
+            {
+                print(selectedRow)
+                let particle = self.previewDataSource.newParticles[selectedRow]
+                detailViewController.particle = particle
+            }
+        }
     }
     
     //Mark: PresentViewControllerProtocol
