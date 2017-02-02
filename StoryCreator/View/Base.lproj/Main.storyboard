@@ -14,6 +14,7 @@
         <scene sceneID="jK9-mK-YVG">
             <objects>
                 <navigationController id="opM-53-ctZ" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IId-ut-Q8C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
