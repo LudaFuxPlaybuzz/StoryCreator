@@ -416,7 +416,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dfl-rq-TFg">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="700"/>
+                                <rect key="frame" x="0.0" y="15" width="320" height="685"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="6Yf-YR-ObO" id="BGG-Yi-4mg"/>
@@ -425,7 +425,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Dfl-rq-TFg" firstAttribute="top" secondItem="NW2-eV-kbp" secondAttribute="top" id="4kW-E6-d7Q"/>
+                            <constraint firstItem="Dfl-rq-TFg" firstAttribute="top" secondItem="NW2-eV-kbp" secondAttribute="top" constant="15" id="4kW-E6-d7Q"/>
                             <constraint firstAttribute="trailing" secondItem="Dfl-rq-TFg" secondAttribute="trailing" id="HEs-Vs-vv7"/>
                             <constraint firstItem="Dfl-rq-TFg" firstAttribute="leading" secondItem="NW2-eV-kbp" secondAttribute="leading" id="atR-0L-uyJ"/>
                             <constraint firstAttribute="bottom" secondItem="Dfl-rq-TFg" secondAttribute="bottom" id="tyu-fM-FjT"/>
