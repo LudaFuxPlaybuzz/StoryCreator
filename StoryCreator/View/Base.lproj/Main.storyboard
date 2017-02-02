@@ -56,14 +56,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M3V-yf-al6">
-                                                    <rect key="frame" x="18" y="9" width="45" height="45"/>
+                                                    <rect key="frame" x="28" y="9" width="45" height="45"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="45" id="6Zx-aQ-9dA"/>
                                                         <constraint firstAttribute="width" constant="45" id="Ucx-bT-SAS"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Preview of" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfD-uy-2bg">
-                                                    <rect key="frame" x="73" y="21" width="321" height="21"/>
+                                                    <rect key="frame" x="83" y="21" width="311" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -73,7 +73,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailingMargin" secondItem="YfD-uy-2bg" secondAttribute="trailing" constant="10" id="17y-xU-cqI"/>
-                                            <constraint firstItem="M3V-yf-al6" firstAttribute="leading" secondItem="hzs-v6-p49" secondAttribute="leadingMargin" constant="10" id="65k-vI-boo"/>
+                                            <constraint firstItem="M3V-yf-al6" firstAttribute="leading" secondItem="hzs-v6-p49" secondAttribute="leadingMargin" constant="20" id="65k-vI-boo"/>
                                             <constraint firstItem="YfD-uy-2bg" firstAttribute="leading" secondItem="M3V-yf-al6" secondAttribute="trailing" constant="10" id="FOg-ef-a01"/>
                                             <constraint firstItem="M3V-yf-al6" firstAttribute="centerY" secondItem="hzs-v6-p49" secondAttribute="centerY" id="ec8-rx-qLj"/>
                                             <constraint firstItem="YfD-uy-2bg" firstAttribute="centerY" secondItem="hzs-v6-p49" secondAttribute="centerY" id="kRw-I1-Kd0"/>
@@ -368,7 +368,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dfl-rq-TFg">
-                                <rect key="frame" x="0.0" y="15" width="414" height="721"/>
+                                <rect key="frame" x="0.0" y="35" width="414" height="701"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="6Yf-YR-ObO" id="BGG-Yi-4mg"/>
@@ -377,7 +377,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Dfl-rq-TFg" firstAttribute="top" secondItem="NW2-eV-kbp" secondAttribute="top" constant="15" id="4kW-E6-d7Q"/>
+                            <constraint firstItem="Dfl-rq-TFg" firstAttribute="top" secondItem="NW2-eV-kbp" secondAttribute="top" constant="35" id="4kW-E6-d7Q"/>
                             <constraint firstAttribute="trailing" secondItem="Dfl-rq-TFg" secondAttribute="trailing" id="HEs-Vs-vv7"/>
                             <constraint firstItem="Dfl-rq-TFg" firstAttribute="leading" secondItem="NW2-eV-kbp" secondAttribute="leading" id="atR-0L-uyJ"/>
                             <constraint firstAttribute="bottom" secondItem="Dfl-rq-TFg" secondAttribute="bottom" id="tyu-fM-FjT"/>
