@@ -34,7 +34,7 @@ class PreviewCollectionDataSource: NSObject, UICollectionViewDelegate, UICollect
         if kind == UICollectionElementKindSectionHeader
         {
             let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader,
-                                                                             withReuseIdentifier:NSStringFromClass(TitleAndCoverHeader.self), for: indexPath) as! TitleAndCoverHeader
+                                                                             withReuseIdentifier:NSStringFromClass(TitleCoverAndDescriptionHeader.self), for: indexPath) as! TitleCoverAndDescriptionHeader
             return headerView
         } else {
             let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter,

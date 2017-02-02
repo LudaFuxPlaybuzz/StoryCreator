@@ -10,7 +10,7 @@ import UIKit
 import AnimatedTextInput
 import DKImagePickerController
 
-class TitleAndCoverHeader: UICollectionReusableView {
+class TitleCoverAndDescriptionHeader: UICollectionReusableView {
 
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var titleTextField: AnimatedTextInput!
