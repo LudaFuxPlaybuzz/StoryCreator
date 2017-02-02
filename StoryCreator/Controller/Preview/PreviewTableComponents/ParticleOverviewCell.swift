@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ParticleOverviewCell: UITableViewCell {
+class ParticleOverviewCell: UICollectionViewCell {
 
     @IBOutlet weak var particleIcon: UIImageView!
     @IBOutlet weak var explanationLabel: UILabel!

@@ -8,13 +8,15 @@
 
 import UIKit
 
-class NewParticlesCollectionView: UITableViewCell, UICollectionViewDataSource, NewParticleCollectionViewCellProtocol
+class NewParticlesAndPublishFooter : UICollectionReusableView, UICollectionViewDataSource
 {
     @IBOutlet weak var NewParticlesCollectionView: UICollectionView!
+    @IBOutlet weak var publishButton: UIButton!
     
     let cardBackgroundBorder = CAShapeLayer()
     var particleItems = [Particle]()
-    weak var delegate: NewParticlesCollectionTableViewCellProtocol?
+    
+    weak var newParticleDelegate: NewParticleCellProtocol?
     
     override func awakeFromNib()
     {
@@ -28,6 +30,9 @@ class NewParticlesCollectionView: UITableViewCell, UICollectionViewDataSource, N
                         Particle(image:"6", name:"Embed Section", url:"https://steelb.com/story.html?particle=embedSection"),
                         Particle(image:"7", name:"Flip Card", url:"https://steelb.com/story.html?particle=flipCard"),
                         Particle(image:"8", name:"Poll", url:"https://steelb.com/story.html?particle=pollSection")]
+        
+        publishButton.layer.masksToBounds = true
+        publishButton.layer.cornerRadius = 4
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -41,20 +46,31 @@ class NewParticlesCollectionView: UITableViewCell, UICollectionViewDataSource, N
         {
             let particle:Particle = self.particleItems[indexPath.row]
             cell.setDetails(particle)
-            cell.delegate = self
+            cell.delegate = self.newParticleDelegate
             return cell
         }
         
         return UICollectionViewCell()
     }
     
-    func particleAdded(_ particle:Particle)
+    @IBAction func didPressCreateButton(_ sender: Any) 
     {
-        self.delegate?.particleAdded(particle)
+        //        var storyContent = ""
+        //
+        //        for index in 0...newParticles.count
+        //        {
+        //            if let particleCell = particlesTable.cellForRow(at: IndexPath(row: index, section:0)) as? WebViewFallbackCell
+        //            {
+        //                storyContent += particleCell.getParticleData()
+        //            }
+        //        }
+        //
+        //        let alertController = UIAlertController(title: "Story Content", message:
+        //            storyContent, preferredStyle: UIAlertControllerStyle.alert)
+        //        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+        //
+        //        self.present(alertController, animated: true, completion: nil)
     }
+
 }
 
-@objc protocol NewParticlesCollectionTableViewCellProtocol: class
-{
-    func particleAdded(_ particle:Particle)
-}

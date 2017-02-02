@@ -9,12 +9,11 @@
 import UIKit
 import Firebase
 
-class PreviewViewController: UIViewController, PreviewTableDataSourceProtocol, PresentViewControllerProtocol
+class PreviewViewController: UIViewController, PreviewCollectionDataSourceProtocol, PresentViewControllerProtocol
 {
-    @IBOutlet weak var particlesTable: UITableView!
-    @IBOutlet weak var selectionView: UIView!
+    @IBOutlet weak var previewCollection: UICollectionView!
     
-    var feedDataSource = PreviewTableDataSource()
+    var previewDataSource = PreviewCollectionDataSource()
     
     override func viewDidLoad()
     {
@@ -22,12 +21,11 @@ class PreviewViewController: UIViewController, PreviewTableDataSourceProtocol, P
         
         //        self.useFirebaseDatabase()
     
-        particlesTable.rowHeight = UITableViewAutomaticDimension
-        particlesTable.estimatedRowHeight = 140
-        particlesTable.dataSource = self.feedDataSource
-        particlesTable.delegate = self.feedDataSource
-        self.feedDataSource.delegate = self
-        self.feedDataSource.presentVCDelegate = self
+        previewCollection.dataSource = self.previewDataSource
+        previewCollection.delegate = self.previewDataSource
+        
+        self.previewDataSource.delegate = self
+        self.previewDataSource.presentVCDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -57,7 +55,7 @@ class PreviewViewController: UIViewController, PreviewTableDataSourceProtocol, P
 
     func particleAdded(_ particle:Particle)
     {
-        particlesTable.reloadData()
+        previewCollection.reloadData()
         
         let deadlineTime = DispatchTime.now() + .seconds(1)
         DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
@@ -80,20 +78,21 @@ class PreviewViewController: UIViewController, PreviewTableDataSourceProtocol, P
             }
             
         }
-        else if let indexPath = particlesTable.indexPathForSelectedRow
+        else if let indexPath = previewCollection.indexPathsForSelectedItems?[0]
         {
             let selectedRow = indexPath.row
             
-            if let cell = particlesTable.cellForRow(at: indexPath) as? ParticleOverviewCell
-            {
-//                print("stuff in prepare")
-//                cell.selectionView.isHidden = false
-                cell.setSelected(true, animated: false)
-            }
+//            if let cell = previewCollection.cellForItem(at: indexPath) as? ParticleOverviewCell
+//            {
+////                print("stuff in prepare")
+////                cell.selectionView.isHidden = false
+//                cell.setSelected(true, animated: false)
+//            }
         
             if let detailViewController = segue.destination as? WebFallbackViewController
             {
-                let particle = self.feedDataSource.newParticles[selectedRow - 2]
+                print(selectedRow)
+                let particle = self.previewDataSource.newParticles[selectedRow]
                 detailViewController.particle = particle
             }
         }
