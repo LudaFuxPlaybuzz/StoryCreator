@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewParticlesCollectionView: UITableViewCell, UICollectionViewDataSource, NewParticleCollectionViewCellProtocol
+class NewParticlesAndPublishFooter : UICollectionReusableView, UICollectionViewDataSource, NewParticleCollectionViewCellProtocol
 {
     @IBOutlet weak var NewParticlesCollectionView: UICollectionView!
     

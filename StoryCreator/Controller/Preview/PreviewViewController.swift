@@ -9,12 +9,11 @@
 import UIKit
 import Firebase
 
-class PreviewViewController: UIViewController, PreviewTableDataSourceProtocol, PresentViewControllerProtocol
+class PreviewViewController: UIViewController, PreviewCollectionDataSourceProtocol, PresentViewControllerProtocol
 {
-    @IBOutlet weak var particlesTable: UITableView!
-    @IBOutlet weak var selectionView: UIView!
+    @IBOutlet weak var previewCollection: UICollectionView!
     
-    var feedDataSource = PreviewTableDataSource()
+    var previewDataSource = PreviewCollectionDataSource()
     
     override func viewDidLoad()
     {
@@ -22,12 +21,13 @@ class PreviewViewController: UIViewController, PreviewTableDataSourceProtocol, P
         
         //        self.useFirebaseDatabase()
     
-        particlesTable.rowHeight = UITableViewAutomaticDimension
-        particlesTable.estimatedRowHeight = 140
-        particlesTable.dataSource = self.feedDataSource
-        particlesTable.delegate = self.feedDataSource
-        self.feedDataSource.delegate = self
-        self.feedDataSource.presentVCDelegate = self
+//        particlesTable.rowHeight = UITableViewAutomaticDimension
+//        particlesTable.estimatedRowHeight = 140
+        previewCollection.dataSource = self.previewDataSource
+        previewCollection.delegate = self.previewDataSource
+        
+        self.previewDataSource.delegate = self
+        self.previewDataSource.presentVCDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool)
@@ -57,7 +57,7 @@ class PreviewViewController: UIViewController, PreviewTableDataSourceProtocol, P
 
     func particleAdded(_ particle:Particle)
     {
-        particlesTable.reloadData()
+        previewCollection.reloadData()
         
         let deadlineTime = DispatchTime.now() + .seconds(1)
         DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
@@ -72,31 +72,31 @@ class PreviewViewController: UIViewController, PreviewTableDataSourceProtocol, P
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any!)
     {
-        if let particle = sender as? Particle
-        {
-            if let detailViewController = segue.destination as? WebFallbackViewController
-            {
-                detailViewController.particle = particle
-            }
-            
-        }
-        else if let indexPath = particlesTable.indexPathForSelectedRow
-        {
-            let selectedRow = indexPath.row
-            
-            if let cell = particlesTable.cellForRow(at: indexPath) as? ParticleOverviewCell
-            {
-//                print("stuff in prepare")
-//                cell.selectionView.isHidden = false
-                cell.setSelected(true, animated: false)
-            }
-        
-            if let detailViewController = segue.destination as? WebFallbackViewController
-            {
-                let particle = self.feedDataSource.newParticles[selectedRow - 2]
-                detailViewController.particle = particle
-            }
-        }
+//        if let particle = sender as? Particle
+//        {
+//            if let detailViewController = segue.destination as? WebFallbackViewController
+//            {
+//                detailViewController.particle = particle
+//            }
+//            
+//        }
+//        else if let indexPath = particlesTable.indexPathForSelectedRow
+//        {
+//            let selectedRow = indexPath.row
+//            
+//            if let cell = particlesTable.cellForRow(at: indexPath) as? ParticleOverviewCell
+//            {
+////                print("stuff in prepare")
+////                cell.selectionView.isHidden = false
+//                cell.setSelected(true, animated: false)
+//            }
+//        
+//            if let detailViewController = segue.destination as? WebFallbackViewController
+//            {
+//                let particle = self.feedDataSource.newParticles[selectedRow - 2]
+//                detailViewController.particle = particle
+//            }
+//        }
     }
     
     //Mark: PresentViewControllerProtocol

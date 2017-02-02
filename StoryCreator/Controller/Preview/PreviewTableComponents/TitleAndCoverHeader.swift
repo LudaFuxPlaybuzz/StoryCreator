@@ -10,7 +10,7 @@ import UIKit
 import AnimatedTextInput
 import DKImagePickerController
 
-class TitleAndCoverCell: UITableViewCell {
+class TitleAndCoverHeader: UICollectionReusableView {
 
     @IBOutlet weak var coverImage: UIImageView!
     @IBOutlet weak var titleTextField: AnimatedTextInput!
@@ -45,7 +45,7 @@ class TitleAndCoverCell: UITableViewCell {
         
     }
     
-    @IBAction func didPressCameraButton(_ sender: Any)
+    @IBAction func didPressCameraButton(_ sender: Any) 
     {
         let pickerController = DKImagePickerController()
         pickerController.singleSelect = true

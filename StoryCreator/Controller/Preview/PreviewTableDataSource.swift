@@ -1,5 +1,5 @@
 //
-//  PreviewTableDataSource.swift
+//  PreviewCollectionDataSource.swift
 //  StoryCreator
 //
 //  Created by Luda Fux on 1/29/17.
@@ -8,88 +8,39 @@
 
 import UIKit
 
-class PreviewTableDataSource: NSObject, UITableViewDataSource, UITableViewDelegate, NewParticlesCollectionTableViewCellProtocol {
+class PreviewCollectionDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, NewParticlesCollectionTableViewCellProtocol {
     
     var newParticles = [Particle]()
-    weak var delegate: PreviewTableDataSourceProtocol?
+    weak var delegate: PreviewCollectionDataSourceProtocol?
     weak var presentVCDelegate: PresentViewControllerProtocol?
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return newParticles.count + 4
+        return newParticles.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        if indexPath.row == 0
-        {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(TitleAndCoverCell.self), for: indexPath) as? TitleAndCoverCell    
-            {
-                cell.delegate = self.presentVCDelegate
-                return cell
-            }
-        }
-        else if indexPath.row == 1
-        {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(DescriptionCell.self), for: indexPath) as? DescriptionCell
-            {
-                return cell
-            }
-        }
-        else if indexPath.row == newParticles.count + 2
-        {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(NewParticlesCollectionView.self), for: indexPath) as? NewParticlesCollectionView
-            {
-                cell.delegate = self
-                return cell
-            }
-        }
-        else if indexPath.row == newParticles.count + 3
-        {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(PublishCell.self), for: indexPath) as? PublishCell
-            {
-                return cell
-            }
-        } else
-        {
-            if let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ParticleOverviewCell.self), for: indexPath) as? ParticleOverviewCell
-            {
-                let bgColorView = UIView()
-                bgColorView.backgroundColor = UIColor.clear
-                cell.selectedBackgroundView = bgColorView
-                
-                let particle = newParticles[indexPath.row - 2]
-                cell.setDetails(particle: particle)
-                //                cell.delegate = self
-                return cell
-            }
-        }
-        return UITableViewCell()
-    }
-    
-    //MARK: Deletion
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
-    {
-        if editingStyle == UITableViewCellEditingStyle.delete
-        {
-            newParticles.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.fade)
-        }
-    }
-    
-    //MARK: Reordering
-    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool
-    {
-        return indexPath.row >= 2 && indexPath.row < newParticles.count + 2
-    }
-    
-    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath)
-    {
-        let source = newParticles[sourceIndexPath.row - 2]
-        let destination = newParticles[destinationIndexPath.row - 2]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(ParticleOverviewCell.self), for: indexPath) as! ParticleOverviewCell
         
-        newParticles[sourceIndexPath.row - 2] = destination
-        newParticles[destinationIndexPath.row - 2] = source
+        let particle = newParticles[indexPath.row]
+        cell.setDetails(particle: particle)
+        //                cell.delegate = self
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        if kind == UICollectionElementKindSectionHeader
+        {
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader,
+                                                                             withReuseIdentifier:NSStringFromClass(TitleAndCoverHeader.self), for: indexPath) as! TitleAndCoverHeader
+            return headerView
+        } else {
+            let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter,
+                                                                             withReuseIdentifier:NSStringFromClass(NewParticlesAndPublishFooter.self), for: indexPath) as! NewParticlesAndPublishFooter
+            return footerView
+        }
     }
 
     func particleAdded(_ particle:Particle)
@@ -99,7 +50,7 @@ class PreviewTableDataSource: NSObject, UITableViewDataSource, UITableViewDelega
     }
 }
 
-@objc protocol PreviewTableDataSourceProtocol: class
+@objc protocol PreviewCollectionDataSourceProtocol: class
 {
     func particleAdded(_ particle:Particle)
     func showParticle(_ particle:Particle)
