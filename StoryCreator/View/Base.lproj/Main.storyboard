@@ -48,7 +48,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hzs-v6-p49">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.ParticleOverviewCell" id="hzs-v6-p49" customClass="ParticleOverviewCell" customModule="StoryCreator" customModuleProvider="target">
                                         <rect key="frame" x="1" y="222" width="412" height="63"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -78,6 +78,11 @@
                                             <constraint firstItem="M3V-yf-al6" firstAttribute="centerY" secondItem="hzs-v6-p49" secondAttribute="centerY" id="ec8-rx-qLj"/>
                                             <constraint firstItem="YfD-uy-2bg" firstAttribute="centerY" secondItem="hzs-v6-p49" secondAttribute="centerY" id="kRw-I1-Kd0"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="explanationLabel" destination="YfD-uy-2bg" id="h12-mM-NJ4"/>
+                                            <outlet property="particleIcon" destination="M3V-yf-al6" id="1C2-8p-gUs"/>
+                                            <segue destination="6Yf-YR-ObO" kind="show" identifier="details" id="bcw-KT-FcL"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.TitleCoverAndDescriptionHeader" id="aUM-JL-cYA" customClass="TitleCoverAndDescriptionHeader" customModule="StoryCreator" customModuleProvider="target">

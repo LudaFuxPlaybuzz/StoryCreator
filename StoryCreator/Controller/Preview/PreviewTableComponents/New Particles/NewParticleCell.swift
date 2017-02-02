@@ -12,7 +12,7 @@ class NewParticleCell  : UICollectionViewCell {
     
     @IBOutlet weak var particleIconButton: UIButton!
     
-    weak var delegate: NewParticleCollectionViewCellProtocol?
+    weak var delegate: NewParticleCellProtocol?
     var particle:Particle!
     
     func setDetails(_ particle:Particle)
@@ -31,7 +31,7 @@ class NewParticleCell  : UICollectionViewCell {
     }
 }
 
-@objc protocol NewParticleCollectionViewCellProtocol: class
+@objc protocol NewParticleCellProtocol: class
 {
     func particleAdded(_ particle:Particle)
 }

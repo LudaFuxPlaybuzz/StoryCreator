@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PreviewCollectionDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, NewParticlesCollectionTableViewCellProtocol {
+class PreviewCollectionDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, NewParticleCellProtocol {
     
     var newParticles = [Particle]()
     weak var delegate: PreviewCollectionDataSourceProtocol?
@@ -39,6 +39,7 @@ class PreviewCollectionDataSource: NSObject, UICollectionViewDelegate, UICollect
         } else {
             let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter,
                                                                              withReuseIdentifier:NSStringFromClass(NewParticlesAndPublishFooter.self), for: indexPath) as! NewParticlesAndPublishFooter
+            footerView.newParticleDelegate = self
             return footerView
         }
     }

@@ -8,14 +8,15 @@
 
 import UIKit
 
-class NewParticlesAndPublishFooter : UICollectionReusableView, UICollectionViewDataSource, NewParticleCollectionViewCellProtocol
+class NewParticlesAndPublishFooter : UICollectionReusableView, UICollectionViewDataSource
 {
     @IBOutlet weak var NewParticlesCollectionView: UICollectionView!
     @IBOutlet weak var publishButton: UIButton!
     
     let cardBackgroundBorder = CAShapeLayer()
     var particleItems = [Particle]()
-    weak var delegate: NewParticlesCollectionTableViewCellProtocol?
+    
+    weak var newParticleDelegate: NewParticleCellProtocol?
     
     override func awakeFromNib()
     {
@@ -45,16 +46,11 @@ class NewParticlesAndPublishFooter : UICollectionReusableView, UICollectionViewD
         {
             let particle:Particle = self.particleItems[indexPath.row]
             cell.setDetails(particle)
-            cell.delegate = self
+            cell.delegate = self.newParticleDelegate
             return cell
         }
         
         return UICollectionViewCell()
-    }
-    
-    func particleAdded(_ particle:Particle)
-    {
-        self.delegate?.particleAdded(particle)
     }
     
     @IBAction func didPressCreateButton(_ sender: Any) 
@@ -78,7 +74,3 @@ class NewParticlesAndPublishFooter : UICollectionReusableView, UICollectionViewD
 
 }
 
-@objc protocol NewParticlesCollectionTableViewCellProtocol: class
-{
-    func particleAdded(_ particle:Particle)
-}

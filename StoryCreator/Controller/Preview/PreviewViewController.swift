@@ -61,7 +61,7 @@ class PreviewViewController: UIViewController, PreviewCollectionDataSourceProtoc
         
         let deadlineTime = DispatchTime.now() + .seconds(1)
         DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
-//            self.performSegue(withIdentifier: "details", sender: particle)
+            self.performSegue(withIdentifier: "details", sender: particle)
         }
     }
     
@@ -72,14 +72,14 @@ class PreviewViewController: UIViewController, PreviewCollectionDataSourceProtoc
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any!)
     {
-//        if let particle = sender as? Particle
-//        {
-//            if let detailViewController = segue.destination as? WebFallbackViewController
-//            {
-//                detailViewController.particle = particle
-//            }
-//            
-//        }
+        if let particle = sender as? Particle
+        {
+            if let detailViewController = segue.destination as? WebFallbackViewController
+            {
+                detailViewController.particle = particle
+            }
+            
+        }
 //        else if let indexPath = particlesTable.indexPathForSelectedRow
 //        {
 //            let selectedRow = indexPath.row
