@@ -12,6 +12,7 @@ import Firebase
 class PreviewViewController: UIViewController, PreviewTableDataSourceProtocol, PresentViewControllerProtocol
 {
     @IBOutlet weak var particlesTable: UITableView!
+    @IBOutlet weak var selectionView: UIView!
     
     var feedDataSource = PreviewTableDataSource()
     
@@ -83,6 +84,13 @@ class PreviewViewController: UIViewController, PreviewTableDataSourceProtocol, P
         {
             let selectedRow = indexPath.row
             
+            if let cell = particlesTable.cellForRow(at: indexPath) as? ParticleOverviewCell
+            {
+//                print("stuff in prepare")
+//                cell.selectionView.isHidden = false
+                cell.setSelected(true, animated: false)
+            }
+        
             if let detailViewController = segue.destination as? WebFallbackViewController
             {
                 let particle = self.feedDataSource.newParticles[selectedRow - 2]

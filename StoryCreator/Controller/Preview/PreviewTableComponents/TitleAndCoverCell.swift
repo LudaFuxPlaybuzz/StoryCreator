@@ -26,12 +26,6 @@ class TitleAndCoverCell: UITableViewCell {
         titleTextField.placeHolderText = "Title"
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
     struct TitleInputStyle: AnimatedTextInputStyle {
         
         let activeColor = UIColor.white

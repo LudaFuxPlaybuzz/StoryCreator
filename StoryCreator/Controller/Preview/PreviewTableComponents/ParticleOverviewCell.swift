@@ -15,11 +15,6 @@ class ParticleOverviewCell: UITableViewCell {
     
     var particle:Particle!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
     func setDetails(particle:Particle)
     {
         self.particle = particle

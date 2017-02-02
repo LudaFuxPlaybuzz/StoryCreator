@@ -33,38 +33,6 @@
             endingLineNumber = "86"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "StoryCreator.MainViewController.prepare (for : __ObjC.UIStoryboardSegue, sender : Swift.ImplicitlyUnwrappedOptional&lt;Any&gt;) -&gt; ()"
-                  moduleName = "StoryCreator"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luda/Documents/Development/StoryCreator/StoryCreator/MainViewController.swift"
-                  timestampString = "507645115.699184"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "994">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "StoryCreator.MainViewController.prepare (for : __ObjC.UIStoryboardSegue, sender : Swift.ImplicitlyUnwrappedOptional&lt;Any&gt;) -&gt; ()"
-                  moduleName = "StoryCreator"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luda/Documents/Development/StoryCreator/StoryCreator/MainViewController.swift"
-                  timestampString = "507645115.701825"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "1181">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
