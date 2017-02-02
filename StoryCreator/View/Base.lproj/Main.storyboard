@@ -43,13 +43,13 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xC2-Ht-TLK">
                                     <size key="itemSize" width="412" height="63"/>
-                                    <size key="headerReferenceSize" width="50" height="220"/>
+                                    <size key="headerReferenceSize" width="50" height="230"/>
                                     <size key="footerReferenceSize" width="50" height="173"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.ParticleOverviewCell" id="hzs-v6-p49" customClass="ParticleOverviewCell" customModule="StoryCreator" customModuleProvider="target">
-                                        <rect key="frame" x="1" y="220" width="412" height="63"/>
+                                        <rect key="frame" x="1" y="230" width="412" height="63"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="412" height="63"/>
@@ -86,7 +86,7 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.TitleCoverAndDescriptionHeader" id="aUM-JL-cYA" customClass="TitleCoverAndDescriptionHeader" customModule="StoryCreator" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="220"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="r28-m2-J0E">
@@ -165,21 +165,9 @@
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7mB-ls-DBu" customClass="AnimatedTextInput" customModule="AnimatedTextInput">
                                                     <rect key="frame" x="0.0" y="140" width="414" height="80"/>
-                                                    <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7dF-Tr-l6f">
-                                                            <rect key="frame" x="0.0" y="79" width="414" height="1"/>
-                                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="1" id="f2W-qJ-96Z"/>
-                                                            </constraints>
-                                                        </view>
-                                                    </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="80" id="9aK-HV-SXq"/>
-                                                        <constraint firstItem="7dF-Tr-l6f" firstAttribute="leading" secondItem="7mB-ls-DBu" secondAttribute="leading" id="AGx-0O-xL3"/>
-                                                        <constraint firstAttribute="trailing" secondItem="7dF-Tr-l6f" secondAttribute="trailing" id="QU7-2X-QpX"/>
-                                                        <constraint firstAttribute="bottom" secondItem="7dF-Tr-l6f" secondAttribute="bottom" id="T0X-Z9-xR7"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -189,7 +177,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="r28-m2-J0E" firstAttribute="top" secondItem="aUM-JL-cYA" secondAttribute="top" id="17l-bc-91P"/>
-                                        <constraint firstAttribute="bottom" secondItem="r28-m2-J0E" secondAttribute="bottom" id="Wj1-Dw-jRB"/>
+                                        <constraint firstAttribute="bottom" secondItem="r28-m2-J0E" secondAttribute="bottom" constant="10" id="Wj1-Dw-jRB"/>
                                         <constraint firstAttribute="trailing" secondItem="r28-m2-J0E" secondAttribute="trailing" id="guz-xn-KpC"/>
                                         <constraint firstItem="r28-m2-J0E" firstAttribute="leading" secondItem="aUM-JL-cYA" secondAttribute="leading" id="lhr-MP-PVL"/>
                                     </constraints>
@@ -200,7 +188,7 @@
                                     </connections>
                                 </collectionReusableView>
                                 <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.NewParticlesAndPublishFooter" id="Ers-4x-Kh1" customClass="NewParticlesAndPublishFooter" customModule="StoryCreator" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="283" width="414" height="173"/>
+                                    <rect key="frame" x="0.0" y="293" width="414" height="173"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RfC-yL-38I">
