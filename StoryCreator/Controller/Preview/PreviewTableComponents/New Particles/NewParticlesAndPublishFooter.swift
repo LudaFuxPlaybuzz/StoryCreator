@@ -11,7 +11,6 @@ import UIKit
 class NewParticlesAndPublishFooter : UICollectionReusableView, UICollectionViewDataSource
 {
     @IBOutlet weak var NewParticlesCollectionView: UICollectionView!
-    @IBOutlet weak var publishButton: UIButton!
     
     let cardBackgroundBorder = CAShapeLayer()
     var particleItems = [Particle]()
@@ -30,9 +29,6 @@ class NewParticlesAndPublishFooter : UICollectionReusableView, UICollectionViewD
                         Particle(image:"6", name:"Embed Section", url:"https://steelb.com/story.html?particle=embedSection"),
                         Particle(image:"7", name:"Flip Card", url:"https://steelb.com/story.html?particle=flipCard"),
                         Particle(image:"8", name:"Poll", url:"https://steelb.com/story.html?particle=pollSection")]
-        
-        publishButton.layer.masksToBounds = true
-        publishButton.layer.cornerRadius = 4
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -52,25 +48,5 @@ class NewParticlesAndPublishFooter : UICollectionReusableView, UICollectionViewD
         
         return UICollectionViewCell()
     }
-    
-    @IBAction func didPressCreateButton(_ sender: Any) 
-    {
-        //        var storyContent = ""
-        //
-        //        for index in 0...newParticles.count
-        //        {
-        //            if let particleCell = particlesTable.cellForRow(at: IndexPath(row: index, section:0)) as? WebViewFallbackCell
-        //            {
-        //                storyContent += particleCell.getParticleData()
-        //            }
-        //        }
-        //
-        //        let alertController = UIAlertController(title: "Story Content", message:
-        //            storyContent, preferredStyle: UIAlertControllerStyle.alert)
-        //        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
-        //
-        //        self.present(alertController, animated: true, completion: nil)
-    }
-
 }
 

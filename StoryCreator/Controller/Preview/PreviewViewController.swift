@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class PreviewViewController: UIViewController, PreviewCollectionDataSourceProtocol, PresentViewControllerProtocol
+class PreviewViewController: UIViewController, UIGestureRecognizerDelegate, PreviewCollectionDataSourceProtocol, PresentViewControllerProtocol
 {
     @IBOutlet weak var previewCollection: UICollectionView!
     
@@ -98,6 +98,10 @@ class PreviewViewController: UIViewController, PreviewCollectionDataSourceProtoc
         }
     }
     
+    @IBAction func didSwipe(_ sender: Any) {
+        NSLog("Swipe left")
+    }
+    
     @IBAction func didPan(_ sender: Any)
     {
         UIApplication.shared.sendAction(#selector(UIApplication.resignFirstResponder), to: nil, from: nil, for: nil);
@@ -107,6 +111,26 @@ class PreviewViewController: UIViewController, PreviewCollectionDataSourceProtoc
     {
         self.present(viewController, animated: true) {}
     }
+    
+    @IBAction func didPressCreateButton(_ sender: Any)
+    {
+        //        var storyContent = ""
+        //
+        //        for index in 0...newParticles.count
+        //        {
+        //            if let particleCell = particlesTable.cellForRow(at: IndexPath(row: index, section:0)) as? WebViewFallbackCell
+        //            {
+        //                storyContent += particleCell.getParticleData()
+        //            }
+        //        }
+        //
+        //        let alertController = UIAlertController(title: "Story Content", message:
+        //            storyContent, preferredStyle: UIAlertControllerStyle.alert)
+        //        alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default,handler: nil))
+        //
+        //        self.present(alertController, animated: true, completion: nil)
+    }
+
 }
 
 
