@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>NVActivityIndicatorView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-StoryCreator.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,12 +47,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8C2E09E036949D84633EB63D09D7250C</key>
+		<key>3EDFE4052B5DE7D509935AC0774CB135</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A8AC1A118B0509672EB45388D2C92088</key>
+		<key>49B1974A2B12DE5B5FEE25B78FB9FF54</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8C2E09E036949D84633EB63D09D7250C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

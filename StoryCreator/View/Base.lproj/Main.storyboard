@@ -380,24 +380,43 @@
                                     <outlet property="delegate" destination="6Yf-YR-ObO" id="BGG-Yi-4mg"/>
                                 </connections>
                             </webView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yd2-Lh-eTR" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="182" y="343" width="50" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="6ym-26-c5a"/>
+                                    <constraint firstAttribute="height" constant="50" id="wc5-E1-olQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" red="0.0" green="0.61176470589999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Dfl-rq-TFg" firstAttribute="top" secondItem="NW2-eV-kbp" secondAttribute="top" constant="35" id="4kW-E6-d7Q"/>
                             <constraint firstAttribute="trailing" secondItem="Dfl-rq-TFg" secondAttribute="trailing" id="HEs-Vs-vv7"/>
+                            <constraint firstItem="yd2-Lh-eTR" firstAttribute="centerX" secondItem="NW2-eV-kbp" secondAttribute="centerX" id="aSO-Wd-owl"/>
                             <constraint firstItem="Dfl-rq-TFg" firstAttribute="leading" secondItem="NW2-eV-kbp" secondAttribute="leading" id="atR-0L-uyJ"/>
+                            <constraint firstItem="yd2-Lh-eTR" firstAttribute="centerY" secondItem="NW2-eV-kbp" secondAttribute="centerY" id="dOP-yd-Bd5"/>
                             <constraint firstAttribute="bottom" secondItem="Dfl-rq-TFg" secondAttribute="bottom" id="tyu-fM-FjT"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <connections>
+                        <outlet property="loaderView" destination="yd2-Lh-eTR" id="wgw-0w-9qX"/>
                         <outlet property="webView" destination="Dfl-rq-TFg" id="Qkl-Dk-M5n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kmu-mn-QjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="120" y="874"/>
+            <point key="canvasLocation" x="118.84057971014494" y="873.91304347826099"/>
         </scene>
     </scenes>
     <resources>

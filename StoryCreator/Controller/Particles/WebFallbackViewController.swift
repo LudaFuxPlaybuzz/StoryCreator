@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import NVActivityIndicatorView
 
 class WebFallbackViewController: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var webView: UIWebView!
+    @IBOutlet weak var loaderView: NVActivityIndicatorView!
 //    @IBOutlet weak var webViewHeight: NSLayoutConstraint!
 
     var particle:Particle!
@@ -20,6 +22,7 @@ class WebFallbackViewController: UIViewController, UIWebViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        loaderView.startAnimating()
 //        webView.scrollView.isScrollEnabled = false
         webView.scrollView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
         webView.delegate = self
@@ -69,6 +72,10 @@ class WebFallbackViewController: UIViewController, UIWebViewDelegate {
         return true
     }
     
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        loaderView.stopAnimating()
+        loaderView.isHidden = true
+    }
     func getParticleData() -> String
     {
         return webView.stringByEvaluatingJavaScript(from: "getPbItem()")!

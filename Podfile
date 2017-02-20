@@ -5,4 +5,5 @@ target 'StoryCreator' do
     pod 'AnimatedTextInput'
     pod 'Firebase/Core'
     pod 'Firebase/Database'
+    pod 'NVActivityIndicatorView'
 end
