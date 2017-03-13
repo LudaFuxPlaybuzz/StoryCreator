@@ -41,9 +41,6 @@
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="iCI-DW-oHc" appends="YES" id="HZE-0V-suy"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.TitleCoverAndDescriptionHeader" id="aUM-JL-cYA" customClass="TitleCoverAndDescriptionHeader" customModule="StoryCreator" customModuleProvider="target">
@@ -241,12 +238,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="up" id="iCI-DW-oHc">
-                    <connections>
-                        <action selector="didSwipe:" destination="BYZ-38-t0r" id="zOH-Hr-1du"/>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="nb0-zv-940"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="118.84057971014494" y="-19.565217391304348"/>
         </scene>

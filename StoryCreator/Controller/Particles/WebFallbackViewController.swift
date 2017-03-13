@@ -27,14 +27,14 @@ class WebFallbackViewController: UIViewController, UIWebViewDelegate {
         webView.scrollView.addObserver(self, forKeyPath: "contentSize", options: .new, context: nil)
         webView.delegate = self
         
-        self.title = particle.name
-        
-        if let url = URL(string: particle.url)
-        {
-            print(url)
-            let request = URLRequest(url: url)
-            webView.loadRequest(request)
-        }
+//        self.title = particle.name
+//        
+//        if let url = URL(string: particle.url)
+//        {
+//            print(url)
+//            let request = URLRequest(url: url)
+//            webView.loadRequest(request)
+//        }
         
         setNeedsStatusBarAppearanceUpdate()
     }

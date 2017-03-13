@@ -21,14 +21,23 @@ class NewParticlesAndPublishFooter : UICollectionReusableView, UICollectionViewD
     {
         super.awakeFromNib()
 
-        particleItems = [Particle(image:"1", name:"Text", url:"https://steelb.com/story.html?particle=paragraph"),
-                        Particle(image:"2", name:"Image", url:"https://steelb.com/story.html?particle=imageSection"),
-                        Particle(image:"3", name:"Quote", url:"https://steelb.com/story.html?particle=quote"),
-                        Particle(image:"4", name:"Convo", url:"https://steelb.com/story.html?particle=convo"),
-                        Particle(image:"5", name:"Summery", url:"https://steelb.com/story.html?particle=summaryCard"),
-                        Particle(image:"6", name:"Embed Section", url:"https://steelb.com/story.html?particle=embedSection"),
-                        Particle(image:"7", name:"Flip Card", url:"https://steelb.com/story.html?particle=flipCard"),
-                        Particle(image:"8", name:"Poll", url:"https://steelb.com/story.html?particle=pollSection")]
+        particleItems = [MicrophoneParticle(),
+                         Particle(image:"1"),
+                         Particle(image:"2"),
+                         Particle(image:"3"),
+                         Particle(image:"4"),
+                         Particle(image:"5"),
+                         Particle(image:"6"),
+                         Particle(image:"7"),
+                         Particle(image:"8")]
+//            Particle(image:"1", name:"Text", url:"https://steelb.com/story.html?particle=paragraph"),
+//                        Particle(image:"2", name:"Image", url:"https://steelb.com/story.html?particle=imageSection"),
+//                        Particle(image:"3", name:"Quote", url:"https://steelb.com/story.html?particle=quote"),
+//                        Particle(image:"4", name:"Convo", url:"https://steelb.com/story.html?particle=convo"),
+//                        Particle(image:"5", name:"Summery", url:"https://steelb.com/story.html?particle=summaryCard"),
+//                        Particle(image:"6", name:"Embed Section", url:"https://steelb.com/story.html?particle=embedSection"),
+//                        Particle(image:"7", name:"Flip Card", url:"https://steelb.com/story.html?particle=flipCard"),
+//                        Particle(image:"8", name:"Poll", url:"https://steelb.com/story.html?particle=pollSection")]
     }
     
     public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int

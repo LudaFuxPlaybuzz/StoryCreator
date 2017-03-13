@@ -22,6 +22,7 @@
 		859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B55B11E0AD2E700231A2B /* FloatLabelTextField.swift */; };
 		859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B55B21E0AD2E700231A2B /* FloatLabelTextView.swift */; };
 		85AF5F5F1E76B5830069A587 /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF5F5E1E76B5830069A587 /* FirebaseManager.swift */; };
+		85AF5F611E76CD620069A587 /* MicrophoneParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF5F601E76CD620069A587 /* MicrophoneParticle.swift */; };
 		85D675931E3637B2003B9798 /* LPRTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D675921E3637B2003B9798 /* LPRTableView.swift */; };
 		85DDC5921E2FCA100077E942 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85DDC5911E2FCA100077E942 /* GoogleService-Info.plist */; };
 		989A2345E41CEB9D85ACB3B1 /* Pods_StoryCreator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 849CDF9A9E24697EC0AE0A98 /* Pods_StoryCreator.framework */; };
@@ -47,6 +48,7 @@
 		859B55B11E0AD2E700231A2B /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
 		859B55B21E0AD2E700231A2B /* FloatLabelTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextView.swift; sourceTree = "<group>"; };
 		85AF5F5E1E76B5830069A587 /* FirebaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirebaseManager.swift; path = Model/FirebaseManager.swift; sourceTree = "<group>"; };
+		85AF5F601E76CD620069A587 /* MicrophoneParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MicrophoneParticle.swift; path = Model/MicrophoneParticle.swift; sourceTree = "<group>"; };
 		85D675921E3637B2003B9798 /* LPRTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LPRTableView.swift; sourceTree = "<group>"; };
 		85DDC5911E2FCA100077E942 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DF9CF8EDB0849B8B7E03C113 /* Pods-StoryCreator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryCreator.release.xcconfig"; path = "Pods/Target Support Files/Pods-StoryCreator/Pods-StoryCreator.release.xcconfig"; sourceTree = "<group>"; };
@@ -86,7 +88,7 @@
 		852C02611E0C186F006B5795 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				852C02621E0C18A7006B5795 /* Particle.swift */,
+				85AF5F621E76D0CC0069A587 /* Particles */,
 				85AF5F5E1E76B5830069A587 /* FirebaseManager.swift */,
 			);
 			name = Model;
@@ -162,6 +164,15 @@
 				859B55B21E0AD2E700231A2B /* FloatLabelTextView.swift */,
 			);
 			name = FloatLabel;
+			sourceTree = "<group>";
+		};
+		85AF5F621E76D0CC0069A587 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				852C02621E0C18A7006B5795 /* Particle.swift */,
+				85AF5F601E76CD620069A587 /* MicrophoneParticle.swift */,
+			);
+			name = Particles;
 			sourceTree = "<group>";
 		};
 		C43BDA37BE37657B705C32DE /* Pods */ = {
@@ -311,6 +322,7 @@
 				852541761E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift in Sources */,
 				859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */,
 				852C02631E0C18A7006B5795 /* Particle.swift in Sources */,
+				85AF5F611E76CD620069A587 /* MicrophoneParticle.swift in Sources */,
 				852541801E421DCD008F6A09 /* NewParticlesAndPublishFooter.swift in Sources */,
 				859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */,
 				852541741E421839008F6A09 /* ParticleOverviewCell.swift in Sources */,
