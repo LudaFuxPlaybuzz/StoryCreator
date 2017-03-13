@@ -55,5 +55,4 @@ class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionVi
 @objc protocol StoryCreatorDataSourceProtocol: class
 {
     func particleAdded(_ particle:Particle)
-    func showParticle(_ particle:Particle)
 }
