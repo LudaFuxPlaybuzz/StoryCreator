@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, NewParticleCellProtocol {
+class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, ParticleIconCellProtocol {
     
     var newParticles = [Particle]()
     weak var delegate: StoryCreatorDataSourceProtocol?

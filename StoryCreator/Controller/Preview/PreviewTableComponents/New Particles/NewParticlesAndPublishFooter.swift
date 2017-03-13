@@ -15,7 +15,7 @@ class NewParticlesAndPublishFooter : UICollectionReusableView, UICollectionViewD
     let cardBackgroundBorder = CAShapeLayer()
     var particleItems = [Particle]()
     
-    weak var newParticleDelegate: NewParticleCellProtocol?
+    weak var newParticleDelegate: ParticleIconCellProtocol?
     
     override func awakeFromNib()
     {
@@ -38,7 +38,7 @@ class NewParticlesAndPublishFooter : UICollectionReusableView, UICollectionViewD
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(NewParticleCell.self), for: indexPath) as? NewParticleCell
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(ParticleIconCell.self), for: indexPath) as? ParticleIconCell
         {
             let particle:Particle = self.particleItems[indexPath.row]
             cell.setDetails(particle)

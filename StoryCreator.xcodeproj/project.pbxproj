@@ -15,7 +15,7 @@
 		8525416E1E4217D9008F6A09 /* StoryCreatorDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525416D1E4217D9008F6A09 /* StoryCreatorDataSource.swift */; };
 		852541741E421839008F6A09 /* ParticleOverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541701E421839008F6A09 /* ParticleOverviewCell.swift */; };
 		852541761E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541721E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift */; };
-		8525417F1E421DCD008F6A09 /* NewParticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525417D1E421DCD008F6A09 /* NewParticleCell.swift */; };
+		8525417F1E421DCD008F6A09 /* ParticleIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525417D1E421DCD008F6A09 /* ParticleIconCell.swift */; };
 		852541801E421DCD008F6A09 /* NewParticlesAndPublishFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525417E1E421DCD008F6A09 /* NewParticlesAndPublishFooter.swift */; };
 		852C02631E0C18A7006B5795 /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852C02621E0C18A7006B5795 /* Particle.swift */; };
 		859B559C1E0AC8FA00231A2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B559B1E0AC8FA00231A2B /* AppDelegate.swift */; };
@@ -37,7 +37,7 @@
 		8525416D1E4217D9008F6A09 /* StoryCreatorDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryCreatorDataSource.swift; path = Controller/Preview/StoryCreatorDataSource.swift; sourceTree = "<group>"; };
 		852541701E421839008F6A09 /* ParticleOverviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticleOverviewCell.swift; path = Controller/Preview/PreviewTableComponents/ParticleOverviewCell.swift; sourceTree = "<group>"; };
 		852541721E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitleCoverAndDescriptionHeader.swift; path = Controller/Preview/PreviewTableComponents/TitleCoverAndDescriptionHeader.swift; sourceTree = "<group>"; };
-		8525417D1E421DCD008F6A09 /* NewParticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewParticleCell.swift; path = "Controller/Preview/PreviewTableComponents/New Particles/NewParticleCell.swift"; sourceTree = "<group>"; };
+		8525417D1E421DCD008F6A09 /* ParticleIconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticleIconCell.swift; path = "Controller/Preview/PreviewTableComponents/New Particles/ParticleIconCell.swift"; sourceTree = "<group>"; };
 		8525417E1E421DCD008F6A09 /* NewParticlesAndPublishFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewParticlesAndPublishFooter.swift; path = "Controller/Preview/PreviewTableComponents/New Particles/NewParticlesAndPublishFooter.swift"; sourceTree = "<group>"; };
 		852C02621E0C18A7006B5795 /* Particle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Particle.swift; path = Model/Particle.swift; sourceTree = "<group>"; };
 		859B55981E0AC8FA00231A2B /* StoryCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,38 +65,20 @@
 		8525414E1E3E1661008F6A09 /* Particles */ = {
 			isa = PBXGroup;
 			children = (
-				8525415B1E421591008F6A09 /* Native Particles */,
+				852541701E421839008F6A09 /* ParticleOverviewCell.swift */,
 				8525414F1E3E1698008F6A09 /* WebFallbackViewController.swift */,
 			);
 			name = Particles;
 			sourceTree = "<group>";
 		};
-		852541511E3E3605008F6A09 /* Preview */ = {
-			isa = PBXGroup;
-			children = (
-				8525416B1E4217CE008F6A09 /* StoryCreatorViewController.swift */,
-				8525416D1E4217D9008F6A09 /* StoryCreatorDataSource.swift */,
-				852541521E3E3632008F6A09 /* PreviewTableComponents */,
-			);
-			name = Preview;
-			sourceTree = "<group>";
-		};
-		852541521E3E3632008F6A09 /* PreviewTableComponents */ = {
+		852541521E3E3632008F6A09 /* Creator General Components */ = {
 			isa = PBXGroup;
 			children = (
 				852541721E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift */,
-				852541701E421839008F6A09 /* ParticleOverviewCell.swift */,
-				8531DCC51E0BD95000BDEECB /* New Particles */,
 				8525417E1E421DCD008F6A09 /* NewParticlesAndPublishFooter.swift */,
+				8525417D1E421DCD008F6A09 /* ParticleIconCell.swift */,
 			);
-			name = PreviewTableComponents;
-			sourceTree = "<group>";
-		};
-		8525415B1E421591008F6A09 /* Native Particles */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Native Particles";
+			name = "Creator General Components";
 			sourceTree = "<group>";
 		};
 		852C02611E0C186F006B5795 /* Model */ = {
@@ -105,14 +87,6 @@
 				852C02621E0C18A7006B5795 /* Particle.swift */,
 			);
 			name = Model;
-			sourceTree = "<group>";
-		};
-		8531DCC51E0BD95000BDEECB /* New Particles */ = {
-			isa = PBXGroup;
-			children = (
-				8525417D1E421DCD008F6A09 /* NewParticleCell.swift */,
-			);
-			name = "New Particles";
 			sourceTree = "<group>";
 		};
 		859B558F1E0AC8FA00231A2B = {
@@ -147,7 +121,9 @@
 		859B55AD1E0ACC7F00231A2B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				852541511E3E3605008F6A09 /* Preview */,
+				8525416B1E4217CE008F6A09 /* StoryCreatorViewController.swift */,
+				8525416D1E4217D9008F6A09 /* StoryCreatorDataSource.swift */,
+				852541521E3E3632008F6A09 /* Creator General Components */,
 				8525414E1E3E1661008F6A09 /* Particles */,
 			);
 			name = Controller;
@@ -334,7 +310,7 @@
 				852541801E421DCD008F6A09 /* NewParticlesAndPublishFooter.swift in Sources */,
 				859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */,
 				852541741E421839008F6A09 /* ParticleOverviewCell.swift in Sources */,
-				8525417F1E421DCD008F6A09 /* NewParticleCell.swift in Sources */,
+				8525417F1E421DCD008F6A09 /* ParticleIconCell.swift in Sources */,
 				852541501E3E1698008F6A09 /* WebFallbackViewController.swift in Sources */,
 				8525416C1E4217CE008F6A09 /* StoryCreatorViewController.swift in Sources */,
 				85D675931E3637B2003B9798 /* LPRTableView.swift in Sources */,
