@@ -24,7 +24,7 @@ class PreviewCollectionDataSource: NSObject, UICollectionViewDelegate, UICollect
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(ParticleOverviewCell.self), for: indexPath) as! ParticleOverviewCell
         
         let particle = newParticles[indexPath.row]
-        cell.setDetails(particle: particle)
+//        cell.setDetails(particle: particle)
         //                cell.delegate = self
         return cell
     }

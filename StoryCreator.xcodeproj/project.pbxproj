@@ -11,11 +11,10 @@
 		852541601E42170F008F6A09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8525415F1E42170F008F6A09 /* Assets.xcassets */; };
 		852541651E421717008F6A09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852541611E421717008F6A09 /* LaunchScreen.storyboard */; };
 		852541661E421717008F6A09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852541631E421717008F6A09 /* Main.storyboard */; };
-		8525416C1E4217CE008F6A09 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525416B1E4217CE008F6A09 /* PreviewViewController.swift */; };
+		8525416C1E4217CE008F6A09 /* StoryCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525416B1E4217CE008F6A09 /* StoryCreatorViewController.swift */; };
 		8525416E1E4217D9008F6A09 /* PreviewTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525416D1E4217D9008F6A09 /* PreviewTableDataSource.swift */; };
 		852541741E421839008F6A09 /* ParticleOverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541701E421839008F6A09 /* ParticleOverviewCell.swift */; };
 		852541761E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541721E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift */; };
-		8525417C1E421D97008F6A09 /* PollNativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525417B1E421D97008F6A09 /* PollNativeViewController.swift */; };
 		8525417F1E421DCD008F6A09 /* NewParticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525417D1E421DCD008F6A09 /* NewParticleCell.swift */; };
 		852541801E421DCD008F6A09 /* NewParticlesAndPublishFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525417E1E421DCD008F6A09 /* NewParticlesAndPublishFooter.swift */; };
 		852C02631E0C18A7006B5795 /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852C02621E0C18A7006B5795 /* Particle.swift */; };
@@ -34,11 +33,10 @@
 		8525415F1E42170F008F6A09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = View/Assets.xcassets; sourceTree = "<group>"; };
 		852541621E421717008F6A09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = View/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		852541641E421717008F6A09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = View/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8525416B1E4217CE008F6A09 /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreviewViewController.swift; path = Controller/Preview/PreviewViewController.swift; sourceTree = "<group>"; };
+		8525416B1E4217CE008F6A09 /* StoryCreatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryCreatorViewController.swift; path = Controller/Preview/StoryCreatorViewController.swift; sourceTree = "<group>"; };
 		8525416D1E4217D9008F6A09 /* PreviewTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreviewTableDataSource.swift; path = Controller/Preview/PreviewTableDataSource.swift; sourceTree = "<group>"; };
 		852541701E421839008F6A09 /* ParticleOverviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticleOverviewCell.swift; path = Controller/Preview/PreviewTableComponents/ParticleOverviewCell.swift; sourceTree = "<group>"; };
 		852541721E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitleCoverAndDescriptionHeader.swift; path = Controller/Preview/PreviewTableComponents/TitleCoverAndDescriptionHeader.swift; sourceTree = "<group>"; };
-		8525417B1E421D97008F6A09 /* PollNativeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollNativeViewController.swift; path = "Controller/Particles/Native Particles/Poll/PollNativeViewController.swift"; sourceTree = "<group>"; };
 		8525417D1E421DCD008F6A09 /* NewParticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewParticleCell.swift; path = "Controller/Preview/PreviewTableComponents/New Particles/NewParticleCell.swift"; sourceTree = "<group>"; };
 		8525417E1E421DCD008F6A09 /* NewParticlesAndPublishFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewParticlesAndPublishFooter.swift; path = "Controller/Preview/PreviewTableComponents/New Particles/NewParticlesAndPublishFooter.swift"; sourceTree = "<group>"; };
 		852C02621E0C18A7006B5795 /* Particle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Particle.swift; path = Model/Particle.swift; sourceTree = "<group>"; };
@@ -76,7 +74,7 @@
 		852541511E3E3605008F6A09 /* Preview */ = {
 			isa = PBXGroup;
 			children = (
-				8525416B1E4217CE008F6A09 /* PreviewViewController.swift */,
+				8525416B1E4217CE008F6A09 /* StoryCreatorViewController.swift */,
 				8525416D1E4217D9008F6A09 /* PreviewTableDataSource.swift */,
 				852541521E3E3632008F6A09 /* PreviewTableComponents */,
 			);
@@ -97,17 +95,8 @@
 		8525415B1E421591008F6A09 /* Native Particles */ = {
 			isa = PBXGroup;
 			children = (
-				8525415E1E421606008F6A09 /* Poll */,
 			);
 			name = "Native Particles";
-			sourceTree = "<group>";
-		};
-		8525415E1E421606008F6A09 /* Poll */ = {
-			isa = PBXGroup;
-			children = (
-				8525417B1E421D97008F6A09 /* PollNativeViewController.swift */,
-			);
-			name = Poll;
 			sourceTree = "<group>";
 		};
 		852C02611E0C186F006B5795 /* Model */ = {
@@ -344,11 +333,10 @@
 				852C02631E0C18A7006B5795 /* Particle.swift in Sources */,
 				852541801E421DCD008F6A09 /* NewParticlesAndPublishFooter.swift in Sources */,
 				859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */,
-				8525417C1E421D97008F6A09 /* PollNativeViewController.swift in Sources */,
 				852541741E421839008F6A09 /* ParticleOverviewCell.swift in Sources */,
 				8525417F1E421DCD008F6A09 /* NewParticleCell.swift in Sources */,
 				852541501E3E1698008F6A09 /* WebFallbackViewController.swift in Sources */,
-				8525416C1E4217CE008F6A09 /* PreviewViewController.swift in Sources */,
+				8525416C1E4217CE008F6A09 /* StoryCreatorViewController.swift in Sources */,
 				85D675931E3637B2003B9798 /* LPRTableView.swift in Sources */,
 				859B559C1E0AC8FA00231A2B /* AppDelegate.swift in Sources */,
 			);

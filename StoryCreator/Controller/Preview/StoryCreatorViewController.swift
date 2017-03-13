@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-class PreviewViewController: UIViewController, UIGestureRecognizerDelegate, PreviewCollectionDataSourceProtocol, PresentViewControllerProtocol
+class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate, PreviewCollectionDataSourceProtocol, PresentViewControllerProtocol
 {
     @IBOutlet weak var previewCollection: UICollectionView!
     
