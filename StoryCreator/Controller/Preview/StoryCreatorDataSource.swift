@@ -8,10 +8,10 @@
 
 import UIKit
 
-class PreviewCollectionDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, NewParticleCellProtocol {
+class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, NewParticleCellProtocol {
     
     var newParticles = [Particle]()
-    weak var delegate: PreviewCollectionDataSourceProtocol?
+    weak var delegate: StoryCreatorDataSourceProtocol?
     weak var presentVCDelegate: PresentViewControllerProtocol?
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
@@ -52,7 +52,7 @@ class PreviewCollectionDataSource: NSObject, UICollectionViewDelegate, UICollect
     }
 }
 
-@objc protocol PreviewCollectionDataSourceProtocol: class
+@objc protocol StoryCreatorDataSourceProtocol: class
 {
     func particleAdded(_ particle:Particle)
     func showParticle(_ particle:Particle)

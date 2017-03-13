@@ -9,11 +9,11 @@
 import UIKit
 import Firebase
 
-class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate, PreviewCollectionDataSourceProtocol, PresentViewControllerProtocol
+class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate, StoryCreatorDataSourceProtocol, PresentViewControllerProtocol
 {
     @IBOutlet weak var previewCollection: UICollectionView!
     
-    var previewDataSource = PreviewCollectionDataSource()
+    var previewDataSource = StoryCreatorDataSource()
     
     override func viewDidLoad()
     {

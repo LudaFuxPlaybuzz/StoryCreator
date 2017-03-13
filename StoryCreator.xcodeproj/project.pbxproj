@@ -12,7 +12,7 @@
 		852541651E421717008F6A09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852541611E421717008F6A09 /* LaunchScreen.storyboard */; };
 		852541661E421717008F6A09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852541631E421717008F6A09 /* Main.storyboard */; };
 		8525416C1E4217CE008F6A09 /* StoryCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525416B1E4217CE008F6A09 /* StoryCreatorViewController.swift */; };
-		8525416E1E4217D9008F6A09 /* PreviewTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525416D1E4217D9008F6A09 /* PreviewTableDataSource.swift */; };
+		8525416E1E4217D9008F6A09 /* StoryCreatorDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525416D1E4217D9008F6A09 /* StoryCreatorDataSource.swift */; };
 		852541741E421839008F6A09 /* ParticleOverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541701E421839008F6A09 /* ParticleOverviewCell.swift */; };
 		852541761E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541721E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift */; };
 		8525417F1E421DCD008F6A09 /* NewParticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525417D1E421DCD008F6A09 /* NewParticleCell.swift */; };
@@ -34,7 +34,7 @@
 		852541621E421717008F6A09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = View/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		852541641E421717008F6A09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = View/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8525416B1E4217CE008F6A09 /* StoryCreatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryCreatorViewController.swift; path = Controller/Preview/StoryCreatorViewController.swift; sourceTree = "<group>"; };
-		8525416D1E4217D9008F6A09 /* PreviewTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreviewTableDataSource.swift; path = Controller/Preview/PreviewTableDataSource.swift; sourceTree = "<group>"; };
+		8525416D1E4217D9008F6A09 /* StoryCreatorDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryCreatorDataSource.swift; path = Controller/Preview/StoryCreatorDataSource.swift; sourceTree = "<group>"; };
 		852541701E421839008F6A09 /* ParticleOverviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticleOverviewCell.swift; path = Controller/Preview/PreviewTableComponents/ParticleOverviewCell.swift; sourceTree = "<group>"; };
 		852541721E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitleCoverAndDescriptionHeader.swift; path = Controller/Preview/PreviewTableComponents/TitleCoverAndDescriptionHeader.swift; sourceTree = "<group>"; };
 		8525417D1E421DCD008F6A09 /* NewParticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewParticleCell.swift; path = "Controller/Preview/PreviewTableComponents/New Particles/NewParticleCell.swift"; sourceTree = "<group>"; };
@@ -75,7 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				8525416B1E4217CE008F6A09 /* StoryCreatorViewController.swift */,
-				8525416D1E4217D9008F6A09 /* PreviewTableDataSource.swift */,
+				8525416D1E4217D9008F6A09 /* StoryCreatorDataSource.swift */,
 				852541521E3E3632008F6A09 /* PreviewTableComponents */,
 			);
 			name = Preview;
@@ -327,7 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8525416E1E4217D9008F6A09 /* PreviewTableDataSource.swift in Sources */,
+				8525416E1E4217D9008F6A09 /* StoryCreatorDataSource.swift in Sources */,
 				852541761E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift in Sources */,
 				859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */,
 				852C02631E0C18A7006B5795 /* Particle.swift in Sources */,
