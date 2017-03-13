@@ -21,9 +21,19 @@ class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(ParticleOverviewCell.self), for: indexPath) as! ParticleOverviewCell
-        
         let particle = newParticles[indexPath.row]
+        
+        var cell = UICollectionViewCell()
+        
+        if let _ = particle as? MicrophoneParticle
+        {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(TextParticleCell.self), for: indexPath) as! TextParticleCell
+        }
+        else
+        {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(ParticleOverviewCell.self), for: indexPath) as! ParticleOverviewCell
+        }
+        
 //        cell.setDetails(particle: particle)
         //                cell.delegate = self
         return cell
