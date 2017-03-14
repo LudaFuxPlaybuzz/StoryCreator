@@ -240,13 +240,25 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kn-UO-YDe">
+                                <rect key="frame" x="0.0" y="606" width="414" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="xLD-KU-DQX"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="IFj-UL-iEm" kind="embed" id="uah-Ad-tdh"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9kn-UO-YDe" secondAttribute="trailing" id="Ccy-0g-DLq"/>
                             <constraint firstAttribute="trailing" secondItem="86l-Q4-N0z" secondAttribute="trailing" id="Eqh-Eq-drw"/>
                             <constraint firstAttribute="bottom" secondItem="86l-Q4-N0z" secondAttribute="bottom" constant="30" id="Td8-CW-9n3"/>
+                            <constraint firstAttribute="bottom" secondItem="9kn-UO-YDe" secondAttribute="bottom" id="XwH-B0-3c3"/>
                             <constraint firstItem="86l-Q4-N0z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bre-nt-Cj0"/>
+                            <constraint firstItem="9kn-UO-YDe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e0X-Gr-rcW"/>
                             <constraint firstItem="Nn2-f8-cMw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eCE-yP-rvj"/>
                             <constraint firstAttribute="trailing" secondItem="Nn2-f8-cMw" secondAttribute="trailing" id="mzD-4x-a0w"/>
                             <constraint firstItem="86l-Q4-N0z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-20" id="wJH-J4-DkD"/>
@@ -262,6 +274,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="118.84057971014494" y="-19.565217391304348"/>
+        </scene>
+        <!--Voice To Speech View Controller-->
+        <scene sceneID="N1Z-D5-vqe">
+            <objects>
+                <viewController id="IFj-UL-iEm" customClass="VoiceToSpeechViewController" customModule="StoryCreator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rFM-gX-eCK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdN-xV-m01">
+                                <rect key="frame" x="177" y="80" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="microphoneTapped:" destination="IFj-UL-iEm" eventType="touchUpInside" id="iPL-BN-6v1"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wns-sH-QqO">
+                                <rect key="frame" x="79" y="5" width="256" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="microphoneButton" destination="vdN-xV-m01" id="yxH-Hd-IKz"/>
+                        <outlet property="textView" destination="Wns-sH-QqO" id="AlA-NE-IVa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pVl-uU-hkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="447.554347826087"/>
         </scene>
     </scenes>
     <resources>
