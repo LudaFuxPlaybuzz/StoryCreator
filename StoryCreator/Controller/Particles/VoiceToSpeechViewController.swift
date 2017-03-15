@@ -21,6 +21,8 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
     
+    weak var delegate: VoiceToSpeechViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -104,6 +106,7 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
             if result != nil {
                 
                 self.textView.text = result?.bestTranscription.formattedString
+                self.delegate?.textFromMicrophoneUpdated((result?.bestTranscription.formattedString)!)
                 isFinal = (result?.isFinal)!
             }
             
@@ -132,7 +135,6 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
         }
         
         textView.text = "Say something, I'm listening!"
-        
     }
     
     func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
@@ -143,3 +145,9 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
         }
     }
 }
+
+@objc protocol VoiceToSpeechViewControllerDelegate: class
+{
+    func textFromMicrophoneUpdated(_ text: String)
+}
+

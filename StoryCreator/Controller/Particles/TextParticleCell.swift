@@ -8,6 +8,13 @@
 
 import UIKit
 
-class TextParticleCell: UICollectionViewCell {
+class TextParticleCell: UICollectionViewCell
+{
 
+    @IBOutlet weak var textView: UITextView!
+    
+    func updateText(_ text: String)
+    {
+        textView.text = text
+    }
 }

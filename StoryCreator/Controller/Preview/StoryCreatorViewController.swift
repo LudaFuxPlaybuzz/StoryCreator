@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate, StoryCreatorDataSourceDelegate, PresentViewControllerDelegate
+class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate, StoryCreatorDataSourceDelegate, PresentViewControllerDelegate, VoiceToSpeechViewControllerDelegate
 {
     @IBOutlet weak var previewCollection: UICollectionView!
     
@@ -28,6 +28,15 @@ class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate,
         self.previewDataSource.presentVCDelegate = self
     }
 
+    override func prepare(for segue: UIStoryboardSegue,
+                 sender: Any?)
+    {
+        if let voiceToSpeechViewController = segue.destination as? VoiceToSpeechViewController
+        {
+            voiceToSpeechViewController.delegate = self
+        }
+    }
+    
     func particleAdded(_ particle:Particle)
     {
         previewCollection.reloadData()
@@ -43,6 +52,13 @@ class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate,
         self.present(viewController, animated: true) {}
     }
 
+    func textFromMicrophoneUpdated(_ text: String)
+    {
+        if let workingTextParticle = previewCollection.cellForItem(at: IndexPath(row: previewDataSource.newParticles.count - 1, section:0) as IndexPath) as? TextParticleCell
+        {
+            workingTextParticle.updateText(text)
+        }
+    }
 }
 
 

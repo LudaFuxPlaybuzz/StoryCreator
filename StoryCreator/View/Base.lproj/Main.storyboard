@@ -39,20 +39,23 @@
                                             <rect key="frame" x="0.0" y="0.0" width="412" height="63"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RtX-d7-7Ih">
-                                                    <rect key="frame" x="16" y="21" width="380" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a2F-lG-u00">
+                                                    <rect key="frame" x="30" y="0.0" width="352" height="63"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="bottomMargin" secondItem="RtX-d7-7Ih" secondAttribute="bottom" constant="13" id="D1c-Fw-QcA"/>
-                                            <constraint firstItem="RtX-d7-7Ih" firstAttribute="top" secondItem="N1x-3k-xjf" secondAttribute="topMargin" constant="13" id="LaH-Pm-IMV"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="RtX-d7-7Ih" secondAttribute="trailing" constant="8" id="NUv-Fo-pJf"/>
-                                            <constraint firstItem="RtX-d7-7Ih" firstAttribute="leading" secondItem="N1x-3k-xjf" secondAttribute="leadingMargin" constant="8" id="mtp-Ox-160"/>
+                                            <constraint firstAttribute="trailing" secondItem="a2F-lG-u00" secondAttribute="trailing" constant="30" id="OYz-HC-Sb8"/>
+                                            <constraint firstAttribute="bottom" secondItem="a2F-lG-u00" secondAttribute="bottom" id="dPM-ps-6OH"/>
+                                            <constraint firstItem="a2F-lG-u00" firstAttribute="top" secondItem="N1x-3k-xjf" secondAttribute="top" id="wbg-yN-9eY"/>
+                                            <constraint firstItem="a2F-lG-u00" firstAttribute="leading" secondItem="N1x-3k-xjf" secondAttribute="leading" constant="30" id="wta-Zy-pEy"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="textView" destination="a2F-lG-u00" id="DcZ-iu-wIA"/>
+                                        </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.ParticleOverviewCell" id="hzs-v6-p49" customClass="ParticleOverviewCell" customModule="StoryCreator" customModuleProvider="target">
                                         <rect key="frame" x="1" y="293" width="412" height="63"/>
@@ -279,12 +282,16 @@
         <scene sceneID="N1Z-D5-vqe">
             <objects>
                 <viewController id="IFj-UL-iEm" customClass="VoiceToSpeechViewController" customModule="StoryCreator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="oHr-hF-fCQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="2zS-hu-Ka5"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rFM-gX-eCK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdN-xV-m01">
-                                <rect key="frame" x="177" y="80" width="46" height="30"/>
+                                <rect key="frame" x="90" y="80" width="196" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -295,7 +302,6 @@
                                 <rect key="frame" x="79" y="5" width="256" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
