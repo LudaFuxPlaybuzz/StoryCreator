@@ -22,7 +22,7 @@ class NewParticlesAndPublishFooter : UICollectionReusableView, UICollectionViewD
         super.awakeFromNib()
 
         particleItems = [MicrophoneParticle(),
-                         Particle(image:"1"),
+                         TextParticle(),
                          Particle(image:"2"),
                          Particle(image:"3"),
                          Particle(image:"4"),

@@ -25,7 +25,7 @@ class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionVi
         
         var cell = UICollectionViewCell()
         
-        if let _ = particle as? MicrophoneParticle
+        if particle is MicrophoneParticle || particle is TextParticle
         {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(TextParticleCell.self), for: indexPath) as! TextParticleCell
         }
@@ -57,7 +57,6 @@ class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionVi
 
     func particleAdded(_ particle:Particle)
     {
-        newParticles.append(particle)
         delegate?.particleAdded(particle)
     }
 }

@@ -39,7 +39,24 @@ class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate,
     
     func particleAdded(_ particle:Particle)
     {
-        previewCollection.reloadData()
+        var shouldAddParticle = true
+        
+        let isTextParticle = particle is MicrophoneParticle || particle is TextParticle
+        
+        let lastCell = previewCollection.cellForItem(at: IndexPath(row: previewDataSource.newParticles.count - 1, section:0) as IndexPath)
+        print(lastCell)
+        let isLastTextCell = lastCell is TextParticleCell
+        
+        if isTextParticle && isLastTextCell
+        {
+            shouldAddParticle = false
+        }
+        
+        if shouldAddParticle
+        {
+            previewDataSource.newParticles.append(particle)
+            previewCollection.reloadData()
+        }
     }
     
     @IBAction func didPan(_ sender: Any)
