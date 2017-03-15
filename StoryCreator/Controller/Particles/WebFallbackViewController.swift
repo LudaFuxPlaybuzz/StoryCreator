@@ -17,7 +17,7 @@ class WebFallbackViewController: UIViewController, UIWebViewDelegate {
 
     var particle:Particle!
     
-    weak var delegate: WebFallbackViewControllerProtocol?
+    weak var delegate: WebFallbackViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +83,7 @@ class WebFallbackViewController: UIViewController, UIWebViewDelegate {
 
 }
 
-@objc protocol WebFallbackViewControllerProtocol: class
+@objc protocol WebFallbackViewControllerDelegate: class
 {
     func reloadTable()
     func triggerOpenCamera()

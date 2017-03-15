@@ -16,7 +16,7 @@ class TitleCoverAndDescriptionHeader: UICollectionReusableView {
     @IBOutlet weak var titleTextField: AnimatedTextInput!
     @IBOutlet weak var descriptionTextField: AnimatedTextInput!
     
-    weak var delegate: PresentViewControllerProtocol?
+    weak var delegate: PresentViewControllerDelegate?
     
     override func awakeFromNib()
     {
@@ -89,7 +89,7 @@ class TitleCoverAndDescriptionHeader: UICollectionReusableView {
     }
 }
 
-@objc protocol PresentViewControllerProtocol: class
+@objc protocol PresentViewControllerDelegate: class
 {
     func present(_ viewController:UIViewController, animated: Bool)
 }

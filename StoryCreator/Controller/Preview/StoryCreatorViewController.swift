@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate, StoryCreatorDataSourceProtocol, PresentViewControllerProtocol
+class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate, StoryCreatorDataSourceDelegate, PresentViewControllerDelegate
 {
     @IBOutlet weak var previewCollection: UICollectionView!
     

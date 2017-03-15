@@ -15,7 +15,7 @@ class NewParticlesAndPublishFooter : UICollectionReusableView, UICollectionViewD
     let cardBackgroundBorder = CAShapeLayer()
     var particleItems = [Particle]()
     
-    weak var newParticleDelegate: ParticleIconCellProtocol?
+    weak var newParticleDelegate: ParticleIconCellDelegate?
     
     override func awakeFromNib()
     {
