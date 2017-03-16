@@ -13,6 +13,7 @@ class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate,
     @IBOutlet weak var previewCollection: UICollectionView!
     @IBOutlet weak var michrophoneContainer: UIView!
     @IBOutlet weak var michrophoneContainerBottomContainer: NSLayoutConstraint!
+    @IBOutlet weak var hideAuxilaryViewsButton: UIButton!
     
     var previewDataSource = StoryCreatorDataSource()
     var firebaseManager = FirebaseManager()
@@ -63,17 +64,40 @@ class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate,
         
         if shouldAddParticle && particle is MicrophoneParticle
         {
-            self.michrophoneContainerBottomContainer.constant = 0
-            
-            UIView.animate(withDuration: 0.3) {
-                self.view.layoutIfNeeded()
-            }
+            self.showMicrophoneView()
         }
+    }
+    
+    func showMicrophoneView()
+    {
+        self.michrophoneContainerBottomContainer.constant = 0
+        
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+        
+        hideAuxilaryViewsButton.isHidden = false
+    }
+    
+    func hideMicrophoneView()
+    {
+        self.michrophoneContainerBottomContainer.constant = -michrophoneContainer.frame.size.height
+        
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+        
+        hideAuxilaryViewsButton.isHidden = true
     }
     
     @IBAction func didPan(_ sender: Any)
     {
         UIApplication.shared.sendAction(#selector(UIApplication.resignFirstResponder), to: nil, from: nil, for: nil);
+    }
+    
+    @IBAction func hideAuxilaryViewsTapped(_ sender: UIButton)
+    {
+        self.hideMicrophoneView()
     }
     
     func present(_ viewController:UIViewController, animated: Bool)
