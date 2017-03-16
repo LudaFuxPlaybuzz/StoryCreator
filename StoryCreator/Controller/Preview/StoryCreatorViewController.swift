@@ -8,7 +8,7 @@
 
 import UIKit
 
-class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate, StoryCreatorDataSourceDelegate, PresentViewControllerDelegate, VoiceToSpeechViewControllerDelegate
+class StoryCreatorViewController: UIViewController
 {
     @IBOutlet weak var previewCollection: UICollectionView!
     @IBOutlet weak var michrophoneContainer: UIView!
@@ -42,12 +42,31 @@ class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate,
         }
     }
     
+    @IBAction func hideAuxilaryViewsTapped(_ sender: UIButton)
+    {
+        self.hideMicrophoneView()
+    }
+    
+    func hideMicrophoneView()
+    {
+        self.michrophoneContainerBottomContainer.constant = -michrophoneContainer.frame.size.height
+        
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+        
+        hideAuxilaryViewsButton.isHidden = true
+    }
+}
+
+extension StoryCreatorViewController: StoryCreatorDataSourceDelegate
+{
     func particleAdded(_ particle:Particle)
     {
         let lastCell = previewCollection.cellForItem(at: IndexPath(row: previewDataSource.newParticles.count - 1, section:0) as IndexPath)
         
         switch particle {
-        
+            
         case is MicrophoneParticle:
             
             let isLastTextCell = lastCell is TextParticleCell
@@ -84,32 +103,18 @@ class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate,
         hideAuxilaryViewsButton.isHidden = false
     }
     
-    func hideMicrophoneView()
-    {
-        self.michrophoneContainerBottomContainer.constant = -michrophoneContainer.frame.size.height
-        
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-        }
-        
-        hideAuxilaryViewsButton.isHidden = true
-    }
-    
-    @IBAction func didPan(_ sender: Any)
-    {
-        UIApplication.shared.sendAction(#selector(UIApplication.resignFirstResponder), to: nil, from: nil, for: nil);
-    }
-    
-    @IBAction func hideAuxilaryViewsTapped(_ sender: UIButton)
-    {
-        self.hideMicrophoneView()
-    }
-    
+}
+
+extension StoryCreatorViewController: PresentViewControllerDelegate
+{
     func present(_ viewController:UIViewController, animated: Bool)
     {
         self.present(viewController, animated: true) {}
     }
+}
 
+extension StoryCreatorViewController: VoiceToSpeechViewControllerDelegate
+{
     func textFromMicrophoneUpdated(_ text: String)
     {
         if let workingTextParticle = previewCollection.cellForItem(at: IndexPath(row: previewDataSource.newParticles.count - 1, section:0) as IndexPath) as? TextParticleCell
@@ -118,7 +123,3 @@ class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate,
         }
     }
 }
-
-
-
-
