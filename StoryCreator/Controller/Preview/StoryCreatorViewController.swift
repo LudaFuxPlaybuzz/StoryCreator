@@ -44,7 +44,6 @@ class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate,
         let isTextParticle = particle is MicrophoneParticle || particle is TextParticle
         
         let lastCell = previewCollection.cellForItem(at: IndexPath(row: previewDataSource.newParticles.count - 1, section:0) as IndexPath)
-        print(lastCell)
         let isLastTextCell = lastCell is TextParticleCell
         
         if isTextParticle && isLastTextCell

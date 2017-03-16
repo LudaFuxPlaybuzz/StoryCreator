@@ -290,27 +290,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="130"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdN-xV-m01">
-                                <rect key="frame" x="90" y="80" width="196" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="audioWave" translatesAutoresizingMaskIntoConstraints="NO" id="eWH-Z4-KWd">
+                                <rect key="frame" x="0.0" y="40" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="nfe-LP-AYz"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdN-xV-m01">
+                                <rect key="frame" x="187" y="80" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="La9-IO-YVA"/>
+                                    <constraint firstAttribute="height" constant="40" id="ZkO-ea-DV2"/>
+                                </constraints>
+                                <state key="normal" image="microphoneIdel"/>
+                                <state key="selected" image="microphoneActive"/>
+                                <state key="highlighted" image="microphoneActive"/>
+                                <state key="focused" image="microphoneActive"/>
                                 <connections>
                                     <action selector="microphoneTapped:" destination="IFj-UL-iEm" eventType="touchUpInside" id="iPL-BN-6v1"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Wns-sH-QqO">
-                                <rect key="frame" x="79" y="5" width="256" height="67"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u7-hG-7Ev">
+                                <rect key="frame" x="19.999999999999993" y="14" width="92.333333333333314" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eWH-Z4-KWd" firstAttribute="leading" secondItem="rFM-gX-eCK" secondAttribute="leading" id="523-wS-pnO"/>
+                            <constraint firstItem="vdN-xV-m01" firstAttribute="centerX" secondItem="rFM-gX-eCK" secondAttribute="centerX" id="5fc-GX-WD2"/>
+                            <constraint firstItem="5u7-hG-7Ev" firstAttribute="leading" secondItem="rFM-gX-eCK" secondAttribute="leading" constant="20" id="DNx-vs-CIj"/>
+                            <constraint firstItem="2zS-hu-Ka5" firstAttribute="top" secondItem="vdN-xV-m01" secondAttribute="bottom" constant="10" id="I5g-aG-FSg"/>
+                            <constraint firstAttribute="trailing" secondItem="eWH-Z4-KWd" secondAttribute="trailing" id="ZHd-AR-GU4"/>
+                            <constraint firstItem="5u7-hG-7Ev" firstAttribute="top" secondItem="oHr-hF-fCQ" secondAttribute="bottom" constant="14" id="aiK-F3-Qph"/>
+                            <constraint firstItem="2zS-hu-Ka5" firstAttribute="top" secondItem="eWH-Z4-KWd" secondAttribute="bottom" constant="40" id="oJF-ew-BGH"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="microphoneButton" destination="vdN-xV-m01" id="yxH-Hd-IKz"/>
-                        <outlet property="textView" destination="Wns-sH-QqO" id="AlA-NE-IVa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVl-uU-hkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -319,8 +338,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="audioWave" width="1001" height="277"/>
         <image name="camera" width="400" height="400"/>
         <image name="cameraShadow" width="227" height="212"/>
         <image name="gradient" width="360" height="360"/>
+        <image name="microphoneActive" width="50" height="50"/>
+        <image name="microphoneIdel" width="50" height="50"/>
     </resources>
 </document>

@@ -12,6 +12,6 @@ class MicrophoneParticle: Particle
 {
     override init() {
         super.init()
-        self.image = "micriphone"
+        self.image = "micriphoneParticle"
     }
 }

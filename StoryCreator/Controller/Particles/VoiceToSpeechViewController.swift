@@ -11,9 +11,6 @@ import Speech
 
 class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
 {
-    
-    @IBOutlet weak var textView: UITextView!
-    
     @IBOutlet weak var microphoneButton: UIButton!
     
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
@@ -104,8 +101,7 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
             var isFinal = false
             
             if result != nil {
-                
-                self.textView.text = result?.bestTranscription.formattedString
+            
                 self.delegate?.textFromMicrophoneUpdated((result?.bestTranscription.formattedString)!)
                 isFinal = (result?.isFinal)!
             }
@@ -133,8 +129,6 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
         } catch {
             print("audioEngine couldn't start because of an error.")
         }
-        
-        textView.text = "Say something, I'm listening!"
     }
     
     func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {

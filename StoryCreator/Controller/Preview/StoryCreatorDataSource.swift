@@ -34,8 +34,6 @@ class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionVi
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(ParticleOverviewCell.self), for: indexPath) as! ParticleOverviewCell
         }
         
-//        cell.setDetails(particle: particle)
-        //                cell.delegate = self
         return cell
     }
     
