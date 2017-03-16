@@ -1,18 +1,18 @@
 //
-//  TextParticle.swift
+//  ImageParticle.swift
 //  StoryCreator
 //
-//  Created by Luda Fux on 3/15/17.
+//  Created by Luda Fux on 3/16/17.
 //  Copyright © 2017 Playbuzz. All rights reserved.
 //
 
 import UIKit
 
-class TextParticle: Particle
-{   
+class ImageParticle: Particle
+{
     override init()
     {
         super.init()
-        self.image = "textParticle"
+        self.image = "imageParticle"
     }
 }

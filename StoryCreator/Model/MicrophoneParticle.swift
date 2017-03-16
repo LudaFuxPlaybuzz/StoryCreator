@@ -10,7 +10,8 @@ import UIKit
 
 class MicrophoneParticle: Particle
 {
-    override init() {
+    override init()
+    {
         super.init()
         self.image = "micriphoneParticle"
     }

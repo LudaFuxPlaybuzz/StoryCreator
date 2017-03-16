@@ -23,7 +23,8 @@ class NewParticlesAndPublishFooter : UICollectionReusableView, UICollectionViewD
 
         particleItems = [MicrophoneParticle(),
                          TextParticle(),
-                         Particle(image:"2"),
+                         ImageParticle(),
+                         MapParticle(),
                          Particle(image:"3"),
                          Particle(image:"4"),
                          Particle(image:"5"),

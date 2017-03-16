@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		85243CE91E7993E000768C5C /* TextParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85243CE81E7993E000768C5C /* TextParticle.swift */; };
+		85243CEB1E7AE62800768C5C /* ImageParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85243CEA1E7AE62800768C5C /* ImageParticle.swift */; };
+		85243CED1E7AE81300768C5C /* MapParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85243CEC1E7AE81300768C5C /* MapParticle.swift */; };
 		852541501E3E1698008F6A09 /* WebFallbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525414F1E3E1698008F6A09 /* WebFallbackViewController.swift */; };
 		852541601E42170F008F6A09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8525415F1E42170F008F6A09 /* Assets.xcassets */; };
 		852541651E421717008F6A09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852541611E421717008F6A09 /* LaunchScreen.storyboard */; };
@@ -35,6 +37,8 @@
 		46D0F28B86A88446D3578897 /* Pods-StoryCreator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryCreator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoryCreator/Pods-StoryCreator.debug.xcconfig"; sourceTree = "<group>"; };
 		849CDF9A9E24697EC0AE0A98 /* Pods_StoryCreator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoryCreator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85243CE81E7993E000768C5C /* TextParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextParticle.swift; path = Model/TextParticle.swift; sourceTree = "<group>"; };
+		85243CEA1E7AE62800768C5C /* ImageParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageParticle.swift; path = Model/ImageParticle.swift; sourceTree = "<group>"; };
+		85243CEC1E7AE81300768C5C /* MapParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapParticle.swift; path = Model/MapParticle.swift; sourceTree = "<group>"; };
 		8525414F1E3E1698008F6A09 /* WebFallbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebFallbackViewController.swift; path = Controller/Particles/WebFallbackViewController.swift; sourceTree = "<group>"; };
 		8525415F1E42170F008F6A09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = View/Assets.xcassets; sourceTree = "<group>"; };
 		852541621E421717008F6A09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = View/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 				852C02621E0C18A7006B5795 /* Particle.swift */,
 				85AF5F601E76CD620069A587 /* MicrophoneParticle.swift */,
 				85243CE81E7993E000768C5C /* TextParticle.swift */,
+				85243CEA1E7AE62800768C5C /* ImageParticle.swift */,
+				85243CEC1E7AE81300768C5C /* MapParticle.swift */,
 			);
 			name = Particles;
 			sourceTree = "<group>";
@@ -337,11 +343,13 @@
 				85AF5F611E76CD620069A587 /* MicrophoneParticle.swift in Sources */,
 				852541801E421DCD008F6A09 /* NewParticlesAndPublishFooter.swift in Sources */,
 				859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */,
+				85243CEB1E7AE62800768C5C /* ImageParticle.swift in Sources */,
 				852541741E421839008F6A09 /* ParticleOverviewCell.swift in Sources */,
 				8525417F1E421DCD008F6A09 /* ParticleIconCell.swift in Sources */,
 				852541501E3E1698008F6A09 /* WebFallbackViewController.swift in Sources */,
 				8525416C1E4217CE008F6A09 /* StoryCreatorViewController.swift in Sources */,
 				85D675931E3637B2003B9798 /* LPRTableView.swift in Sources */,
+				85243CED1E7AE81300768C5C /* MapParticle.swift in Sources */,
 				859B559C1E0AC8FA00231A2B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
