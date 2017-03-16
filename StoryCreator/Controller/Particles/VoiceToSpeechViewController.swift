@@ -27,7 +27,7 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
         super.viewDidLoad()
 
         speechRecognizer?.delegate = self
-        
+        self.audioWave.alpha = 0.0
         microphoneButton.isEnabled = false
         
         SFSpeechRecognizer.requestAuthorization { (authStatus) in
@@ -56,7 +56,7 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
             }
         }
         
-        recordingPrompt.text = "Say something, I'm listening!"
+        recordingPrompt.text = "Start Recording!"
     }
 
     @IBAction func microphoneTapped(_ sender: Any)
@@ -77,6 +77,10 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
     func startRecording() {
         
         recordingPrompt.text = "Recording..."
+        
+        UIView.animate(withDuration: 1, animations: {
+            self.audioWave.alpha = 1.0
+        })
         
         if recognitionTask != nil {
             recognitionTask?.cancel()
