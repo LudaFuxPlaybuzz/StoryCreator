@@ -19,6 +19,7 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
+    private var isRecording = false
     
     weak var delegate: VoiceToSpeechViewControllerDelegate?
     
@@ -60,6 +61,8 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
 
     @IBAction func microphoneTapped(_ sender: Any)
     {
+        microphoneButton.isSelected = true
+        
         if audioEngine.isRunning {
             audioEngine.stop()
             recognitionRequest?.endAudio()
