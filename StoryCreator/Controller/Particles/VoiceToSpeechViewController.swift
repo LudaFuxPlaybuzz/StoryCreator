@@ -12,6 +12,8 @@ import Speech
 class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
 {
     @IBOutlet weak var microphoneButton: UIButton!
+    @IBOutlet weak var recordingPrompt: UILabel!
+    @IBOutlet weak var audioWave: UIImageView!
     
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
@@ -53,6 +55,7 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
             }
         }
         
+        recordingPrompt.text = "Say something, I'm listening!"
     }
 
     @IBAction func microphoneTapped(_ sender: Any)
@@ -69,6 +72,8 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
     }
     
     func startRecording() {
+        
+        recordingPrompt.text = "Recording..."
         
         if recognitionTask != nil {
             recognitionTask?.cancel()

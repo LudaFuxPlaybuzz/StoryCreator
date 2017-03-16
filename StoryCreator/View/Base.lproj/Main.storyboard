@@ -331,7 +331,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="audioWave" destination="eWH-Z4-KWd" id="mrW-zG-iKq"/>
                         <outlet property="microphoneButton" destination="vdN-xV-m01" id="yxH-Hd-IKz"/>
+                        <outlet property="recordingPrompt" destination="5u7-hG-7Ev" id="0hX-Uc-Gdv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVl-uU-hkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
