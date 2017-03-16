@@ -9,6 +9,11 @@
 import UIKit
 import Speech
 
+@objc protocol VoiceToSpeechViewControllerDelegate: class
+{
+    func textFromMicrophoneUpdated(_ text: String)
+}
+
 class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
 {
     @IBOutlet weak var microphoneButton: UIButton!
@@ -152,8 +157,4 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
     }
 }
 
-@objc protocol VoiceToSpeechViewControllerDelegate: class
-{
-    func textFromMicrophoneUpdated(_ text: String)
-}
 

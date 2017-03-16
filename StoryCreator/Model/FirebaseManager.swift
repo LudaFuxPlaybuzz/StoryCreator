@@ -9,12 +9,11 @@
 import UIKit
 import Firebase
 
-class FirebaseManager: NSObject {
+class FirebaseManager: NSObject
+{
     func useFirebaseDatabase()
     {
         let ref = FIRDatabase.database().reference()
         ref.child("articles").child("article2").setValue(["title": "Igal is awesome!"])
     }
-
-
 }

@@ -8,7 +8,12 @@
 
 import UIKit
 
-class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource, ParticleIconCellDelegate {
+@objc protocol StoryCreatorDataSourceDelegate: class
+{
+    func particleAdded(_ particle:Particle)
+}
+
+class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var newParticles = [Particle]()
     weak var delegate: StoryCreatorDataSourceDelegate?
@@ -52,14 +57,12 @@ class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionVi
             return footerView
         }
     }
+}
 
+extension StoryCreatorDataSource: ParticleIconCellDelegate
+{
     func particleAdded(_ particle:Particle)
     {
         delegate?.particleAdded(particle)
     }
-}
-
-@objc protocol StoryCreatorDataSourceDelegate: class
-{
-    func particleAdded(_ particle:Particle)
 }

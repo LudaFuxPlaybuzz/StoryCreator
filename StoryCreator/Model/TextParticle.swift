@@ -8,8 +8,8 @@
 
 import UIKit
 
-class TextParticle: Particle {
-   
+class TextParticle: Particle
+{   
     override init() {
         super.init()
         self.image = "1"

@@ -9,6 +9,12 @@
 import UIKit
 import NVActivityIndicatorView
 
+@objc protocol WebFallbackViewControllerDelegate: class
+{
+    func reloadTable()
+    func triggerOpenCamera()
+}
+
 class WebFallbackViewController: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var webView: UIWebView!
@@ -83,8 +89,3 @@ class WebFallbackViewController: UIViewController, UIWebViewDelegate {
 
 }
 
-@objc protocol WebFallbackViewControllerDelegate: class
-{
-    func reloadTable()
-    func triggerOpenCamera()
-}

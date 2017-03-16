@@ -8,8 +8,7 @@
 
 import UIKit
 
-class ParticleOverviewCell: UICollectionViewCell, UIGestureRecognizerDelegate {
-
-
+class ParticleOverviewCell: UICollectionViewCell, UIGestureRecognizerDelegate
+{
 
 }

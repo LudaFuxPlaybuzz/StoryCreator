@@ -10,6 +10,11 @@ import UIKit
 import AnimatedTextInput
 import DKImagePickerController
 
+@objc protocol PresentViewControllerDelegate: class
+{
+    func present(_ viewController:UIViewController, animated: Bool)
+}
+
 class TitleCoverAndDescriptionHeader: UICollectionReusableView {
 
     @IBOutlet weak var coverImage: UIImageView!
@@ -87,9 +92,4 @@ class TitleCoverAndDescriptionHeader: UICollectionReusableView {
         self.delegate?.present(pickerController, animated: true)
         
     }
-}
-
-@objc protocol PresentViewControllerDelegate: class
-{
-    func present(_ viewController:UIViewController, animated: Bool)
 }
