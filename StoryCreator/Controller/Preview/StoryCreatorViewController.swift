@@ -11,6 +11,8 @@ import UIKit
 class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate, StoryCreatorDataSourceDelegate, PresentViewControllerDelegate, VoiceToSpeechViewControllerDelegate
 {
     @IBOutlet weak var previewCollection: UICollectionView!
+    @IBOutlet weak var michrophoneContainer: UIView!
+    @IBOutlet weak var michrophoneContainerBottomContainer: NSLayoutConstraint!
     
     var previewDataSource = StoryCreatorDataSource()
     var firebaseManager = FirebaseManager()
@@ -26,6 +28,8 @@ class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate,
         
         self.previewDataSource.delegate = self
         self.previewDataSource.presentVCDelegate = self
+        
+        self.michrophoneContainerBottomContainer.constant = -michrophoneContainer.frame.size.height
     }
 
     override func prepare(for segue: UIStoryboardSegue,
@@ -55,6 +59,15 @@ class StoryCreatorViewController: UIViewController, UIGestureRecognizerDelegate,
         {
             previewDataSource.newParticles.append(particle)
             previewCollection.reloadData()
+        }
+        
+        if shouldAddParticle && particle is MicrophoneParticle
+        {
+            self.michrophoneContainerBottomContainer.constant = 0
+            
+            UIView.animate(withDuration: 0.3) {
+                self.view.layoutIfNeeded()
+            }
         }
     }
     

@@ -41,7 +41,7 @@
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a2F-lG-u00">
                                                     <rect key="frame" x="30" y="0.0" width="352" height="63"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
@@ -271,6 +271,8 @@
                     <navigationItem key="navigationItem" id="cm6-aZ-iV6"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="michrophoneContainer" destination="9kn-UO-YDe" id="UVJ-TV-yc9"/>
+                        <outlet property="michrophoneContainerBottomContainer" destination="XwH-B0-3c3" id="nK3-y3-Egm"/>
                         <outlet property="previewCollection" destination="86l-Q4-N0z" id="Lmc-HE-yut"/>
                     </connections>
                 </viewController>
