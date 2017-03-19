@@ -32,6 +32,9 @@ class StoryCreatorViewController: UIViewController
         self.previewDataSource.presentVCDelegate = self
         
         self.michrophoneContainerBottomContainer.constant = -michrophoneContainer.frame.size.height
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(StoryCreatorViewController.showHideAuxilaryViewsButton), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(StoryCreatorViewController.hideHideAuxilaryViewsButton), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
 
     override func prepare(for segue: UIStoryboardSegue,
@@ -57,6 +60,16 @@ class StoryCreatorViewController: UIViewController
             self.view.layoutIfNeeded()
         }
         
+        hideAuxilaryViewsButton.isHidden = true
+    }
+    
+    func showHideAuxilaryViewsButton()
+    {
+        hideAuxilaryViewsButton.isHidden = false
+    }
+    
+    func hideHideAuxilaryViewsButton()
+    {
         hideAuxilaryViewsButton.isHidden = true
     }
 }
@@ -108,7 +121,6 @@ extension StoryCreatorViewController: StoryCreatorDataSourceDelegate
                         if let lastPicCell = self.previewCollection.cellForItem(at: IndexPath(row: self.previewDataSource.newParticles.count - 1, section:0) as IndexPath) as? ImageParticleCell
                         {
                             lastPicCell.imageView.image = image
-                            self.previewCollection.reloadData()
                         }
                     })
                 }
