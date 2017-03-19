@@ -73,3 +73,18 @@ extension StoryCreatorDataSource: ParticleIconCellDelegate
         delegate?.particleAdded(particle)
     }
 }
+
+extension StoryCreatorDataSource: UICollectionViewDelegateFlowLayout
+{
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let test = newParticles[indexPath.row]
+        print("test - \(test)")
+        if let _ = newParticles[indexPath.row] as? ImageParticle
+        {
+            return CGSize(width: 400, height: 300)
+        }
+        return CGSize(width: 400, height: 50)
+    }
+}

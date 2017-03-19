@@ -108,6 +108,7 @@ extension StoryCreatorViewController: StoryCreatorDataSourceDelegate
                         if let lastPicCell = self.previewCollection.cellForItem(at: IndexPath(row: self.previewDataSource.newParticles.count - 1, section:0) as IndexPath) as? ImageParticleCell
                         {
                             lastPicCell.imageView.image = image
+                            self.previewCollection.reloadData()
                         }
                     })
                 }
