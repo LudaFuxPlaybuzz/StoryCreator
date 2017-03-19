@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DKImagePickerController
 
 class StoryCreatorViewController: UIViewController
 {
@@ -44,6 +45,7 @@ class StoryCreatorViewController: UIViewController
     
     @IBAction func hideAuxilaryViewsTapped(_ sender: UIButton)
     {
+        self.view.endEditing(true)
         self.hideMicrophoneView()
     }
     
@@ -78,13 +80,39 @@ extension StoryCreatorViewController: StoryCreatorDataSourceDelegate
             self.showMicrophoneView()
             
         case is TextParticle:
-            
-            let isLastTextCell = lastCell is TextParticleCell
-            if !isLastTextCell
+
+            if let lastTextCell = lastCell as? TextParticleCell
+            {
+                self.showKeyboard(textView: lastTextCell.textView)
+                hideAuxilaryViewsButton.isHidden = true
+            }
+            else
             {
                 previewDataSource.newParticles.append(particle)
                 previewCollection.reloadData()
             }
+            
+        case is ImageParticle:
+            
+            previewDataSource.newParticles.append(particle)
+            previewCollection.reloadData()
+            
+            let pickerController = DKImagePickerController()
+            pickerController.singleSelect = true
+            
+            pickerController.didSelectAssets = { (assets: [DKAsset]) in
+                if assets.count > 0
+                {
+                    let asset: DKAsset = assets[0]
+                    asset.fetchImageWithSize(self.view.frame.size, completeBlock: { image, info in
+                        if let lastPicCell = self.previewCollection.cellForItem(at: IndexPath(row: self.previewDataSource.newParticles.count - 1, section:0) as IndexPath) as? ImageParticleCell
+                        {
+                            lastPicCell.imageView.image = image
+                        }
+                    })
+                }
+            }
+            self.present(pickerController, animated: true) {}
             
         default:
             previewDataSource.newParticles.append(particle)
@@ -101,6 +129,11 @@ extension StoryCreatorViewController: StoryCreatorDataSourceDelegate
         }
         
         hideAuxilaryViewsButton.isHidden = false
+    }
+    
+    func showKeyboard(textView: UITextView)
+    {
+        textView.becomeFirstResponder()
     }
     
 }

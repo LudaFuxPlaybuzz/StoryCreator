@@ -30,13 +30,20 @@ class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionVi
         
         var cell = UICollectionViewCell()
         
-        if particle is MicrophoneParticle || particle is TextParticle
+        switch particle
         {
+        case is MicrophoneParticle, is TextParticle:
+        
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(TextParticleCell.self), for: indexPath) as! TextParticleCell
-        }
-        else
-        {
+            
+        case is ImageParticle:
+            
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(ImageParticleCell.self), for: indexPath) as! ImageParticleCell
+            
+        default:
+            
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(ParticleOverviewCell.self), for: indexPath) as! ParticleOverviewCell
+            
         }
         
         return cell

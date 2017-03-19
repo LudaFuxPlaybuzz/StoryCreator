@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85180E321E7EB3E600BC1000 /* ImageParticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85180E311E7EB3E600BC1000 /* ImageParticleCell.swift */; };
 		85243CE91E7993E000768C5C /* TextParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85243CE81E7993E000768C5C /* TextParticle.swift */; };
 		85243CEB1E7AE62800768C5C /* ImageParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85243CEA1E7AE62800768C5C /* ImageParticle.swift */; };
 		85243CED1E7AE81300768C5C /* MapParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85243CEC1E7AE81300768C5C /* MapParticle.swift */; };
@@ -36,6 +37,7 @@
 /* Begin PBXFileReference section */
 		46D0F28B86A88446D3578897 /* Pods-StoryCreator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryCreator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoryCreator/Pods-StoryCreator.debug.xcconfig"; sourceTree = "<group>"; };
 		849CDF9A9E24697EC0AE0A98 /* Pods_StoryCreator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoryCreator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		85180E311E7EB3E600BC1000 /* ImageParticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageParticleCell.swift; path = Controller/Particles/ImageParticleCell.swift; sourceTree = "<group>"; };
 		85243CE81E7993E000768C5C /* TextParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextParticle.swift; path = Model/TextParticle.swift; sourceTree = "<group>"; };
 		85243CEA1E7AE62800768C5C /* ImageParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageParticle.swift; path = Model/ImageParticle.swift; sourceTree = "<group>"; };
 		85243CEC1E7AE81300768C5C /* MapParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapParticle.swift; path = Model/MapParticle.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				8525414F1E3E1698008F6A09 /* WebFallbackViewController.swift */,
 				85AF5F631E76D3950069A587 /* TextParticleCell.swift */,
 				85AF5F651E77F5120069A587 /* VoiceToSpeechViewController.swift */,
+				85180E311E7EB3E600BC1000 /* ImageParticleCell.swift */,
 			);
 			name = Particles;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */,
 				852C02631E0C18A7006B5795 /* Particle.swift in Sources */,
 				85AF5F611E76CD620069A587 /* MicrophoneParticle.swift in Sources */,
+				85180E321E7EB3E600BC1000 /* ImageParticleCell.swift in Sources */,
 				852541801E421DCD008F6A09 /* NewParticlesAndPublishFooter.swift in Sources */,
 				859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */,
 				85243CEB1E7AE62800768C5C /* ImageParticle.swift in Sources */,
