@@ -19,26 +19,16 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNQ-2e-at2">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="870"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.0" green="0.56078431370000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="hideAuxilaryViewsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mQY-TN-OAO"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="86l-Q4-N0z">
-                                <rect key="frame" x="0.0" y="-20" width="414" height="990"/>
+                                <rect key="frame" x="0.0" y="-20" width="414" height="1190"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xC2-Ht-TLK">
                                     <size key="itemSize" width="412" height="63"/>
                                     <size key="headerReferenceSize" width="50" height="230"/>
-                                    <size key="footerReferenceSize" width="50" height="150"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
@@ -336,82 +326,9 @@
                                         <outlet property="titleTextField" destination="k7N-1r-yuu" id="bmb-I9-piR"/>
                                     </connections>
                                 </collectionReusableView>
-                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.NewParticlesAndPublishFooter" id="Ers-4x-Kh1" customClass="NewParticlesAndPublishFooter" customModule="StoryCreator" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="862" width="414" height="150"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RfC-yL-38I">
-                                            <rect key="frame" x="8" y="8" width="398" height="134"/>
-                                            <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LG9-D2-ydE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="398" height="134"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="h38-RM-yvf">
-                                                        <size key="itemSize" width="45" height="45"/>
-                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                        <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
-                                                    </collectionViewFlowLayout>
-                                                    <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.ParticleIconCell" id="WYa-Li-BJX" customClass="ParticleIconCell" customModule="StoryCreator" customModuleProvider="target">
-                                                            <rect key="frame" x="10" y="10" width="45" height="45"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                                                <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJF-ER-Exo">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="45"/>
-                                                                        <connections>
-                                                                            <action selector="didPressAddParticle:" destination="WYa-Li-BJX" eventType="touchUpInside" id="B41-Pi-iaj"/>
-                                                                        </connections>
-                                                                    </button>
-                                                                </subviews>
-                                                            </view>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                            <constraints>
-                                                                <constraint firstItem="cJF-ER-Exo" firstAttribute="leading" secondItem="WYa-Li-BJX" secondAttribute="leading" id="SBb-IA-KaI"/>
-                                                                <constraint firstAttribute="trailing" secondItem="cJF-ER-Exo" secondAttribute="trailing" id="cAV-k6-a1k"/>
-                                                                <constraint firstItem="cJF-ER-Exo" firstAttribute="top" secondItem="WYa-Li-BJX" secondAttribute="top" id="eFd-ET-hPF"/>
-                                                                <constraint firstAttribute="bottom" secondItem="cJF-ER-Exo" secondAttribute="bottom" id="nou-vO-mmk"/>
-                                                            </constraints>
-                                                            <connections>
-                                                                <outlet property="particleIconButton" destination="cJF-ER-Exo" id="H9f-hh-AJV"/>
-                                                            </connections>
-                                                        </collectionViewCell>
-                                                    </cells>
-                                                    <connections>
-                                                        <outlet property="dataSource" destination="Ers-4x-Kh1" id="cct-r4-Xwv"/>
-                                                        <outlet property="delegate" destination="Ers-4x-Kh1" id="X9L-r1-Gge"/>
-                                                    </connections>
-                                                </collectionView>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="RfC-yL-38I" secondAttribute="bottom" id="6WK-v7-FhP"/>
-                                        <constraint firstItem="RfC-yL-38I" firstAttribute="leading" secondItem="Ers-4x-Kh1" secondAttribute="leadingMargin" id="8xH-L0-gJn"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="RfC-yL-38I" secondAttribute="trailing" id="9AA-rb-dvN"/>
-                                        <constraint firstItem="RfC-yL-38I" firstAttribute="top" secondItem="Ers-4x-Kh1" secondAttribute="topMargin" id="y8J-gV-Tw0"/>
-                                    </constraints>
-                                    <connections>
-                                        <outlet property="NewParticlesCollectionView" destination="LG9-D2-ydE" id="A9I-TT-uPP"/>
-                                    </connections>
-                                </collectionReusableView>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn2-f8-cMw">
-                                <rect key="frame" x="0.0" y="940" width="414" height="60"/>
-                                <color key="backgroundColor" red="0.73725490199999999" green="0.28627450980000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="c0u-tP-3U3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="21"/>
-                                <state key="normal" title="PUBLISH">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kn-UO-YDe">
-                                <rect key="frame" x="0.0" y="870" width="414" height="130"/>
+                                <rect key="frame" x="0.0" y="1070" width="414" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="xLD-KU-DQX"/>
                                 </constraints>
@@ -419,6 +336,73 @@
                                     <segue destination="IFj-UL-iEm" kind="embed" id="uah-Ad-tdh"/>
                                 </connections>
                             </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RfC-yL-38I">
+                                <rect key="frame" x="0.0" y="1090" width="414" height="110"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LG9-D2-ydE">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="15" minimumInteritemSpacing="15" id="h38-RM-yvf">
+                                            <size key="itemSize" width="30" height="30"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.ParticleIconCell" id="WYa-Li-BJX" customClass="ParticleIconCell" customModule="StoryCreator" customModuleProvider="target">
+                                                <rect key="frame" x="10" y="10" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJF-ER-Exo">
+                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="45"/>
+                                                            <connections>
+                                                                <action selector="didPressAddParticle:" destination="WYa-Li-BJX" eventType="touchUpInside" id="B41-Pi-iaj"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </view>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstItem="cJF-ER-Exo" firstAttribute="leading" secondItem="WYa-Li-BJX" secondAttribute="leading" id="SBb-IA-KaI"/>
+                                                    <constraint firstAttribute="trailing" secondItem="cJF-ER-Exo" secondAttribute="trailing" id="cAV-k6-a1k"/>
+                                                    <constraint firstItem="cJF-ER-Exo" firstAttribute="top" secondItem="WYa-Li-BJX" secondAttribute="top" id="eFd-ET-hPF"/>
+                                                    <constraint firstAttribute="bottom" secondItem="cJF-ER-Exo" secondAttribute="bottom" id="nou-vO-mmk"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="particleIconButton" destination="cJF-ER-Exo" id="H9f-hh-AJV"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn2-f8-cMw">
+                                        <rect key="frame" x="0.0" y="60" width="414" height="50"/>
+                                        <color key="backgroundColor" red="0.73725490199999999" green="0.28627450980000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="c0u-tP-3U3"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                        <state key="normal" title="PUBLISH">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="Cxg-Ps-Cyi"/>
+                                </constraints>
+                            </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNQ-2e-at2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1070"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.56078431370000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideAuxilaryViewsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mQY-TN-OAO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -429,24 +413,25 @@
                             <constraint firstAttribute="trailing" secondItem="WNQ-2e-at2" secondAttribute="trailing" id="F5N-lX-2b1"/>
                             <constraint firstAttribute="bottom" secondItem="86l-Q4-N0z" secondAttribute="bottom" constant="30" id="Td8-CW-9n3"/>
                             <constraint firstItem="WNQ-2e-at2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Tje-bo-OwH"/>
+                            <constraint firstAttribute="trailing" secondItem="RfC-yL-38I" secondAttribute="trailing" id="X8y-84-ELi"/>
                             <constraint firstAttribute="bottom" secondItem="9kn-UO-YDe" secondAttribute="bottom" id="XwH-B0-3c3"/>
                             <constraint firstItem="86l-Q4-N0z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bre-nt-Cj0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RfC-yL-38I" secondAttribute="bottom" id="dl6-R6-QfY"/>
                             <constraint firstItem="9kn-UO-YDe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e0X-Gr-rcW"/>
-                            <constraint firstItem="Nn2-f8-cMw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eCE-yP-rvj"/>
-                            <constraint firstAttribute="trailing" secondItem="Nn2-f8-cMw" secondAttribute="trailing" id="mzD-4x-a0w"/>
+                            <constraint firstItem="RfC-yL-38I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="s38-fT-c8U"/>
                             <constraint firstItem="9kn-UO-YDe" firstAttribute="top" secondItem="WNQ-2e-at2" secondAttribute="bottom" id="uvN-Kc-SLI"/>
                             <constraint firstItem="86l-Q4-N0z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-20" id="wJH-J4-DkD"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nn2-f8-cMw" secondAttribute="bottom" id="zj7-9Q-Zxx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cm6-aZ-iV6"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="414" height="1000"/>
+                    <size key="freeformSize" width="414" height="1200"/>
                     <connections>
                         <outlet property="hideAuxilaryViewsButton" destination="WNQ-2e-at2" id="9OS-oc-di4"/>
                         <outlet property="michrophoneContainer" destination="9kn-UO-YDe" id="UVJ-TV-yc9"/>
                         <outlet property="michrophoneContainerBottomContainer" destination="XwH-B0-3c3" id="nK3-y3-Egm"/>
+                        <outlet property="particlesIconsCollectionView" destination="LG9-D2-ydE" id="PM8-sU-4yC"/>
                         <outlet property="previewCollection" destination="86l-Q4-N0z" id="Lmc-HE-yut"/>
                         <segue destination="7UM-sK-2iT" kind="presentation" identifier="CheckIn" id="U3s-wK-Z8T"/>
                     </connections>

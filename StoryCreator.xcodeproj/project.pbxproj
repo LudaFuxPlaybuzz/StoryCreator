@@ -19,7 +19,7 @@
 		852541741E421839008F6A09 /* ParticleOverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541701E421839008F6A09 /* ParticleOverviewCell.swift */; };
 		852541761E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852541721E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift */; };
 		8525417F1E421DCD008F6A09 /* ParticleIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525417D1E421DCD008F6A09 /* ParticleIconCell.swift */; };
-		852541801E421DCD008F6A09 /* NewParticlesAndPublishFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525417E1E421DCD008F6A09 /* NewParticlesAndPublishFooter.swift */; };
+		852541801E421DCD008F6A09 /* NewParticlesDataSourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525417E1E421DCD008F6A09 /* NewParticlesDataSourse.swift */; };
 		852C02631E0C18A7006B5795 /* Particle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852C02621E0C18A7006B5795 /* Particle.swift */; };
 		85438E881E813A17001AFC8F /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85438E871E813A17001AFC8F /* CheckInViewController.swift */; };
 		85438E8A1E813B3F001AFC8F /* CheckInTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85438E891E813B3F001AFC8F /* CheckInTableViewCell.swift */; };
@@ -54,7 +54,7 @@
 		852541701E421839008F6A09 /* ParticleOverviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticleOverviewCell.swift; path = Controller/Preview/PreviewTableComponents/ParticleOverviewCell.swift; sourceTree = "<group>"; };
 		852541721E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TitleCoverAndDescriptionHeader.swift; path = Controller/Preview/PreviewTableComponents/TitleCoverAndDescriptionHeader.swift; sourceTree = "<group>"; };
 		8525417D1E421DCD008F6A09 /* ParticleIconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParticleIconCell.swift; path = "Controller/Preview/PreviewTableComponents/New Particles/ParticleIconCell.swift"; sourceTree = "<group>"; };
-		8525417E1E421DCD008F6A09 /* NewParticlesAndPublishFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewParticlesAndPublishFooter.swift; path = "Controller/Preview/PreviewTableComponents/New Particles/NewParticlesAndPublishFooter.swift"; sourceTree = "<group>"; };
+		8525417E1E421DCD008F6A09 /* NewParticlesDataSourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewParticlesDataSourse.swift; path = "Controller/Preview/PreviewTableComponents/New Particles/NewParticlesDataSourse.swift"; sourceTree = "<group>"; };
 		852C02621E0C18A7006B5795 /* Particle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Particle.swift; path = Model/Particle.swift; sourceTree = "<group>"; };
 		85438E871E813A17001AFC8F /* CheckInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckInViewController.swift; path = Controller/CheckIn/CheckInViewController.swift; sourceTree = "<group>"; };
 		85438E891E813B3F001AFC8F /* CheckInTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckInTableViewCell.swift; path = Controller/CheckIn/CheckInTableViewCell.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				852541721E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift */,
-				8525417E1E421DCD008F6A09 /* NewParticlesAndPublishFooter.swift */,
+				8525417E1E421DCD008F6A09 /* NewParticlesDataSourse.swift */,
 				8525417D1E421DCD008F6A09 /* ParticleIconCell.swift */,
 			);
 			name = "Creator General Components";
@@ -370,7 +370,7 @@
 				852C02631E0C18A7006B5795 /* Particle.swift in Sources */,
 				85AF5F611E76CD620069A587 /* MicrophoneParticle.swift in Sources */,
 				85180E321E7EB3E600BC1000 /* ImageParticleCell.swift in Sources */,
-				852541801E421DCD008F6A09 /* NewParticlesAndPublishFooter.swift in Sources */,
+				852541801E421DCD008F6A09 /* NewParticlesDataSourse.swift in Sources */,
 				859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */,
 				85438E8C1E813E5B001AFC8F /* CheckInDetails.swift in Sources */,
 				85243CEB1E7AE62800768C5C /* ImageParticle.swift in Sources */,

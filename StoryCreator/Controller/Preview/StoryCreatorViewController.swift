@@ -11,6 +11,9 @@ import DKImagePickerController
 
 class StoryCreatorViewController: UIViewController
 {
+    
+    @IBOutlet weak var particlesIconsCollectionView: UICollectionView!
+    
     @IBOutlet weak var previewCollection: UICollectionView!
     @IBOutlet weak var michrophoneContainer: UIView!
     @IBOutlet weak var michrophoneContainerBottomContainer: NSLayoutConstraint!
@@ -18,7 +21,7 @@ class StoryCreatorViewController: UIViewController
     
     var previewDataSource = StoryCreatorDataSource()
     var firebaseManager = FirebaseManager()
-    
+    let newParticlesDataSourse = NewParticlesDataSourse()
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -35,6 +38,9 @@ class StoryCreatorViewController: UIViewController
         
         NotificationCenter.default.addObserver(self, selector: #selector(StoryCreatorViewController.showHideAuxilaryViewsButton), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(StoryCreatorViewController.hideHideAuxilaryViewsButton), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        particlesIconsCollectionView.dataSource = newParticlesDataSourse
+        newParticlesDataSourse.newParticleDelegate = self
     }
 
     override func prepare(for segue: UIStoryboardSegue,
@@ -97,7 +103,7 @@ class StoryCreatorViewController: UIViewController
     }
 }
 
-extension StoryCreatorViewController: StoryCreatorDataSourceDelegate
+extension StoryCreatorViewController: StoryCreatorDataSourceDelegate, ParticleIconCellDelegate
 {
     func particleAdded(_ particle:Particle)
     {

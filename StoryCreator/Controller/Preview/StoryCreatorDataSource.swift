@@ -57,7 +57,8 @@ class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionVi
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
+    {
         
         if kind == UICollectionElementKindSectionHeader
         {
@@ -65,20 +66,8 @@ class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionVi
                                                                              withReuseIdentifier:NSStringFromClass(TitleCoverAndDescriptionHeader.self), for: indexPath) as! TitleCoverAndDescriptionHeader
             headerView.delegate = self.presentVCDelegate
             return headerView
-        } else {
-            let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionFooter,
-                                                                             withReuseIdentifier:NSStringFromClass(NewParticlesAndPublishFooter.self), for: indexPath) as! NewParticlesAndPublishFooter
-            footerView.newParticleDelegate = self
-            return footerView
         }
-    }
-}
-
-extension StoryCreatorDataSource: ParticleIconCellDelegate
-{
-    func particleAdded(_ particle:Particle)
-    {
-        delegate?.particleAdded(particle)
+        return UICollectionReusableView()
     }
 }
 
