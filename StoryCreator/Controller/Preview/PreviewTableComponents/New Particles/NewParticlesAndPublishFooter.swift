@@ -25,7 +25,7 @@ class NewParticlesAndPublishFooter : UICollectionReusableView, UICollectionViewD
                          TextParticle(),
                          ImageParticle(),
                          MapParticle(),
-                         Particle(image:"3"),
+                         QuoteParticle(),
                          Particle(image:"4"),
                          Particle(image:"5"),
                          Particle(image:"6"),

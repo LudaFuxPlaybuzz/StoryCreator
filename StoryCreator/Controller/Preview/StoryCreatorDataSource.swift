@@ -44,6 +44,10 @@ class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionVi
             
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(MapParticleCell.self), for: indexPath) as! MapParticleCell
             
+        case is QuoteParticle:
+            
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(QuoteParticleCell.self), for: indexPath) as! QuoteParticleCell
+            
         default:
             
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(ParticleOverviewCell.self), for: indexPath) as! ParticleOverviewCell
@@ -90,6 +94,8 @@ extension StoryCreatorDataSource: UICollectionViewDelegateFlowLayout
             return CGSize(width: 400, height: 300)
         case is MapParticle:
             return CGSize(width: 400, height: 250)
+        case is QuoteParticle:
+            return CGSize(width: 400, height: 370)
         default:
             return CGSize(width: 400, height: 50)
         }

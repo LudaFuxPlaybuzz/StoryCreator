@@ -11,7 +11,6 @@
 		85243CE91E7993E000768C5C /* TextParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85243CE81E7993E000768C5C /* TextParticle.swift */; };
 		85243CEB1E7AE62800768C5C /* ImageParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85243CEA1E7AE62800768C5C /* ImageParticle.swift */; };
 		85243CED1E7AE81300768C5C /* MapParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85243CEC1E7AE81300768C5C /* MapParticle.swift */; };
-		852541501E3E1698008F6A09 /* WebFallbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8525414F1E3E1698008F6A09 /* WebFallbackViewController.swift */; };
 		852541601E42170F008F6A09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8525415F1E42170F008F6A09 /* Assets.xcassets */; };
 		852541651E421717008F6A09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852541611E421717008F6A09 /* LaunchScreen.storyboard */; };
 		852541661E421717008F6A09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852541631E421717008F6A09 /* Main.storyboard */; };
@@ -26,6 +25,8 @@
 		85438E8A1E813B3F001AFC8F /* CheckInTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85438E891E813B3F001AFC8F /* CheckInTableViewCell.swift */; };
 		85438E8C1E813E5B001AFC8F /* CheckInDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85438E8B1E813E5B001AFC8F /* CheckInDetails.swift */; };
 		85438E8E1E815396001AFC8F /* MapParticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85438E8D1E815396001AFC8F /* MapParticleCell.swift */; };
+		85438E901E8172DF001AFC8F /* QuoteParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85438E8F1E8172DF001AFC8F /* QuoteParticle.swift */; };
+		85438E921E817316001AFC8F /* QuoteParticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85438E911E817316001AFC8F /* QuoteParticleCell.swift */; };
 		859B559C1E0AC8FA00231A2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B559B1E0AC8FA00231A2B /* AppDelegate.swift */; };
 		859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B55B11E0AD2E700231A2B /* FloatLabelTextField.swift */; };
 		859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B55B21E0AD2E700231A2B /* FloatLabelTextView.swift */; };
@@ -45,7 +46,6 @@
 		85243CE81E7993E000768C5C /* TextParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextParticle.swift; path = Model/TextParticle.swift; sourceTree = "<group>"; };
 		85243CEA1E7AE62800768C5C /* ImageParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageParticle.swift; path = Model/ImageParticle.swift; sourceTree = "<group>"; };
 		85243CEC1E7AE81300768C5C /* MapParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapParticle.swift; path = Model/MapParticle.swift; sourceTree = "<group>"; };
-		8525414F1E3E1698008F6A09 /* WebFallbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebFallbackViewController.swift; path = Controller/Particles/WebFallbackViewController.swift; sourceTree = "<group>"; };
 		8525415F1E42170F008F6A09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = View/Assets.xcassets; sourceTree = "<group>"; };
 		852541621E421717008F6A09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = View/Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		852541641E421717008F6A09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = View/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +60,8 @@
 		85438E891E813B3F001AFC8F /* CheckInTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckInTableViewCell.swift; path = Controller/CheckIn/CheckInTableViewCell.swift; sourceTree = "<group>"; };
 		85438E8B1E813E5B001AFC8F /* CheckInDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckInDetails.swift; path = Model/CheckInDetails.swift; sourceTree = "<group>"; };
 		85438E8D1E815396001AFC8F /* MapParticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapParticleCell.swift; path = Controller/Particles/MapParticleCell.swift; sourceTree = "<group>"; };
+		85438E8F1E8172DF001AFC8F /* QuoteParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuoteParticle.swift; path = Model/QuoteParticle.swift; sourceTree = "<group>"; };
+		85438E911E817316001AFC8F /* QuoteParticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuoteParticleCell.swift; path = Controller/Particles/QuoteParticleCell.swift; sourceTree = "<group>"; };
 		859B55981E0AC8FA00231A2B /* StoryCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859B559B1E0AC8FA00231A2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859B55A71E0AC8FA00231A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -90,11 +92,11 @@
 			isa = PBXGroup;
 			children = (
 				852541701E421839008F6A09 /* ParticleOverviewCell.swift */,
-				8525414F1E3E1698008F6A09 /* WebFallbackViewController.swift */,
 				85AF5F631E76D3950069A587 /* TextParticleCell.swift */,
 				85AF5F651E77F5120069A587 /* VoiceToSpeechViewController.swift */,
 				85180E311E7EB3E600BC1000 /* ImageParticleCell.swift */,
 				85438E8D1E815396001AFC8F /* MapParticleCell.swift */,
+				85438E911E817316001AFC8F /* QuoteParticleCell.swift */,
 			);
 			name = Particles;
 			sourceTree = "<group>";
@@ -209,6 +211,7 @@
 				85243CE81E7993E000768C5C /* TextParticle.swift */,
 				85243CEA1E7AE62800768C5C /* ImageParticle.swift */,
 				85243CEC1E7AE81300768C5C /* MapParticle.swift */,
+				85438E8F1E8172DF001AFC8F /* QuoteParticle.swift */,
 			);
 			name = Particles;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				85243CE91E7993E000768C5C /* TextParticle.swift in Sources */,
 				8525416E1E4217D9008F6A09 /* StoryCreatorDataSource.swift in Sources */,
 				852541761E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift in Sources */,
+				85438E921E817316001AFC8F /* QuoteParticleCell.swift in Sources */,
 				85AF5F661E77F5120069A587 /* VoiceToSpeechViewController.swift in Sources */,
 				859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */,
 				852C02631E0C18A7006B5795 /* Particle.swift in Sources */,
@@ -373,10 +377,10 @@
 				85438E881E813A17001AFC8F /* CheckInViewController.swift in Sources */,
 				852541741E421839008F6A09 /* ParticleOverviewCell.swift in Sources */,
 				8525417F1E421DCD008F6A09 /* ParticleIconCell.swift in Sources */,
-				852541501E3E1698008F6A09 /* WebFallbackViewController.swift in Sources */,
 				8525416C1E4217CE008F6A09 /* StoryCreatorViewController.swift in Sources */,
 				85D675931E3637B2003B9798 /* LPRTableView.swift in Sources */,
 				85438E8A1E813B3F001AFC8F /* CheckInTableViewCell.swift in Sources */,
+				85438E901E8172DF001AFC8F /* QuoteParticle.swift in Sources */,
 				85243CED1E7AE81300768C5C /* MapParticle.swift in Sources */,
 				859B559C1E0AC8FA00231A2B /* AppDelegate.swift in Sources */,
 			);
