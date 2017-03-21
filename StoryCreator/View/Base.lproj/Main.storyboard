@@ -65,18 +65,38 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qID-cl-QNL">
-                                                    <rect key="frame" x="10" y="10" width="392" height="89"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="412" height="109"/>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handPress" translatesAutoresizingMaskIntoConstraints="NO" id="1mR-yv-hCc">
+                                                    <rect key="frame" x="186" y="34" width="40" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="0qQ-w1-OEl"/>
+                                                        <constraint firstAttribute="height" constant="42" id="S3o-SF-c0v"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vru-Wc-PaA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="412" height="109"/>
+                                                    <connections>
+                                                        <action selector="revielImage:" destination="9mP-SX-GBb" eventType="touchUpInside" id="fYD-rp-aYb"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="qID-cl-QNL" firstAttribute="leading" secondItem="9mP-SX-GBb" secondAttribute="leading" constant="10" id="cZZ-B5-086"/>
-                                            <constraint firstItem="qID-cl-QNL" firstAttribute="top" secondItem="9mP-SX-GBb" secondAttribute="top" constant="10" id="ghx-18-wcd"/>
-                                            <constraint firstAttribute="trailing" secondItem="qID-cl-QNL" secondAttribute="trailing" constant="10" id="iX5-j0-rO6"/>
-                                            <constraint firstAttribute="bottom" secondItem="qID-cl-QNL" secondAttribute="bottom" constant="10" id="k5G-Mf-ZxC"/>
+                                            <constraint firstItem="Vru-Wc-PaA" firstAttribute="top" secondItem="qID-cl-QNL" secondAttribute="top" id="3uF-RZ-kEv"/>
+                                            <constraint firstItem="Vru-Wc-PaA" firstAttribute="bottom" secondItem="qID-cl-QNL" secondAttribute="bottom" id="G3n-Se-7Wf"/>
+                                            <constraint firstItem="1mR-yv-hCc" firstAttribute="centerX" secondItem="9mP-SX-GBb" secondAttribute="centerX" id="Px6-ZZ-kPY"/>
+                                            <constraint firstItem="qID-cl-QNL" firstAttribute="leading" secondItem="9mP-SX-GBb" secondAttribute="leading" id="cZZ-B5-086"/>
+                                            <constraint firstItem="Vru-Wc-PaA" firstAttribute="trailing" secondItem="qID-cl-QNL" secondAttribute="trailing" id="e54-fV-NAG"/>
+                                            <constraint firstItem="qID-cl-QNL" firstAttribute="top" secondItem="9mP-SX-GBb" secondAttribute="top" id="ghx-18-wcd"/>
+                                            <constraint firstAttribute="trailing" secondItem="qID-cl-QNL" secondAttribute="trailing" id="iX5-j0-rO6"/>
+                                            <constraint firstAttribute="bottom" secondItem="qID-cl-QNL" secondAttribute="bottom" id="k5G-Mf-ZxC"/>
+                                            <constraint firstItem="1mR-yv-hCc" firstAttribute="centerY" secondItem="9mP-SX-GBb" secondAttribute="centerY" id="rwM-M5-TtF"/>
+                                            <constraint firstItem="Vru-Wc-PaA" firstAttribute="leading" secondItem="qID-cl-QNL" secondAttribute="leading" id="w33-Fk-BMb"/>
                                         </constraints>
                                         <size key="customSize" width="412" height="109"/>
                                         <connections>
+                                            <outlet property="handPressIcon" destination="1mR-yv-hCc" id="e25-GM-TSf"/>
                                             <outlet property="imageView" destination="qID-cl-QNL" id="50M-xR-Od7"/>
                                         </connections>
                                     </collectionViewCell>
@@ -381,6 +401,7 @@
         <image name="camera" width="400" height="400"/>
         <image name="cameraShadow" width="227" height="212"/>
         <image name="gradient" width="360" height="360"/>
+        <image name="handPress" width="47" height="52"/>
         <image name="microphoneActive" width="50" height="50"/>
         <image name="microphoneIdel" width="50" height="50"/>
     </resources>

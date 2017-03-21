@@ -72,19 +72,36 @@ class StoryCreatorViewController: UIViewController
     {
         hideAuxilaryViewsButton.isHidden = true
     }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?)
+    {
+        if(event?.subtype == UIEventSubtype.motionShake)
+        {
+            let lastCell = self.lastCell()
+            
+            if let lastImageCell = lastCell as? ImageParticleCell
+            {
+                lastImageCell.blurImage()
+            }
+        }
+    }
+    
+    func lastCell() -> UICollectionViewCell?
+    {
+        let lastCell = previewCollection.cellForItem(at: IndexPath(row: previewDataSource.newParticles.count - 1, section:0) as IndexPath)
+        return lastCell
+    }
 }
 
 extension StoryCreatorViewController: StoryCreatorDataSourceDelegate
 {
     func particleAdded(_ particle:Particle)
     {
-        let lastCell = previewCollection.cellForItem(at: IndexPath(row: previewDataSource.newParticles.count - 1, section:0) as IndexPath)
-        
         switch particle {
             
         case is MicrophoneParticle:
             
-            let isLastTextCell = lastCell is TextParticleCell
+            let isLastTextCell = self.lastCell() is TextParticleCell
             if !isLastTextCell
             {
                 previewDataSource.newParticles.append(particle)
@@ -94,7 +111,7 @@ extension StoryCreatorViewController: StoryCreatorDataSourceDelegate
             
         case is TextParticle:
 
-            if let lastTextCell = lastCell as? TextParticleCell
+            if let lastTextCell = self.lastCell() as? TextParticleCell
             {
                 self.showKeyboard(textView: lastTextCell.textView)
                 hideAuxilaryViewsButton.isHidden = true
