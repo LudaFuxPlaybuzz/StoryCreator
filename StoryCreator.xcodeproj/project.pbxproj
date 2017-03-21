@@ -25,6 +25,7 @@
 		85438E881E813A17001AFC8F /* CheckInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85438E871E813A17001AFC8F /* CheckInViewController.swift */; };
 		85438E8A1E813B3F001AFC8F /* CheckInTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85438E891E813B3F001AFC8F /* CheckInTableViewCell.swift */; };
 		85438E8C1E813E5B001AFC8F /* CheckInDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85438E8B1E813E5B001AFC8F /* CheckInDetails.swift */; };
+		85438E8E1E815396001AFC8F /* MapParticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85438E8D1E815396001AFC8F /* MapParticleCell.swift */; };
 		859B559C1E0AC8FA00231A2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B559B1E0AC8FA00231A2B /* AppDelegate.swift */; };
 		859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B55B11E0AD2E700231A2B /* FloatLabelTextField.swift */; };
 		859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B55B21E0AD2E700231A2B /* FloatLabelTextView.swift */; };
@@ -58,6 +59,7 @@
 		85438E871E813A17001AFC8F /* CheckInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckInViewController.swift; path = Controller/CheckIn/CheckInViewController.swift; sourceTree = "<group>"; };
 		85438E891E813B3F001AFC8F /* CheckInTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckInTableViewCell.swift; path = Controller/CheckIn/CheckInTableViewCell.swift; sourceTree = "<group>"; };
 		85438E8B1E813E5B001AFC8F /* CheckInDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CheckInDetails.swift; path = Model/CheckInDetails.swift; sourceTree = "<group>"; };
+		85438E8D1E815396001AFC8F /* MapParticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapParticleCell.swift; path = Controller/Particles/MapParticleCell.swift; sourceTree = "<group>"; };
 		859B55981E0AC8FA00231A2B /* StoryCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859B559B1E0AC8FA00231A2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859B55A71E0AC8FA00231A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				85AF5F631E76D3950069A587 /* TextParticleCell.swift */,
 				85AF5F651E77F5120069A587 /* VoiceToSpeechViewController.swift */,
 				85180E311E7EB3E600BC1000 /* ImageParticleCell.swift */,
+				85438E8D1E815396001AFC8F /* MapParticleCell.swift */,
 			);
 			name = Particles;
 			sourceTree = "<group>";
@@ -159,9 +162,9 @@
 			children = (
 				8525416B1E4217CE008F6A09 /* StoryCreatorViewController.swift */,
 				8525416D1E4217D9008F6A09 /* StoryCreatorDataSource.swift */,
+				8525414E1E3E1661008F6A09 /* Particles */,
 				85438E861E8139C9001AFC8F /* CheckIn */,
 				852541521E3E3632008F6A09 /* Creator General Components */,
-				8525414E1E3E1661008F6A09 /* Particles */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			files = (
 				85AF5F641E76D3950069A587 /* TextParticleCell.swift in Sources */,
 				85AF5F5F1E76B5830069A587 /* FirebaseManager.swift in Sources */,
+				85438E8E1E815396001AFC8F /* MapParticleCell.swift in Sources */,
 				85243CE91E7993E000768C5C /* TextParticle.swift in Sources */,
 				8525416E1E4217D9008F6A09 /* StoryCreatorDataSource.swift in Sources */,
 				852541761E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift in Sources */,

@@ -44,6 +44,10 @@ class StoryCreatorViewController: UIViewController
         {
             voiceToSpeechViewController.delegate = self
         }
+        else if let checkInViewController = segue.destination as? CheckInViewController
+        {
+            checkInViewController.delegate = self
+        }
     }
     
     @IBAction func hideAuxilaryViewsTapped(_ sender: UIButton)
@@ -147,6 +151,8 @@ extension StoryCreatorViewController: StoryCreatorDataSourceDelegate
         case is MapParticle:
             
             self.performSegue(withIdentifier: "CheckIn", sender: nil)
+            previewDataSource.newParticles.append(particle)
+            previewCollection.reloadData()
             
         default:
             previewDataSource.newParticles.append(particle)
@@ -187,6 +193,17 @@ extension StoryCreatorViewController: VoiceToSpeechViewControllerDelegate
         if let workingTextParticle = previewCollection.cellForItem(at: IndexPath(row: previewDataSource.newParticles.count - 1, section:0) as IndexPath) as? TextParticleCell
         {
             workingTextParticle.updateText(text)
+        }
+    }
+}
+
+extension StoryCreatorViewController: CheckInViewControllerDelegate
+{
+    func didCheckIn(_ checkInDetails:CheckInDetails)
+    {
+        if let lastMapCell = self.lastCell() as? MapParticleCell
+        {
+            lastMapCell.setDetails(checkInDetails: checkInDetails)
         }
     }
 }

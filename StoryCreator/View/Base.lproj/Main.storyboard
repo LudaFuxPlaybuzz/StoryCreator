@@ -22,6 +22,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNQ-2e-at2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="870"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.56078431370000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideAuxilaryViewsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mQY-TN-OAO"/>
+                                </connections>
+                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="86l-Q4-N0z">
                                 <rect key="frame" x="0.0" y="-20" width="414" height="990"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -32,8 +42,64 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.MapParticleCell" id="VeB-Fl-6DL" customClass="MapParticleCell" customModule="StoryCreator" customModuleProvider="target">
+                                        <rect key="frame" x="1" y="230" width="412" height="211"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="412" height="211"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zec-52-6Ol">
+                                                    <rect key="frame" x="8" y="8" width="396" height="195"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ixL-w2-a0V">
+                                                            <rect key="frame" x="0.0" y="0.0" width="396" height="143"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ezq-tv-baK">
+                                                            <rect key="frame" x="10" y="155" width="30" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="B4a-O1-zQG"/>
+                                                                <constraint firstAttribute="width" constant="30" id="zE9-UW-iR0"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lE7-NZ-5b5">
+                                                            <rect key="frame" x="50" y="153" width="336" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="ixL-w2-a0V" firstAttribute="leading" secondItem="Zec-52-6Ol" secondAttribute="leading" id="KRC-yU-c1l"/>
+                                                        <constraint firstItem="lE7-NZ-5b5" firstAttribute="centerY" secondItem="ezq-tv-baK" secondAttribute="centerY" constant="-8" id="WAR-qt-wUl"/>
+                                                        <constraint firstAttribute="bottom" secondItem="ezq-tv-baK" secondAttribute="bottom" constant="10" id="ZOP-NZ-iMi"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lE7-NZ-5b5" secondAttribute="trailing" constant="10" id="ZUS-l1-4K9"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ixL-w2-a0V" secondAttribute="trailing" id="bme-Sa-Wx1"/>
+                                                        <constraint firstItem="ezq-tv-baK" firstAttribute="leading" secondItem="Zec-52-6Ol" secondAttribute="leading" constant="10" id="cK9-Wb-bhw"/>
+                                                        <constraint firstItem="lE7-NZ-5b5" firstAttribute="top" secondItem="ixL-w2-a0V" secondAttribute="bottom" constant="10" id="fhD-xR-M7C"/>
+                                                        <constraint firstItem="lE7-NZ-5b5" firstAttribute="leading" secondItem="ezq-tv-baK" secondAttribute="trailing" constant="10" id="hl5-qo-faX"/>
+                                                        <constraint firstItem="ixL-w2-a0V" firstAttribute="top" secondItem="Zec-52-6Ol" secondAttribute="top" id="tc9-6c-7lh"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Zec-52-6Ol" firstAttribute="leading" secondItem="VeB-Fl-6DL" secondAttribute="leadingMargin" id="5Kh-G5-8po"/>
+                                            <constraint firstItem="Zec-52-6Ol" firstAttribute="trailing" secondItem="VeB-Fl-6DL" secondAttribute="trailingMargin" id="IG6-q3-dOL"/>
+                                            <constraint firstItem="Zec-52-6Ol" firstAttribute="bottom" secondItem="VeB-Fl-6DL" secondAttribute="bottomMargin" id="MBd-yJ-aRK"/>
+                                            <constraint firstItem="Zec-52-6Ol" firstAttribute="top" secondItem="VeB-Fl-6DL" secondAttribute="topMargin" id="UjI-bO-U1s"/>
+                                        </constraints>
+                                        <size key="customSize" width="412" height="211"/>
+                                        <connections>
+                                            <outlet property="mapContainer" destination="Zec-52-6Ol" id="yCp-qn-FEE"/>
+                                            <outlet property="mapImageView" destination="ixL-w2-a0V" id="3w7-qe-fUT"/>
+                                            <outlet property="placeIcon" destination="ezq-tv-baK" id="s0c-Fp-rac"/>
+                                            <outlet property="placeName" destination="lE7-NZ-5b5" id="Swa-6H-fk0"/>
+                                        </connections>
+                                    </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.TextParticleCell" id="N1x-3k-xjf" customClass="TextParticleCell" customModule="StoryCreator" customModuleProvider="target">
-                                        <rect key="frame" x="1" y="230" width="412" height="63"/>
+                                        <rect key="frame" x="1" y="441" width="412" height="63"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="412" height="63"/>
@@ -58,7 +124,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.ImageParticleCell" id="9mP-SX-GBb" customClass="ImageParticleCell" customModule="StoryCreator" customModuleProvider="target">
-                                        <rect key="frame" x="1" y="293" width="412" height="109"/>
+                                        <rect key="frame" x="1" y="504" width="412" height="109"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="412" height="109"/>
@@ -101,7 +167,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.ParticleOverviewCell" id="hzs-v6-p49" customClass="ParticleOverviewCell" customModule="StoryCreator" customModuleProvider="target">
-                                        <rect key="frame" x="1" y="402" width="412" height="63"/>
+                                        <rect key="frame" x="1" y="613" width="412" height="63"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="412" height="63"/>
@@ -214,7 +280,7 @@
                                     </connections>
                                 </collectionReusableView>
                                 <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.NewParticlesAndPublishFooter" id="Ers-4x-Kh1" customClass="NewParticlesAndPublishFooter" customModule="StoryCreator" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="465" width="414" height="150"/>
+                                    <rect key="frame" x="0.0" y="676" width="414" height="150"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RfC-yL-38I">
@@ -285,16 +351,6 @@
                                 <state key="normal" title="PUBLISH">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNQ-2e-at2">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="870"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.0" green="0.56078431370000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="hideAuxilaryViewsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mQY-TN-OAO"/>
-                                </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kn-UO-YDe">
                                 <rect key="frame" x="0.0" y="870" width="414" height="130"/>

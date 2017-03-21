@@ -39,6 +39,10 @@ class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionVi
         case is ImageParticle:
             
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(ImageParticleCell.self), for: indexPath) as! ImageParticleCell
+        
+        case is MapParticle:
+            
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(MapParticleCell.self), for: indexPath) as! MapParticleCell
             
         default:
             
@@ -79,12 +83,15 @@ extension StoryCreatorDataSource: UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let test = newParticles[indexPath.row]
-        print("test - \(test)")
-        if let _ = newParticles[indexPath.row] as? ImageParticle
-        {
+        let particleType = newParticles[indexPath.row]
+        
+        switch particleType {
+        case is ImageParticle:
             return CGSize(width: 400, height: 300)
+        case is MapParticle:
+            return CGSize(width: 400, height: 250)
+        default:
+            return CGSize(width: 400, height: 50)
         }
-        return CGSize(width: 400, height: 50)
     }
 }

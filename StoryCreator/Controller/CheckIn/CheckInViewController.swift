@@ -8,15 +8,22 @@
 
 import UIKit
 
+@objc protocol CheckInViewControllerDelegate: class
+{
+    func didCheckIn(_ checkInDetails:CheckInDetails)
+}
+
 class CheckInViewController: UIViewController {
 
     var checkInItems = [CheckInDetails]()
+    
+    weak var delegate: CheckInViewControllerDelegate?
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        checkInItems = [CheckInDetails(checkInTitle: "Sarona TLV", iconName: "food", details: "0.3 mi · 115,345 check-ins", mapImageName: ""),
+        checkInItems = [CheckInDetails(checkInTitle: "Sarona TLV", iconName: "food", details: "0.3 mi · 115,345 check-ins", mapImageName: "sarona"),
         CheckInDetails(checkInTitle: "The White House", iconName: "marker", details: "1600 Pensylvania Avenue, Washington", mapImageName: ""),
         CheckInDetails(checkInTitle: "London Stadium", iconName: "ticket", details: "Olimpic Park, Stanford, London, United Kindom", mapImageName: "")]
     }
@@ -48,4 +55,10 @@ extension CheckInViewController: UITableViewDelegate, UITableViewDataSource
 
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) 
+    {
+        let checkInDetails = checkInItems[indexPath.row]
+        self.delegate?.didCheckIn(checkInDetails)
+        self.dismiss(animated: true, completion: nil)
+    }
 }
