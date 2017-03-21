@@ -16,9 +16,9 @@ class CheckInViewController: UIViewController {
     {
         super.viewDidLoad()
         
-        checkInItems = [CheckInDetails(checkInTitle: "Sarona TLV", iconName: "", details: "0.3 mi · 115,345 check-ins", mapImageName: ""),
-        CheckInDetails(checkInTitle: "The White House", iconName: "", details: "1600 Pensylvania Avenue, Washington", mapImageName: ""),
-        CheckInDetails(checkInTitle: "London Stadium", iconName: "", details: "Olimpic Park, Stanford, London, United Kindom", mapImageName: "")]
+        checkInItems = [CheckInDetails(checkInTitle: "Sarona TLV", iconName: "food", details: "0.3 mi · 115,345 check-ins", mapImageName: ""),
+        CheckInDetails(checkInTitle: "The White House", iconName: "marker", details: "1600 Pensylvania Avenue, Washington", mapImageName: ""),
+        CheckInDetails(checkInTitle: "London Stadium", iconName: "ticket", details: "Olimpic Park, Stanford, London, United Kindom", mapImageName: "")]
     }
     
     @IBAction func didPressCancelButton(_ sender: Any)
@@ -42,6 +42,7 @@ extension CheckInViewController: UITableViewDelegate, UITableViewDataSource
         
         cell.titleLabel.text = checkInDetails.checkInTitle
         cell.descriptionLabel.text = checkInDetails.details
+        cell.iconImageView.image = UIImage.init(named: checkInDetails.iconName)
         
         return cell
 

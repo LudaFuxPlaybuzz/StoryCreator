@@ -381,20 +381,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wfR-Ak-nDa">
-                                                    <rect key="frame" x="10" y="9" width="50" height="50"/>
+                                                    <rect key="frame" x="10" y="14" width="40" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="LwD-d2-AZL"/>
-                                                        <constraint firstAttribute="height" constant="50" id="oPX-Gk-at9"/>
+                                                        <constraint firstAttribute="width" constant="40" id="LwD-d2-AZL"/>
+                                                        <constraint firstAttribute="height" constant="40" id="oPX-Gk-at9"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJ8-Pd-Y0w">
-                                                    <rect key="frame" x="70" y="13" width="326" height="21"/>
+                                                    <rect key="frame" x="60" y="13" width="336" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LP5-8D-poP">
-                                                    <rect key="frame" x="70" y="34" width="326" height="20"/>
+                                                    <rect key="frame" x="60" y="37" width="336" height="20"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -405,7 +405,7 @@
                                                 <constraint firstItem="LP5-8D-poP" firstAttribute="leading" secondItem="wfR-Ak-nDa" secondAttribute="trailing" constant="10" id="GG7-9m-yu2"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="DJ8-Pd-Y0w" secondAttribute="trailing" constant="10" id="Ljb-0a-0ds"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="LP5-8D-poP" secondAttribute="trailing" constant="10" id="Ylh-OH-BNu"/>
-                                                <constraint firstItem="LP5-8D-poP" firstAttribute="top" secondItem="DJ8-Pd-Y0w" secondAttribute="bottom" id="adU-Ei-UJk"/>
+                                                <constraint firstItem="LP5-8D-poP" firstAttribute="top" secondItem="DJ8-Pd-Y0w" secondAttribute="bottom" constant="3" id="adU-Ei-UJk"/>
                                                 <constraint firstItem="DJ8-Pd-Y0w" firstAttribute="leading" secondItem="wfR-Ak-nDa" secondAttribute="trailing" constant="10" id="i6L-ot-v38"/>
                                                 <constraint firstItem="wfR-Ak-nDa" firstAttribute="leading" secondItem="BXu-gB-eJu" secondAttribute="leading" constant="10" id="iRa-N8-mjn"/>
                                                 <constraint firstItem="wfR-Ak-nDa" firstAttribute="centerY" secondItem="BXu-gB-eJu" secondAttribute="centerY" id="kfX-Ca-aGe"/>
