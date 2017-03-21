@@ -24,8 +24,8 @@ class CheckInViewController: UIViewController {
         super.viewDidLoad()
         
         checkInItems = [CheckInDetails(checkInTitle: "Sarona TLV", iconName: "food", details: "0.3 mi · 115,345 check-ins", mapImageName: "sarona"),
-        CheckInDetails(checkInTitle: "The White House", iconName: "marker", details: "1600 Pensylvania Avenue, Washington", mapImageName: ""),
-        CheckInDetails(checkInTitle: "London Stadium", iconName: "ticket", details: "Olimpic Park, Stanford, London, United Kindom", mapImageName: "")]
+        CheckInDetails(checkInTitle: "The White House", iconName: "marker", details: "1600 Pensylvania Avenue, Washington", mapImageName: "whiteHouse"),
+        CheckInDetails(checkInTitle: "London Stadium", iconName: "ticket", details: "Olimpic Park, Stanford, London, United Kindom", mapImageName: "london")]
     }
     
     @IBAction func didPressCancelButton(_ sender: Any)
