@@ -50,11 +50,18 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zec-52-6Ol">
-                                                    <rect key="frame" x="8" y="8" width="396" height="195"/>
+                                                    <rect key="frame" x="28" y="8" width="356" height="195"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ixL-w2-a0V">
-                                                            <rect key="frame" x="0.0" y="0.0" width="396" height="143"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="356" height="146"/>
                                                         </imageView>
+                                                        <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mWi-92-vDS">
+                                                            <rect key="frame" x="0.0" y="146" width="356" height="1"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="1" id="sWo-59-QUA"/>
+                                                            </constraints>
+                                                        </view>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ezq-tv-baK">
                                                             <rect key="frame" x="10" y="155" width="30" height="30"/>
                                                             <constraints>
@@ -63,7 +70,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lE7-NZ-5b5">
-                                                            <rect key="frame" x="50" y="153" width="336" height="18"/>
+                                                            <rect key="frame" x="50" y="156" width="296" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -71,22 +78,25 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="mWi-92-vDS" secondAttribute="trailing" id="Iws-pu-kpp"/>
                                                         <constraint firstItem="ixL-w2-a0V" firstAttribute="leading" secondItem="Zec-52-6Ol" secondAttribute="leading" id="KRC-yU-c1l"/>
-                                                        <constraint firstItem="lE7-NZ-5b5" firstAttribute="centerY" secondItem="ezq-tv-baK" secondAttribute="centerY" constant="-8" id="WAR-qt-wUl"/>
+                                                        <constraint firstItem="lE7-NZ-5b5" firstAttribute="centerY" secondItem="ezq-tv-baK" secondAttribute="centerY" constant="-5" id="WAR-qt-wUl"/>
+                                                        <constraint firstItem="mWi-92-vDS" firstAttribute="top" secondItem="ixL-w2-a0V" secondAttribute="bottom" id="YYx-3R-Gy8"/>
                                                         <constraint firstAttribute="bottom" secondItem="ezq-tv-baK" secondAttribute="bottom" constant="10" id="ZOP-NZ-iMi"/>
                                                         <constraint firstAttribute="trailing" secondItem="lE7-NZ-5b5" secondAttribute="trailing" constant="10" id="ZUS-l1-4K9"/>
                                                         <constraint firstAttribute="trailing" secondItem="ixL-w2-a0V" secondAttribute="trailing" id="bme-Sa-Wx1"/>
                                                         <constraint firstItem="ezq-tv-baK" firstAttribute="leading" secondItem="Zec-52-6Ol" secondAttribute="leading" constant="10" id="cK9-Wb-bhw"/>
                                                         <constraint firstItem="lE7-NZ-5b5" firstAttribute="top" secondItem="ixL-w2-a0V" secondAttribute="bottom" constant="10" id="fhD-xR-M7C"/>
                                                         <constraint firstItem="lE7-NZ-5b5" firstAttribute="leading" secondItem="ezq-tv-baK" secondAttribute="trailing" constant="10" id="hl5-qo-faX"/>
+                                                        <constraint firstItem="mWi-92-vDS" firstAttribute="leading" secondItem="Zec-52-6Ol" secondAttribute="leading" id="pLf-Ou-Mcl"/>
                                                         <constraint firstItem="ixL-w2-a0V" firstAttribute="top" secondItem="Zec-52-6Ol" secondAttribute="top" id="tc9-6c-7lh"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Zec-52-6Ol" firstAttribute="leading" secondItem="VeB-Fl-6DL" secondAttribute="leadingMargin" id="5Kh-G5-8po"/>
-                                            <constraint firstItem="Zec-52-6Ol" firstAttribute="trailing" secondItem="VeB-Fl-6DL" secondAttribute="trailingMargin" id="IG6-q3-dOL"/>
+                                            <constraint firstItem="Zec-52-6Ol" firstAttribute="leading" secondItem="VeB-Fl-6DL" secondAttribute="leadingMargin" constant="20" id="5Kh-G5-8po"/>
+                                            <constraint firstItem="Zec-52-6Ol" firstAttribute="trailing" secondItem="VeB-Fl-6DL" secondAttribute="trailingMargin" constant="-20" id="IG6-q3-dOL"/>
                                             <constraint firstItem="Zec-52-6Ol" firstAttribute="bottom" secondItem="VeB-Fl-6DL" secondAttribute="bottomMargin" id="MBd-yJ-aRK"/>
                                             <constraint firstItem="Zec-52-6Ol" firstAttribute="top" secondItem="VeB-Fl-6DL" secondAttribute="topMargin" id="UjI-bO-U1s"/>
                                         </constraints>

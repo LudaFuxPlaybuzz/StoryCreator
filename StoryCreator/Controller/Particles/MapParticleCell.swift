@@ -19,6 +19,14 @@ class MapParticleCell: UICollectionViewCell {
     {
         super.awakeFromNib()
         mapContainer.isHidden = true
+        
+        self.mapContainer.layer.borderWidth = 1
+        self.mapContainer.layer.borderColor = UIColor(white: 0.8, alpha: 1).cgColor
+        
+        self.mapContainer.layer.shadowColor = UIColor(white: 0.8, alpha: 1).cgColor
+        self.mapContainer.layer.shadowOpacity = 1
+        self.mapContainer.layer.shadowOffset = CGSize(width: 0, height: 3)
+        self.mapContainer.layer.shadowRadius = 3
     }
     
     func setDetails(checkInDetails: CheckInDetails)
