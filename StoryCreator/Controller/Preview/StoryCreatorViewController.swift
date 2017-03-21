@@ -143,6 +143,10 @@ extension StoryCreatorViewController: StoryCreatorDataSourceDelegate
                 }
             }
             self.present(pickerController, animated: true) {}
+        
+        case is MapParticle:
+            
+            self.performSegue(withIdentifier: "CheckIn", sender: nil)
             
         default:
             previewDataSource.newParticles.append(particle)
