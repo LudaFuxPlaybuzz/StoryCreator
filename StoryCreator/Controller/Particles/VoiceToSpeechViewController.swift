@@ -16,9 +16,9 @@ import Speech
 
 class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
 {
-    @IBOutlet weak var microphoneButton: UIButton!
-    @IBOutlet weak var recordingPrompt: UILabel!
-    @IBOutlet weak var audioWave: UIImageView!
+    @IBOutlet weak var recordingPromptLabel: UILabel!
+    
+    var recordingPrompt: String!
     
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
@@ -32,60 +32,44 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
         super.viewDidLoad()
 
         speechRecognizer?.delegate = self
-        self.audioWave.alpha = 0.0
-        microphoneButton.isEnabled = false
         
         SFSpeechRecognizer.requestAuthorization { (authStatus) in
             
-            var isButtonEnabled = false
+            var isRecordingEnabled = false
             
             switch authStatus {
             case .authorized:
-                isButtonEnabled = true
+                isRecordingEnabled = true
                 
             case .denied:
-                isButtonEnabled = false
+                isRecordingEnabled = false
                 print("User denied access to speech recognition")
                 
             case .restricted:
-                isButtonEnabled = false
+                isRecordingEnabled = false
                 print("Speech recognition restricted on this device")
                 
             case .notDetermined:
-                isButtonEnabled = false
+                isRecordingEnabled = false
                 print("Speech recognition not yet authorized")
             }
             
             OperationQueue.main.addOperation() {
-                self.microphoneButton.isEnabled = isButtonEnabled
             }
         }
         
-        recordingPrompt.text = "Start Recording!"
+        recordingPrompt = "Start Recording!"
+        self.startRecording()
     }
 
-    @IBAction func microphoneTapped(_ sender: Any)
+    @IBAction func cancelButtonPressed(_ sender: Any)
     {
-        microphoneButton.isSelected = true
         
-        if audioEngine.isRunning {
-            audioEngine.stop()
-            recognitionRequest?.endAudio()
-            microphoneButton.isEnabled = false
-            microphoneButton.setTitle("Start Recording", for: .normal)
-        } else {
-            startRecording()
-            microphoneButton.setTitle("Stop Recording", for: .normal)
-        }
     }
     
     func startRecording() {
         
-        recordingPrompt.text = "Recording..."
-        
-        UIView.animate(withDuration: 1, animations: {
-            self.audioWave.alpha = 1.0
-        })
+//        recordingPromptLabel.text = "Recording..."
         
         if recognitionTask != nil {
             recognitionTask?.cancel()
@@ -129,8 +113,6 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
                 
                 self.recognitionRequest = nil
                 self.recognitionTask = nil
-                
-                self.microphoneButton.isEnabled = true
             }
         })
         
@@ -150,9 +132,9 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
     
     func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
         if available {
-            microphoneButton.isEnabled = true
+            
         } else {
-            microphoneButton.isEnabled = false
+            
         }
     }
 }

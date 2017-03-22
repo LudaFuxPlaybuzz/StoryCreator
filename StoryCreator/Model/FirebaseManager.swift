@@ -14,6 +14,6 @@ class FirebaseManager: NSObject
     func useFirebaseDatabase()
     {
         let ref = FIRDatabase.database().reference()
-        ref.child("articles").child("article2").setValue(["title": "Igal is awesome!"])
+        ref.child("articles").child("article2").setValue(["title": "We are awesome!"])
     }
 }

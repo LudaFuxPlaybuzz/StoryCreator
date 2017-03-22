@@ -35,7 +35,7 @@
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="86l-Q4-N0z">
                                 <rect key="frame" x="0.0" y="-20" width="320" height="1190"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xC2-Ht-TLK">
                                     <size key="itemSize" width="412" height="63"/>
                                     <size key="headerReferenceSize" width="50" height="300"/>
@@ -352,15 +352,6 @@
                                     </connections>
                                 </collectionReusableView>
                             </collectionView>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kn-UO-YDe">
-                                <rect key="frame" x="0.0" y="1070" width="320" height="130"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="xLD-KU-DQX"/>
-                                </constraints>
-                                <connections>
-                                    <segue destination="IFj-UL-iEm" kind="embed" id="uah-Ad-tdh"/>
-                                </connections>
-                            </containerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RfC-yL-38I">
                                 <rect key="frame" x="0.0" y="1140" width="320" height="60"/>
                                 <subviews>
@@ -409,10 +400,20 @@
                                         </cells>
                                     </collectionView>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Cxg-Ps-Cyi"/>
                                 </constraints>
                             </stackView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kn-UO-YDe">
+                                <rect key="frame" x="0.0" y="1100" width="320" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="xLD-KU-DQX"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="IFj-UL-iEm" kind="embed" id="uah-Ad-tdh"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -559,60 +560,41 @@
                         <viewControllerLayoutGuide type="bottom" id="2zS-hu-Ka5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rFM-gX-eCK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="130"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="audioWave" translatesAutoresizingMaskIntoConstraints="NO" id="eWH-Z4-KWd">
-                                <rect key="frame" x="0.0" y="40" width="320" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="nfe-LP-AYz"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vdN-xV-m01">
-                                <rect key="frame" x="140" y="80" width="40" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="La9-IO-YVA"/>
-                                    <constraint firstAttribute="height" constant="40" id="ZkO-ea-DV2"/>
-                                </constraints>
-                                <state key="normal" image="microphoneIdel"/>
-                                <state key="selected" image="microphoneActive"/>
-                                <state key="highlighted" image="microphoneActive"/>
-                                <state key="focused" image="microphoneActive"/>
-                                <connections>
-                                    <action selector="microphoneTapped:" destination="IFj-UL-iEm" eventType="touchUpInside" id="iPL-BN-6v1"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u7-hG-7Ev">
-                                <rect key="frame" x="20" y="14" width="92.5" height="20"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording in 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pr3-mW-UbA">
+                                <rect key="frame" x="100" y="20" width="121" height="23"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WGA-C7-UEY">
+                                <rect key="frame" x="136" y="51" width="48" height="30"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="IFj-UL-iEm" eventType="touchUpInside" id="t33-9a-RkN"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eWH-Z4-KWd" firstAttribute="leading" secondItem="rFM-gX-eCK" secondAttribute="leading" id="523-wS-pnO"/>
-                            <constraint firstItem="vdN-xV-m01" firstAttribute="centerX" secondItem="rFM-gX-eCK" secondAttribute="centerX" id="5fc-GX-WD2"/>
-                            <constraint firstItem="5u7-hG-7Ev" firstAttribute="leading" secondItem="rFM-gX-eCK" secondAttribute="leading" constant="20" id="DNx-vs-CIj"/>
-                            <constraint firstItem="2zS-hu-Ka5" firstAttribute="top" secondItem="vdN-xV-m01" secondAttribute="bottom" constant="10" id="I5g-aG-FSg"/>
-                            <constraint firstAttribute="trailing" secondItem="eWH-Z4-KWd" secondAttribute="trailing" id="ZHd-AR-GU4"/>
-                            <constraint firstItem="5u7-hG-7Ev" firstAttribute="top" secondItem="oHr-hF-fCQ" secondAttribute="bottom" constant="14" id="aiK-F3-Qph"/>
-                            <constraint firstItem="2zS-hu-Ka5" firstAttribute="top" secondItem="eWH-Z4-KWd" secondAttribute="bottom" constant="40" id="oJF-ew-BGH"/>
+                            <constraint firstItem="WGA-C7-UEY" firstAttribute="centerX" secondItem="rFM-gX-eCK" secondAttribute="centerX" id="3RD-tJ-rvZ"/>
+                            <constraint firstItem="WGA-C7-UEY" firstAttribute="top" secondItem="pr3-mW-UbA" secondAttribute="bottom" constant="8" id="7ri-Zq-wwX"/>
+                            <constraint firstItem="pr3-mW-UbA" firstAttribute="top" secondItem="oHr-hF-fCQ" secondAttribute="bottom" constant="20" id="UFd-GT-huq"/>
+                            <constraint firstItem="pr3-mW-UbA" firstAttribute="centerX" secondItem="rFM-gX-eCK" secondAttribute="centerX" id="g0A-ec-P19"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="audioWave" destination="eWH-Z4-KWd" id="mrW-zG-iKq"/>
-                        <outlet property="microphoneButton" destination="vdN-xV-m01" id="yxH-Hd-IKz"/>
-                        <outlet property="recordingPrompt" destination="5u7-hG-7Ev" id="0hX-Uc-Gdv"/>
+                        <outlet property="recordingPromptLabel" destination="pr3-mW-UbA" id="yIW-Qs-OaN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVl-uU-hkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="119" y="563"/>
+            <point key="canvasLocation" x="118" y="796"/>
         </scene>
     </scenes>
     <resources>
-        <image name="audioWave" width="1001" height="277"/>
         <image name="camera" width="400" height="400"/>
         <image name="cameraShadow" width="227" height="212"/>
         <image name="coverPlaceholder" width="375" height="192"/>
@@ -620,7 +602,5 @@
         <image name="gradient2" width="180" height="49"/>
         <image name="handPress" width="47" height="52"/>
         <image name="katyParryQuote" width="261" height="103"/>
-        <image name="microphoneActive" width="50" height="50"/>
-        <image name="microphoneIdel" width="50" height="50"/>
     </resources>
 </document>
