@@ -362,7 +362,7 @@
                                 </connections>
                             </containerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RfC-yL-38I">
-                                <rect key="frame" x="0.0" y="1090" width="320" height="110"/>
+                                <rect key="frame" x="0.0" y="1140" width="320" height="60"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gradient2" translatesAutoresizingMaskIntoConstraints="NO" id="aKH-Br-IJI">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="10"/>
@@ -408,20 +408,9 @@
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nn2-f8-cMw">
-                                        <rect key="frame" x="0.0" y="60" width="320" height="50"/>
-                                        <color key="backgroundColor" red="0.73725490199999999" green="0.28627450980000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="c0u-tP-3U3"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                        <state key="normal" title="PUBLISH">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="110" id="Cxg-Ps-Cyi"/>
+                                    <constraint firstAttribute="height" constant="60" id="Cxg-Ps-Cyi"/>
                                 </constraints>
                             </stackView>
                         </subviews>
