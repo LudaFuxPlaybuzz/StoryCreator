@@ -206,6 +206,11 @@ extension StoryCreatorViewController: VoiceToSpeechViewControllerDelegate
             workingTextParticle.updateText(text)
         }
     }
+    
+    func doneRecording()
+    {
+        self.hideMicrophoneView()
+    }
 }
 
 extension StoryCreatorViewController: CheckInViewControllerDelegate

@@ -586,6 +586,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="doneButton" destination="WGA-C7-UEY" id="8kj-Ep-1sU"/>
                         <outlet property="recordingPromptLabel" destination="pr3-mW-UbA" id="yIW-Qs-OaN"/>
                     </connections>
                 </viewController>

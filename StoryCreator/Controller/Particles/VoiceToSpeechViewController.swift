@@ -12,10 +12,12 @@ import Speech
 @objc protocol VoiceToSpeechViewControllerDelegate: class
 {
     func textFromMicrophoneUpdated(_ text: String)
+    func doneRecording()
 }
 
 class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
 {
+    @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var recordingPromptLabel: UILabel!
     
     var recordingPrompt: String!
@@ -61,15 +63,11 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
         }
         
         recordingPrompt = "Start Recording!"
-        
-        
-        
-        
     }
 
     func countDown()
     {
-        self.countDownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        self.countDownTimer = Timer.scheduledTimer(timeInterval: 0.6, target: self, selector: #selector(update), userInfo: nil, repeats: true)
     }
     
     func update()
@@ -84,7 +82,9 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
             self.countDownTimer?.invalidate()
             recordingPromptLabel.text = String("Recording")
             recordingPromptLabel.textColor = UIColor.red
+            self.doneButton.setTitle("Done", for: UIControlState.normal)
             self.addPulsingEffect()
+            self.startRecording()
         }
     }
     
@@ -107,15 +107,25 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
     
     @IBAction func cancelButtonPressed(_ sender: Any)
     {
-        
+        countDownFrom = 3
+        recordingPromptLabel.textColor = UIColor.black
+        recordingPromptLabel.layer.removeAllAnimations()
+        recordingPromptLabel.text = String("Recording in \(countDownFrom)")
+        self.stopRecording()
+        self.delegate?.doneRecording()
     }
     
-    func startRecording() {
-        
+    func stopRecording()
+    {
         if recognitionTask != nil {
             recognitionTask?.cancel()
             recognitionTask = nil
         }
+    }
+    
+    func startRecording() {
+        
+        self.stopRecording()
         
         let audioSession = AVAudioSession.sharedInstance()
         do {
