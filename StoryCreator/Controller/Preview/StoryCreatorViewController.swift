@@ -22,6 +22,8 @@ class StoryCreatorViewController: UIViewController
     var previewDataSource = StoryCreatorDataSource()
     var firebaseManager = FirebaseManager()
     let newParticlesDataSourse = NewParticlesDataSourse()
+    var voiceToSpeechViewController: VoiceToSpeechViewController!
+        
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -46,9 +48,10 @@ class StoryCreatorViewController: UIViewController
     override func prepare(for segue: UIStoryboardSegue,
                  sender: Any?)
     {
-        if let voiceToSpeechViewController = segue.destination as? VoiceToSpeechViewController
+        if let voiceToSpeechVC = segue.destination as? VoiceToSpeechViewController
         {
-            voiceToSpeechViewController.delegate = self
+            self.voiceToSpeechViewController = voiceToSpeechVC
+            self.voiceToSpeechViewController.delegate = self
         }
         else if let checkInViewController = segue.destination as? CheckInViewController
         {
@@ -173,6 +176,8 @@ extension StoryCreatorViewController: StoryCreatorDataSourceDelegate, ParticleIc
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
+        
+        self.voiceToSpeechViewController.countDown()
         
         hideAuxilaryViewsButton.isHidden = false
     }

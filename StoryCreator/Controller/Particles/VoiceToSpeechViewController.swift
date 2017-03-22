@@ -19,12 +19,14 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
     @IBOutlet weak var recordingPromptLabel: UILabel!
     
     var recordingPrompt: String!
+    var countDownFrom = 3
     
     private let speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en-US"))
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private var recognitionTask: SFSpeechRecognitionTask?
     private let audioEngine = AVAudioEngine()
     private var isRecording = false
+    private var countDownTimer: Timer?
     
     weak var delegate: VoiceToSpeechViewControllerDelegate?
     
@@ -59,17 +61,42 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
         }
         
         recordingPrompt = "Start Recording!"
-        self.startRecording()
+        
+        
+        
+        
     }
 
+    func countDown()
+    {
+        self.countDownTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+    }
+    
+    func update()
+    {
+        countDownFrom = countDownFrom - 1
+        
+        if(self.countDownFrom >= 0) {
+            recordingPromptLabel.text = String("Recording in \(countDownFrom)")
+        }
+        else
+        {
+            self.countDownTimer?.invalidate()
+            recordingPromptLabel.text = String("Recording")
+            recordingPromptLabel.textColor = UIColor.red
+        }
+    }
+    
+    func someSelector() {
+        // Something after a delay
+    }
+    
     @IBAction func cancelButtonPressed(_ sender: Any)
     {
         
     }
     
     func startRecording() {
-        
-//        recordingPromptLabel.text = "Recording..."
         
         if recognitionTask != nil {
             recognitionTask?.cancel()

@@ -406,9 +406,9 @@
                                 </constraints>
                             </stackView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9kn-UO-YDe">
-                                <rect key="frame" x="0.0" y="1100" width="320" height="100"/>
+                                <rect key="frame" x="0.0" y="1110" width="320" height="90"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="xLD-KU-DQX"/>
+                                    <constraint firstAttribute="height" constant="90" id="xLD-KU-DQX"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="IFj-UL-iEm" kind="embed" id="uah-Ad-tdh"/>
@@ -560,7 +560,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2zS-hu-Ka5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rFM-gX-eCK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recording in 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pr3-mW-UbA">
