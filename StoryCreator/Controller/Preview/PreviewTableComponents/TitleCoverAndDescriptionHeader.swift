@@ -29,10 +29,11 @@ class TitleCoverAndDescriptionHeader: UICollectionReusableView {
         
         titleTextField.style = TitleInputStyle() as AnimatedTextInputStyle
         titleTextField.backgroundColor = UIColor.clear
-        titleTextField.placeHolderText = "Amazingly viral title here"
+        titleTextField.placeHolderText = "Your Awesome Title"
         
         descriptionTextField.style = DescriptionInputStyle() as AnimatedTextInputStyle
-        descriptionTextField.placeHolderText = "Brief but sexy description that summarizes this amazing story goes here"
+        descriptionTextField.backgroundColor = UIColor.clear
+        descriptionTextField.placeHolderText = "Sexy description summarizing this amazing story"
         descriptionTextField.type = .multiline
     }
 
@@ -57,18 +58,18 @@ class TitleCoverAndDescriptionHeader: UICollectionReusableView {
     
     struct DescriptionInputStyle: AnimatedTextInputStyle {
         
-        let activeColor = UIColor.gray
-        let inactiveColor = UIColor.black
-        let lineInactiveColor = UIColor.clear
+        let activeColor = UIColor.lightGray
+        let inactiveColor = UIColor.gray
+        let lineInactiveColor = UIColor.lightGray
         let errorColor = UIColor.red
-        let textInputFont = UIFont.systemFont(ofSize: 14, weight: UIFontWeightLight)
+        let textInputFont = UIFont.systemFont(ofSize: 15, weight: UIFontWeightLight)
         let textInputFontColor = UIColor.black
         let placeholderMinFontSize: CGFloat = 9
         let counterLabelFont: UIFont? = UIFont.systemFont(ofSize: 9)
-        let leftMargin: CGFloat = 15
-        let topMargin: CGFloat = 20
-        let rightMargin: CGFloat = 10
-        let bottomMargin: CGFloat = 15
+        let leftMargin: CGFloat = 0
+        let topMargin: CGFloat = 10
+        let rightMargin: CGFloat = 15
+        let bottomMargin: CGFloat = 10
         let yHintPositionOffset: CGFloat = 7
         let yPlaceholderPositionOffset: CGFloat = 7
         

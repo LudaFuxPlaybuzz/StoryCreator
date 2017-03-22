@@ -38,13 +38,13 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xC2-Ht-TLK">
                                     <size key="itemSize" width="412" height="63"/>
-                                    <size key="headerReferenceSize" width="50" height="260"/>
+                                    <size key="headerReferenceSize" width="50" height="300"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.MapParticleCell" id="VeB-Fl-6DL" customClass="MapParticleCell" customModule="StoryCreator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="260" width="412" height="211"/>
+                                        <rect key="frame" x="0.0" y="300" width="412" height="211"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="412" height="211"/>
@@ -110,7 +110,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.QuoteParticleCell" id="p38-Ls-ojB" customClass="QuoteParticleCell" customModule="StoryCreator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="471" width="412" height="186"/>
+                                        <rect key="frame" x="0.0" y="511" width="412" height="186"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="412" height="186"/>
@@ -157,7 +157,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.TextParticleCell" id="N1x-3k-xjf" customClass="TextParticleCell" customModule="StoryCreator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="657" width="412" height="63"/>
+                                        <rect key="frame" x="0.0" y="697" width="412" height="63"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="412" height="63"/>
@@ -182,7 +182,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.ImageParticleCell" id="9mP-SX-GBb" customClass="ImageParticleCell" customModule="StoryCreator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="720" width="412" height="109"/>
+                                        <rect key="frame" x="0.0" y="760" width="412" height="109"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="412" height="109"/>
@@ -225,7 +225,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.ParticleOverviewCell" id="hzs-v6-p49" customClass="ParticleOverviewCell" customModule="StoryCreator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="829" width="412" height="63"/>
+                                        <rect key="frame" x="0.0" y="869" width="412" height="63"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="412" height="63"/>
@@ -236,7 +236,7 @@
                                     </collectionViewCell>
                                 </cells>
                                 <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.TitleCoverAndDescriptionHeader" id="aUM-JL-cYA" customClass="TitleCoverAndDescriptionHeader" customModule="StoryCreator" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EXo-3e-YAg" userLabel="Cover Image Container">
@@ -260,6 +260,13 @@
                                                         <constraint firstAttribute="width" constant="63" id="SpC-Y9-ZNp"/>
                                                     </constraints>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" alpha="0.30000001192092896" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cameraShadow" translatesAutoresizingMaskIntoConstraints="NO" id="o10-Ww-Ies">
+                                                    <rect key="frame" x="200" y="30" width="150" height="56"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="56" id="WOk-5l-d7E"/>
+                                                        <constraint firstAttribute="width" constant="150" id="sJJ-jv-cIr"/>
+                                                    </constraints>
+                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="nOx-mA-Bv5">
                                                     <rect key="frame" x="16" y="143" width="31" height="28"/>
                                                     <constraints>
@@ -277,6 +284,15 @@
                                                         <action selector="didPressCameraButton:" destination="aUM-JL-cYA" eventType="touchUpInside" id="Wi2-Sg-dRf"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APv-mQ-LP1">
+                                                    <rect key="frame" x="237" y="40" width="68" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                    <size key="titleShadowOffset" width="1" height="1"/>
+                                                    <state key="normal" title="Publish">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
@@ -288,10 +304,14 @@
                                                 <constraint firstAttribute="trailing" secondItem="iB9-Qv-JSs" secondAttribute="trailing" id="QTd-Nl-SIO"/>
                                                 <constraint firstAttribute="height" constant="185" id="T2L-Tp-M41"/>
                                                 <constraint firstItem="nOx-mA-Bv5" firstAttribute="centerX" secondItem="dRB-mN-V7y" secondAttribute="centerX" id="YJk-RN-c0n"/>
+                                                <constraint firstAttribute="trailing" secondItem="o10-Ww-Ies" secondAttribute="trailing" constant="-30" id="c5E-1E-7lD"/>
                                                 <constraint firstAttribute="bottom" secondItem="dRB-mN-V7y" secondAttribute="bottom" id="gfH-as-KHJ"/>
                                                 <constraint firstAttribute="bottom" secondItem="dah-5K-6qr" secondAttribute="bottom" id="gjW-Zo-N0r"/>
                                                 <constraint firstItem="BmF-U4-R73" firstAttribute="top" secondItem="EXo-3e-YAg" secondAttribute="top" id="n1H-EX-ylQ"/>
+                                                <constraint firstItem="APv-mQ-LP1" firstAttribute="top" secondItem="EXo-3e-YAg" secondAttribute="top" constant="40" id="p9A-nX-rJk"/>
                                                 <constraint firstItem="nOx-mA-Bv5" firstAttribute="centerY" secondItem="dRB-mN-V7y" secondAttribute="centerY" id="qk7-9v-DD7"/>
+                                                <constraint firstAttribute="trailing" secondItem="APv-mQ-LP1" secondAttribute="trailing" constant="15" id="s6h-d0-eqb"/>
+                                                <constraint firstItem="o10-Ww-Ies" firstAttribute="top" secondItem="EXo-3e-YAg" secondAttribute="top" constant="30" id="snw-Sp-SW1"/>
                                                 <constraint firstItem="dRB-mN-V7y" firstAttribute="leading" secondItem="EXo-3e-YAg" secondAttribute="leading" id="xJm-hp-IgH"/>
                                                 <constraint firstItem="BmF-U4-R73" firstAttribute="leading" secondItem="EXo-3e-YAg" secondAttribute="leading" id="xNR-lH-ef8"/>
                                                 <constraint firstItem="dah-5K-6qr" firstAttribute="leading" secondItem="EXo-3e-YAg" secondAttribute="leading" id="xV3-BH-gVg"/>
@@ -306,22 +326,24 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7mB-ls-DBu" customClass="AnimatedTextInput" customModule="AnimatedTextInput">
-                                            <rect key="frame" x="0.0" y="245" width="320" height="10"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <rect key="frame" x="13" y="245" width="294" height="40"/>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="5bX-bb-gzY"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="k7N-1r-yuu" firstAttribute="leading" secondItem="aUM-JL-cYA" secondAttribute="leadingMargin" constant="5" id="31q-e1-MZ8"/>
-                                        <constraint firstItem="7mB-ls-DBu" firstAttribute="leading" secondItem="aUM-JL-cYA" secondAttribute="leading" id="8ht-tJ-kls"/>
                                         <constraint firstItem="k7N-1r-yuu" firstAttribute="top" secondItem="EXo-3e-YAg" secondAttribute="bottom" constant="-5" id="Ifw-5N-9p5"/>
                                         <constraint firstItem="EXo-3e-YAg" firstAttribute="leading" secondItem="aUM-JL-cYA" secondAttribute="leading" id="PGH-N2-c39"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="k7N-1r-yuu" secondAttribute="trailing" constant="5" id="RMT-Il-SA9"/>
+                                        <constraint firstItem="7mB-ls-DBu" firstAttribute="trailing" secondItem="k7N-1r-yuu" secondAttribute="trailing" id="SZY-Kd-scQ"/>
                                         <constraint firstAttribute="trailing" secondItem="EXo-3e-YAg" secondAttribute="trailing" id="UAv-tu-4fX"/>
+                                        <constraint firstItem="7mB-ls-DBu" firstAttribute="leading" secondItem="k7N-1r-yuu" secondAttribute="leading" id="UE1-ht-t22"/>
                                         <constraint firstItem="EXo-3e-YAg" firstAttribute="top" secondItem="aUM-JL-cYA" secondAttribute="top" id="Za4-gE-5yR"/>
                                         <constraint firstItem="7mB-ls-DBu" firstAttribute="top" secondItem="k7N-1r-yuu" secondAttribute="bottom" constant="5" id="aKs-k1-oUJ"/>
-                                        <constraint firstAttribute="bottom" secondItem="7mB-ls-DBu" secondAttribute="bottom" constant="5" id="cCJ-NK-rg5"/>
-                                        <constraint firstAttribute="trailing" secondItem="7mB-ls-DBu" secondAttribute="trailing" id="lBQ-BM-7Uk"/>
                                     </constraints>
                                     <connections>
                                         <outlet property="coverImage" destination="iB9-Qv-JSs" id="FyW-fB-YRy"/>
@@ -471,7 +493,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bbj-OE-mEC" id="BXu-gB-eJu">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wfR-Ak-nDa">
