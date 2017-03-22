@@ -38,7 +38,7 @@ class TitleCoverAndDescriptionHeader: UICollectionReusableView {
 
     struct TitleInputStyle: AnimatedTextInputStyle {
         
-        let activeColor = UIColor.gray
+        let activeColor = UIColor.lightGray
         let inactiveColor = UIColor.black
         let lineInactiveColor = UIColor.lightGray
         let errorColor = UIColor.red
