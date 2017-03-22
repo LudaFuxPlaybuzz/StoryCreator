@@ -84,7 +84,21 @@ class VoiceToSpeechViewController: UIViewController, SFSpeechRecognizerDelegate
             self.countDownTimer?.invalidate()
             recordingPromptLabel.text = String("Recording")
             recordingPromptLabel.textColor = UIColor.red
+            self.addPulsingEffect()
         }
+    }
+    
+    func addPulsingEffect()
+    {
+        let pulseAnimation = CABasicAnimation(keyPath: "opacity")
+        pulseAnimation.duration = 1
+        pulseAnimation.fromValue = 0
+        pulseAnimation.toValue = 1
+        pulseAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        pulseAnimation.autoreverses = true
+        pulseAnimation.repeatCount = FLT_MAX
+        recordingPromptLabel.layer.add(pulseAnimation, forKey: "animateOpacity")
+
     }
     
     func someSelector() {
