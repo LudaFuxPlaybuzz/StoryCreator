@@ -31,6 +31,7 @@
 		856A3AC61E840DB600EF7FDD /* StreetViewParticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856A3AC51E840DB600EF7FDD /* StreetViewParticleCell.swift */; };
 		856A3AC81E8412F800EF7FDD /* ConvoParticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856A3AC71E8412F800EF7FDD /* ConvoParticleCell.swift */; };
 		856A3ACA1E8413CC00EF7FDD /* ConvoParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856A3AC91E8413CC00EF7FDD /* ConvoParticle.swift */; };
+		856A3ACD1E84426700EF7FDD /* FinishedStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856A3ACC1E84426700EF7FDD /* FinishedStoryViewController.swift */; };
 		859B559C1E0AC8FA00231A2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B559B1E0AC8FA00231A2B /* AppDelegate.swift */; };
 		859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B55B11E0AD2E700231A2B /* FloatLabelTextField.swift */; };
 		859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B55B21E0AD2E700231A2B /* FloatLabelTextView.swift */; };
@@ -68,6 +69,7 @@
 		856A3AC51E840DB600EF7FDD /* StreetViewParticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StreetViewParticleCell.swift; path = Controller/Particles/StreetViewParticleCell.swift; sourceTree = "<group>"; };
 		856A3AC71E8412F800EF7FDD /* ConvoParticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConvoParticleCell.swift; path = Controller/Particles/ConvoParticleCell.swift; sourceTree = "<group>"; };
 		856A3AC91E8413CC00EF7FDD /* ConvoParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConvoParticle.swift; path = Model/ConvoParticle.swift; sourceTree = "<group>"; };
+		856A3ACC1E84426700EF7FDD /* FinishedStoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FinishedStoryViewController.swift; path = Controller/FinishedStory/FinishedStoryViewController.swift; sourceTree = "<group>"; };
 		859B55981E0AC8FA00231A2B /* StoryCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859B559B1E0AC8FA00231A2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859B55A71E0AC8FA00231A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -135,6 +137,14 @@
 			name = CheckIn;
 			sourceTree = "<group>";
 		};
+		856A3ACB1E84421E00EF7FDD /* FinishedStory */ = {
+			isa = PBXGroup;
+			children = (
+				856A3ACC1E84426700EF7FDD /* FinishedStoryViewController.swift */,
+			);
+			name = FinishedStory;
+			sourceTree = "<group>";
+		};
 		859B558F1E0AC8FA00231A2B = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +177,7 @@
 		859B55AD1E0ACC7F00231A2B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				856A3ACB1E84421E00EF7FDD /* FinishedStory */,
 				8525416B1E4217CE008F6A09 /* StoryCreatorViewController.swift */,
 				8525416D1E4217D9008F6A09 /* StoryCreatorDataSource.swift */,
 				8525414E1E3E1661008F6A09 /* Particles */,
@@ -366,6 +377,7 @@
 			files = (
 				85AF5F641E76D3950069A587 /* TextParticleCell.swift in Sources */,
 				85AF5F5F1E76B5830069A587 /* FirebaseManager.swift in Sources */,
+				856A3ACD1E84426700EF7FDD /* FinishedStoryViewController.swift in Sources */,
 				85438E8E1E815396001AFC8F /* MapParticleCell.swift in Sources */,
 				85243CE91E7993E000768C5C /* TextParticle.swift in Sources */,
 				856A3ACA1E8413CC00EF7FDD /* ConvoParticle.swift in Sources */,

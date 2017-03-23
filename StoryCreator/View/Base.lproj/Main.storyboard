@@ -337,6 +337,9 @@
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <segue destination="m1O-pe-2Xr" kind="show" id="Pfa-9T-aPU"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -492,6 +495,59 @@
             </objects>
             <point key="canvasLocation" x="118.125" y="-20.070422535211268"/>
         </scene>
+        <!--Finished Story View Controller-->
+        <scene sceneID="Lse-eg-AkU">
+            <objects>
+                <viewController id="m1O-pe-2Xr" customClass="FinishedStoryViewController" customModule="StoryCreator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o7j-re-cvM"/>
+                        <viewControllerLayoutGuide type="bottom" id="5hI-CZ-Exy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="m5U-Tj-G5g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ns-rO-15X">
+                                <rect key="frame" x="0.0" y="-55" width="320" height="455"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i73-B9-svO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="tBK-R2-ihU"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Your Playbuzz Item" id="GUX-lB-OIs">
+                                        <barButtonItem key="leftBarButtonItem" title="Edit" id="YbJ-Sr-Ihz">
+                                            <connections>
+                                                <action selector="didPressDoneButton:" destination="m1O-pe-2Xr" id="44C-Zh-2Pi"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="i73-B9-svO" firstAttribute="top" secondItem="m5U-Tj-G5g" secondAttribute="top" id="5EA-7r-NZj"/>
+                            <constraint firstItem="i73-B9-svO" firstAttribute="leading" secondItem="m5U-Tj-G5g" secondAttribute="leading" id="A2O-zc-DHI"/>
+                            <constraint firstAttribute="trailing" secondItem="i73-B9-svO" secondAttribute="trailing" id="Ezp-lo-0J7"/>
+                            <constraint firstItem="5hI-CZ-Exy" firstAttribute="top" secondItem="8ns-rO-15X" secondAttribute="bottom" id="IOD-j7-yr5"/>
+                            <constraint firstItem="8ns-rO-15X" firstAttribute="leading" secondItem="m5U-Tj-G5g" secondAttribute="leading" id="RLE-j7-nJx"/>
+                            <constraint firstAttribute="trailing" secondItem="8ns-rO-15X" secondAttribute="trailing" id="cJl-z0-OCQ"/>
+                            <constraint firstItem="8ns-rO-15X" firstAttribute="top" secondItem="i73-B9-svO" secondAttribute="bottom" constant="-115" id="cbx-Ez-MwV"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="400"/>
+                    <connections>
+                        <outlet property="webView" destination="8ns-rO-15X" id="p6z-ZO-cZ1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oeH-vV-2GV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.5" y="-269.36619718309862"/>
+        </scene>
         <!--Check In View Controller-->
         <scene sceneID="g4H-FA-l7m">
             <objects>
@@ -594,7 +650,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="um7-iW-lyY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="992.75362318840587" y="-17.119565217391305"/>
+            <point key="canvasLocation" x="1043" y="406"/>
         </scene>
     </scenes>
     <resources>
