@@ -29,6 +29,8 @@
 		85438E921E817316001AFC8F /* QuoteParticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85438E911E817316001AFC8F /* QuoteParticleCell.swift */; };
 		856A3AC41E840C7500EF7FDD /* StreetViewParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856A3AC31E840C7500EF7FDD /* StreetViewParticle.swift */; };
 		856A3AC61E840DB600EF7FDD /* StreetViewParticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856A3AC51E840DB600EF7FDD /* StreetViewParticleCell.swift */; };
+		856A3AC81E8412F800EF7FDD /* ConvoParticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856A3AC71E8412F800EF7FDD /* ConvoParticleCell.swift */; };
+		856A3ACA1E8413CC00EF7FDD /* ConvoParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856A3AC91E8413CC00EF7FDD /* ConvoParticle.swift */; };
 		859B559C1E0AC8FA00231A2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B559B1E0AC8FA00231A2B /* AppDelegate.swift */; };
 		859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B55B11E0AD2E700231A2B /* FloatLabelTextField.swift */; };
 		859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859B55B21E0AD2E700231A2B /* FloatLabelTextView.swift */; };
@@ -64,6 +66,8 @@
 		85438E911E817316001AFC8F /* QuoteParticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuoteParticleCell.swift; path = Controller/Particles/QuoteParticleCell.swift; sourceTree = "<group>"; };
 		856A3AC31E840C7500EF7FDD /* StreetViewParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StreetViewParticle.swift; path = Model/StreetViewParticle.swift; sourceTree = "<group>"; };
 		856A3AC51E840DB600EF7FDD /* StreetViewParticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StreetViewParticleCell.swift; path = Controller/Particles/StreetViewParticleCell.swift; sourceTree = "<group>"; };
+		856A3AC71E8412F800EF7FDD /* ConvoParticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConvoParticleCell.swift; path = Controller/Particles/ConvoParticleCell.swift; sourceTree = "<group>"; };
+		856A3AC91E8413CC00EF7FDD /* ConvoParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConvoParticle.swift; path = Model/ConvoParticle.swift; sourceTree = "<group>"; };
 		859B55981E0AC8FA00231A2B /* StoryCreator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryCreator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		859B559B1E0AC8FA00231A2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		859B55A71E0AC8FA00231A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 		8525414E1E3E1661008F6A09 /* Particles */ = {
 			isa = PBXGroup;
 			children = (
+				856A3AC71E8412F800EF7FDD /* ConvoParticleCell.swift */,
 				856A3AC51E840DB600EF7FDD /* StreetViewParticleCell.swift */,
 				852541701E421839008F6A09 /* ParticleOverviewCell.swift */,
 				85AF5F631E76D3950069A587 /* TextParticleCell.swift */,
@@ -212,6 +217,7 @@
 				85243CEC1E7AE81300768C5C /* MapParticle.swift */,
 				85438E8F1E8172DF001AFC8F /* QuoteParticle.swift */,
 				856A3AC31E840C7500EF7FDD /* StreetViewParticle.swift */,
+				856A3AC91E8413CC00EF7FDD /* ConvoParticle.swift */,
 			);
 			name = Particles;
 			sourceTree = "<group>";
@@ -362,6 +368,7 @@
 				85AF5F5F1E76B5830069A587 /* FirebaseManager.swift in Sources */,
 				85438E8E1E815396001AFC8F /* MapParticleCell.swift in Sources */,
 				85243CE91E7993E000768C5C /* TextParticle.swift in Sources */,
+				856A3ACA1E8413CC00EF7FDD /* ConvoParticle.swift in Sources */,
 				8525416E1E4217D9008F6A09 /* StoryCreatorDataSource.swift in Sources */,
 				852541761E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift in Sources */,
 				85438E921E817316001AFC8F /* QuoteParticleCell.swift in Sources */,
@@ -377,6 +384,7 @@
 				852541741E421839008F6A09 /* ParticleOverviewCell.swift in Sources */,
 				8525417F1E421DCD008F6A09 /* ParticleIconCell.swift in Sources */,
 				856A3AC41E840C7500EF7FDD /* StreetViewParticle.swift in Sources */,
+				856A3AC81E8412F800EF7FDD /* ConvoParticleCell.swift in Sources */,
 				8525416C1E4217CE008F6A09 /* StoryCreatorViewController.swift in Sources */,
 				85D675931E3637B2003B9798 /* LPRTableView.swift in Sources */,
 				85438E8A1E813B3F001AFC8F /* CheckInTableViewCell.swift in Sources */,

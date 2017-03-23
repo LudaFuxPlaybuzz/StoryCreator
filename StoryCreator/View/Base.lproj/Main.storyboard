@@ -172,8 +172,33 @@
                                             <outlet property="webView" destination="HAh-Tf-e8c" id="zAw-JZ-wFO"/>
                                         </connections>
                                     </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.ConvoParticleCell" id="8sy-0r-vqd" customClass="ConvoParticleCell" customModule="StoryCreator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="777" width="320" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xZP-Dj-gbe">
+                                                    <rect key="frame" x="18" y="8" width="284" height="64"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </webView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="xZP-Dj-gbe" secondAttribute="trailing" constant="10" id="3V9-G2-f5h"/>
+                                            <constraint firstItem="xZP-Dj-gbe" firstAttribute="leading" secondItem="8sy-0r-vqd" secondAttribute="leadingMargin" constant="10" id="8qX-uo-cCV"/>
+                                            <constraint firstItem="xZP-Dj-gbe" firstAttribute="top" secondItem="8sy-0r-vqd" secondAttribute="topMargin" id="krl-sZ-n0f"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="xZP-Dj-gbe" secondAttribute="bottom" id="w8g-3Z-j65"/>
+                                        </constraints>
+                                        <size key="customSize" width="320" height="80"/>
+                                        <connections>
+                                            <outlet property="webView" destination="xZP-Dj-gbe" id="ddJ-eK-EF6"/>
+                                        </connections>
+                                    </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.TextParticleCell" id="N1x-3k-xjf" customClass="TextParticleCell" customModule="StoryCreator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="777" width="320" height="63"/>
+                                        <rect key="frame" x="0.0" y="857" width="320" height="63"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
@@ -200,7 +225,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.ImageParticleCell" id="9mP-SX-GBb" customClass="ImageParticleCell" customModule="StoryCreator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="840" width="320" height="109"/>
+                                        <rect key="frame" x="0.0" y="920" width="320" height="109"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
@@ -244,7 +269,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.ParticleOverviewCell" id="hzs-v6-p49" customClass="ParticleOverviewCell" customModule="StoryCreator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="949" width="320" height="63"/>
+                                        <rect key="frame" x="0.0" y="1029" width="320" height="63"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>

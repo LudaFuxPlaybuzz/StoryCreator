@@ -52,6 +52,10 @@ class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionVi
             
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(StreetViewParticleCell.self), for: indexPath) as! StreetViewParticleCell
             
+        case is ConvoParticle:
+            
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(ConvoParticleCell.self), for: indexPath) as! ConvoParticleCell
+            
         default:
             
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(ParticleOverviewCell.self), for: indexPath) as! ParticleOverviewCell
@@ -93,6 +97,8 @@ extension StoryCreatorDataSource: UICollectionViewDelegateFlowLayout
         switch particleType {
         case is ImageParticle:
             return CGSize(width: width, height: 300)
+        case is ConvoParticle:
+            return CGSize(width: width, height: 800)
         case is StreetViewParticle:
             return CGSize(width: width, height: 300)
         case is MapParticle:

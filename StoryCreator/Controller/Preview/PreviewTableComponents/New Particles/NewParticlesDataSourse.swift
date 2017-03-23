@@ -16,7 +16,7 @@ class NewParticlesDataSourse : NSObject, UICollectionViewDataSource
                          MapParticle(),
                          StreetViewParticle(),
                          QuoteParticle(),
-                         Particle(image:"4"),
+                         ConvoParticle(),
                          Particle(image:"5"),
                          Particle(image:"7")]
     
