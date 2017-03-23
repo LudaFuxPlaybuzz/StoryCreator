@@ -47,6 +47,10 @@ class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionVi
         case is QuoteParticle:
             
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(QuoteParticleCell.self), for: indexPath) as! QuoteParticleCell
+         
+        case is StreetViewParticle:
+            
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(StreetViewParticleCell.self), for: indexPath) as! StreetViewParticleCell
             
         default:
             
@@ -88,6 +92,8 @@ extension StoryCreatorDataSource: UICollectionViewDelegateFlowLayout
         
         switch particleType {
         case is ImageParticle:
+            return CGSize(width: width, height: 300)
+        case is StreetViewParticle:
             return CGSize(width: width, height: 300)
         case is MapParticle:
             return CGSize(width: width, height: 250)

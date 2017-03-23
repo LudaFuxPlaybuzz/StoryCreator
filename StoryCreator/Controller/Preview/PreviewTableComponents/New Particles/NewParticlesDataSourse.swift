@@ -14,6 +14,7 @@ class NewParticlesDataSourse : NSObject, UICollectionViewDataSource
     var particleItems = [TextParticle(),
                          ImageParticle(),
                          MapParticle(),
+                         StreetViewParticle(),
                          QuoteParticle(),
                          Particle(image:"4"),
                          Particle(image:"5"),
