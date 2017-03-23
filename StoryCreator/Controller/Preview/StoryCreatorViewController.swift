@@ -23,7 +23,8 @@ class StoryCreatorViewController: UIViewController
     var firebaseManager = FirebaseManager()
     let newParticlesDataSourse = NewParticlesDataSourse()
     var voiceToSpeechViewController: VoiceToSpeechViewController!
-        
+    var longPressGesture: UILongPressGestureRecognizer!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -43,8 +44,29 @@ class StoryCreatorViewController: UIViewController
         
         particlesIconsCollectionView.dataSource = newParticlesDataSourse
         newParticlesDataSourse.newParticleDelegate = self
+        
+        longPressGesture = UILongPressGestureRecognizer(target: self, action: #selector(StoryCreatorViewController.handleLongGesture(gesture:)))
+        self.previewCollection.addGestureRecognizer(longPressGesture!)
     }
 
+    func handleLongGesture(gesture: UILongPressGestureRecognizer) {
+        
+        switch(gesture.state) {
+            
+        case UIGestureRecognizerState.began:
+            guard let selectedIndexPath = self.previewCollection.indexPathForItem(at: gesture.location(in: self.previewCollection)) else {
+                break
+            }
+            previewCollection.beginInteractiveMovementForItem(at: selectedIndexPath)
+        case UIGestureRecognizerState.changed:
+            previewCollection.updateInteractiveMovementTargetPosition(gesture.location(in: gesture.view!))
+        case UIGestureRecognizerState.ended:
+            previewCollection.endInteractiveMovement()
+        default:
+            previewCollection.cancelInteractiveMovement()
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue,
                  sender: Any?)
     {

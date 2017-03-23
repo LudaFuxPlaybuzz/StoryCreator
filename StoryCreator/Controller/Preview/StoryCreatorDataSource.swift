@@ -69,6 +69,12 @@ class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionVi
         }
         return UICollectionReusableView()
     }
+    
+    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+        let temp = newParticles.remove(at: sourceIndexPath.item)
+        newParticles.insert(temp, at: destinationIndexPath.item)
+    }
 }
 
 extension StoryCreatorDataSource: UICollectionViewDelegateFlowLayout
