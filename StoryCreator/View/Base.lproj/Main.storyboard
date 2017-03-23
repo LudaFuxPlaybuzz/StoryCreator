@@ -95,6 +95,7 @@
                                                 </view>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Zec-52-6Ol" firstAttribute="leading" secondItem="VeB-Fl-6DL" secondAttribute="leadingMargin" constant="20" id="5Kh-G5-8po"/>
                                             <constraint firstItem="Zec-52-6Ol" firstAttribute="trailing" secondItem="VeB-Fl-6DL" secondAttribute="trailingMargin" constant="-20" id="IG6-q3-dOL"/>
@@ -138,6 +139,7 @@
                                                 </button>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailingMargin" secondItem="pJg-XQ-3Xf" secondAttribute="trailing" constant="10" id="7zx-Po-LH9"/>
                                             <constraint firstItem="pJg-XQ-3Xf" firstAttribute="top" secondItem="p38-Ls-ojB" secondAttribute="topMargin" id="9xE-oC-hGs"/>
@@ -171,6 +173,7 @@
                                                 </textView>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="a2F-lG-u00" secondAttribute="trailing" constant="30" id="OYz-HC-Sb8"/>
                                             <constraint firstAttribute="bottom" secondItem="a2F-lG-u00" secondAttribute="bottom" id="dPM-ps-6OH"/>
@@ -207,6 +210,7 @@
                                                 </button>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Vru-Wc-PaA" firstAttribute="top" secondItem="qID-cl-QNL" secondAttribute="top" id="3uF-RZ-kEv"/>
                                             <constraint firstItem="Vru-Wc-PaA" firstAttribute="bottom" secondItem="qID-cl-QNL" secondAttribute="bottom" id="G3n-Se-7Wf"/>
@@ -232,7 +236,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </view>
-                                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <gestureRecognizers/>
                                         <size key="customSize" width="320" height="63"/>
                                     </collectionViewCell>

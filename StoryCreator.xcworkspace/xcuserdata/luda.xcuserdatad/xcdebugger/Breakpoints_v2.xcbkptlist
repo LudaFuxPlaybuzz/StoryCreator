@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StoryCreator/Controller/Preview/StoryCreatorDataSource.swift"
-            timestampString = "511959096.39647"
+            timestampString = "511959216.251584"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
             landmarkName = "invalidationContext(forInteractivelyMovingItems:withTargetPosition:previousIndexPaths:previousPosition:)"
             landmarkType = "7">
          </BreakpointContent>
