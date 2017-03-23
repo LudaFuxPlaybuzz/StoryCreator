@@ -11,8 +11,7 @@ import UIKit
 class NewParticlesDataSourse : NSObject, UICollectionViewDataSource
 {
     let cardBackgroundBorder = CAShapeLayer()
-    var particleItems = [MicrophoneParticle(),
-                         TextParticle(),
+    var particleItems = [TextParticle(),
                          ImageParticle(),
                          MapParticle(),
                          QuoteParticle(),

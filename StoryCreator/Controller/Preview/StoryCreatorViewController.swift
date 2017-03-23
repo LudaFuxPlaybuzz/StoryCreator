@@ -15,14 +15,11 @@ class StoryCreatorViewController: UIViewController
     @IBOutlet weak var particlesIconsCollectionView: UICollectionView!
     
     @IBOutlet weak var previewCollection: UICollectionView!
-    @IBOutlet weak var michrophoneContainer: UIView!
-    @IBOutlet weak var michrophoneContainerBottomContainer: NSLayoutConstraint!
     @IBOutlet weak var hideAuxilaryViewsButton: UIButton!
     
     var previewDataSource = StoryCreatorDataSource()
     var firebaseManager = FirebaseManager()
     let newParticlesDataSourse = NewParticlesDataSourse()
-    var voiceToSpeechViewController: VoiceToSpeechViewController!
     var longPressGesture: UILongPressGestureRecognizer!
     
     override func viewDidLoad()
@@ -36,8 +33,6 @@ class StoryCreatorViewController: UIViewController
         
         self.previewDataSource.delegate = self
         self.previewDataSource.presentVCDelegate = self
-        
-        self.michrophoneContainerBottomContainer.constant = -michrophoneContainer.frame.size.height
         
         NotificationCenter.default.addObserver(self, selector: #selector(StoryCreatorViewController.showHideAuxilaryViewsButton), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(StoryCreatorViewController.hideHideAuxilaryViewsButton), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
@@ -70,12 +65,7 @@ class StoryCreatorViewController: UIViewController
     override func prepare(for segue: UIStoryboardSegue,
                  sender: Any?)
     {
-        if let voiceToSpeechVC = segue.destination as? VoiceToSpeechViewController
-        {
-            self.voiceToSpeechViewController = voiceToSpeechVC
-            self.voiceToSpeechViewController.delegate = self
-        }
-        else if let checkInViewController = segue.destination as? CheckInViewController
+        if let checkInViewController = segue.destination as? CheckInViewController
         {
             checkInViewController.delegate = self
         }
@@ -84,18 +74,6 @@ class StoryCreatorViewController: UIViewController
     @IBAction func hideAuxilaryViewsTapped(_ sender: UIButton)
     {
         self.view.endEditing(true)
-        self.hideMicrophoneView()
-    }
-    
-    func hideMicrophoneView()
-    {
-        self.michrophoneContainerBottomContainer.constant = -michrophoneContainer.frame.size.height
-        
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-        }
-        
-        hideAuxilaryViewsButton.isHidden = true
     }
     
     func showHideAuxilaryViewsButton()
@@ -126,6 +104,11 @@ class StoryCreatorViewController: UIViewController
         let lastCell = previewCollection.cellForItem(at: IndexPath(row: previewDataSource.newParticles.count - 1, section:0) as IndexPath)
         return lastCell
     }
+    
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        let when = DispatchTime.now() + delay
+        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
+    }
 }
 
 extension StoryCreatorViewController: StoryCreatorDataSourceDelegate, ParticleIconCellDelegate
@@ -134,27 +117,20 @@ extension StoryCreatorViewController: StoryCreatorDataSourceDelegate, ParticleIc
     {
         switch particle {
             
-        case is MicrophoneParticle:
-            
-            let isLastTextCell = self.lastCell() is TextParticleCell
-            if !isLastTextCell
-            {
-                previewDataSource.newParticles.append(particle)
-                previewCollection.reloadData()
-            }
-            self.showMicrophoneView()
-            
-        case is TextParticle:
+            case is TextParticle:
 
-            if let lastTextCell = self.lastCell() as? TextParticleCell
-            {
-                self.showKeyboard(textView: lastTextCell.textView)
-                hideAuxilaryViewsButton.isHidden = true
-            }
-            else
+            if !(self.lastCell() is TextParticleCell)
             {
                 previewDataSource.newParticles.append(particle)
                 previewCollection.reloadData()
+            }
+            
+            delay(0.1) {
+                if let lastTextCell = self.lastCell() as? TextParticleCell
+                {
+                    self.showKeyboard(textView: lastTextCell.textView)
+                    self.hideAuxilaryViewsButton.isHidden = false
+                }
             }
             
         case is ImageParticle:
@@ -191,19 +167,6 @@ extension StoryCreatorViewController: StoryCreatorDataSourceDelegate, ParticleIc
         }
     }
     
-    func showMicrophoneView()
-    {
-        self.michrophoneContainerBottomContainer.constant = 0
-        
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-        }
-        
-        self.voiceToSpeechViewController.countDown()
-        
-        hideAuxilaryViewsButton.isHidden = false
-    }
-    
     func showKeyboard(textView: UITextView)
     {
         textView.becomeFirstResponder()
@@ -216,22 +179,6 @@ extension StoryCreatorViewController: PresentViewControllerDelegate
     func present(_ viewController:UIViewController, animated: Bool)
     {
         self.present(viewController, animated: true) {}
-    }
-}
-
-extension StoryCreatorViewController: VoiceToSpeechViewControllerDelegate
-{
-    func textFromMicrophoneUpdated(_ text: String)
-    {
-        if let workingTextParticle = previewCollection.cellForItem(at: IndexPath(row: previewDataSource.newParticles.count - 1, section:0) as IndexPath) as? TextParticleCell
-        {
-            workingTextParticle.updateText(text)
-        }
-    }
-    
-    func doneRecording()
-    {
-        self.hideMicrophoneView()
     }
 }
 

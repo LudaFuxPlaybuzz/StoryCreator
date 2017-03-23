@@ -32,7 +32,7 @@ class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionVi
         
         switch particle
         {
-        case is MicrophoneParticle, is TextParticle:
+        case is TextParticle:
         
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(TextParticleCell.self), for: indexPath) as! TextParticleCell
             
