@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="86l-Q4-N0z">
-                                <rect key="frame" x="0.0" y="-20" width="320" height="1190"/>
+                                <rect key="frame" x="0.0" y="-20" width="320" height="1160"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="xC2-Ht-TLK">
                                     <size key="itemSize" width="412" height="63"/>
@@ -51,13 +51,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zec-52-6Ol">
-                                                    <rect key="frame" x="28" y="8" width="263" height="195"/>
+                                                    <rect key="frame" x="28" y="8" width="264" height="195"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ixL-w2-a0V">
-                                                            <rect key="frame" x="0.0" y="0.0" width="263" height="146"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="264" height="146"/>
                                                         </imageView>
                                                         <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mWi-92-vDS">
-                                                            <rect key="frame" x="0.0" y="146" width="263" height="1"/>
+                                                            <rect key="frame" x="0.0" y="146" width="264" height="1"/>
                                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="sWo-59-QUA"/>
@@ -71,7 +71,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lE7-NZ-5b5">
-                                                            <rect key="frame" x="50" y="156" width="203" height="18"/>
+                                                            <rect key="frame" x="50" y="156" width="204" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -164,7 +164,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="a2F-lG-u00">
-                                                    <rect key="frame" x="30" y="0.0" width="352" height="63"/>
+                                                    <rect key="frame" x="30" y="0.0" width="260" height="63"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -422,12 +422,12 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="9kn-UO-YDe" secondAttribute="trailing" id="Ccy-0g-DLq"/>
                             <constraint firstAttribute="trailing" secondItem="86l-Q4-N0z" secondAttribute="trailing" id="Eqh-Eq-drw"/>
-                            <constraint firstAttribute="bottom" secondItem="86l-Q4-N0z" secondAttribute="bottom" constant="30" id="Td8-CW-9n3"/>
                             <constraint firstAttribute="trailing" secondItem="RfC-yL-38I" secondAttribute="trailing" id="X8y-84-ELi"/>
                             <constraint firstAttribute="bottom" secondItem="9kn-UO-YDe" secondAttribute="bottom" id="XwH-B0-3c3"/>
                             <constraint firstItem="86l-Q4-N0z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bre-nt-Cj0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RfC-yL-38I" secondAttribute="bottom" id="dl6-R6-QfY"/>
                             <constraint firstItem="9kn-UO-YDe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e0X-Gr-rcW"/>
+                            <constraint firstItem="RfC-yL-38I" firstAttribute="top" secondItem="86l-Q4-N0z" secondAttribute="bottom" id="r7Z-et-Tg6"/>
                             <constraint firstItem="RfC-yL-38I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="s38-fT-c8U"/>
                             <constraint firstItem="86l-Q4-N0z" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-20" id="wJH-J4-DkD"/>
                         </constraints>

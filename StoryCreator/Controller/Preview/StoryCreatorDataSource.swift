@@ -78,15 +78,17 @@ extension StoryCreatorDataSource: UICollectionViewDelegateFlowLayout
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         let particleType = newParticles[indexPath.row]
         
+        let width = UIScreen.main.bounds.width
+        
         switch particleType {
         case is ImageParticle:
-            return CGSize(width: 400, height: 300)
+            return CGSize(width: width, height: 300)
         case is MapParticle:
-            return CGSize(width: 400, height: 250)
+            return CGSize(width: width, height: 250)
         case is QuoteParticle:
-            return CGSize(width: 400, height: 370)
+            return CGSize(width: width, height: 370)
         default:
-            return CGSize(width: 400, height: 50)
+            return CGSize(width: width, height: 50)
         }
     }
 }
