@@ -43,7 +43,7 @@ class TitleCoverAndDescriptionHeader: UICollectionReusableView {
         let inactiveColor = UIColor.black
         let lineInactiveColor = UIColor.lightGray
         let errorColor = UIColor.red
-        let textInputFont = UIFont.systemFont(ofSize: 24, weight: UIFontWeightSemibold)
+        let textInputFont = UIFont.systemFont(ofSize: 18, weight: UIFontWeightSemibold)
         let textInputFontColor = UIColor.black
         let placeholderMinFontSize: CGFloat = 9
         let counterLabelFont: UIFont? = UIFont.systemFont(ofSize: 9)
@@ -67,7 +67,7 @@ class TitleCoverAndDescriptionHeader: UICollectionReusableView {
         let placeholderMinFontSize: CGFloat = 9
         let counterLabelFont: UIFont? = UIFont.systemFont(ofSize: 9)
         let leftMargin: CGFloat = 0
-        let topMargin: CGFloat = 10
+        let topMargin: CGFloat = 20
         let rightMargin: CGFloat = 15
         let bottomMargin: CGFloat = 10
         let yHintPositionOffset: CGFloat = 7

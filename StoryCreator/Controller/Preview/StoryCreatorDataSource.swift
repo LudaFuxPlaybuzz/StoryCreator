@@ -48,6 +48,10 @@ class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionVi
             
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(QuoteParticleCell.self), for: indexPath) as! QuoteParticleCell
          
+        case is PollParticle:
+            
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(PollParticleCell.self), for: indexPath) as! PollParticleCell
+            
         case is StreetViewParticle:
             
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(StreetViewParticleCell.self), for: indexPath) as! StreetViewParticleCell
@@ -96,7 +100,7 @@ extension StoryCreatorDataSource: UICollectionViewDelegateFlowLayout
         
         switch particleType {
         case is ImageParticle:
-            return CGSize(width: width, height: 300)
+            return CGSize(width: width, height: 100)
         case is ConvoParticle:
             return CGSize(width: width, height: 800)
         case is StreetViewParticle:
@@ -106,7 +110,7 @@ extension StoryCreatorDataSource: UICollectionViewDelegateFlowLayout
         case is QuoteParticle:
             return CGSize(width: width, height: 370)
         default:
-            return CGSize(width: width, height: 50)
+            return CGSize(width: width, height: 450)
         }
     }
 }

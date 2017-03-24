@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8512535A1E84FE7B0081DA3C /* PollParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851253591E84FE7B0081DA3C /* PollParticle.swift */; };
+		8512535C1E84FEC80081DA3C /* PollParticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8512535B1E84FEC80081DA3C /* PollParticleCell.swift */; };
 		85180E321E7EB3E600BC1000 /* ImageParticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85180E311E7EB3E600BC1000 /* ImageParticleCell.swift */; };
 		85243CE91E7993E000768C5C /* TextParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85243CE81E7993E000768C5C /* TextParticle.swift */; };
 		85243CEB1E7AE62800768C5C /* ImageParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85243CEA1E7AE62800768C5C /* ImageParticle.swift */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		46D0F28B86A88446D3578897 /* Pods-StoryCreator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryCreator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StoryCreator/Pods-StoryCreator.debug.xcconfig"; sourceTree = "<group>"; };
 		849CDF9A9E24697EC0AE0A98 /* Pods_StoryCreator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoryCreator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		851253591E84FE7B0081DA3C /* PollParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollParticle.swift; path = Model/PollParticle.swift; sourceTree = "<group>"; };
+		8512535B1E84FEC80081DA3C /* PollParticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollParticleCell.swift; path = Controller/Particles/PollParticleCell.swift; sourceTree = "<group>"; };
 		85180E311E7EB3E600BC1000 /* ImageParticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageParticleCell.swift; path = Controller/Particles/ImageParticleCell.swift; sourceTree = "<group>"; };
 		85243CE81E7993E000768C5C /* TextParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextParticle.swift; path = Model/TextParticle.swift; sourceTree = "<group>"; };
 		85243CEA1E7AE62800768C5C /* ImageParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageParticle.swift; path = Model/ImageParticle.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				85180E311E7EB3E600BC1000 /* ImageParticleCell.swift */,
 				85438E8D1E815396001AFC8F /* MapParticleCell.swift */,
 				85438E911E817316001AFC8F /* QuoteParticleCell.swift */,
+				8512535B1E84FEC80081DA3C /* PollParticleCell.swift */,
 			);
 			name = Particles;
 			sourceTree = "<group>";
@@ -229,6 +234,7 @@
 				85438E8F1E8172DF001AFC8F /* QuoteParticle.swift */,
 				856A3AC31E840C7500EF7FDD /* StreetViewParticle.swift */,
 				856A3AC91E8413CC00EF7FDD /* ConvoParticle.swift */,
+				851253591E84FE7B0081DA3C /* PollParticle.swift */,
 			);
 			name = Particles;
 			sourceTree = "<group>";
@@ -385,10 +391,12 @@
 				852541761E421839008F6A09 /* TitleCoverAndDescriptionHeader.swift in Sources */,
 				85438E921E817316001AFC8F /* QuoteParticleCell.swift in Sources */,
 				859B55B31E0AD2E700231A2B /* FloatLabelTextField.swift in Sources */,
+				8512535C1E84FEC80081DA3C /* PollParticleCell.swift in Sources */,
 				852C02631E0C18A7006B5795 /* Particle.swift in Sources */,
 				85180E321E7EB3E600BC1000 /* ImageParticleCell.swift in Sources */,
 				852541801E421DCD008F6A09 /* NewParticlesDataSourse.swift in Sources */,
 				859B55B41E0AD2E700231A2B /* FloatLabelTextView.swift in Sources */,
+				8512535A1E84FE7B0081DA3C /* PollParticle.swift in Sources */,
 				85438E8C1E813E5B001AFC8F /* CheckInDetails.swift in Sources */,
 				85243CEB1E7AE62800768C5C /* ImageParticle.swift in Sources */,
 				85438E881E813A17001AFC8F /* CheckInViewController.swift in Sources */,

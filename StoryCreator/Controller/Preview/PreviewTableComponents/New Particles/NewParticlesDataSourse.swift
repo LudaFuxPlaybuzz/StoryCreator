@@ -17,7 +17,7 @@ class NewParticlesDataSourse : NSObject, UICollectionViewDataSource
                          StreetViewParticle(),
                          QuoteParticle(),
                          ConvoParticle(),
-                         Particle(image:"5"),
+                         PollParticle(),
                          Particle(image:"7")]
     
     weak var newParticleDelegate: ParticleIconCellDelegate?
