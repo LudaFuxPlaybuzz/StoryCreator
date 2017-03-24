@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PanoParticle: Particle
+class ImageParticle: Particle
 {
     override init()
     {

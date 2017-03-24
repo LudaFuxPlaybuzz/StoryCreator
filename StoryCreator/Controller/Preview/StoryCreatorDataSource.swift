@@ -40,6 +40,10 @@ class StoryCreatorDataSource: NSObject, UICollectionViewDelegate, UICollectionVi
             
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(ImageParticleCell.self), for: indexPath) as! ImageParticleCell
         
+        case is PanoParticle:
+            
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(PanoParticleCell.self), for: indexPath) as! PanoParticleCell
+        
         case is MapParticle:
             
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(MapParticleCell.self), for: indexPath) as! MapParticleCell
@@ -99,9 +103,13 @@ extension StoryCreatorDataSource: UICollectionViewDelegateFlowLayout
         let width = UIScreen.main.bounds.width
         
         switch particleType {
+        case is PanoParticle:
+            return CGSize(width: width, height: 170)
         case is ImageParticle:
-            return CGSize(width: width, height: 100)
+            return CGSize(width: width, height: 300)
         case is ConvoParticle:
+            return CGSize(width: width, height: 400)
+        case is PollParticle:
             return CGSize(width: width, height: 800)
         case is StreetViewParticle:
             return CGSize(width: width, height: 300)
@@ -109,8 +117,10 @@ extension StoryCreatorDataSource: UICollectionViewDelegateFlowLayout
             return CGSize(width: width, height: 250)
         case is QuoteParticle:
             return CGSize(width: width, height: 370)
+        case is TextParticle:
+            return CGSize(width: width, height: 100)
         default:
-            return CGSize(width: width, height: 450)
+            return CGSize(width: width, height: 150)
         }
     }
 }

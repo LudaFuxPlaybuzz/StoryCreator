@@ -22,16 +22,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNQ-2e-at2">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="1200"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <state key="normal">
-                                    <color key="titleColor" red="0.0" green="0.56078431370000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="hideAuxilaryViewsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mQY-TN-OAO"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="86l-Q4-N0z">
                                 <rect key="frame" x="0.0" y="-20" width="320" height="1220"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -259,7 +249,7 @@
                                             <outlet property="textView" destination="a2F-lG-u00" id="DcZ-iu-wIA"/>
                                         </connections>
                                     </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.ImageParticleCell" id="9mP-SX-GBb" customClass="ImageParticleCell" customModule="StoryCreator" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.PanoParticleCell" id="9mP-SX-GBb" customClass="PanoParticleCell" customModule="StoryCreator" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1000" width="320" height="109"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -269,21 +259,8 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qID-cl-QNL">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handPress" translatesAutoresizingMaskIntoConstraints="NO" id="1mR-yv-hCc">
-                                                    <rect key="frame" x="140" y="34" width="40" height="42"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="40" id="0qQ-w1-OEl"/>
-                                                        <constraint firstAttribute="height" constant="42" id="S3o-SF-c0v"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vru-Wc-PaA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
-                                                    <connections>
-                                                        <action selector="revielImage:" destination="9mP-SX-GBb" eventType="touchUpInside" id="fYD-rp-aYb"/>
-                                                    </connections>
-                                                </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pano" translatesAutoresizingMaskIntoConstraints="NO" id="Kl8-a7-c61">
-                                                    <rect key="frame" x="10" y="79" width="20" height="20"/>
+                                                    <rect key="frame" x="10" y="59" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="G2E-9T-RAc"/>
                                                         <constraint firstAttribute="height" constant="20" id="qz0-H8-NVV"/>
@@ -293,27 +270,64 @@
                                         </view>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="Vru-Wc-PaA" firstAttribute="top" secondItem="qID-cl-QNL" secondAttribute="top" id="3uF-RZ-kEv"/>
                                             <constraint firstItem="Kl8-a7-c61" firstAttribute="leading" secondItem="9mP-SX-GBb" secondAttribute="leading" constant="10" id="7XG-gH-82N"/>
-                                            <constraint firstItem="Vru-Wc-PaA" firstAttribute="bottom" secondItem="qID-cl-QNL" secondAttribute="bottom" id="G3n-Se-7Wf"/>
-                                            <constraint firstItem="1mR-yv-hCc" firstAttribute="centerX" secondItem="9mP-SX-GBb" secondAttribute="centerX" id="Px6-ZZ-kPY"/>
                                             <constraint firstItem="qID-cl-QNL" firstAttribute="leading" secondItem="9mP-SX-GBb" secondAttribute="leading" id="cZZ-B5-086"/>
-                                            <constraint firstItem="Vru-Wc-PaA" firstAttribute="trailing" secondItem="qID-cl-QNL" secondAttribute="trailing" id="e54-fV-NAG"/>
                                             <constraint firstItem="qID-cl-QNL" firstAttribute="top" secondItem="9mP-SX-GBb" secondAttribute="top" id="ghx-18-wcd"/>
                                             <constraint firstAttribute="trailing" secondItem="qID-cl-QNL" secondAttribute="trailing" id="iX5-j0-rO6"/>
                                             <constraint firstAttribute="bottom" secondItem="qID-cl-QNL" secondAttribute="bottom" id="k5G-Mf-ZxC"/>
-                                            <constraint firstAttribute="bottom" secondItem="Kl8-a7-c61" secondAttribute="bottom" constant="10" id="nYJ-pR-p4R"/>
-                                            <constraint firstItem="1mR-yv-hCc" firstAttribute="centerY" secondItem="9mP-SX-GBb" secondAttribute="centerY" id="rwM-M5-TtF"/>
-                                            <constraint firstItem="Vru-Wc-PaA" firstAttribute="leading" secondItem="qID-cl-QNL" secondAttribute="leading" id="w33-Fk-BMb"/>
+                                            <constraint firstAttribute="bottom" secondItem="Kl8-a7-c61" secondAttribute="bottom" constant="30" id="nYJ-pR-p4R"/>
                                         </constraints>
                                         <size key="customSize" width="320" height="109"/>
                                         <connections>
-                                            <outlet property="handPressIcon" destination="1mR-yv-hCc" id="e25-GM-TSf"/>
                                             <outlet property="imageView" destination="qID-cl-QNL" id="50M-xR-Od7"/>
                                         </connections>
                                     </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.ImageParticleCell" id="X39-1c-PAm" customClass="ImageParticleCell" customModule="StoryCreator" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1109" width="320" height="109"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rcq-6m-MWO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="handPress" translatesAutoresizingMaskIntoConstraints="NO" id="8c8-Nz-0X6">
+                                                    <rect key="frame" x="140" y="34" width="40" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="RMC-mS-7iQ"/>
+                                                        <constraint firstAttribute="height" constant="42" id="pGN-y6-EUn"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZY-9f-XVC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
+                                                    <connections>
+                                                        <action selector="revielImage:" destination="X39-1c-PAm" eventType="touchUpInside" id="af8-3O-uvc"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="rcq-6m-MWO" firstAttribute="top" secondItem="X39-1c-PAm" secondAttribute="top" id="3TO-gQ-EA5"/>
+                                            <constraint firstItem="AZY-9f-XVC" firstAttribute="top" secondItem="rcq-6m-MWO" secondAttribute="top" id="Erx-Wr-ykd"/>
+                                            <constraint firstItem="AZY-9f-XVC" firstAttribute="bottom" secondItem="rcq-6m-MWO" secondAttribute="bottom" id="FEf-2V-Knh"/>
+                                            <constraint firstItem="8c8-Nz-0X6" firstAttribute="centerX" secondItem="X39-1c-PAm" secondAttribute="centerX" id="Hmo-cU-lYG"/>
+                                            <constraint firstItem="8c8-Nz-0X6" firstAttribute="centerY" secondItem="X39-1c-PAm" secondAttribute="centerY" id="NoL-i9-Zid"/>
+                                            <constraint firstAttribute="bottom" secondItem="rcq-6m-MWO" secondAttribute="bottom" id="Pnt-RC-0gj"/>
+                                            <constraint firstAttribute="trailing" secondItem="rcq-6m-MWO" secondAttribute="trailing" id="Sqy-N8-y8h"/>
+                                            <constraint firstItem="AZY-9f-XVC" firstAttribute="trailing" secondItem="rcq-6m-MWO" secondAttribute="trailing" id="fPM-gF-p70"/>
+                                            <constraint firstItem="AZY-9f-XVC" firstAttribute="leading" secondItem="rcq-6m-MWO" secondAttribute="leading" id="gZT-fE-rqH"/>
+                                            <constraint firstItem="rcq-6m-MWO" firstAttribute="leading" secondItem="X39-1c-PAm" secondAttribute="leading" id="wKJ-z3-pM4"/>
+                                        </constraints>
+                                        <size key="customSize" width="320" height="109"/>
+                                        <connections>
+                                            <outlet property="handPressIcon" destination="8c8-Nz-0X6" id="F2Q-tb-Ihh"/>
+                                            <outlet property="imageView" destination="rcq-6m-MWO" id="SpQ-5T-2lG"/>
+                                        </connections>
+                                    </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoryCreator.ParticleOverviewCell" id="hzs-v6-p49" customClass="ParticleOverviewCell" customModule="StoryCreator" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1109" width="320" height="63"/>
+                                        <rect key="frame" x="0.0" y="1218" width="320" height="63"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
@@ -497,6 +511,16 @@
                                     <constraint firstAttribute="height" constant="60" id="Cxg-Ps-Cyi"/>
                                 </constraints>
                             </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNQ-2e-at2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.0" green="0.56078431370000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="hideAuxilaryViewsTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mQY-TN-OAO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>

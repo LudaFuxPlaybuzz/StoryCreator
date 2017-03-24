@@ -12,13 +12,11 @@ class NewParticlesDataSourse : NSObject, UICollectionViewDataSource
 {
     let cardBackgroundBorder = CAShapeLayer()
     var particleItems = [TextParticle(),
-                         ImageParticle(),
+                        ImageParticle(),
                          MapParticle(),
                          StreetViewParticle(),
-                         QuoteParticle(),
                          ConvoParticle(),
-                         PollParticle(),
-                         Particle(image:"7")]
+                         PollParticle()]
     
     weak var newParticleDelegate: ParticleIconCellDelegate?
 

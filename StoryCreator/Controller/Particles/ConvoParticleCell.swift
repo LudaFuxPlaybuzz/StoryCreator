@@ -17,7 +17,7 @@ class ConvoParticleCell: UICollectionViewCell
     {
         super.awakeFromNib()
         
-        let url = URL (string: "https://steelb.com/hack-convo.html?type=convo")
+        let url = URL (string: "https://steelb.com/story.html?particle=convo")
         let requestObj = URLRequest(url: url! as URL)
         webView.loadRequest(requestObj)
     }

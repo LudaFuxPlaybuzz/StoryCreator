@@ -24,7 +24,8 @@ class CheckInViewController: UIViewController {
         super.viewDidLoad()
         
         checkInItems = [CheckInDetails(checkInTitle: "Sarona TLV", iconName: "food", details: "0.3 mi · 115,345 check-ins", mapImageName: "sarona"),
-        CheckInDetails(checkInTitle: "The White House", iconName: "marker", details: "1600 Pensylvania Avenue, Washington", mapImageName: "whiteHouse"),
+        CheckInDetails(checkInTitle: "Ramat Gan Stadium", iconName: "ticket", details: "0.3 mi · 115,345 check-ins", mapImageName: "sarona"),
+        CheckInDetails(checkInTitle: "The White House", iconName: "marker", details: "Ramat Gan · 6,037 check", mapImageName: "ramatGan"),
         CheckInDetails(checkInTitle: "London Stadium", iconName: "ticket", details: "Olimpic Park, Stanford, London, United Kindom", mapImageName: "london")]
     }
     
@@ -38,7 +39,7 @@ extension CheckInViewController: UITableViewDelegate, UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell

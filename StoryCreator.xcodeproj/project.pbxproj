@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		8512535A1E84FE7B0081DA3C /* PollParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851253591E84FE7B0081DA3C /* PollParticle.swift */; };
 		8512535C1E84FEC80081DA3C /* PollParticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8512535B1E84FEC80081DA3C /* PollParticleCell.swift */; };
+		8512535E1E8525A90081DA3C /* PanoParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8512535D1E8525A90081DA3C /* PanoParticle.swift */; };
+		851253601E8525C70081DA3C /* PanoParticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8512535F1E8525C70081DA3C /* PanoParticleCell.swift */; };
 		85180E321E7EB3E600BC1000 /* ImageParticleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85180E311E7EB3E600BC1000 /* ImageParticleCell.swift */; };
 		85243CE91E7993E000768C5C /* TextParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85243CE81E7993E000768C5C /* TextParticle.swift */; };
 		85243CEB1E7AE62800768C5C /* ImageParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85243CEA1E7AE62800768C5C /* ImageParticle.swift */; };
@@ -49,6 +51,8 @@
 		849CDF9A9E24697EC0AE0A98 /* Pods_StoryCreator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoryCreator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		851253591E84FE7B0081DA3C /* PollParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollParticle.swift; path = Model/PollParticle.swift; sourceTree = "<group>"; };
 		8512535B1E84FEC80081DA3C /* PollParticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PollParticleCell.swift; path = Controller/Particles/PollParticleCell.swift; sourceTree = "<group>"; };
+		8512535D1E8525A90081DA3C /* PanoParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PanoParticle.swift; path = Model/PanoParticle.swift; sourceTree = "<group>"; };
+		8512535F1E8525C70081DA3C /* PanoParticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PanoParticleCell.swift; path = Controller/Particles/PanoParticleCell.swift; sourceTree = "<group>"; };
 		85180E311E7EB3E600BC1000 /* ImageParticleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageParticleCell.swift; path = Controller/Particles/ImageParticleCell.swift; sourceTree = "<group>"; };
 		85243CE81E7993E000768C5C /* TextParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TextParticle.swift; path = Model/TextParticle.swift; sourceTree = "<group>"; };
 		85243CEA1E7AE62800768C5C /* ImageParticle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageParticle.swift; path = Model/ImageParticle.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 		8525414E1E3E1661008F6A09 /* Particles */ = {
 			isa = PBXGroup;
 			children = (
+				8512535F1E8525C70081DA3C /* PanoParticleCell.swift */,
 				856A3AC71E8412F800EF7FDD /* ConvoParticleCell.swift */,
 				856A3AC51E840DB600EF7FDD /* StreetViewParticleCell.swift */,
 				852541701E421839008F6A09 /* ParticleOverviewCell.swift */,
@@ -228,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				852C02621E0C18A7006B5795 /* Particle.swift */,
+				8512535D1E8525A90081DA3C /* PanoParticle.swift */,
 				85243CE81E7993E000768C5C /* TextParticle.swift */,
 				85243CEA1E7AE62800768C5C /* ImageParticle.swift */,
 				85243CEC1E7AE81300768C5C /* MapParticle.swift */,
@@ -400,7 +406,9 @@
 				85438E8C1E813E5B001AFC8F /* CheckInDetails.swift in Sources */,
 				85243CEB1E7AE62800768C5C /* ImageParticle.swift in Sources */,
 				85438E881E813A17001AFC8F /* CheckInViewController.swift in Sources */,
+				851253601E8525C70081DA3C /* PanoParticleCell.swift in Sources */,
 				856A3AC61E840DB600EF7FDD /* StreetViewParticleCell.swift in Sources */,
+				8512535E1E8525A90081DA3C /* PanoParticle.swift in Sources */,
 				852541741E421839008F6A09 /* ParticleOverviewCell.swift in Sources */,
 				8525417F1E421DCD008F6A09 /* ParticleIconCell.swift in Sources */,
 				856A3AC41E840C7500EF7FDD /* StreetViewParticle.swift in Sources */,

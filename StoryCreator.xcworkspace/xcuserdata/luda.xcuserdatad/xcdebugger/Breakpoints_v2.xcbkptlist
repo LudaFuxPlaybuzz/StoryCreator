@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StoryCreator/Controller/Preview/StoryCreatorDataSource.swift"
-            timestampString = "512032842.079634"
+            timestampString = "512044168.626923"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136">
+            startingLineNumber = "146"
+            endingLineNumber = "146">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

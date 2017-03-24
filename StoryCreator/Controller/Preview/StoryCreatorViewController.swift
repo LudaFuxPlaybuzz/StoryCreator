@@ -155,6 +155,28 @@ extension StoryCreatorViewController: StoryCreatorDataSourceDelegate, ParticleIc
             }
             self.present(pickerController, animated: true) {}
         
+        case is PanoParticle:
+            
+            previewDataSource.newParticles.append(particle)
+            previewCollection.reloadData()
+            
+            let pickerController = DKImagePickerController()
+            pickerController.singleSelect = true
+            
+            pickerController.didSelectAssets = { (assets: [DKAsset]) in
+                if assets.count > 0
+                {
+                    let asset: DKAsset = assets[0]
+                    asset.fetchImageWithSize(self.view.frame.size, completeBlock: { image, info in
+                        if let lastPicCell = self.previewCollection.cellForItem(at: IndexPath(row: self.previewDataSource.newParticles.count - 1, section:0) as IndexPath) as? PanoParticleCell
+                        {
+                            lastPicCell.imageView.image = image
+                        }
+                    })
+                }
+            }
+            self.present(pickerController, animated: true) {}
+            
         case is MapParticle:
             
             self.performSegue(withIdentifier: "CheckIn", sender: nil)
